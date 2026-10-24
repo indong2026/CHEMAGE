@@ -3,12 +3,13 @@ import { ENEMIES } from '../data/enemies';
 import { REWARDS } from '../data/rewards';
 import { matchRecipe } from './recipes';
 import { drawElement, shuffle } from './random';
+import { incomingAction } from './incoming';
 import type { Action, BattleFrame, Effect, Element, EnemyId, GameEvent, GameState, RewardId, Rng, Tile, TurnEffects } from './types';
 
 export const enemyArmor = (s: GameState) => Math.max(0, ENEMIES[s.enemy.id].armor - (s.enemy.acid > 0 ? B.acid.reduction : 0));
 const emptyEffects = (): TurnEffects => ({ fireReduction: 0, reflect: 0, wetApplied: false, acidApplied: false });
 export function battleFrame(s: GameState): BattleFrame {
-  return { hp: s.hp, enemy: { ...s.enemy, intent: { ...s.enemy.intent } }, inventory: s.inventory.map(t => ({ ...t })), freshIds: [...s.freshIds], boost: s.boost, playerShield: s.playerShield, turn: s.turn, spellsUsed: s.spellsUsed, mana: s.mana };
+  return { hp: s.hp, enemy: { ...s.enemy, intent: { ...s.enemy.intent, ...(s.enemy.intent.hits ? { hits: s.enemy.intent.hits.map(hit => ({ ...hit })) } : {}) } }, inventory: s.inventory.map(t => ({ ...t })), freshIds: [...s.freshIds], boost: s.boost, playerShield: s.playerShield, turn: s.turn, spellsUsed: s.spellsUsed, mana: s.mana };
 }
 /** Only new incoming tiles can overflow. Saved inventory is never discarded. */
 function acquire(s: GameState, elements: Element[]) {
@@ -44,7 +45,7 @@ export function newGame(rng: Rng = Math.random): GameState {
   }, rng);
 }
 function copyState(s: GameState): GameState {
-  return { ...s, enemy: { ...s.enemy, intent: { ...s.enemy.intent } }, inventory: [...s.inventory], freshIds: [...s.freshIds], turnEffects: { ...s.turnEffects }, upgrades: { ...s.upgrades }, discoveries: [...s.discoveries], taken: [...s.taken], stats: { ...s.stats }, events: [] };
+  return { ...s, enemy: { ...s.enemy, intent: { ...s.enemy.intent, ...(s.enemy.intent.hits ? { hits: s.enemy.intent.hits.map(hit => ({ ...hit })) } : {}) } }, inventory: [...s.inventory], freshIds: [...s.freshIds], turnEffects: { ...s.turnEffects }, upgrades: { ...s.upgrades }, discoveries: [...s.discoveries], taken: [...s.taken], stats: { ...s.stats }, events: [] };
 }
 function hurtEnemy(s: GameState, raw: number, pierce = 0, ignoreShield = false) {
   let damage = Math.max(0, raw - Math.max(0, enemyArmor(s) - pierce));
@@ -67,12 +68,15 @@ function resolveAction(state: GameState, action: Action, revision: number, rng: 
   const s = copyState(state);
   s.revision++;
   if (s.spellsUsed === 0) s.stats.turns++;
-  const emit = (event: GameEvent) => s.events.push(frames ? { ...event, frame: battleFrame(s) } : event);
+  let wardActive = false;
+  const emit = (event: GameEvent) => s.events.push({ ...event, wardActive, ...(frames ? { frame: battleFrame(s) } : {}) });
   const ended = () => {
-    if (s.hp <= 0) { s.screen = 'defeat'; s.boost = false; emit({ kind: 'defeat', cue: 'system', text: '다시 도전할 수 있어요' }); return true; }
+    if (s.hp <= 0 || s.enemy.hp <= 0) wardActive = false;
+    if (s.hp <= 0) { s.screen = 'defeat'; s.boost = false; s.playerShield = 0; s.turnEffects = emptyEffects(); emit({ kind: 'defeat', cue: 'system', text: '다시 도전할 수 있어요' }); return true; }
     if (s.enemy.hp > 0) return false;
+    s.playerShield = 0; s.turnEffects = emptyEffects();
     emit({ kind: 'death', cue: 'system', effect: 'death', target: 'enemy', text: `${ENEMIES[s.enemy.id].name} 격파!` });
-    s.stats.defeated++; s.boost = false; s.playerShield = 0; s.turnEffects = emptyEffects();
+    s.stats.defeated++; s.boost = false;
     const healed = Math.min(B.victoryHeal, B.maxHp - s.hp); s.hp += healed;
     s.screen = s.stage === 4 ? 'victory' : 'reward';
     s.rewards = s.screen === 'reward' ? shuffle(REWARDS.map(r => r.id), rng).slice(0, 3) : [];
@@ -105,12 +109,12 @@ function resolveAction(state: GameState, action: Action, revision: number, rng: 
       case 'methane': raw = B.methane.damage; break;
       case 'ironOxide': raw = B.ironOxide.damage; break;
       case 'oxygen': s.boost = true; emit({ kind: 'info', cue: 'support', effect: spell.id, target: 'player', text: '다음 공격 마법 +10' }); break;
-      case 'carbon': s.playerShield = Math.max(s.playerShield, B.carbon.shield); s.turnEffects.fireReduction = B.carbon.fireReduction; break;
-      case 'iron': s.playerShield = Math.max(s.playerShield, B.iron.shield); break;
-      case 'graphite': s.playerShield = Math.max(s.playerShield, B.graphite.shield); s.turnEffects.reflect = B.graphite.reflect; break;
+      case 'carbon': s.playerShield += B.carbon.shield; s.turnEffects.fireReduction = B.carbon.fireReduction; break;
+      case 'iron': s.playerShield += B.iron.shield; break;
+      case 'graphite': s.playerShield += B.graphite.shield; s.turnEffects.reflect = B.graphite.reflect; break;
     }
     if (raw > 0) strike(raw + bonus, spell.id, pierce, false, combo);
-    if (['carbon', 'iron', 'graphite'].includes(spell.id)) emit({ kind: 'shield', cue: 'support', effect: spell.id, target: 'player', value: s.playerShield, text: `보호막 ${s.playerShield}` });
+    if (spell.id === 'carbon' || spell.id === 'iron' || spell.id === 'graphite') emit({ kind: 'shield', cue: 'support', effect: spell.id, target: 'player', value: B[spell.id].shield, text: `보호막 +${B[spell.id].shield}` });
     if (ended() || s.spellsUsed < B.spellsPerTurn) return s;
   } else if (action.type === 'burst') {
     s.mana -= B.manaMax; s.stats.bursts++;
@@ -118,28 +122,38 @@ function resolveAction(state: GameState, action: Action, revision: number, rng: 
     strike(B.zeroDamage, 'zero', Infinity);
     if (ended()) return s;
   } else if (action.type === 'guard') {
-    s.playerShield = Math.max(s.playerShield, s.upgrades.guard);
-    emit({ kind: 'shield', cue: 'support', effect: 'guard', target: 'player', value: s.playerShield, text: `방어 · 보호막 ${s.playerShield}` });
+    s.playerShield += s.upgrades.guard;
+    emit({ kind: 'shield', cue: 'support', effect: 'guard', target: 'player', value: s.upgrades.guard, text: `보호막 +${s.upgrades.guard}` });
   }
+  emit({ kind: 'turn', cue: 'system', target: 'enemy', text: '적의 차례' });
   if (s.enemy.dot > 0) { s.enemy.dot--; strike(B.peroxide.dot, 'dot', Infinity, true); if (ended()) return s; }
   s.enemy.shield = 0;
   const intent = s.enemy.intent;
   const effect: Effect = `enemy-${intent.type === 'attack' ? 'attack' : intent.type === 'fire' ? 'fire' : intent.type}`;
-  emit({ kind: 'enemy', cue: 'launch', effect, value: intent.value, target: 'player', text: `${intent.label}${intent.value ? ` ${intent.value}` : ''}` });
+  const hadShield = s.playerShield > 0;
+  wardActive = hadShield;
   s.stats.enemyActions++;
   if (intent.type === 'attack' || intent.type === 'fire') {
-    const reduced = Math.max(0, intent.value - (intent.type === 'fire' ? s.turnEffects.fireReduction : 0));
-    const blocked = Math.min(s.playerShield, reduced), damage = reduced - blocked;
-    s.hp = Math.max(0, s.hp - damage);
-    emit({ kind: 'damage', cue: 'impact', effect, target: 'player', value: damage, blocked, text: damage ? `피격! −${damage}${blocked ? ` · ${blocked} 방어` : ''}` : 'BLOCK! 완전 방어' });
-    if (s.turnEffects.reflect > 0) strike(s.turnEffects.reflect, 'reflect', Infinity, true);
-  } else if (intent.type === 'shield') {
-    s.enemy.shield = intent.value; emit({ kind: 'shield', cue: 'support', effect, target: 'enemy', value: intent.value, text: `적 보호막 ${intent.value}` });
-  } else emit({ kind: 'info', cue: 'support', effect, target: 'enemy', text: intent.type === 'charge' ? '다음 강공격을 준비해요' : '적이 숨을 고릅니다' });
+    const incoming = incomingAction(s.hp, s.playerShield, intent, s.turnEffects);
+    for (const hit of incoming.hits) {
+      const hitEffect: Effect = hit.type === 'fire' ? 'enemy-fire' : 'enemy-attack';
+      emit({ kind: 'enemy', cue: 'launch', effect: hitEffect, value: hit.value, target: 'player', text: `${intent.label} ${hit.value}` });
+      s.hp = hit.hp; s.playerShield = hit.shield;
+      emit({ kind: 'damage', cue: 'impact', effect: hitEffect, target: 'player', value: hit.damage, blocked: hit.blocked, text: hit.damage ? `피격! −${hit.damage}${hit.blocked ? ` · ${hit.blocked} 방어` : ''}` : s.hp ? 'BLOCK! 완전 방어' : '전투 불능' });
+    }
+    if (incoming.reflect > 0) strike(incoming.reflect, 'reflect', Infinity, true);
+  } else {
+    emit({ kind: 'enemy', cue: 'launch', effect, value: intent.value, target: 'player', text: `${intent.label}${intent.value ? ` ${intent.value}` : ''}` });
+    if (intent.type === 'shield') {
+      s.enemy.shield = intent.value; emit({ kind: 'shield', cue: 'support', effect, target: 'enemy', value: intent.value, text: `적 보호막 ${intent.value}` });
+    } else emit({ kind: 'info', cue: 'support', effect, target: 'enemy', text: intent.type === 'charge' ? '다음 강공격을 준비해요' : '적이 숨을 고릅니다' });
+  }
   if (ended()) return s;
   if (!s.turnEffects.wetApplied) s.enemy.wet = Math.max(0, s.enemy.wet - 1);
   if (!s.turnEffects.acidApplied) s.enemy.acid = Math.max(0, s.enemy.acid - 1);
   s.playerShield = 0; s.turnEffects = emptyEffects();
+  if (hadShield) emit({ kind: 'shield-end', cue: 'system', target: 'player', text: '적 행동 종료 · 보호막 해제' });
+  wardActive = false;
   const data = ENEMIES[s.enemy.id];
   if (data.phaseThreshold && s.enemy.hp <= data.phaseThreshold && s.enemy.phase === 1) {
     s.enemy.phase = 2; s.enemy.patternIndex = 0;
@@ -149,7 +163,7 @@ function resolveAction(state: GameState, action: Action, revision: number, rng: 
   s.enemy.intent = { ...pattern[s.enemy.patternIndex % pattern.length] };
   s.turn++; s.spellsUsed = 0; s.freshIds = [];
   const draw = acquire(s, Array.from({ length: s.upgrades.draw }, () => drawElement(rng)));
-  emit({ kind: 'turn', cue: 'system', text: '나의 차례', value: s.upgrades.draw - draw.tiles.length });
+  emit({ kind: 'turn', cue: 'system', target: 'player', text: '나의 차례', value: s.upgrades.draw - draw.tiles.length });
   if (draw.tiles.length) emit({ kind: 'convert', cue: 'support', effect: 'overflow', target: 'player', tiles: draw.tiles, value: draw.gained, text: `초과 ${draw.tiles.length}개 → 마력 +${draw.gained}` });
   return s;
 }

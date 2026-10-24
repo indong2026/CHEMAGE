@@ -1,0 +1,241 @@
+{
+  "seedRange": [
+    1,
+    200
+  ],
+  "note": "All recipes known to greedy agents; not a human win-rate estimate.",
+  "reports": [
+    {
+      "strategy": "basic",
+      "runs": 200,
+      "wins": 0,
+      "defeats": 200,
+      "stalled": 0,
+      "turns": 2696,
+      "battlesWon": 160,
+      "firstTurnKills": 0,
+      "zeroBursts": 0,
+      "releaseElements": 0,
+      "autoElements": 4812,
+      "defenseTurns": 0,
+      "threeChains": 0,
+      "threeChainDamage": 0,
+      "threeSpellDamage": 0,
+      "maxConsecutiveBursts": 0,
+      "stageTurns": [
+        1810,
+        780,
+        106,
+        0,
+        0
+      ],
+      "stageVisits": [
+        200,
+        130,
+        30,
+        0,
+        0
+      ],
+      "maxTurnDamage": 10,
+      "winningSeeds": [],
+      "failedStages": [
+        70,
+        100,
+        30,
+        0,
+        0
+      ]
+    },
+    {
+      "strategy": "release",
+      "runs": 200,
+      "wins": 0,
+      "defeats": 200,
+      "stalled": 0,
+      "turns": 2716,
+      "battlesWon": 161,
+      "firstTurnKills": 0,
+      "zeroBursts": 0,
+      "releaseElements": 10246,
+      "autoElements": 0,
+      "defenseTurns": 0,
+      "threeChains": 0,
+      "threeChainDamage": 0,
+      "threeSpellDamage": 0,
+      "maxConsecutiveBursts": 0,
+      "stageTurns": [
+        1747,
+        806,
+        163,
+        0,
+        0
+      ],
+      "stageVisits": [
+        200,
+        130,
+        31,
+        0,
+        0
+      ],
+      "maxTurnDamage": 12,
+      "winningSeeds": [],
+      "failedStages": [
+        70,
+        99,
+        31,
+        0,
+        0
+      ]
+    },
+    {
+      "strategy": "single",
+      "runs": 200,
+      "wins": 6,
+      "defeats": 194,
+      "stalled": 0,
+      "turns": 6819,
+      "battlesWon": 805,
+      "firstTurnKills": 0,
+      "zeroBursts": 0,
+      "releaseElements": 0,
+      "autoElements": 2939,
+      "defenseTurns": 2329,
+      "threeChains": 0,
+      "threeChainDamage": 0,
+      "threeSpellDamage": 0,
+      "maxConsecutiveBursts": 0,
+      "stageTurns": [
+        1278,
+        1172,
+        1072,
+        2027,
+        1270
+      ],
+      "stageVisits": [
+        200,
+        200,
+        200,
+        200,
+        199
+      ],
+      "maxTurnDamage": 30,
+      "winningSeeds": [
+        13,
+        26,
+        69,
+        78,
+        103,
+        134
+      ],
+      "failedStages": [
+        0,
+        0,
+        0,
+        1,
+        193
+      ]
+    },
+    {
+      "strategy": "chain",
+      "runs": 200,
+      "wins": 158,
+      "defeats": 42,
+      "stalled": 0,
+      "turns": 4290,
+      "battlesWon": 958,
+      "firstTurnKills": 36,
+      "zeroBursts": 1716,
+      "releaseElements": 6241,
+      "autoElements": 0,
+      "defenseTurns": 2109,
+      "threeChains": 942,
+      "threeChainDamage": 35077,
+      "threeSpellDamage": 22671,
+      "maxConsecutiveBursts": 5,
+      "stageTurns": [
+        737,
+        667,
+        605,
+        1176,
+        1105
+      ],
+      "stageVisits": [
+        200,
+        200,
+        200,
+        200,
+        200
+      ],
+      "maxTurnDamage": 69,
+      "winningSeeds": [
+        3,
+        4,
+        6,
+        7,
+        9,
+        10,
+        12,
+        13,
+        15,
+        16,
+        17,
+        18
+      ],
+      "failedStages": [
+        0,
+        0,
+        0,
+        0,
+        42
+      ]
+    },
+    {
+      "strategy": "chain-no-defense",
+      "runs": 200,
+      "wins": 6,
+      "defeats": 194,
+      "stalled": 0,
+      "turns": 3406,
+      "battlesWon": 685,
+      "firstTurnKills": 39,
+      "zeroBursts": 894,
+      "releaseElements": 5327,
+      "autoElements": 0,
+      "defenseTurns": 0,
+      "threeChains": 314,
+      "threeChainDamage": 13151,
+      "threeSpellDamage": 9886,
+      "maxConsecutiveBursts": 3,
+      "stageTurns": [
+        823,
+        737,
+        632,
+        955,
+        259
+      ],
+      "stageVisits": [
+        200,
+        199,
+        196,
+        196,
+        88
+      ],
+      "maxTurnDamage": 69,
+      "winningSeeds": [
+        71,
+        105,
+        113,
+        139,
+        151,
+        166
+      ],
+      "failedStages": [
+        1,
+        3,
+        0,
+        108,
+        82
+      ]
+    }
+  ]
+}

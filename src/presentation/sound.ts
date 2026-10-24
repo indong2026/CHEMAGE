@@ -62,6 +62,12 @@ export class SynthAudio {
   select() { this.tone(600, 950, .045, 'triangle', .018); }
   complete() { [523, 659, 784].forEach((f, i) => this.tone(f, f, .12, 'sine', .025, i * .035)); }
   event(event: GameEvent) {
+    if (event.kind === 'turn-banner') {
+      if (event.target === 'enemy') { this.tone(220, 110, .18, 'square', .025); this.tone(165, 82, .16, 'triangle', .025, .18); }
+      return;
+    }
+    if (event.kind === 'ready') { [392, 587, 784, 1174].forEach((f, i) => this.tone(f, f * 1.1, .18, 'sine', .035, i * .065)); return; }
+    if (event.kind === 'death') { this.noise(.2, .05, 1800); [784, 1046].forEach((f, i) => this.tone(f, f / 2, .2, 'triangle', .035, i * .1)); return; }
     if (event.cue === 'launch') { this.tone(event.target === 'player' ? 140 : 380, event.target === 'player' ? 90 : 700, .12, 'triangle', .018); return; }
     if (event.kind === 'win') { [523, 659, 784, 1046].forEach((f, i) => this.tone(f, f, .2, 'triangle', .025, i * .07)); return; }
     if (event.target === 'player' && event.kind === 'damage') {

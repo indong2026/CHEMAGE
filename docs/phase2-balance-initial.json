@@ -1,0 +1,173 @@
+{
+  "seedRange": [
+    1,
+    200
+  ],
+  "note": "All recipes known to greedy agents; not a human win-rate estimate.",
+  "reports": [
+    {
+      "strategy": "basic",
+      "runs": 200,
+      "wins": 0,
+      "defeats": 200,
+      "stalled": 0,
+      "turns": 2696,
+      "battlesWon": 160,
+      "firstTurnKills": 0,
+      "zeroBursts": 0,
+      "releaseElements": 0,
+      "autoElements": 4812,
+      "defenseTurns": 0,
+      "threeChains": 0,
+      "threeChainDamage": 0,
+      "maxTurnDamage": 10,
+      "winningSeeds": [],
+      "failedStages": [
+        70,
+        100,
+        30,
+        0,
+        0
+      ]
+    },
+    {
+      "strategy": "release",
+      "runs": 200,
+      "wins": 0,
+      "defeats": 200,
+      "stalled": 0,
+      "turns": 2716,
+      "battlesWon": 161,
+      "firstTurnKills": 0,
+      "zeroBursts": 0,
+      "releaseElements": 10246,
+      "autoElements": 0,
+      "defenseTurns": 0,
+      "threeChains": 0,
+      "threeChainDamage": 0,
+      "maxTurnDamage": 12,
+      "winningSeeds": [],
+      "failedStages": [
+        70,
+        99,
+        31,
+        0,
+        0
+      ]
+    },
+    {
+      "strategy": "single",
+      "runs": 200,
+      "wins": 126,
+      "defeats": 74,
+      "stalled": 0,
+      "turns": 7404,
+      "battlesWon": 926,
+      "firstTurnKills": 0,
+      "zeroBursts": 0,
+      "releaseElements": 0,
+      "autoElements": 3660,
+      "defenseTurns": 2623,
+      "threeChains": 0,
+      "threeChainDamage": 0,
+      "maxTurnDamage": 30,
+      "winningSeeds": [
+        2,
+        3,
+        5,
+        8,
+        11,
+        13,
+        15,
+        16,
+        18,
+        19,
+        22,
+        24
+      ],
+      "failedStages": [
+        0,
+        0,
+        0,
+        0,
+        74
+      ]
+    },
+    {
+      "strategy": "chain",
+      "runs": 200,
+      "wins": 200,
+      "defeats": 0,
+      "stalled": 0,
+      "turns": 4350,
+      "battlesWon": 1000,
+      "firstTurnKills": 36,
+      "zeroBursts": 1716,
+      "releaseElements": 6287,
+      "autoElements": 0,
+      "defenseTurns": 2146,
+      "threeChains": 942,
+      "threeChainDamage": 35175,
+      "maxTurnDamage": 69,
+      "winningSeeds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "failedStages": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "strategy": "chain-no-defense",
+      "runs": 200,
+      "wins": 21,
+      "defeats": 179,
+      "stalled": 0,
+      "turns": 3670,
+      "battlesWon": 734,
+      "firstTurnKills": 39,
+      "zeroBursts": 955,
+      "releaseElements": 5831,
+      "autoElements": 0,
+      "defenseTurns": 0,
+      "threeChains": 328,
+      "threeChainDamage": 13841,
+      "maxTurnDamage": 69,
+      "winningSeeds": [
+        3,
+        12,
+        43,
+        68,
+        70,
+        71,
+        74,
+        94,
+        105,
+        106,
+        109,
+        113
+      ],
+      "failedStages": [
+        1,
+        3,
+        0,
+        74,
+        101
+      ]
+    }
+  ]
+}

@@ -13,6 +13,8 @@ const ICONS: Record<string, string> = {
   spark: 'M7 0h2v5h2v2h5v2h-5v2H9v5H7v-5H5V9H0V7h5V5h2z',
   book: 'M1 2h5v1h4V2h5v12h-5v1H6v-1H1z M3 4v8h3V4z M10 4v8h3V4z',
   heart: 'M2 2h4v2h4V2h4v2h2v6h-2v2h-2v2h-2v2H6v-2H4v-2H2v-2H0V4h2z',
+  warning: 'M7 0h2v2h2v3h2v3h2v5h1v3H0v-3h1V8h2V5h2V2h2z M7 5v5h2V5z M7 12v2h2v-2z',
+  flask: 'M5 0h6v2h-1v4l5 7v3H1v-3l5-7V2H5z M7 7l-3 5h8L9 7V2H7z',
   refine: 'M3 0h8v2h2v2h2V2h1v7H9V7h4V5h-2V3H5v2H3z M0 7h7v2H3v2h2v2h6v-2h2v5H5v-2H3v-2H1v2H0z',
   bag: 'M5 0h6v2h2v3h2v10H1V5h2V2h2z M5 2v3h6V2z M3 7v6h10V7z',
   drop: 'M7 0h2v3h2v3h2v3h2v4h-2v2H3v-2H1V9h2V6h2V3h2z',

@@ -103,17 +103,17 @@ describe('보호막과 연계는 두 시전 사이에 유지된다', () => {
     const first = cast(s, 'carbon'); expect(first.playerShield).toBe(12); expect(first.hp).toBe(60);
     const next = cast(first, 'water'); expect(next.hp).toBe(57); expect(next.enemy.hp).toBe(187); expect(next.playerShield).toBe(0);
   });
-  it('Fe와 CO₂는 보호막 최댓값 16에 화염 경감 5를 유지한다', () => {
+  it('Fe와 CO₂는 보호막 28에 화염 경감 5를 유지한다', () => {
     const s = fixture(['Fe', 'C', 'O', 'O']); s.enemy.intent = { type: 'fire', value: 22, label: '화염' };
-    const n = cast(cast(s, 'iron'), 'carbon'); expect(n.hp).toBe(59);
+    const n = cast(cast(s, 'iron'), 'carbon'); expect(n.hp).toBe(60);
   });
-  it('흑연을 두 번 사용해도 보호막 10, 반사 3만 적용한다', () => {
+  it('흑연 두 번은 보호막 20, 반사 3만 적용한다', () => {
     const s = fixture(['C', 'C'], 'beetle'); s.enemy.intent = { type: 'attack', value: 12, label: '공격' };
-    const n = cast(cast(s, 'graphite'), 'graphite'); expect(n.hp).toBe(58); expect(n.enemy.hp).toBe(197);
+    const n = cast(cast(s, 'graphite'), 'graphite'); expect(n.hp).toBe(60); expect(n.enemy.hp).toBe(197);
   });
   it('방어 행동이 기존 강한 보호막을 낮추지 않고 반사 효과도 유지한다', () => {
     const s = fixture(['C']); s.enemy.intent = { type: 'attack', value: 12, label: '공격' };
-    const n = act(cast(s, 'graphite'), { type: 'guard' }); expect(n.hp).toBe(58); expect(n.enemy.hp).toBe(197);
+    const n = act(cast(s, 'graphite'), { type: 'guard' }); expect(n.hp).toBe(60); expect(n.enemy.hp).toBe(197);
   });
   it('H₂O → NaCl은 COMBO +4, 역순에서는 추가 피해가 없다', () => {
     const s = fixture(['H', 'H', 'O', 'Na', 'Cl']);
