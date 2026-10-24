@@ -1,0 +1,179 @@
+{
+  "seedRange": [
+    1,
+    200
+  ],
+  "note": "All formulas known; one-turn greedy search, not human win rates.",
+  "reports": [
+    {
+      "strategy": "two-casts",
+      "runs": 200,
+      "wins": 184,
+      "defeats": 16,
+      "stalled": 0,
+      "turns": 4738,
+      "casts": 7391,
+      "bursts": 629,
+      "conversions": 247,
+      "combos": 1100,
+      "defenseActions": 3352,
+      "stageTurns": [
+        938,
+        720,
+        902,
+        1056,
+        1122
+      ],
+      "stageVisits": [
+        200,
+        200,
+        200,
+        200,
+        200
+      ],
+      "losses": [
+        0,
+        0,
+        0,
+        0,
+        16
+      ],
+      "firstTurnKills": 0,
+      "winningSeeds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "strategy": "one-cast",
+      "runs": 200,
+      "wins": 160,
+      "defeats": 40,
+      "stalled": 0,
+      "turns": 5591,
+      "casts": 5401,
+      "bursts": 663,
+      "conversions": 1962,
+      "combos": 645,
+      "defenseActions": 2922,
+      "stageTurns": [
+        997,
+        982,
+        954,
+        1303,
+        1355
+      ],
+      "stageVisits": [
+        200,
+        200,
+        200,
+        200,
+        199
+      ],
+      "losses": [
+        0,
+        0,
+        0,
+        1,
+        39
+      ],
+      "firstTurnKills": 0,
+      "winningSeeds": [
+        1,
+        3,
+        4,
+        5,
+        7,
+        8,
+        10,
+        11,
+        12,
+        13
+      ]
+    },
+    {
+      "strategy": "no-defense",
+      "runs": 200,
+      "wins": 1,
+      "defeats": 199,
+      "stalled": 0,
+      "turns": 3811,
+      "casts": 3769,
+      "bursts": 281,
+      "conversions": 202,
+      "combos": 774,
+      "defenseActions": 0,
+      "stageTurns": [
+        967,
+        1013,
+        814,
+        892,
+        125
+      ],
+      "stageVisits": [
+        200,
+        200,
+        200,
+        195,
+        46
+      ],
+      "losses": [
+        0,
+        0,
+        5,
+        149,
+        45
+      ],
+      "firstTurnKills": 0,
+      "winningSeeds": [
+        142
+      ]
+    },
+    {
+      "strategy": "guard-burst",
+      "runs": 200,
+      "wins": 1,
+      "defeats": 199,
+      "stalled": 0,
+      "turns": 7173,
+      "casts": 0,
+      "bursts": 1675,
+      "conversions": 15814,
+      "combos": 0,
+      "defenseActions": 2903,
+      "stageTurns": [
+        1800,
+        1738,
+        1661,
+        1767,
+        207
+      ],
+      "stageVisits": [
+        200,
+        200,
+        200,
+        200,
+        31
+      ],
+      "losses": [
+        0,
+        0,
+        0,
+        169,
+        30
+      ],
+      "firstTurnKills": 0,
+      "winningSeeds": [
+        17
+      ]
+    }
+  ]
+}

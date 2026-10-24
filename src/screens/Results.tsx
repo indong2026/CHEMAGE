@@ -1,0 +1,11 @@
+import { Icon, Sprite } from '../components/PixelArt';
+import { REWARDS } from '../data/rewards';
+import { ENEMIES } from '../data/enemies';
+import type { GameState, RewardId } from '../game/types';
+export function Rewards({ game: g, choose }: { game: GameState; choose: (id: RewardId) => void }) {
+  return <main className="reward-screen"><span className="eyebrow">ENCOUNTER 0{g.stage + 1} COMPLETE</span><div className="victory-rune"><Icon name="spark" size={42} /></div><h1>멋진 합성이었어요.</h1><p className="muted">{ENEMIES[g.enemy.id].name} 격파</p><div className="heal-badge"><Icon name="heart" />승리 회복 적용 · 현재 HP {g.hp} / 60</div><div className="reward-title"><h2>다음 실험을 위한 선물</h2><p>하나를 선택하세요. 이번 모험 동안 유지됩니다.</p></div><div className="reward-options">{g.rewards.map(id => { const r = REWARDS.find(r => r.id === id)!; return <button key={id} className="reward-option pixel-panel" onClick={() => choose(id)}><span className={`reward-icon reward-${id}`}><Icon name={r.rune} size={25} /></span><span><b>{r.name}</b><small>{r.description}</small>{id === 'heal' && g.hp === 60 && <em>체력이 가득 차 효과가 없습니다</em>}</span><span className="reward-arrow">→</span></button>; })}</div><p className="next-enemy">다음 전투 <b>{ENEMIES[g.route[g.stage + 1]].name}</b></p></main>;
+}
+export function Ending({ game: g, restart, menu, codex }: { game: GameState; restart: () => void; menu: () => void; codex: () => void }) {
+  const win = g.screen === 'victory';
+  return <main className={`ending-screen ${win ? 'won' : ''}`}><span className="eyebrow">{win ? 'THE CRYSTAL IS QUIET AGAIN' : 'EVERY EXPERIMENT TEACHES YOU'}</span><div className="ending-art"><Sprite name={win ? 'flask' : 'mage'} /></div><h1>{win ? '마법은, 당신 안에.' : '아직 끝나지 않은 실험'}</h1><p>{win ? '크리스탈 골렘을 쓰러뜨렸습니다.\n다섯 번의 전투, 당신만의 해답을 찾았어요.' : '이번 모험은 여기까지.\n발견한 마법과 함께 다시 도전해 보세요.'}</p><div className="run-stats"><span><strong>{g.stats.defeated}<small>/5</small></strong>완료한 전투</span><span><strong>{g.stats.casts}</strong>사용한 마법</span><span><strong>{g.stats.turns}</strong>지나온 턴</span></div><button className="primary-button" onClick={restart}><Icon name="refine" />다시 모험하기</button><button className="secondary-button" onClick={codex}><Icon name="book" />발견한 마법 보기</button><button className="text-button" onClick={menu}>메인 메뉴</button></main>;
+}
