@@ -4,6 +4,8 @@ const shield = (value: number): Intent => ({ type: 'shield', value, label: '보�
 const charge: Intent = { type: 'charge', value: 0, label: '강공격 준비' };
 const multi = (value: number, count: number, label: string): Intent => ({ type: 'attack', value: value * count, label, hits: Array.from({ length: count }, () => ({ type: 'attack', value })) });
 export const ENEMIES: Record<EnemyId, { name: string; affinity: Affinity; subtitle: string; hp: number; armor: number; pattern: Intent[]; phase2?: Intent[]; phaseThreshold?: number }> = {
+  minion: { name: '크리스탈 미니언', affinity: 'CRYSTAL', subtitle: '작은 결정의 방', hp: 36, armor: 2, pattern: [attack(8), shield(8), attack(8)] },
+  gel: { name: '코러시브 젤', affinity: 'CORROSION', subtitle: '부식된 배양실', hp: 40, armor: 0, pattern: [attack(8), { type: 'attack', value: 7, label: '부식성 마법 · 취약 부여', inflictVulnerable: true }, charge, { ...attack(14, '부식 강타'), dangerous: true }] },
   slime: { name: '그린 슬라임', affinity: 'NEUTRAL', subtitle: '이끼 낀 실험실', hp: 48, armor: 0, pattern: [attack(8), { type: 'wait', value: 0, label: '대기 · 공격 없음' }] },
   beetle: { name: '아이언 비틀', affinity: 'METAL', subtitle: '버려진 제련소', hp: 60, armor: 5, pattern: [attack(11), shield(8), multi(6, 2, '더블 스트라이크'), charge] },
   flame: { name: '플레임 스피릿', affinity: 'FIRE', subtitle: '꺼지지 않는 화로', hp: 54, armor: 0, pattern: [{ type: 'fire', value: 12, label: '화염 공격' }, charge, { type: 'fire', value: 20, label: '플레임 버스트' }, charge] },

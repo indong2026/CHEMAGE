@@ -1,10 +1,16 @@
 import { ELEMENTS, ELEMENT_KEYS } from '../data/elements';
 import type { Element, Rng } from './types';
-export function drawElement(rng: Rng): Element {
+export function elementProbabilities(resonance: Partial<Record<Element, number>> = {}) {
+  const weights = ELEMENT_KEYS.map(e => ELEMENTS[e].probability * Math.min(2, Math.max(1, resonance[e] ?? 1)));
+  const total = weights.reduce((a, b) => a + b, 0);
+  return Object.fromEntries(ELEMENT_KEYS.map((e, i) => [e, weights[i] / total])) as Record<Element, number>;
+}
+export function drawElement(rng: Rng, resonance: Partial<Record<Element, number>> = {}): Element {
+  const probabilities = elementProbabilities(resonance);
   const roll = rng();
   let cumulative = 0;
   for (const element of ELEMENT_KEYS) {
-    cumulative += ELEMENTS[element].probability;
+    cumulative += probabilities[element];
     if (roll < cumulative) return element;
   }
   return 'Fe';

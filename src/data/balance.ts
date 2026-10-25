@@ -7,5 +7,7 @@ export const BALANCE = {
   carbon: { shield: 12, fireReduction: 5 }, iron: { shield: 16 },
   oxygen: { boost: 10 }, acid: { damage: 7, reduction: 3 },
   peroxide: { damage: 8, dot: 4 }, graphite: { shield: 10, reflect: 3 },
+  hydrogen: { damage: 7, shieldDamage: 4 }, alkali: { damage: 9, shieldDamage: 5 }, ferrous: { damage: 16, reduction: 3 },
+  neutralization: { damage: 8, shield: 6 },
   methane: { damage: 20 }, ironOxide: { damage: 14 },
 } as const;

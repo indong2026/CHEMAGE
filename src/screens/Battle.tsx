@@ -1,4 +1,5 @@
 import type { CSSProperties } from 'react';
+import { REACTIONS } from '../data/reactions';
 import { AFFINITIES } from '../data/affinities';
 import { PlayerStatus } from '../components/CombatStatus';
 import { SPELLS } from '../data/spells';
@@ -16,13 +17,13 @@ type Props = {
   game: GameState; selected: number[]; discoveries: SpellId[]; busy: boolean; tutorial: number;
   event: GameEvent | null; eventIndex: number; speed: number; discovery: SpellId | null;
   select: (ids: number[]) => void; act: (action: Action) => void; skip: () => void;
-  detail: (title: string, text: string) => void;
+  detail: (title: string, text: string) => void; hint?: () => void;
 };
-export function Battle({ game: g, selected, discoveries, busy, tutorial, event, eventIndex, speed, discovery, select, act, skip, detail }: Props) {
+export function Battle({ game: g, selected, discoveries, busy, tutorial, event, eventIndex, speed, discovery, select, act, skip, detail, hint }: Props) {
   const tiles = selected.map(id => g.inventory.find(t => t.id === id)!).filter(Boolean);
   const spell = matchRecipe(tiles.map(t => t.element));
   const preview = spell && !busy ? previewSpell(g, selected) : null;
-  const shortEffect = preview ? preview.shield ? `보호막 +${preview.shield} · 총 ${preview.totalShield}` : `예상 피해 ${preview.damage}${preview.blocked ? ` · 방어막 ${preview.blocked}` : ''}${preview.multiplier !== 1 ? ` · ×${preview.multiplier}` : ''}${preview.combo ? ' · COMBO 가능' : ''}` : spell?.effect.split(' · ')[0];
+  const shortEffect = preview ? preview.shield ? `보호막 +${preview.shield} · 총 ${preview.totalShield}` : `예상 피해 ${preview.damage}${preview.blocked ? ` · 방어막 ${preview.blocked}` : ''}${preview.multiplier !== 1 ? ` · ×${preview.multiplier}` : ''}${preview.combo ? ' · COMBO 가능' : ''}${preview.reactionShield ? ' · 보호막 +6' : ''}` : spell?.effect.split(' · ')[0];
   const craftable = SPELLS.filter(s => recipeIds(g.inventory, s));
   const canAttack = craftable.some(s => s.attack);
   const notice = busy && (event?.kind === 'turn-banner' || event?.kind === 'ready');
@@ -37,10 +38,10 @@ export function Battle({ game: g, selected, discoveries, busy, tutorial, event, 
     {tutorial < 3 && g.stage === 0 && <div className="first-lesson" role="status"><span>{tutorial + 1}/3</span>{guide}</div>}
     <section className={`instant-composer ${spell ? 'complete' : ''}`} aria-label="마법 조합">
       <div className="instant-slots">{Array.from({ length: B.maxSlots }, (_, i) => tiles[i] ? <ElementTile key={i} tile={tiles[i]} slot onClick={() => toggle(tiles[i].id)} disabled={busy} /> : <span className="instant-empty" key={i} aria-hidden="true">{tutorial === 0 && i < 3 ? ['H', 'H', 'O'][i] : '+'}</span>)}<button className="clear-selection" aria-label="선택 해제" disabled={busy || !selected.length} onClick={() => select([])}><Icon name="close" size={14} /></button></div>
-      <div className="instant-result" aria-live="polite">{spell ? <><b style={{ color: spell.color }}>{spell.display} <span>{spell.name}</span>{discovery === spell.id && <em>NEW</em>}</b><button aria-label={`${spell.name} 효과 자세히`} onClick={() => detail(spell.name, `${AFFINITIES[spell.affinity].name} 속성 · ${spell.effect}${spell.id === 'water' && g.upgrades.waterDamage ? ` · 강화 피해 +${g.upgrades.waterDamage}` : ''}\n${spell.fact}${!spell.attack && spell.id !== 'oxygen' && g.upgrades.shieldBonus ? `\n보호막 강화 +${g.upgrades.shieldBonus}` : ''}`)}>효과 ⓘ</button></> : <span>{busy ? '마법이 펼쳐지는 중…' : selected.length ? '조합을 바꿔 보세요. 원소는 소모되지 않아요.' : '원소를 골라 마법을 만드세요'}</span>}</div>
+      <div className="instant-result" aria-live="polite">{spell ? <><b style={{ color: spell.color }}>{spell.display} <span>{preview?.reaction ? REACTIONS[preview.reaction].name + ' 가능!' : spell.name}</span>{discovery === spell.id && <em>NEW</em>}</b><button aria-label={`${spell.name} 효과 자세히`} onClick={() => detail(spell.name, `${AFFINITIES[spell.affinity].name} 속성 · ${spell.effect}${spell.id === 'water' && g.upgrades.waterDamage ? ` · 강화 피해 +${g.upgrades.waterDamage}` : ''}\n${spell.fact}${!spell.attack && spell.id !== 'oxygen' && g.upgrades.shieldBonus ? `\n보호막 강화 +${g.upgrades.shieldBonus}` : ''}`)}>효과 ⓘ</button></> : <span>{busy ? '마법이 펼쳐지는 중…' : selected.length ? '조합을 바꿔 보세요. 원소는 소모되지 않아요.' : '원소를 골라 마법을 만드세요'}</span>}</div>
       {busy ? <button className="primary-button instant-cast casting-button" disabled={notice} onClick={skip}>연출 넘기기 <small>»</small></button> : <button className="primary-button instant-cast" disabled={!spell || !left} onClick={() => act({ type: 'cast', ids: selected })}><Icon name="spark" size={17} /><span>마법 발동{spell && <small className="cast-estimate">{shortEffect}</small>}</span></button>}
     </section>
-    <div className="spell-suggestions" aria-label="발견한 마법 추천"><span>빠른 조합</span>{known.map(s => <button key={s.id} disabled={busy} title={s.name} aria-label={`${s.name} 자동 선택`} onClick={() => select(recipeIds(g.inventory, s)!)} style={{ color: s.color }}>{s.display}</button>)}{!known.length && <small>{craftable.length ? '발견한 조합 없음 · 직접 조합해 보세요' : '조합 가능한 마법 없음'}</small>}</div>
+    <div className="spell-suggestions" aria-label="발견한 마법 추천"><span>빠른 조합</span>{known.map(s => <button key={s.id} disabled={busy} title={s.name} aria-label={`${s.name} 자동 선택`} onClick={() => select(recipeIds(g.inventory, s)!)} style={{ color: s.color }}>{s.display}</button>)}{!known.length && !hint && <small>{craftable.length ? '발견한 조합 없음 · 직접 조합해 보세요' : '조합 가능한 마법 없음'}</small>}{hint && !busy && <button className="discovery-hint" aria-label="새로운 마법을 발견할 수 있습니다! 힌트 보기" title="새로운 마법을 발견할 수 있습니다!" onClick={hint}><Icon name="bulb" size={15} /><span>발견 힌트</span></button>}</div>
     <section className={`compact-bag ${event?.kind === 'convert' && busy ? 'converting' : ''}`} aria-label="원소 보관함">
       <div className="bag-label"><span><Icon name="bag" size={13} /> 원소 가방</span><small>{g.inventory.length} / {g.upgrades.capacity}</small>{event?.kind === 'convert' && busy && <strong className="conversion-note" role="status">{event.text}</strong>}</div>
       <div className="inventory">{g.inventory.map(tile => <ElementTile key={tile.id} tile={tile} selected={selected.includes(tile.id)} fresh={g.freshIds.includes(tile.id)} hint={tutorial === 0 && !selected.includes(tile.id) && (tile.element === 'H' || tile.element === 'O')} onClick={() => toggle(tile.id)} disabled={busy || (!selected.includes(tile.id) && selected.length >= B.maxSlots)} />)}{g.inventory.length === 0 && <p className="empty-bag">원소를 모두 썼어요. 턴을 마치면 새 원소를 얻어요.</p>}</div>

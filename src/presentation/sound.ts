@@ -3,6 +3,9 @@ import type { GameEvent, Effect } from '../game/types';
 type AudioWindow = Window & { webkitAudioContext?: typeof AudioContext };
 type Voice = { frequency: number; end: number; duration: number; type: OscillatorType };
 const VOICES: Partial<Record<Effect, Voice>> = {
+  hydrogen: { frequency: 980, end: 440, duration: .15, type: 'sine' },
+  alkali: { frequency: 480, end: 980, duration: .2, type: 'triangle' },
+  ferrous: { frequency: 1500, end: 120, duration: .24, type: 'square' },
   water: { frequency: 780, end: 220, duration: .18, type: 'sine' },
   salt: { frequency: 1600, end: 620, duration: .12, type: 'triangle' },
   acid: { frequency: 180, end: 760, duration: .18, type: 'sawtooth' },
@@ -62,6 +65,7 @@ export class SynthAudio {
   select() { this.tone(600, 950, .045, 'triangle', .018); }
   complete() { [523, 659, 784].forEach((f, i) => this.tone(f, f, .12, 'sine', .025, i * .035)); }
   event(event: GameEvent) {
+    if (event.kind === 'reaction') { [440, 660, 880].forEach((f,i) => this.tone(f,f * 1.2,.16,'triangle',.03,i * .06)); return; }
     if (event.kind === 'turn-banner') {
       if (event.target === 'enemy') { this.tone(220, 110, .18, 'square', .025); this.tone(165, 82, .16, 'triangle', .025, .18); }
       return;

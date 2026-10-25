@@ -52,7 +52,7 @@ describe('즉시 시전과 턴 경계', () => {
       const s = newGame(seededRng(seed));
       expect(s.route[0]).toBe('slime'); expect(s.inventory).toHaveLength(5); expect(s.upgrades.capacity).toBe(12);
       expect(recipeIds(s.inventory, SPELL_BY_ID.water)).toHaveLength(3);
-      expect(new Set(s.route)).toEqual(new Set(['slime', 'beetle', 'flame', 'elite', 'golem']));
+      expect(new Set(s.route).size).toBe(5); expect(s.route.slice(3)).toEqual(['elite', 'golem']);
     }
   });
   it('첫 마법은 해당 원소만 소모하고 적 행동과 드로우 없이 두 번째 선택을 기다린다', () => {
@@ -185,8 +185,10 @@ describe('승패, 예고, 보상과 도감', () => {
     }
   });
   it.each(REWARDS)('호환 보상 $id가 적용되고 새로운 전투는 원소 5개로 시작한다', reward => {
-    const s = won(); s.rewards = [reward.id]; s.mana = 60; const n = chooseReward(s, reward.id, fixed);
+    const s = won(); s.rewards = [reward.id]; s.mana = 60; const n = chooseReward(s, reward.id, fixed, reward.id === 'resonance' ? 'H' : undefined);
     if (reward.stat) expect(n.upgrades[reward.stat]).toBe(s.upgrades[reward.stat] + reward.amount);
+    else if (reward.id === 'research') expect(n.upgrades.research).toBe(true);
+    else if (reward.id === 'resonance') expect(n.upgrades.resonance.H).toBe(1.5);
     else expect(n.hp).toBe(60);
     expect(n.inventory).toHaveLength(5); expect(n.mana).toBe(60); expect(n.stage).toBe(1); expect(n.spellsUsed).toBe(0);
     expect(n.taken).toContain(reward.id); expect(n.enemy.acid + n.enemy.wet + n.enemy.dot).toBe(0);

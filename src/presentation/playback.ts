@@ -1,6 +1,7 @@
 import type { GameEvent } from '../game/types';
 
 export function eventDuration(event: GameEvent) {
+  if (event.kind === 'reaction') return 650;
   if (event.kind === 'shield-end') return 200;
   if (event.kind === 'turn-banner') return 700;
   if (event.kind === 'ready') return 800;

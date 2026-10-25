@@ -1,7 +1,7 @@
 import { act, fireEvent, render, screen, within } from '@testing-library/react';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import App from '../App';
-import { CODEX_KEY } from '../game/codex';
+import { CODEX_KEY, REACTIONS_KEY } from '../game/codex';
 import type { Element } from '../game/types';
 const scenario = vi.hoisted(() => ({ mode: 'normal' }));
 vi.mock('../game/engine', async importOriginal => {
@@ -12,6 +12,7 @@ vi.mock('../game/engine', async importOriginal => {
     s.inventory = elements.map((element, i) => ({ id: i + 1, element })); s.nextId = 100;
     if (scenario.mode === 'boss') { s.stage = 4; s.enemy.id = 'golem'; s.enemy.hp = 1; }
     if (scenario.mode === 'burst') { s.mana = 100; s.enemy.id = 'golem'; s.enemy.hp = 120; }
+    if (scenario.mode === 'research') { s.upgrades.research = true; s.mana = 80; }
     if (scenario.mode === 'ready') s.mana = 90;
     if (scenario.mode === 'shield') s.enemy.intent = { type: 'attack', value: 24, label: '결정 강타' };
     if (scenario.mode === 'defeat') { s.hp = 1; s.enemy.intent = { type: 'attack', value: 20, label: '공격' }; }
@@ -28,6 +29,17 @@ function finish() { act(() => vi.runAllTimers()); }
 function cast() { fireEvent.click(screen.getByRole('button', { name: /마법 발동/ })); }
 
 describe('즉시 시전 UI', { timeout: 15_000 }, () => {
+  it('새 마법 시전에서만 연구 마력과 READY를 지급하고 조합만 하면 발견하지 않는다', () => {
+    scenario.mode = 'research'; start(); select('수소 H'); select('수소 H', 1);
+    expect(screen.getByLabelText('마력')).toHaveAttribute('aria-valuenow', '80');
+    expect(localStorage.getItem(CODEX_KEY)).toBeNull();
+    expect(screen.getByLabelText('남은 마법 2회')).toBeInTheDocument();
+    select('산소 O'); cast(); finish();
+    expect(screen.getByLabelText('마력')).toHaveAttribute('aria-valuenow', '100');
+    expect(JSON.parse(localStorage.getItem(CODEX_KEY)!)).toEqual(['water']);
+    expect(screen.getByLabelText('남은 마법 1회')).toBeInTheDocument();
+    expect(document.querySelector('.battle-notice')).toBeNull();
+  });
   it('시작 배너 동안 입력 잠금, 첫 마법에는 배너 없이 두 번째 뒤 적 턴으로 전환한다', () => {
     start(true); expect(screen.getByText('YOUR TURN', { selector: '.notice-band b' })).toBeInTheDocument();
     expect(screen.getByRole('button', { name: /턴 종료/ })).toBeDisabled();
@@ -35,7 +47,7 @@ describe('즉시 시전 UI', { timeout: 15_000 }, () => {
     expect(screen.queryByRole('button', { name: /방어하고/ })).not.toBeInTheDocument();
     water(); cast(); finish(); expect(document.querySelector('.battle-notice')).toBeNull();
     select('나트륨 Na'); select('염소 Cl'); expect(screen.getByText('예상 피해 15 · COMBO 가능')).toBeInTheDocument(); cast();
-    act(() => vi.advanceTimersByTime(580)); expect(screen.getByText('ENEMY TURN')).toBeInTheDocument();
+    act(() => vi.advanceTimersByTime(1230)); expect(screen.getByText('ENEMY TURN')).toBeInTheDocument();
     expect(screen.getByLabelText('내 체력')).toHaveAttribute('aria-valuenow', '60'); finish();
     expect(screen.getByText('턴 2')).toBeInTheDocument(); expect(screen.getByLabelText('내 체력')).toHaveAttribute('aria-valuenow', '52');
   });
@@ -68,16 +80,17 @@ describe('즉시 시전 UI', { timeout: 15_000 }, () => {
     scenario.mode = 'overflow'; start(); expect(screen.getByText('조합 가능한 마법 없음')).toBeInTheDocument();
     expect(screen.getByRole('button', { name: /턴 종료/ })).toHaveClass('suggested');
   });
-  it('첫 전투는 예약 목록 없이 조합을 안내하고, 화학식 완성 즉시 발견을 저장한다', () => {
+  it('첫 전투는 조합을 안내하되 완성·취소로는 발견되지 않고 시전해야 저장한다', () => {
     start(); expect(screen.getByText(/H 두 개와 O 하나/)).toBeInTheDocument();
     expect(screen.queryByRole('region', { name: '연쇄 목록' })).not.toBeInTheDocument();
     expect(screen.queryByRole('button', { name: '정제' })).not.toBeInTheDocument();
     water(); expect(screen.getByText(/완성! 아래 마법 발동/)).toBeInTheDocument();
-    expect(JSON.parse(localStorage.getItem(CODEX_KEY)!)).toEqual(['water']);
+    expect(localStorage.getItem(CODEX_KEY)).toBeNull();
     expect(screen.getByRole('region', { name: '원소 보관함' })).toHaveTextContent('5 / 12');
     fireEvent.click(screen.getByRole('button', { name: '선택 해제' }));
     expect(screen.getByRole('button', { name: /마법 발동/ })).toBeDisabled();
-    expect(JSON.parse(localStorage.getItem(CODEX_KEY)!)).toEqual(['water']);
+    expect(localStorage.getItem(CODEX_KEY)).toBeNull();
+    water(); cast(); finish(); expect(JSON.parse(localStorage.getItem(CODEX_KEY)!)).toEqual(['water']);
   });
   it('첫 시전 발사 때 HP를 유지하고 명중 때 감소, 이후 적 턴 없이 남은 마법 1회', () => {
     start(); const hp = Number(screen.getByLabelText('적 체력').getAttribute('aria-valuenow'));
@@ -90,8 +103,8 @@ describe('즉시 시전 UI', { timeout: 15_000 }, () => {
   });
   it('두 번째 마법을 바로 사용하면 COMBO 뒤 적 행동과 새 턴으로 이어진다', () => {
     start(); water(); cast(); finish(); select('나트륨 Na'); select('염소 Cl'); cast();
-    act(() => vi.advanceTimersByTime(270)); expect(screen.getAllByText(/COMBO!/).length).toBeGreaterThan(0);
-    finish(); expect(screen.getByText('턴 2')).toBeInTheDocument(); expect(screen.getByLabelText('남은 마법 2회')).toBeInTheDocument();
+    act(() => vi.advanceTimersByTime(270 + 650)); expect(screen.getAllByText(/COMBO!/).length).toBeGreaterThan(0);
+    finish(); expect(JSON.parse(localStorage.getItem(REACTIONS_KEY)!)).toContain('crystallization'); expect(screen.getByText('턴 2')).toBeInTheDocument(); expect(screen.getByLabelText('남은 마법 2회')).toBeInTheDocument();
     expect(screen.queryByText(/한 번 더 시전하거나/)).not.toBeInTheDocument(); expect(screen.getByLabelText('내 체력')).toHaveAttribute('aria-valuenow', '52');
   });
   it('발견한 마법만 추천하고 추천 클릭은 원소 선택만 하며 시전하지 않는다', () => {

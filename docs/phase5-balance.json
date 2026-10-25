@@ -1,0 +1,548 @@
+{
+  "seedRange": [
+    1,
+    200
+  ],
+  "note": "All formulas known to policy, independent empty discovery records per run; random 3-of-5 route; reaction +7 per reaction; stockpile cost penalty 1.7; burst mana weight .65; one-turn greedy policies, not human win rates. Attack/affinity policies weight HP preservation at 1.2 and allow defensive spells. Attack approximates nominal damage by dividing observed HP damage by matchup; affinity evaluates actual damage; shield only uses support magic and ZERO; mixed can use all spells.",
+  "reports": [
+    {
+      "strategy": "attack",
+      "runs": 200,
+      "wins": 158,
+      "defeats": 42,
+      "stalled": 0,
+      "turns": 4525,
+      "casts": 7638,
+      "bursts": 627,
+      "conversions": 107,
+      "combos": 1038,
+      "effectiveHits": 531,
+      "resistedHits": 730,
+      "defenseActions": 2668,
+      "stageTurns": [
+        928,
+        592,
+        730,
+        1149,
+        1126
+      ],
+      "stageVisits": [
+        200,
+        200,
+        200,
+        200,
+        192
+      ],
+      "losses": [
+        0,
+        0,
+        0,
+        8,
+        34
+      ],
+      "firstTurnKills": 18,
+      "reactions": {
+        "neutralization": 28,
+        "combustion": 13,
+        "crystallization": 246
+      },
+      "spellUsage": {
+        "water": 1122,
+        "salt": 725,
+        "carbon": 70,
+        "iron": 416,
+        "oxygen": 899,
+        "acid": 594,
+        "peroxide": 53,
+        "graphite": 2154,
+        "methane": 88,
+        "ironOxide": 472,
+        "hydrogen": 627,
+        "alkali": 370,
+        "ferrous": 48
+      },
+      "enemyVisits": {
+        "gel": 132,
+        "flame": 125,
+        "beetle": 120,
+        "elite": 200,
+        "golem": 192,
+        "slime": 113,
+        "minion": 110
+      },
+      "winningSeeds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "strategy": "affinity",
+      "runs": 200,
+      "wins": 156,
+      "defeats": 44,
+      "stalled": 0,
+      "turns": 4499,
+      "casts": 7596,
+      "bursts": 622,
+      "conversions": 97,
+      "combos": 996,
+      "effectiveHits": 634,
+      "resistedHits": 553,
+      "defenseActions": 2657,
+      "stageTurns": [
+        916,
+        580,
+        724,
+        1132,
+        1147
+      ],
+      "stageVisits": [
+        200,
+        200,
+        200,
+        200,
+        195
+      ],
+      "losses": [
+        0,
+        0,
+        0,
+        5,
+        39
+      ],
+      "firstTurnKills": 19,
+      "reactions": {
+        "neutralization": 54,
+        "combustion": 13,
+        "crystallization": 180
+      },
+      "spellUsage": {
+        "water": 1004,
+        "salt": 635,
+        "carbon": 69,
+        "iron": 399,
+        "oxygen": 910,
+        "acid": 686,
+        "peroxide": 79,
+        "graphite": 2135,
+        "methane": 98,
+        "ironOxide": 485,
+        "hydrogen": 643,
+        "alkali": 412,
+        "ferrous": 41
+      },
+      "enemyVisits": {
+        "gel": 132,
+        "flame": 125,
+        "beetle": 120,
+        "elite": 200,
+        "golem": 195,
+        "slime": 113,
+        "minion": 110
+      },
+      "winningSeeds": [
+        1,
+        3,
+        4,
+        5,
+        7,
+        9,
+        10,
+        11,
+        12,
+        13
+      ]
+    },
+    {
+      "strategy": "shield",
+      "runs": 200,
+      "wins": 3,
+      "defeats": 197,
+      "stalled": 0,
+      "turns": 6049,
+      "casts": 4323,
+      "bursts": 1221,
+      "conversions": 7612,
+      "combos": 0,
+      "effectiveHits": 0,
+      "resistedHits": 0,
+      "defenseActions": 3100,
+      "stageTurns": [
+        1905,
+        1670,
+        1247,
+        963,
+        264
+      ],
+      "stageVisits": [
+        200,
+        196,
+        157,
+        130,
+        35
+      ],
+      "losses": [
+        4,
+        39,
+        27,
+        95,
+        32
+      ],
+      "firstTurnKills": 0,
+      "reactions": {
+        "neutralization": 0,
+        "combustion": 0,
+        "crystallization": 0
+      },
+      "spellUsage": {
+        "water": 0,
+        "salt": 0,
+        "carbon": 51,
+        "iron": 799,
+        "oxygen": 1223,
+        "acid": 0,
+        "peroxide": 0,
+        "graphite": 2250,
+        "methane": 0,
+        "ironOxide": 0,
+        "hydrogen": 0,
+        "alkali": 0,
+        "ferrous": 0
+      },
+      "enemyVisits": {
+        "gel": 127,
+        "flame": 116,
+        "beetle": 111,
+        "elite": 130,
+        "slime": 105,
+        "golem": 35,
+        "minion": 94
+      },
+      "winningSeeds": [
+        85,
+        112,
+        180
+      ]
+    },
+    {
+      "strategy": "mixed",
+      "runs": 200,
+      "wins": 160,
+      "defeats": 40,
+      "stalled": 0,
+      "turns": 4599,
+      "casts": 7780,
+      "bursts": 646,
+      "conversions": 155,
+      "combos": 992,
+      "effectiveHits": 619,
+      "resistedHits": 570,
+      "defenseActions": 2886,
+      "stageTurns": [
+        923,
+        580,
+        736,
+        1159,
+        1201
+      ],
+      "stageVisits": [
+        200,
+        200,
+        200,
+        200,
+        195
+      ],
+      "losses": [
+        0,
+        0,
+        0,
+        5,
+        35
+      ],
+      "firstTurnKills": 22,
+      "reactions": {
+        "neutralization": 62,
+        "combustion": 14,
+        "crystallization": 174
+      },
+      "spellUsage": {
+        "water": 1052,
+        "salt": 625,
+        "carbon": 86,
+        "iron": 481,
+        "oxygen": 913,
+        "acid": 686,
+        "peroxide": 87,
+        "graphite": 2257,
+        "methane": 88,
+        "ironOxide": 410,
+        "hydrogen": 628,
+        "alkali": 423,
+        "ferrous": 44
+      },
+      "enemyVisits": {
+        "gel": 132,
+        "flame": 125,
+        "beetle": 120,
+        "elite": 200,
+        "golem": 195,
+        "slime": 113,
+        "minion": 110
+      },
+      "winningSeeds": [
+        1,
+        2,
+        3,
+        4,
+        7,
+        9,
+        10,
+        11,
+        12,
+        13
+      ]
+    },
+    {
+      "strategy": "reaction",
+      "runs": 200,
+      "wins": 162,
+      "defeats": 38,
+      "stalled": 0,
+      "turns": 4599,
+      "casts": 7786,
+      "bursts": 642,
+      "conversions": 134,
+      "combos": 1004,
+      "effectiveHits": 618,
+      "resistedHits": 561,
+      "defenseActions": 2884,
+      "stageTurns": [
+        923,
+        581,
+        738,
+        1158,
+        1199
+      ],
+      "stageVisits": [
+        200,
+        200,
+        200,
+        200,
+        195
+      ],
+      "losses": [
+        0,
+        0,
+        0,
+        5,
+        33
+      ],
+      "firstTurnKills": 22,
+      "reactions": {
+        "neutralization": 85,
+        "combustion": 18,
+        "crystallization": 184
+      },
+      "spellUsage": {
+        "water": 1039,
+        "salt": 630,
+        "carbon": 86,
+        "iron": 480,
+        "oxygen": 920,
+        "acid": 694,
+        "peroxide": 83,
+        "graphite": 2233,
+        "methane": 84,
+        "ironOxide": 414,
+        "hydrogen": 636,
+        "alkali": 444,
+        "ferrous": 43
+      },
+      "enemyVisits": {
+        "gel": 132,
+        "flame": 125,
+        "beetle": 120,
+        "elite": 200,
+        "golem": 195,
+        "slime": 113,
+        "minion": 110
+      },
+      "winningSeeds": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        9,
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "strategy": "stockpile",
+      "runs": 200,
+      "wins": 184,
+      "defeats": 16,
+      "stalled": 0,
+      "turns": 4571,
+      "casts": 7368,
+      "bursts": 634,
+      "conversions": 275,
+      "combos": 981,
+      "effectiveHits": 640,
+      "resistedHits": 573,
+      "defenseActions": 2586,
+      "stageTurns": [
+        912,
+        592,
+        703,
+        1118,
+        1246
+      ],
+      "stageVisits": [
+        200,
+        200,
+        200,
+        200,
+        198
+      ],
+      "losses": [
+        0,
+        0,
+        0,
+        2,
+        14
+      ],
+      "firstTurnKills": 14,
+      "reactions": {
+        "neutralization": 60,
+        "combustion": 16,
+        "crystallization": 192
+      },
+      "spellUsage": {
+        "water": 1138,
+        "salt": 618,
+        "carbon": 126,
+        "iron": 429,
+        "oxygen": 819,
+        "acid": 676,
+        "peroxide": 66,
+        "graphite": 1971,
+        "methane": 98,
+        "ironOxide": 464,
+        "hydrogen": 536,
+        "alkali": 382,
+        "ferrous": 45
+      },
+      "enemyVisits": {
+        "gel": 132,
+        "flame": 125,
+        "beetle": 120,
+        "elite": 200,
+        "golem": 198,
+        "slime": 113,
+        "minion": 110
+      },
+      "winningSeeds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "strategy": "burst",
+      "runs": 200,
+      "wins": 163,
+      "defeats": 37,
+      "stalled": 0,
+      "turns": 4778,
+      "casts": 7968,
+      "bursts": 559,
+      "conversions": 148,
+      "combos": 1057,
+      "effectiveHits": 620,
+      "resistedHits": 541,
+      "defenseActions": 2892,
+      "stageTurns": [
+        925,
+        595,
+        758,
+        1226,
+        1274
+      ],
+      "stageVisits": [
+        200,
+        200,
+        200,
+        200,
+        191
+      ],
+      "losses": [
+        0,
+        0,
+        0,
+        9,
+        28
+      ],
+      "firstTurnKills": 22,
+      "reactions": {
+        "neutralization": 63,
+        "combustion": 13,
+        "crystallization": 172
+      },
+      "spellUsage": {
+        "water": 1010,
+        "salt": 635,
+        "carbon": 48,
+        "iron": 468,
+        "oxygen": 972,
+        "acid": 699,
+        "peroxide": 74,
+        "graphite": 2313,
+        "methane": 90,
+        "ironOxide": 438,
+        "hydrogen": 721,
+        "alkali": 463,
+        "ferrous": 37
+      },
+      "enemyVisits": {
+        "gel": 132,
+        "flame": 125,
+        "beetle": 120,
+        "elite": 200,
+        "golem": 191,
+        "slime": 113,
+        "minion": 110
+      },
+      "winningSeeds": [
+        1,
+        2,
+        4,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        13
+      ]
+    }
+  ]
+}
