@@ -8,7 +8,7 @@ import { isDangerous } from './danger';
 import type { Element, GameState, SpellId } from './types';
 const rng = () => .5;
 function fixture(elements: Element[]) {
-  const s = newGame(rng); s.enemy.id = 'golem'; s.enemy.hp = 120;
+  const s = newGame(rng); s.enemy.id = 'slime'; s.enemy.hp = 120;
   s.enemy.intent = { type: 'fire', value: 40, label: '검증용 화염' };
   s.inventory = elements.map((element, i) => ({ id: i + 1, element })); s.nextId = 100;
   return s;
@@ -33,23 +33,23 @@ describe('합산 보호막', () => {
     expect(hit.frame?.playerShield).toBe(0); expect(n.playerShield).toBe(0);
     expect(n.enemy.hp).toBe(120 - reflection); expect(n.stats.enemyActions).toBe(1); expect(n.stats.casts).toBe(2); expect(n.turn).toBe(2);
   });
-  it('Fe + 강화 방어를 더하며 중복 revision은 거절한다', () => {
-    const s = cast(fixture(['Fe']), 'iron'); s.upgrades.guard = 11;
-    const n = performAction(s, { type: 'guard' }, s.revision, rng);
-    expect(ward(n).value).toBe(11); expect(ward(n).frame?.playerShield).toBe(27);
-    expect(performAction(n, { type: 'guard' }, s.revision, rng)).toBe(n);
+  it('강화된 Fe 보호막을 유지하고 턴 종료의 중복 revision은 거절한다', () => {
+    const initial = fixture(['Fe']); initial.upgrades.shieldBonus = 6; const s = cast(initial, 'iron');
+    const n = performAction(s, { type: 'endTurn' }, s.revision, rng);
+    expect(s.playerShield).toBe(22); expect(n.events.some(e => e.kind === 'shield')).toBe(false);
+    expect(performAction(n, { type: 'endTurn' }, s.revision, rng)).toBe(n);
     expect(n.stats.enemyActions).toBe(1); expect(n.playerShield).toBe(0);
   });
   it('실제 방어 보상은 다음 전투의 보호막 증가량에 적용된다', () => {
     const s = fixture([]); s.screen = 'reward'; s.rewards = ['guard'];
-    const next = chooseReward(s, 'guard', rng), n = performAction(next, { type: 'guard' }, next.revision, rng);
-    expect(ward(n).value).toBe(11); expect(next.upgrades.guard).toBe(11);
+    const next = chooseReward(s, 'guard', rng); next.inventory = [{ id: 100, element: 'Fe' }]; const n = cast(next, 'iron');
+    expect(ward(n).value).toBe(19); expect(next.upgrades.shieldBonus).toBe(3);
   });
   it('흡수 후 남은 보호막도 대기/공격 행동 종료 시 사라진다', () => {
     for (const type of ['wait', 'attack'] as const) {
       const s = fixture(['Fe']); s.enemy.intent = { type, value: type === 'wait' ? 0 : 5, label: '검증' };
-      const n = performAction(cast(s, 'iron'), { type: 'guard' }, 1, rng);
-      if (type === 'attack') expect(n.events.find(e => e.kind === 'damage' && e.target === 'player')?.frame?.playerShield).toBe(19);
+      const n = performAction(cast(s, 'iron'), { type: 'endTurn' }, 1, rng);
+      if (type === 'attack') expect(n.events.find(e => e.kind === 'damage' && e.target === 'player')?.frame?.playerShield).toBe(11);
       expect(n.hp).toBe(60); expect(n.playerShield).toBe(0); expect(n.turnEffects.reflect).toBe(0);
     }
   });
@@ -77,7 +77,7 @@ describe('피해 예측과 위험 예고', () => {
   });
   it('HCl 자신의 명중에는 아직 부여하지 않은 부식을 적용하지 않는다', () => {
     const s = fixture(['H', 'Cl']); s.enemy.id = 'beetle';
-    expect(previewSpell(s, [1, 2])?.damage).toBe(2);
+    expect(previewSpell(s, [1, 2])?.damage).toBe(5);
   });
   it('일반 공격과 대기는 경고하지 않고 현재 예고된 강공격만 경고한다', () => {
     expect(isDangerous(ENEMIES.slime.pattern[0])).toBe(false);
@@ -85,8 +85,8 @@ describe('피해 예측과 위험 예고', () => {
     expect(isDangerous(ENEMIES.golem.pattern[2])).toBe(true);
     expect(isDangerous(ENEMIES.flame.pattern[2])).toBe(true);
     const s = fixture([]); s.enemy.intent = { ...ENEMIES.golem.pattern[2] };
-    const n = performAction(s, { type: 'guard' }, s.revision, rng);
+    const n = performAction(s, { type: 'endTurn' }, s.revision, rng);
     expect(n.events.find(e => e.kind === 'enemy')?.value).toBe(24);
-    expect(n.hp).toBe(44);
+    expect(n.hp).toBe(36);
   });
 });

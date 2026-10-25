@@ -10,7 +10,7 @@ import { CODEX_KEY, loadDiscoveries, saveDiscoveries } from './codex';
 import { recipeIds } from './suggestions';
 import type { Action, Element, EnemyId, GameState, RewardId, SpellId } from './types';
 const fixed = () => .1;
-function fixture(elements: Element[] = [], id: EnemyId = 'golem') {
+function fixture(elements: Element[] = [], id: EnemyId = 'slime') {
   const s = newGame(fixed);
   s.enemy = { id, hp: 200, shield: 0, wet: 0, acid: 0, dot: 0, phase: 1, intent: { type: 'wait', value: 0, label: '대기' }, patternIndex: 0 };
   s.inventory = elements.map((element, i) => ({ id: i + 1, element })); s.nextId = 100; s.freshIds = [];
@@ -74,10 +74,10 @@ describe('즉시 시전과 턴 경계', () => {
     const s = cast(fixture(['H', 'H', 'O', 'C']), 'water'); const n = end(s);
     expect(n.turn).toBe(2); expect(n.inventory.some(t => t.id === 4)).toBe(true); expect(n.mana).toBe(10); expect(n.stats.turns).toBe(1);
   });
-  it('마법을 만들 수 없어도 방어로 진행하며 다음 턴에 보호막이 남지 않는다', () => {
+  it('마법을 만들 수 없으면 무료 보호막 없이 턴 종료로 진행한다', () => {
     const s = fixture(['Na']); s.enemy.intent = { type: 'attack', value: 9, label: '공격' };
-    const n = act(s, { type: 'guard' }); expect(n.hp).toBe(59); expect(n.turn).toBe(2); expect(n.playerShield).toBe(0);
-    n.enemy.intent = { type: 'attack', value: 9, label: '공격' }; expect(end(n).hp).toBe(50);
+    const n = act(s, { type: 'endTurn' }); expect(n.hp).toBe(51); expect(n.turn).toBe(2); expect(n.playerShield).toBe(0);
+    n.enemy.intent = { type: 'attack', value: 9, label: '공격' }; expect(end(n).hp).toBe(42);
   });
   it('같은 revision을 사용한 빠른 중복 시전은 거절한다', () => {
     const s = fixture(['Fe', 'Fe']); const n = cast(s, 'iron');
@@ -86,7 +86,7 @@ describe('즉시 시전과 턴 경계', () => {
   });
   it('기존 예약, 방출, 공격, 정제 명령은 런타임에서도 처리하지 않는다', () => {
     const s = fixture();
-    for (const type of ['chain', 'release', 'attack', 'refine']) expect(act(s, { type } as Action)).toBe(s);
+    for (const type of ['chain', 'release', 'attack', 'refine', 'guard']) expect(act(s, { type } as Action)).toBe(s);
   });
   it('연출 없는 시뮬레이션과 실제 엔진의 최종 상태가 일치한다', () => {
     const s = fixture(['H', 'H', 'O']); s.spellsUsed = 1;
@@ -111,9 +111,9 @@ describe('보호막과 연계는 두 시전 사이에 유지된다', () => {
     const s = fixture(['C', 'C'], 'beetle'); s.enemy.intent = { type: 'attack', value: 12, label: '공격' };
     const n = cast(cast(s, 'graphite'), 'graphite'); expect(n.hp).toBe(60); expect(n.enemy.hp).toBe(197);
   });
-  it('방어 행동이 기존 강한 보호막을 낮추지 않고 반사 효과도 유지한다', () => {
+  it('턴 종료는 추가 보호막 없이 마법 보호막과 반사를 유지한다', () => {
     const s = fixture(['C']); s.enemy.intent = { type: 'attack', value: 12, label: '공격' };
-    const n = act(cast(s, 'graphite'), { type: 'guard' }); expect(n.hp).toBe(60); expect(n.enemy.hp).toBe(197);
+    const n = act(cast(s, 'graphite'), { type: 'endTurn' }); expect(n.hp).toBe(58); expect(n.enemy.hp).toBe(197);
   });
   it('H₂O → NaCl은 COMBO +4, 역순에서는 추가 피해가 없다', () => {
     const s = fixture(['H', 'H', 'O', 'Na', 'Cl']);
@@ -131,7 +131,7 @@ describe('보호막과 연계는 두 시전 사이에 유지된다', () => {
   });
   it('HCl 자체는 기존 방어, 두 번째 공격은 감소한 방어를 사용한다', () => {
     const s = fixture(['H', 'Cl', 'Fe', 'O'], 'beetle'); const armor = ENEMIES.beetle.armor;
-    const first = cast(s, 'acid'); expect(first.enemy.hp).toBe(200 - Math.max(0, 7 - armor)); expect(enemyArmor(first)).toBe(Math.max(0, armor - 3));
+    const first = cast(s, 'acid'); expect(first.enemy.hp).toBe(200 - Math.max(0, 10 - armor)); expect(enemyArmor(first)).toBe(Math.max(0, armor - 3));
     const n = cast(first, 'ironOxide'); expect(n.enemy.hp).toBe(first.enemy.hp - (14 - Math.max(0, armor - 3))); expect(n.enemy.acid).toBe(2);
   });
   it('젖음/부식은 시전 사이에 감소하지 않고 이후 턴 종료 때만 감소한다', () => {
@@ -173,15 +173,15 @@ describe('승패, 예고, 보상과 도감', () => {
     const n = end(cast(s, 'graphite')); expect(n.screen).toBe('defeat'); expect(n.hp).toBe(0);
   });
   it('보스 문턱을 넘어도 첫 시전에서는 예고가 그대로이고 적 행동 후 다음 패턴이 바뀐다', () => {
-    const s = fixture(['H', 'H', 'O']); s.enemy.hp = ENEMIES.golem.phaseThreshold! + 2; s.enemy.intent = { type: 'attack', value: 10, label: '공격' };
+    const s = fixture(['H', 'H', 'O'], 'golem'); s.enemy.hp = ENEMIES.golem.phaseThreshold! + 2; s.enemy.intent = { type: 'attack', value: 10, label: '공격' };
     const first = cast(s, 'water'); expect(first.enemy.phase).toBe(1); expect(first.enemy.intent.value).toBe(10);
     const n = end(first); expect(n.hp).toBe(50); expect(n.enemy.phase).toBe(2); expect(n.enemy.intent.value).toBe(ENEMIES.golem.phase2![0].value);
   });
   it('모든 적의 양 페이즈 예고가 실제 공격과 일치한다', () => {
     for (const id of Object.keys(ENEMIES) as EnemyId[]) for (const intent of [...ENEMIES[id].pattern, ...(ENEMIES[id].phase2 ?? [])]) {
       const s = fixture([], id); s.enemy.intent = { ...intent };
-      const n = act(s, { type: 'guard' }); expect(n.hp).toBe(60 - (['attack', 'fire'].includes(intent.type) ? Math.max(0, intent.value - 8) : 0));
-      expect(n.events.find(e => e.kind === 'enemy')?.text).toBe(`${intent.label}${intent.value ? ` ${intent.value}` : ''}`);
+      const n = act(s, { type: 'endTurn' }); expect(n.hp).toBe(60 - (['attack', 'fire'].includes(intent.type) ? intent.value : 0));
+      expect(n.events.filter(e => e.kind === 'enemy').map(e => e.value)).toEqual(intent.hits ? intent.hits.map(h => h.value) : [intent.value]);
     }
   });
   it.each(REWARDS)('호환 보상 $id가 적용되고 새로운 전투는 원소 5개로 시작한다', reward => {

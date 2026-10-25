@@ -11,7 +11,7 @@ function setup(elements: Element[] = []) {
 }
 const run = (s: GameState, action: Action) => performAction(s, action, s.revision, () => .1);
 it('가방 12개가 꽉 차면 새 원소 3개만 변환하며 기존 ID를 보존한다', () => {
-  const s = setup(Array(12).fill('H')); const n = run(s, { type: 'guard' });
+  const s = setup(Array(12).fill('H')); const n = run(s, { type: 'endTurn' });
   expect(n.inventory).toEqual(s.inventory); expect(n.mana).toBe(45); expect(n.stats.converted).toBe(3);
   expect(n.events.find(e => e.kind === 'convert')?.tiles?.map(t => t.id)).toEqual([100, 101, 102]);
   expect(n.enemy.hp).toBe(200); expect(n.turn).toBe(2);
@@ -23,11 +23,11 @@ it('빈 칸만큼 먼저 저장하고 새 초과분만 마력으로 변환한다
 });
 it('가방 확장이 적용되며 정상 획득에서는 마력이 생기지 않는다', () => {
   const s = setup(Array(11).fill('Na')); s.upgrades.capacity = 14;
-  const n = run(s, { type: 'guard' }); expect(n.inventory).toHaveLength(14); expect(n.mana).toBe(0);
+  const n = run(s, { type: 'endTurn' }); expect(n.inventory).toHaveLength(14); expect(n.mana).toBe(0);
 });
 it('마법과 초과 변환 모두 마력 100에서 제한되며 실제 획득량을 표시한다', () => {
   const s = setup(Array(12).fill('Na')); s.mana = 95;
-  const n = run(s, { type: 'guard' }); expect(n.mana).toBe(100); expect(n.events.find(e => e.kind === 'convert')?.value).toBe(5);
+  const n = run(s, { type: 'endTurn' }); expect(n.mana).toBe(100); expect(n.events.find(e => e.kind === 'convert')?.value).toBe(5);
   const c = setup(['C']); c.mana = 95; expect(run(c, { type: 'cast', ids: [1] }).mana).toBe(100);
 });
 it('마력 99에서는 필살기를 거절하며 가방을 비워도 자동 발동하지 않는다', () => {

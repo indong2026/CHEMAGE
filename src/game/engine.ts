@@ -3,6 +3,8 @@ import { ENEMIES } from '../data/enemies';
 import { REWARDS } from '../data/rewards';
 import { matchRecipe } from './recipes';
 import { drawElement, shuffle } from './random';
+import { multiplier } from '../data/affinities';
+import { SPELL_BY_ID } from '../data/spells';
 import { incomingAction } from './incoming';
 import type { Action, BattleFrame, Effect, Element, EnemyId, GameEvent, GameState, RewardId, Rng, Tile, TurnEffects } from './types';
 
@@ -39,7 +41,7 @@ export function newGame(rng: Rng = Math.random): GameState {
   return startBattle({
     screen: 'battle', route, stage: 0, turn: 1, revision: 0, hp: B.maxHp,
     inventory: [], freshIds: [], nextId: 1, boost: false, playerShield: 0, spellsUsed: 0, mana: 0, turnEffects: emptyEffects(), enemy: {} as GameState['enemy'],
-    upgrades: { capacity: B.capacity, waterDamage: 0, guard: B.guard, draw: B.draw },
+    upgrades: { capacity: B.capacity, waterDamage: 0, shieldBonus: 0, draw: B.draw },
     rewards: [], taken: [], discoveries: [], events: [],
     stats: { turns: 0, casts: 0, defeated: 0, bursts: 0, converted: 0, enemyActions: 0, damage: 0 },
   }, rng);
@@ -51,9 +53,10 @@ function hurtEnemy(s: GameState, raw: number, pierce = 0, ignoreShield = false) 
   let damage = Math.max(0, raw - Math.max(0, enemyArmor(s) - pierce));
   const blocked = ignoreShield ? 0 : Math.min(s.enemy.shield, damage);
   s.enemy.shield -= blocked; damage -= blocked;
+  const shieldBreak = blocked > 0 && s.enemy.shield === 0;
   const value = Math.min(s.enemy.hp, damage);
   s.enemy.hp = Math.max(0, s.enemy.hp - damage); s.stats.damage += value;
-  return { value, blocked };
+  return { value, blocked, shieldBreak };
 }
 /** One immediate command, one revision. A first cast does NOT resolve the enemy turn. */
 function resolveAction(state: GameState, action: Action, revision: number, rng: Rng, frames: boolean): GameState {
@@ -64,7 +67,7 @@ function resolveAction(state: GameState, action: Action, revision: number, rng: 
     spell = matchRecipe(action.ids.map(id => state.inventory.find(t => t.id === id)!.element));
     if (!spell) return state;
   } else if (action.type === 'burst') { if (state.mana < B.manaMax) return state; }
-  else if (action.type !== 'guard' && action.type !== 'endTurn') return state;
+  else if (action.type !== 'endTurn') return state;
   const s = copyState(state);
   s.revision++;
   if (s.spellsUsed === 0) s.stats.turns++;
@@ -83,8 +86,10 @@ function resolveAction(state: GameState, action: Action, revision: number, rng: 
     emit({ kind: 'win', cue: 'support', effect: 'heal', target: 'player', value: healed, text: `전투 승리 · 체력 +${healed}` }); return true;
   };
   const strike = (raw: number, effect: Effect, pierce = 0, ignoreShield = false, combo = 0) => {
-    const result = hurtEnemy(s, raw, pierce, ignoreShield);
-    emit({ kind: 'damage', cue: 'impact', target: 'enemy', effect, ...result, combo, text: combo ? `COMBO! +${combo}` : result.value ? `${result.value} 피해` : '방어막에 막혔어요' });
+    const magic = effect in SPELL_BY_ID ? SPELL_BY_ID[effect as keyof typeof SPELL_BY_ID] : undefined;
+    const scale = magic?.attack ? multiplier(magic.affinity, ENEMIES[s.enemy.id].affinity) : 1;
+    const result = hurtEnemy(s, Math.floor(raw * scale), pierce, ignoreShield);
+    emit({ kind: 'damage', cue: 'impact', target: 'enemy', effect, ...result, combo, multiplier: scale, affinity: magic?.affinity, text: combo ? `COMBO! +${combo}` : result.value ? `${result.value} 피해` : '방어막에 막혔어요' });
   };
   if (action.type === 'cast' && spell) {
     s.inventory = s.inventory.filter(t => !action.ids.includes(t.id)); s.freshIds = s.freshIds.filter(id => !action.ids.includes(id));
@@ -101,29 +106,27 @@ function resolveAction(state: GameState, action: Action, revision: number, rng: 
         if (s.enemy.wet > 0) { raw += B.salt.wetBonus; combo += B.salt.wetBonus; s.enemy.wet = 0; }
         break;
       case 'acid': {
-        const result = hurtEnemy(s, B.acid.damage + bonus);
+        const scale = multiplier(spell.affinity, ENEMIES[s.enemy.id].affinity), armorBefore = enemyArmor(s);
+        const result = hurtEnemy(s, Math.floor((B.acid.damage + bonus) * scale));
         s.enemy.acid = B.acidDuration; s.turnEffects.acidApplied = true;
-        emit({ kind: 'damage', cue: 'impact', target: 'enemy', effect: spell.id, ...result, combo: bonus, text: bonus ? `COMBO! +${bonus}` : '부식! 방어력이 낮아졌어요' }); break;
+        emit({ kind: 'damage', cue: 'impact', target: 'enemy', effect: spell.id, ...result, combo: bonus, multiplier: scale, affinity: spell.affinity, armorBefore, armorAfter: enemyArmor(s), text: bonus ? `COMBO! +${bonus}` : '부식! 방어력이 낮아졌어요' }); break;
       }
       case 'peroxide': raw = B.peroxide.damage; s.enemy.dot = B.dotTicks; break;
       case 'methane': raw = B.methane.damage; break;
       case 'ironOxide': raw = B.ironOxide.damage; break;
       case 'oxygen': s.boost = true; emit({ kind: 'info', cue: 'support', effect: spell.id, target: 'player', text: '다음 공격 마법 +10' }); break;
-      case 'carbon': s.playerShield += B.carbon.shield; s.turnEffects.fireReduction = B.carbon.fireReduction; break;
-      case 'iron': s.playerShield += B.iron.shield; break;
-      case 'graphite': s.playerShield += B.graphite.shield; s.turnEffects.reflect = B.graphite.reflect; break;
+      case 'carbon': s.playerShield += B.carbon.shield + s.upgrades.shieldBonus; s.turnEffects.fireReduction = B.carbon.fireReduction; break;
+      case 'iron': s.playerShield += B.iron.shield + s.upgrades.shieldBonus; break;
+      case 'graphite': s.playerShield += B.graphite.shield + s.upgrades.shieldBonus; s.turnEffects.reflect = B.graphite.reflect; break;
     }
     if (raw > 0) strike(raw + bonus, spell.id, pierce, false, combo);
-    if (spell.id === 'carbon' || spell.id === 'iron' || spell.id === 'graphite') emit({ kind: 'shield', cue: 'support', effect: spell.id, target: 'player', value: B[spell.id].shield, text: `보호막 +${B[spell.id].shield}` });
+    if (spell.id === 'carbon' || spell.id === 'iron' || spell.id === 'graphite') emit({ kind: 'shield', cue: 'support', effect: spell.id, target: 'player', value: B[spell.id].shield + s.upgrades.shieldBonus, text: `보호막 +${B[spell.id].shield + s.upgrades.shieldBonus}` });
     if (ended() || s.spellsUsed < B.spellsPerTurn) return s;
   } else if (action.type === 'burst') {
     s.mana -= B.manaMax; s.stats.bursts++;
     emit({ kind: 'burst', cue: 'launch', effect: 'zero', text: 'ZERO BURST!' });
     strike(B.zeroDamage, 'zero', Infinity);
     if (ended()) return s;
-  } else if (action.type === 'guard') {
-    s.playerShield += s.upgrades.guard;
-    emit({ kind: 'shield', cue: 'support', effect: 'guard', target: 'player', value: s.upgrades.guard, text: `보호막 +${s.upgrades.guard}` });
   }
   emit({ kind: 'turn', cue: 'system', target: 'enemy', text: '적의 차례' });
   if (s.enemy.dot > 0) { s.enemy.dot--; strike(B.peroxide.dot, 'dot', Infinity, true); if (ended()) return s; }
@@ -135,11 +138,12 @@ function resolveAction(state: GameState, action: Action, revision: number, rng: 
   s.stats.enemyActions++;
   if (intent.type === 'attack' || intent.type === 'fire') {
     const incoming = incomingAction(s.hp, s.playerShield, intent, s.turnEffects);
-    for (const hit of incoming.hits) {
+    for (const [hitIndex, hit] of incoming.hits.entries()) {
+      const shieldBefore = s.playerShield;
       const hitEffect: Effect = hit.type === 'fire' ? 'enemy-fire' : 'enemy-attack';
-      emit({ kind: 'enemy', cue: 'launch', effect: hitEffect, value: hit.value, target: 'player', text: `${intent.label} ${hit.value}` });
+      emit({ kind: 'enemy', cue: 'launch', effect: hitEffect, value: hit.value, hitIndex: hitIndex + 1, hitCount: incoming.hits.length, target: 'player', text: `${intent.label} ${hit.value}` });
       s.hp = hit.hp; s.playerShield = hit.shield;
-      emit({ kind: 'damage', cue: 'impact', effect: hitEffect, target: 'player', value: hit.damage, blocked: hit.blocked, text: hit.damage ? `피격! −${hit.damage}${hit.blocked ? ` · ${hit.blocked} 방어` : ''}` : s.hp ? 'BLOCK! 완전 방어' : '전투 불능' });
+      emit({ kind: 'damage', cue: 'impact', effect: hitEffect, target: 'player', value: hit.damage, blocked: hit.blocked, shieldBreak: shieldBefore > 0 && hit.shield === 0, hitIndex: hitIndex + 1, hitCount: incoming.hits.length, text: hit.damage ? `피격! −${hit.damage}${hit.blocked ? ` · ${hit.blocked} 방어` : ''}` : s.hp ? 'BLOCK! 완전 방어' : '전투 불능' });
     }
     if (incoming.reflect > 0) strike(incoming.reflect, 'reflect', Infinity, true);
   } else {

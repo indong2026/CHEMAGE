@@ -30,20 +30,20 @@ function cast() { fireEvent.click(screen.getByRole('button', { name: /마법 발
 describe('즉시 시전 UI', { timeout: 15_000 }, () => {
   it('시작 배너 동안 입력 잠금, 첫 마법에는 배너 없이 두 번째 뒤 적 턴으로 전환한다', () => {
     start(true); expect(screen.getByText('YOUR TURN', { selector: '.notice-band b' })).toBeInTheDocument();
-    expect(screen.getByRole('button', { name: /방어하고 턴 종료/ })).toBeDisabled();
+    expect(screen.getByRole('button', { name: /턴 종료/ })).toBeDisabled();
     expect(screen.getByRole('button', { name: /연출 넘기기/ })).toBeDisabled(); finish();
-    expect(screen.queryByRole('button', { name: /^턴 종료/ })).not.toBeInTheDocument();
+    expect(screen.queryByRole('button', { name: /방어하고/ })).not.toBeInTheDocument();
     water(); cast(); finish(); expect(document.querySelector('.battle-notice')).toBeNull();
     select('나트륨 Na'); select('염소 Cl'); expect(screen.getByText('예상 피해 15 · COMBO 가능')).toBeInTheDocument(); cast();
     act(() => vi.advanceTimersByTime(580)); expect(screen.getByText('ENEMY TURN')).toBeInTheDocument();
     expect(screen.getByLabelText('내 체력')).toHaveAttribute('aria-valuenow', '60'); finish();
     expect(screen.getByText('턴 2')).toBeInTheDocument(); expect(screen.getByLabelText('내 체력')).toHaveAttribute('aria-valuenow', '52');
   });
-  it('방어 연타는 한 번만 합산하고 적도 한 번만 행동한다', () => {
-    start(); const button = screen.getByRole('button', { name: /방어하고 턴 종료/ });
+  it('턴 종료 연타는 무료 보호막 없이 적이 한 번만 행동한다', () => {
+    start(); const button = screen.getByRole('button', { name: /턴 종료/ });
     fireEvent.click(button); fireEvent.click(button); fireEvent.click(button);
-    expect(screen.getByLabelText('내 보호막 설명')).toHaveTextContent('8'); finish();
-    expect(screen.getByText('턴 2')).toBeInTheDocument(); expect(screen.getByLabelText('내 체력')).toHaveAttribute('aria-valuenow', '60');
+    expect(screen.queryByLabelText('내 보호막 설명')).not.toBeInTheDocument(); finish();
+    expect(screen.getByText('턴 2')).toBeInTheDocument(); expect(screen.getByLabelText('내 체력')).toHaveAttribute('aria-valuenow', '52');
     expect(screen.queryByLabelText('내 보호막 설명')).not.toBeInTheDocument();
   });
   it('READY는 100 도달 시 한 번 표시되고 같은 100에서 재알림하지 않는다', () => {
@@ -51,7 +51,7 @@ describe('즉시 시전 UI', { timeout: 15_000 }, () => {
     expect(screen.getByText('ZERO BURST READY!')).toBeInTheDocument();
     expect(screen.getByRole('button', { name: 'ZERO BURST' })).toBeDisabled(); finish();
     expect(screen.getByRole('button', { name: 'ZERO BURST' })).toHaveClass('ready');
-    fireEvent.click(screen.getByRole('button', { name: /방어하고 턴 종료/ }));
+    fireEvent.click(screen.getByRole('button', { name: /턴 종료/ }));
     for (let i = 0; i < 25; i++) { act(() => vi.advanceTimersByTime(100)); expect(screen.queryByText('ZERO BURST READY!')).not.toBeInTheDocument(); }
     finish(); expect(screen.getByRole('button', { name: 'ZERO BURST' })).toBeEnabled();
   });
@@ -64,9 +64,9 @@ describe('즉시 시전 UI', { timeout: 15_000 }, () => {
     expect(screen.getByLabelText('내 보호막 설명')).toHaveTextContent('28'); expect(document.querySelector('.shield-gain')).toHaveTextContent('+12');
     expect(document.querySelector('.persistent-ward')).toHaveClass('ward-gain'); finish(); expect(screen.getByLabelText('내 체력')).toHaveAttribute('aria-valuenow', '60');
   });
-  it('조합이 없으면 안내와 통합 방어 버튼을 강조한다', () => {
+  it('조합이 없으면 안내와 턴 종료 버튼을 강조한다', () => {
     scenario.mode = 'overflow'; start(); expect(screen.getByText('조합 가능한 마법 없음')).toBeInTheDocument();
-    expect(screen.getByRole('button', { name: /방어하고 턴 종료/ })).toHaveClass('suggested');
+    expect(screen.getByRole('button', { name: /턴 종료/ })).toHaveClass('suggested');
   });
   it('첫 전투는 예약 목록 없이 조합을 안내하고, 화학식 완성 즉시 발견을 저장한다', () => {
     start(); expect(screen.getByText(/H 두 개와 O 하나/)).toBeInTheDocument();
@@ -112,7 +112,7 @@ describe('즉시 시전 UI', { timeout: 15_000 }, () => {
   it('한 번 시전 후에도 방어하고 턴을 마칠 수 있다', () => {
     start(); water(); cast(); finish(); fireEvent.click(screen.getByRole('button', { name: /턴 종료/ })); finish();
     expect(screen.getByText('턴 2')).toBeInTheDocument();
-    fireEvent.click(screen.getByRole('button', { name: /방어하고 턴 종료/ })); finish(); expect(screen.getByText('턴 3')).toBeInTheDocument();
+    fireEvent.click(screen.getByRole('button', { name: /턴 종료/ })); finish(); expect(screen.getByText('턴 3')).toBeInTheDocument();
   });
   it('빠른 중복 클릭과 연출 넘기기는 마법·적 행동을 중복 처리하지 않는다', () => {
     start(); water(); const button = screen.getByRole('button', { name: /마법 발동/ }); fireEvent.click(button);
@@ -122,11 +122,11 @@ describe('즉시 시전 UI', { timeout: 15_000 }, () => {
     fireEvent.click(screen.getByRole('button', { name: /턴 종료/ })); finish(); expect(screen.getByText('턴 2')).toBeInTheDocument();
   });
   it('첫 마법을 배우기 전에 방어해도 조합 튜토리얼이 유지된다', () => {
-    start(); fireEvent.click(screen.getByRole('button', { name: /방어하고 턴 종료/ })); finish();
+    start(); fireEvent.click(screen.getByRole('button', { name: /턴 종료/ })); finish();
     expect(screen.getByText('H 두 개와 O 하나를 눌러 조합해 보세요.')).toBeInTheDocument();
   });
   it('초과 원소를 팝업 없이 변환하며 가방을 보존하고 마력을 표시한다', () => {
-    scenario.mode = 'overflow'; start(); fireEvent.click(screen.getByRole('button', { name: /방어하고 턴 종료/ })); finish();
+    scenario.mode = 'overflow'; start(); fireEvent.click(screen.getByRole('button', { name: /턴 종료/ })); finish();
     expect(screen.queryByRole('dialog')).not.toBeInTheDocument(); expect(screen.getByRole('region', { name: '원소 보관함' })).toHaveTextContent('12 / 12');
     expect(screen.getByLabelText('마력')).toHaveAttribute('aria-valuenow', '45');
     expect(screen.getByRole('button', { name: 'ZERO BURST' })).toBeDisabled();

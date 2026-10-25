@@ -1,0 +1,197 @@
+{
+  "seedRange": [
+    1,
+    200
+  ],
+  "note": "All formulas known; one-turn greedy policies, not human win rates. Attack/affinity policies weight HP preservation at 1.2 and allow defensive spells. Attack approximates nominal damage by dividing observed HP damage by matchup; affinity evaluates actual damage; shield only uses support magic and ZERO; mixed can use all spells.",
+  "reports": [
+    {
+      "strategy": "attack",
+      "runs": 200,
+      "wins": 158,
+      "defeats": 42,
+      "stalled": 0,
+      "turns": 4691,
+      "casts": 7441,
+      "bursts": 617,
+      "conversions": 166,
+      "combos": 1064,
+      "effectiveHits": 619,
+      "resistedHits": 905,
+      "defenseActions": 2767,
+      "stageTurns": [
+        952,
+        702,
+        852,
+        1072,
+        1113
+      ],
+      "stageVisits": [
+        200,
+        200,
+        200,
+        200,
+        194
+      ],
+      "losses": [
+        0,
+        0,
+        0,
+        6,
+        36
+      ],
+      "firstTurnKills": 6,
+      "winningSeeds": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9,
+        11,
+        12,
+        13
+      ]
+    },
+    {
+      "strategy": "affinity",
+      "runs": 200,
+      "wins": 157,
+      "defeats": 43,
+      "stalled": 0,
+      "turns": 4651,
+      "casts": 7330,
+      "bursts": 609,
+      "conversions": 141,
+      "combos": 1066,
+      "effectiveHits": 750,
+      "resistedHits": 732,
+      "defenseActions": 2693,
+      "stageTurns": [
+        952,
+        694,
+        843,
+        1073,
+        1089
+      ],
+      "stageVisits": [
+        200,
+        200,
+        200,
+        200,
+        195
+      ],
+      "losses": [
+        0,
+        0,
+        0,
+        5,
+        38
+      ],
+      "firstTurnKills": 6,
+      "winningSeeds": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9,
+        12,
+        13,
+        14
+      ]
+    },
+    {
+      "strategy": "shield",
+      "runs": 200,
+      "wins": 2,
+      "defeats": 198,
+      "stalled": 0,
+      "turns": 6681,
+      "casts": 4571,
+      "bursts": 1397,
+      "conversions": 8950,
+      "combos": 0,
+      "effectiveHits": 0,
+      "resistedHits": 0,
+      "defenseActions": 3268,
+      "stageTurns": [
+        1924,
+        1892,
+        1544,
+        1045,
+        276
+      ],
+      "stageVisits": [
+        200,
+        200,
+        181,
+        141,
+        34
+      ],
+      "losses": [
+        0,
+        19,
+        40,
+        107,
+        32
+      ],
+      "firstTurnKills": 0,
+      "winningSeeds": [
+        18,
+        39
+      ]
+    },
+    {
+      "strategy": "mixed",
+      "runs": 200,
+      "wins": 165,
+      "defeats": 35,
+      "stalled": 0,
+      "turns": 4728,
+      "casts": 7489,
+      "bursts": 634,
+      "conversions": 235,
+      "combos": 1066,
+      "effectiveHits": 716,
+      "resistedHits": 740,
+      "defenseActions": 2928,
+      "stageTurns": [
+        957,
+        700,
+        849,
+        1076,
+        1146
+      ],
+      "stageVisits": [
+        200,
+        200,
+        200,
+        200,
+        195
+      ],
+      "losses": [
+        0,
+        0,
+        0,
+        5,
+        30
+      ],
+      "firstTurnKills": 5,
+      "winningSeeds": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9,
+        12,
+        13,
+        14
+      ]
+    }
+  ]
+}

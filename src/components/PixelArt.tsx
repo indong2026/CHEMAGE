@@ -6,6 +6,7 @@ export function Sprite({ name, className = '' }: { name: string; className?: str
   </svg>;
 }
 const ICONS: Record<string, string> = {
+  circle: 'M4 1h8v2h2v2h2v6h-2v2h-2v2H4v-2H2v-2H0V5h2V3h2z M5 5v6h6V5z',
   settings: 'M6 0h4v3h2V2h2v2h-1v2h3v4h-3v2h1v2h-2v-1h-2v3H6v-3H4v1H2v-2h1v-2H0V6h3V4H2V2h2v1h2z M6 6v4h4V6z',
   sword: 'M11 1h4v4h-2v2h-2v2H9v2H7v2H5v2H1v-4h2V9h2V7h2V5h2V3h2z M3 5h2v2h2v2h2v2H7V9H5V7H3z',
   shield: 'M2 1h12v9h-2v2h-2v2H6v-2H4v-2H2z M5 4v5h2v2h2V9h2V4z',

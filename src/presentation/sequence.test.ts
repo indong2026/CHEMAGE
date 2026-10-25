@@ -4,7 +4,7 @@ import { battleSequence } from './sequence';
 import { PlaybackController, eventDuration } from './playback';
 import type { GameState } from '../game/types';
 const rng = () => .99;
-const guard = (s: GameState) => performAction(s, { type: 'guard' }, s.revision, rng);
+const guard = (s: GameState) => performAction(s, { type: 'endTurn' }, s.revision, rng);
 const cast = (s: GameState, ids: number[]) => performAction(s, { type: 'cast', ids }, s.revision, rng);
 afterEach(() => vi.useRealTimers());
 it('전투 시작 YOUR TURN, 첫 시전은 배너 없음, 두 번째 뒤 ENEMY → YOUR 순서', () => {

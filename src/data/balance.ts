@@ -1,6 +1,6 @@
 export const BALANCE = {
   maxHp: 60, startElements: 5, draw: 3, capacity: 12,
-  guard: 8, victoryHeal: 15, maxSlots: 5, spellsPerTurn: 2,
+  victoryHeal: 15, maxSlots: 5, spellsPerTurn: 2,
   manaMax: 100, castMana: 10, overflowMana: 15, zeroDamage: 30,
   wetDuration: 1, acidDuration: 2, dotTicks: 2,
   water: { damage: 13 }, salt: { damage: 11, pierce: 5, wetBonus: 4 },

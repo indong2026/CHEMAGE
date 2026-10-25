@@ -12,7 +12,7 @@ function fixture(elements: Element[], hits: DirectHit[]) {
   return s;
 }
 const cast = (s: GameState, ids: number[]) => performAction(s, { type: 'cast', ids }, s.revision, rng);
-const guard = (s: GameState) => performAction(s, { type: 'guard' }, s.revision, rng);
+const guard = (s: GameState) => performAction(s, { type: 'endTurn' }, s.revision, rng);
 const impacts = (s: GameState) => s.events.filter(e => e.kind === 'damage' && e.target === 'player');
 const cleared = (s: GameState) => {
   expect(s.playerShield).toBe(0); expect(s.turnEffects.fireReduction).toBe(0); expect(s.turnEffects.reflect).toBe(0);
@@ -28,12 +28,12 @@ describe('13번 보호막 소모 순서', () => {
     expect(n.hp).toBe(hp); expect(impacts(n)[0]).toMatchObject({ blocked, value: 60 - hp, frame: { playerShield: left } });
     expect(n.events.filter(e => e.kind === 'shield-end')).toHaveLength(1); cleared(n);
   });
-  it('Fe + 기본 방어 24는 일반 공격 30에서 HP 피해 6', () => {
+  it('Fe 후 턴 종료는 추가 보호막 없이 일반 공격 30에서 HP 피해 14', () => {
     const n = guard(cast(fixture(['Fe'], [{ type: 'attack', value: 30 }]), [1]));
-    expect(impacts(n)[0]).toMatchObject({ blocked: 24, value: 6 }); expect(n.hp).toBe(54); cleared(n);
+    expect(impacts(n)[0]).toMatchObject({ blocked: 16, value: 14 }); expect(n.hp).toBe(46); cleared(n);
   });
   it('연속 10, 20 사이에 보호막 14를 유지하고 끝에서 한 번만 해제한다', () => {
-    const n = guard(cast(fixture(['Fe'], [{ type: 'attack', value: 10 }, { type: 'attack', value: 20 }]), [1]));
+    const s = fixture([], [{ type: 'attack', value: 10 }, { type: 'attack', value: 20 }]); s.playerShield = 24; const n = guard(s);
     expect(impacts(n).map(e => [e.blocked, e.value, e.frame?.playerShield])).toEqual([[10, 0, 14], [14, 6, 0]]);
     expect(n.hp).toBe(54); expect(n.stats.enemyActions).toBe(1); expect(n.turn).toBe(2);
     const end = n.events.findIndex(e => e.kind === 'shield-end');

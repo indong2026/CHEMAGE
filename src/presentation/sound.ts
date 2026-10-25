@@ -70,11 +70,13 @@ export class SynthAudio {
     if (event.kind === 'death') { this.noise(.2, .05, 1800); [784, 1046].forEach((f, i) => this.tone(f, f / 2, .2, 'triangle', .035, i * .1)); return; }
     if (event.cue === 'launch') { this.tone(event.target === 'player' ? 140 : 380, event.target === 'player' ? 90 : 700, .12, 'triangle', .018); return; }
     if (event.kind === 'win') { [523, 659, 784, 1046].forEach((f, i) => this.tone(f, f, .2, 'triangle', .025, i * .07)); return; }
+    if (event.shieldBreak) this.noise(.12, .04, 3200);
     if (event.target === 'player' && event.kind === 'damage') {
       if (!event.value) this.tone(940, 560, .17, 'triangle', .04);
       else { this.tone(130, 40, .2, 'square', .025); this.noise(.13, .04, 1200); }
       return;
     }
+    if ((event.multiplier ?? 1) > 1) { this.tone(1100, 600, .12, 'triangle', .045); this.noise(.09, .04, 2200); }
     const voice = event.effect ? VOICES[event.effect] : undefined;
     if (voice) this.tone(voice.frequency, voice.end, voice.duration, voice.type, event.effect === 'zero' ? .065 : .035);
     else if (event.kind === 'damage') this.tone(270, 80, .12, 'triangle');
