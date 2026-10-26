@@ -16,6 +16,14 @@ export const SPELLS: Spell[] = [
   { id: 'alkali', affinity: 'NEUTRAL', formula: 'NaOH', display: 'NaOH', name: '알칼리 펄스', substance: '수산화 나트륨', recipe: { Na: 1, O: 1, H: 1 }, fact: 'NaOH는 수산화 나트륨이며 수용액에서 강한 염기성을 나타냅니다. 파동 공격은 판타지 전투 효과입니다.', effect: '피해 9 · 먼저 보호막에만 추가 피해 5 · 같은 턴 HCl 다음에 중화 반응', attack: true, color: '#83e6d3' },
   { id: 'ferrous', affinity: 'METAL', formula: 'FeCl2', display: 'FeCl₂', name: '페러스 체인', substance: '염화 철(II)', recipe: { Fe: 1, Cl: 2 }, fact: 'FeCl₂는 철의 산화수가 +2인 염화 철(II)입니다. 금속 사슬과 공격 약화는 판타지 설정입니다.', effect: '피해 16 · 이번 적 행동의 각 직접 타격 −3 · 중첩 불가', attack: true, color: '#b7c8e4' },
 ];
+SPELLS.push(
+  { id: 'nitrogen', affinity: 'NEUTRAL', formula: 'N2', display: 'N₂', name: '질소 장막', substance: '질소 분자', recipe: { N: 2 }, fact: '질소 원자 2개로 이루어진 분자이며 지구 대기의 주성분입니다.', effect: '보호막 14 · 추가 마력 +8', attack: false, color: '#74dedb' },
+  { id: 'ammonia', affinity: 'NEUTRAL', formula: 'NH3', display: 'NH₃', name: '암모니아 미스트', substance: '암모니아', recipe: { N: 1, H: 3 }, fact: 'NH₃는 질소 원자 1개와 수소 원자 3개로 이루어진 암모니아입니다. 공격 약화는 판타지 효과입니다.', effect: '피해 12 · 다음 적 행동의 각 직접 타격 −2 · 다른 약화와는 강한 효과만 적용', attack: true, color: '#a1e9df' },
+  { id: 'nitro', affinity: 'NEUTRAL', formula: 'NO2', display: 'NO₂', name: '니트로 펄스', substance: '이산화 질소', recipe: { N: 1, O: 2 }, fact: 'NO₂는 질소 원자 1개와 산소 원자 2개로 이루어진 이산화 질소입니다. 지속 피해는 판타지 효과입니다.', effect: '피해 14 · 적 행동 시작 시 피해 2 × 2 · 잔류 피해는 마지막 시전으로 갱신', attack: true, color: '#81d2db' },
+  { id: 'sulfide', affinity: 'NEUTRAL', formula: 'H2S', display: 'H₂S', name: '설퍼 베일', substance: '황화 수소', recipe: { H: 2, S: 1 }, fact: 'H₂S는 수소 원자 2개와 황 원자 1개로 이루어진 황화 수소입니다. 보호막은 판타지 효과입니다.', effect: '피해 10 · 보호막 6', attack: true, color: '#efd275' },
+  { id: 'sulfur', affinity: 'CORROSION', formula: 'SO2', display: 'SO₂', name: '설퍼 미스트', substance: '이산화 황', recipe: { S: 1, O: 2 }, fact: 'SO₂는 황 원자 1개와 산소 원자 2개로 이루어진 이산화 황입니다. 젖음 소비와 추가 피해는 실제 화학 반응이 아닌 게임 규칙입니다.', effect: '피해 14 · 젖음이면 +4 및 젖음 소비', attack: true, color: '#f1df9b' },
+  { id: 'ironSulfide', affinity: 'METAL', formula: 'FeS', display: 'FeS', name: '황철 타격', substance: '황화 철(II)', recipe: { Fe: 1, S: 1 }, fact: 'FeS는 철과 황이 1:1 비율을 이루는 황화 철(II)입니다. 철의 산화수는 +2이며 황철석(FeS₂)과는 다른 물질입니다.', effect: '피해 18 · 방어력 2 관통', attack: true, color: '#e3be78' },
+);
 export const SPELL_BY_ID = Object.fromEntries(SPELLS.map(s => [s.id, s])) as Record<SpellId, Spell>;
 
 

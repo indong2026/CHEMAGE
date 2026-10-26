@@ -2,7 +2,7 @@ import { BALANCE as B } from '../data/balance';
 import { ENEMIES } from '../data/enemies';
 import { REWARDS } from '../data/rewards';
 import { matchRecipe } from './recipes';
-import { drawElement, shuffle } from './random';
+import { drawElement, shuffle, reconstructElement } from './random';
 import { multiplier } from '../data/affinities';
 import { SPELL_BY_ID } from '../data/spells';
 import { incomingAction, adjustedIntent } from './incoming';
@@ -13,7 +13,7 @@ import type { Action, BattleFrame, Effect, Element, EnemyId, GameEvent, GameStat
 export const enemyArmor = (s: GameState) => Math.max(0, ENEMIES[s.enemy.id].armor - (s.enemy.acid > 0 ? B.acid.reduction : 0));
 const emptyEffects = (): TurnEffects => ({ fireReduction: 0, reflect: 0, wetApplied: false, acidApplied: false });
 export function battleFrame(s: GameState): BattleFrame {
-  return { hp: s.hp, enemy: { ...s.enemy, intent: { ...s.enemy.intent, ...(s.enemy.intent.hits ? { hits: s.enemy.intent.hits.map(hit => ({ ...hit })) } : {}) } }, inventory: s.inventory.map(t => ({ ...t })), freshIds: [...s.freshIds], boost: s.boost, playerShield: s.playerShield, turn: s.turn, spellsUsed: s.spellsUsed, mana: s.mana, castHistory: [...s.castHistory], vulnerable: s.vulnerable };
+  return { hp: s.hp, reconstruction: s.reconstruction, enemy: { ...s.enemy, intent: { ...s.enemy.intent, ...(s.enemy.intent.hits ? { hits: s.enemy.intent.hits.map(hit => ({ ...hit })) } : {}) } }, inventory: s.inventory.map(t => ({ ...t })), freshIds: [...s.freshIds], boost: s.boost, playerShield: s.playerShield, turn: s.turn, spellsUsed: s.spellsUsed, mana: s.mana, castHistory: [...s.castHistory], vulnerable: s.vulnerable };
 }
 /** Only new incoming tiles can overflow. Saved inventory is never discarded. */
 function acquire(s: GameState, elements: Element[]) {
@@ -44,7 +44,7 @@ export function newGame(rng: Rng = Math.random, options: { firstAdventure?: bool
   const normals = options.firstAdventure === false ? shuffle(pool, rng).slice(0, 3) : ['slime' as EnemyId, ...shuffle(pool.slice(1), rng).slice(0, 2)];
   const route: EnemyId[] = [...normals, 'elite', 'golem'];
   return startBattle({
-    screen: 'battle', route, stage: 0, turn: 1, revision: 0, hp: B.maxHp,
+    screen: 'battle', route, stage: 0, turn: 1, revision: 0, hp: B.maxHp, reconstruction: 0,
     inventory: [], freshIds: [], nextId: 1, pendingResonance: null, boost: false, playerShield: 0, spellsUsed: 0, mana: 0, turnEffects: emptyEffects(), enemy: {} as GameState['enemy'],
     upgrades: { capacity: B.capacity, waterDamage: 0, shieldBonus: 0, draw: B.draw, reactionBonus: 0, research: false, resonance: {} },
     rewards: [], taken: [], discoveries: [...(options.discoveries ?? [])], reactionDiscoveries: [...(options.reactions ?? [])], castHistory: [], vulnerable: false, researchTriggered: false, events: [],
@@ -66,6 +66,18 @@ function hurtEnemy(s: GameState, raw: number, pierce = 0, ignoreShield = false) 
 /** One immediate command, one revision. A first cast does NOT resolve the enemy turn. */
 function resolveAction(state: GameState, action: Action, revision: number, rng: Rng, frames: boolean, castOnly = false): GameState {
   if (state.screen !== 'battle' || state.revision !== revision) return state;
+  // Enemy turns resolve atomically. The UI locks all commands while their frames play.
+  if (action.type === 'reconstruct') {
+    const tile = state.inventory.find(t => t.id === action.id);
+    if (!tile || state.reconstruction !== 100 || state.spellsUsed >= B.spellsPerTurn) return state;
+    const s = copyState(state), element = reconstructElement(tile.element, rng);
+    const replacement = { id: s.nextId++, element };
+    s.inventory = s.inventory.map(t => t.id === tile.id ? replacement : t);
+    s.freshIds = [...s.freshIds.filter(id => id !== tile.id), replacement.id];
+    s.reconstruction = 0; s.revision++;
+    s.events.push({ kind: 'reconstruct', cue: 'system', text: '원소 재구성 성공!', fromElement: tile.element, toElement: element, ...(frames ? { frame: battleFrame(s) } : {}) });
+    return s;
+  }
   let spell;
   if (action.type === 'cast') {
     if (state.spellsUsed >= B.spellsPerTurn || action.ids.length > B.maxSlots || new Set(action.ids).size !== action.ids.length || action.ids.some(id => !state.inventory.some(t => t.id === id))) return state;
@@ -80,9 +92,9 @@ function resolveAction(state: GameState, action: Action, revision: number, rng: 
   const emit = (event: GameEvent) => s.events.push({ ...event, wardActive, ...(frames ? { frame: battleFrame(s) } : {}) });
   const ended = () => {
     if (s.hp <= 0 || s.enemy.hp <= 0) wardActive = false;
-    if (s.hp <= 0) { s.screen = 'defeat'; s.boost = false; s.playerShield = 0; s.turnEffects = emptyEffects(); s.vulnerable = false; s.enemy.weaken = 0; s.castHistory = []; emit({ kind: 'defeat', cue: 'system', text: '다시 도전할 수 있어요' }); return true; }
+    if (s.hp <= 0) { s.screen = 'defeat'; s.boost = false; s.playerShield = 0; s.turnEffects = emptyEffects(); s.vulnerable = false; s.enemy.weaken = 0; s.enemy.mist = false; s.castHistory = []; emit({ kind: 'defeat', cue: 'system', text: '다시 도전할 수 있어요' }); return true; }
     if (s.enemy.hp > 0) return false;
-    s.playerShield = 0; s.turnEffects = emptyEffects(); s.vulnerable = false; s.enemy.weaken = 0; s.castHistory = [];
+    s.playerShield = 0; s.turnEffects = emptyEffects(); s.vulnerable = false; s.enemy.weaken = 0; s.enemy.mist = false; s.castHistory = [];
     emit({ kind: 'death', cue: 'system', effect: 'death', target: 'enemy', text: `${ENEMIES[s.enemy.id].name} 격파!` });
     s.stats.defeated++; s.boost = false;
     const healed = Math.min(B.victoryHeal, B.maxHp - s.hp); s.hp += healed;
@@ -128,7 +140,13 @@ function resolveAction(state: GameState, action: Action, revision: number, rng: 
         s.enemy.acid = B.acidDuration; s.turnEffects.acidApplied = true;
         emit({ kind: 'damage', cue: 'impact', target: 'enemy', effect: spell.id, ...result, combo: bonus, multiplier: scale, affinity: spell.affinity, armorBefore, armorAfter: enemyArmor(s), text: bonus ? `COMBO! +${bonus}` : '부식! 방어력이 낮아졌어요' }); break;
       }
-      case 'peroxide': raw = B.peroxide.damage; s.enemy.dot = B.dotTicks; break;
+      case 'peroxide': raw = B.peroxide.damage; s.enemy.dot = B.dotTicks; s.enemy.dotDamage = B.peroxide.dot; break;
+      case 'nitro': raw = B.nitro.damage; s.enemy.dot = B.dotTicks; s.enemy.dotDamage = B.nitro.dot; break;
+      case 'nitrogen': s.playerShield += B.nitrogen.shield + s.upgrades.shieldBonus; s.mana = Math.min(B.manaMax, s.mana + B.nitrogen.mana); break;
+      case 'ammonia': raw = B.ammonia.damage; s.enemy.mist = true; break;
+      case 'sulfide': raw = B.sulfide.damage; s.playerShield += B.sulfide.shield + s.upgrades.shieldBonus; break;
+      case 'sulfur': raw = B.sulfur.damage; if (s.enemy.wet > 0) { raw += B.sulfur.wetBonus; combo += B.sulfur.wetBonus; s.enemy.wet = 0; } break;
+      case 'ironSulfide': raw = B.ironSulfide.damage; pierce = B.ironSulfide.pierce; break;
       case 'hydrogen': raw = B.hydrogen.damage; break;
       case 'alkali': raw = B.alkali.damage; break;
       case 'ferrous': raw = B.ferrous.damage; s.enemy.weaken = 1; break;
@@ -139,9 +157,10 @@ function resolveAction(state: GameState, action: Action, revision: number, rng: 
       case 'iron': s.playerShield += B.iron.shield + s.upgrades.shieldBonus; break;
       case 'graphite': s.playerShield += B.graphite.shield + s.upgrades.shieldBonus; s.turnEffects.reflect = B.graphite.reflect; break;
     }
-    if (reaction && reaction !== 'neutralization') react(reaction);
+    if (reaction && reaction !== 'neutralization' && reaction !== 'ammonium') react(reaction);
     if (raw > 0) strike(raw + bonus, spell.id, pierce, false, combo, spell.id === 'hydrogen' ? B.hydrogen.shieldDamage : spell.id === 'alkali' ? B.alkali.shieldDamage : 0);
-    if (spell.id === 'carbon' || spell.id === 'iron' || spell.id === 'graphite') emit({ kind: 'shield', cue: 'support', effect: spell.id, target: 'player', value: B[spell.id].shield + s.upgrades.shieldBonus, text: `보호막 +${B[spell.id].shield + s.upgrades.shieldBonus}` });
+    if (spell.id === 'carbon' || spell.id === 'iron' || spell.id === 'graphite' || spell.id === 'nitrogen' || spell.id === 'sulfide') emit({ kind: 'shield', cue: 'support', effect: spell.id, target: 'player', value: B[spell.id].shield + s.upgrades.shieldBonus, text: `보호막 +${B[spell.id].shield + s.upgrades.shieldBonus}${spell.id === 'nitrogen' ? ' · 마력 +8' : ''}` });
+    if (reaction === 'ammonium') { react(reaction); strike(B.ammonium.damage, reaction); }
     if (reaction === 'neutralization') {
       react(reaction); strike(B.neutralization.damage + s.upgrades.reactionBonus, reaction);
       s.playerShield += B.neutralization.shield;
@@ -155,9 +174,9 @@ function resolveAction(state: GameState, action: Action, revision: number, rng: 
     if (ended()) return s;
   }
   emit({ kind: 'turn', cue: 'system', target: 'enemy', text: '적의 차례' });
-  if (s.enemy.dot > 0) { s.enemy.dot--; strike(B.peroxide.dot, 'dot', Infinity, true); if (ended()) return s; }
+  if (s.enemy.dot > 0) { s.enemy.dot--; strike(s.enemy.dotDamage ?? B.peroxide.dot, 'dot', Infinity, true); if (ended()) return s; }
   s.enemy.shield = 0;
-  const intent = adjustedIntent(s.enemy.intent, s.enemy.weaken ?? 0, s.vulnerable);
+  const intent = adjustedIntent(s.enemy.intent, s.enemy.weaken ?? 0, s.vulnerable, s.enemy.mist);
   const effect: Effect = `enemy-${intent.type === 'attack' ? 'attack' : intent.type === 'fire' ? 'fire' : intent.type}`;
   const hadShield = s.playerShield > 0;
   wardActive = hadShield;
@@ -179,7 +198,7 @@ function resolveAction(state: GameState, action: Action, revision: number, rng: 
       s.enemy.shield = intent.value; emit({ kind: 'shield', cue: 'support', effect, target: 'enemy', value: intent.value, text: `적 보호막 ${intent.value}` });
     } else emit({ kind: 'info', cue: 'support', effect, target: 'enemy', text: intent.type === 'charge' ? '다음 강공격을 준비해요' : '적이 숨을 고릅니다' });
   }
-  s.enemy.weaken = 0;
+  s.enemy.weaken = 0; s.enemy.mist = false;
   if (ended()) return s;
   if (!s.turnEffects.wetApplied) s.enemy.wet = Math.max(0, s.enemy.wet - 1);
   if (!s.turnEffects.acidApplied) s.enemy.acid = Math.max(0, s.enemy.acid - 1);
@@ -194,9 +213,12 @@ function resolveAction(state: GameState, action: Action, revision: number, rng: 
   const pattern = s.enemy.phase === 2 ? data.phase2! : data.pattern;
   s.enemy.intent = { ...pattern[s.enemy.patternIndex % pattern.length] };
   s.turn++; s.spellsUsed = 0; s.castHistory = []; s.freshIds = [];
+  const reconstructionBefore = s.reconstruction;
+  s.reconstruction = Math.min(100, s.reconstruction + B.reconstructionCharge);
   const draw = acquire(s, Array.from({ length: s.upgrades.draw }, () => drawElement(rng, s.upgrades.resonance)));
   emit({ kind: 'turn', cue: 'system', target: 'player', text: '나의 차례', value: s.upgrades.draw - draw.tiles.length });
   if (draw.tiles.length) emit({ kind: 'convert', cue: 'support', effect: 'overflow', target: 'player', tiles: draw.tiles, value: draw.gained, text: `초과 ${draw.tiles.length}개 → 마력 +${draw.gained}` });
+  if (reconstructionBefore < 100 && s.reconstruction === 100) emit({ kind: 'reconstruct-ready', cue: 'system', text: '원소 재구성을 사용할 수 있습니다!' });
   return s;
 }
 export function performAction(state: GameState, action: Action, revision: number, rng: Rng = Math.random): GameState {

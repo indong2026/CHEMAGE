@@ -74,7 +74,7 @@ export default function App() {
     if (!game || lock.current) return;
     const next = performAction(game, action, game.revision);
     if (next === game) return;
-    lock.current = true; audio.current.unlock(); setGame(next); setSelected([]);
+    lock.current = true; audio.current.unlock(); setGame(next); setSelected(action.type === 'reconstruct' ? selected.filter(id => next.inventory.some(t => t.id === id)) : []);
     discover(next.discoveries);
     const found = [...new Set([...loadReactions(), ...reactions, ...next.reactionDiscoveries])];
     setReactions(found); if (!saveReactions(found)) setStorageError(true);
@@ -98,8 +98,8 @@ export default function App() {
     const next = chooseReward(game, id, Math.random, element); if (next === game) return;
     setGame(next); setSelected([]); setDiscovery(null); setTutorial(3); play(next, true);
   };
-  return <div className={`world rework ${reducedMotion ? 'reduced-motion' : ''} ${simpleBanners ? 'simple-banners' : ''}`}><div className="ambient-orb orb-a" /><div className="ambient-orb orb-b" /><div className="desktop-label">CHEMAGE <span>MAKE A LITTLE MAGIC · VI</span></div><div className={`game-shell ${visibleGame?.screen === 'battle' ? 'in-battle' : ''}`}>
-    <header className="topbar"><button className="brand" disabled={busy} onClick={() => game && setOverlay('leave')} aria-label={game ? '메인 메뉴로 돌아가기' : 'CHEMAGE'}><Icon name="spark" size={18} /><span>CHEMAGE</span><small>VI</small></button><div><button className="icon-button" disabled={busy} onClick={() => openCodex()} aria-label="마법 도감"><Icon name="book" size={17} /></button><button className="icon-button" onClick={() => setOverlay('settings')} aria-label="효과음 및 움직임 설정"><Icon name="settings" size={17} /></button><button className="icon-button help-button" onClick={() => setOverlay('help')} aria-label="도움말">?</button></div></header>
+  return <div className={`world rework ${reducedMotion ? 'reduced-motion' : ''} ${simpleBanners ? 'simple-banners' : ''}`}><div className="ambient-orb orb-a" /><div className="ambient-orb orb-b" /><div className="desktop-label">CHEMAGE <span>MAKE A LITTLE MAGIC · VIII</span></div><div className={`game-shell ${visibleGame?.screen === 'battle' ? 'in-battle' : ''}`}>
+    <header className="topbar"><button className="brand" disabled={busy} onClick={() => game && setOverlay('leave')} aria-label={game ? '메인 메뉴로 돌아가기' : 'CHEMAGE'}><Icon name="spark" size={18} /><span>CHEMAGE</span><small>VIII</small></button><div><button className="icon-button" disabled={busy} onClick={() => openCodex()} aria-label="마법 도감"><Icon name="book" size={17} /></button><button className="icon-button" onClick={() => setOverlay('settings')} aria-label="효과음 및 움직임 설정"><Icon name="settings" size={17} /></button><button className="icon-button help-button" onClick={() => setOverlay('help')} aria-label="도움말">?</button></div></header>
     {!visibleGame ? <Menu start={start} codex={() => openCodex()} help={() => setOverlay('help')} found={discoveries.length} /> : visibleGame.screen === 'battle' ? <Battle hint={hintSpell ? () => openCodex({kind:'magic', id:hintSpell.id}) : undefined} game={visibleGame} selected={selected} discoveries={discoveries} busy={busy} tutorial={tutorial} select={select} act={act} skip={() => controller.current.skip()} event={playback?.event ?? null} eventIndex={playback?.index ?? -1} speed={speed} discovery={discovery} detail={(title, text) => setDetail({ title, text })} /> : visibleGame.screen === 'reward' ? <Rewards game={visibleGame} choose={choose} /> : <Ending game={visibleGame} restart={start} menu={() => setGame(null)} codex={() => setOverlay('codex')} />}
     {overlay === 'codex' && <Codex hints={hints} onReveal={reveal} initialTarget={hintTarget} reactions={reactions} discoveries={discoveries} onClose={closeOverlay} storageError={storageError} />}
     {overlay === 'help' && <Help onClose={closeOverlay} />}

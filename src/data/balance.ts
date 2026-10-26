@@ -9,5 +9,8 @@ export const BALANCE = {
   peroxide: { damage: 8, dot: 4 }, graphite: { shield: 10, reflect: 3 },
   hydrogen: { damage: 7, shieldDamage: 4 }, alkali: { damage: 9, shieldDamage: 5 }, ferrous: { damage: 16, reduction: 3 },
   neutralization: { damage: 8, shield: 6 },
+  nitrogen: { shield: 14, mana: 8 }, ammonia: { damage: 12, reduction: 2 }, nitro: { damage: 14, dot: 2 },
+  sulfide: { damage: 10, shield: 6 }, sulfur: { damage: 14, wetBonus: 4 }, ironSulfide: { damage: 18, pierce: 2 },
+  ammonium: { damage: 5 }, reconstructionCharge: 35,
   methane: { damage: 20 }, ironOxide: { damage: 14 },
 } as const;

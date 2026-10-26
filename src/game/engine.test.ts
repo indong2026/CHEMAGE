@@ -27,7 +27,7 @@ function recipe(s: GameState, id: SpellId) {
 describe('원소와 화학식: 기존 판정 유지', () => {
   it('확률 합계와 경계값을 유지한다', () => {
     expect(Object.values(ELEMENTS).reduce((n, e) => n + e.probability, 0)).toBeCloseTo(1);
-    expect([0, .299, .301, .559, .561, .741, .841, .941].map(n => drawElement(() => n))).toEqual(['H', 'H', 'O', 'O', 'C', 'Na', 'Cl', 'Fe']);
+    expect([0, .289, .291, .519, .521, .651, .741, .831, .881, .941].map(n => drawElement(() => n))).toEqual(['H', 'H', 'O', 'O', 'C', 'Na', 'Cl', 'Fe', 'N', 'S']);
   });
   it('순서와 무관하게 정확한 다중집합만 판정한다', () => {
     expect(matchRecipe(['O', 'H', 'H'])?.id).toBe('water'); expect(matchRecipe(['H', 'O', 'H'])?.id).toBe('water');
@@ -35,7 +35,7 @@ describe('원소와 화학식: 기존 판정 유지', () => {
   });
   it.each(SPELLS)('마법 $formula의 레시피를 유지하고 실제 시전 시 10 마력을 얻는다', spell => {
     const s = recipe(fixture(), spell.id), n = cast(s, spell.id);
-    expect(n.stats.casts).toBe(1); expect(n.mana).toBe(10); expect(n.spellsUsed).toBe(1);
+    expect(n.stats.casts).toBe(1); expect(n.mana).toBe(spell.id === 'nitrogen' ? 18 : 10); expect(n.spellsUsed).toBe(1);
     expect(n.inventory).toHaveLength(0); expect(n.discoveries).toEqual([spell.id]); expect(n.turn).toBe(1);
   });
   it('잘못된 조합, 중복/없는 ID, 빈 선택은 상태를 변경하지 않는다', () => {

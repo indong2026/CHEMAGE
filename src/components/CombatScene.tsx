@@ -14,7 +14,7 @@ export function HealthBar({ value, max, player = false }: { value: number; max: 
 }
 export function CombatScene({ game: g, event, eventIndex, busy, speed, detail }: { game: GameState; event: GameEvent | null; eventIndex: number; busy: boolean; speed: number; detail?: (title: string, text: string) => void }) {
   const enemy = ENEMIES[g.enemy.id];
-  const intent = adjustedIntent(g.enemy.intent, g.enemy.weaken, g.vulnerable);
+  const intent = adjustedIntent(g.enemy.intent, g.enemy.weaken, g.vulnerable, g.enemy.mist);
   const reaction = busy && event?.kind === 'reaction' && event.reaction ? REACTIONS[event.reaction] : null;
   const danger = g.enemy.hp > 0 && isDangerous(intent);
   const shieldGain = busy && event?.kind === 'shield' && event.target === 'player';
@@ -27,7 +27,7 @@ export function CombatScene({ game: g, event, eventIndex, busy, speed, detail }:
   const support = busy && event?.cue === 'support';
   const attackingSpell = effect in SPELL_BY_ID && SPELL_BY_ID[effect as SpellId].attack;
   const outgoing = !incoming && (attackingSpell || ['zero'].includes(effect));
-  const strong = ['zero', 'methane', 'ironOxide'].includes(effect) || (incoming && (danger || (event?.value ?? 0) >= 18));
+  const strong = ['zero', 'methane', 'ironOxide', 'ironSulfide'].includes(effect) || (incoming && (danger || (event?.value ?? 0) >= 18));
   const color = effect in SPELL_BY_ID ? SPELL_BY_ID[effect as SpellId].color : effect === 'neutralization' ? '#9ef0cb' : effect === 'enemy-acid' ? '#a0ef8e' : effect === 'zero' ? '#e3ffc7' : effect === 'enemy-fire' ? '#ff8b68' : incoming ? '#ffabc2' : '#b6dbff';
   const icon = { attack: 'sword', fire: 'fire', shield: 'shield', charge: 'spark', wait: 'wait' }[intent.type];
   const enemyHit = impact && event?.target === 'enemy';
@@ -59,7 +59,7 @@ export function CombatScene({ game: g, event, eventIndex, busy, speed, detail }:
     {busy && (event?.hitCount ?? 0) > 1 && <div className="hit-counter">{event?.hitIndex}/{event?.hitCount} 타격</div>}
     {impact && (event?.combo ?? 0) > 0 && <div className="combo-pop">COMBO! <b>+{event!.combo}</b></div>}
     {busy && event?.kind === 'spell' && event.freshSpell && <span className="new-magic-label">NEW MAGIC!</span>}
-    <div className={`action-caption ${effect === 'zero' ? 'burst-caption' : ''}`} role="status" aria-live="polite"><span className="caption-index">{busy ? incoming ? 'ENEMY' : effect === 'zero' ? 'BURST' : 'MAGIC' : 'YOUR TURN'}</span><strong>{busy ? event?.text : '나의 차례'}</strong></div>
+    {event?.kind !== 'reconstruct' && event?.kind !== 'reconstruct-ready' && <div className={`action-caption ${effect === 'zero' ? 'burst-caption' : ''}`} role="status" aria-live="polite"><span className="caption-index">{busy ? incoming ? 'ENEMY' : effect === 'zero' ? 'BURST' : 'MAGIC' : 'YOUR TURN'}</span><strong>{busy ? event?.text : '나의 차례'}</strong></div>}
   </section>;
 }
 

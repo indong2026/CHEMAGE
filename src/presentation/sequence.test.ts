@@ -3,7 +3,7 @@ import { newGame, performAction } from '../game/engine';
 import { battleSequence } from './sequence';
 import { PlaybackController, eventDuration } from './playback';
 import type { GameState } from '../game/types';
-const rng = () => .99;
+const rng = () => .85;
 const guard = (s: GameState) => performAction(s, { type: 'endTurn' }, s.revision, rng);
 const cast = (s: GameState, ids: number[]) => performAction(s, { type: 'cast', ids }, s.revision, rng);
 afterEach(() => vi.useRealTimers());

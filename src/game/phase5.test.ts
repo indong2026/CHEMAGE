@@ -141,7 +141,7 @@ describe('보상과 발견 저장', () => {
     let s=state();s.screen='reward';s.rewards=['resonance'];expect(chooseReward(s,'resonance',rng)).toBe(s);
     for(let i=0;i<2;i++){s.screen='reward';s.rewards=['resonance'];s=chooseReward(s,'resonance',rng,'H');}
     expect(s.upgrades.resonance.H).toBe(2); const probs=elementProbabilities(s.upgrades.resonance);
-    expect(Object.values(probs).reduce((a,b)=>a+b,0)).toBeCloseTo(1); expect(probs.H).toBeCloseTo(.6/1.3);
+    expect(Object.values(probs).reduce((a,b)=>a+b,0)).toBeCloseTo(1); expect(probs.H).toBeCloseTo(.58/1.29);
     s.screen='reward';s.rewards=['resonance'];expect(chooseReward(s,'resonance',rng,'H')).toBe(s);
     expect(newGame(rng).upgrades.resonance).toEqual({});
     let cumulative=0;for(const e of ELEMENT_KEYS){expect(drawElement(()=>cumulative + probs[e]/2,s.upgrades.resonance)).toBe(e);cumulative+=probs[e];}
@@ -167,8 +167,8 @@ describe('보상과 발견 저장', () => {
     values.set(REACTIONS_KEY,'["bogus","combustion"]');expect(loadReactions(storage)).toEqual(['combustion']);
     expect(saveReactions([], {getItem:()=>null,setItem:()=>{throw Error('blocked');}})).toBe(false);
   });
-  it('13개 레시피는 유일하고 상태를 변경하지 않는 예상 피해 계산을 제공한다', () => {
-    expect(SPELLS).toHaveLength(13);expect(new Set(SPELLS.map(s=>s.formula)).size).toBe(13);
+  it('19개 레시피는 유일하고 상태를 변경하지 않는 예상 피해 계산을 제공한다', () => {
+    expect(SPELLS).toHaveLength(19);expect(new Set(SPELLS.map(s=>s.formula)).size).toBe(19);
     const s=state(['acid','alkali']);const before=structuredClone(s);expect(previewSpell(s,[999])).toBeNull();expect(s).toEqual(before);
   });
 });

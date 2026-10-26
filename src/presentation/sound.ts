@@ -3,6 +3,12 @@ import type { GameEvent, Effect } from '../game/types';
 type AudioWindow = Window & { webkitAudioContext?: typeof AudioContext };
 type Voice = { frequency: number; end: number; duration: number; type: OscillatorType };
 const VOICES: Partial<Record<Effect, Voice>> = {
+  nitrogen: { frequency: 450, end: 880, duration: .22, type: 'sine' },
+  ammonia: { frequency: 260, end: 540, duration: .2, type: 'sine' },
+  nitro: { frequency: 720, end: 180, duration: .18, type: 'triangle' },
+  sulfide: { frequency: 380, end: 680, duration: .2, type: 'sine' },
+  sulfur: { frequency: 230, end: 680, duration: .2, type: 'triangle' },
+  ironSulfide: { frequency: 1200, end: 100, duration: .22, type: 'square' },
   hydrogen: { frequency: 980, end: 440, duration: .15, type: 'sine' },
   alkali: { frequency: 480, end: 980, duration: .2, type: 'triangle' },
   ferrous: { frequency: 1500, end: 120, duration: .24, type: 'square' },
@@ -65,6 +71,7 @@ export class SynthAudio {
   select() { this.tone(600, 950, .045, 'triangle', .018); }
   complete() { [523, 659, 784].forEach((f, i) => this.tone(f, f, .12, 'sine', .025, i * .035)); }
   event(event: GameEvent) {
+    if (event.kind === 'reconstruct-ready' || event.kind === 'reconstruct') { [660, 990].forEach((f,i) => this.tone(f,f * 1.1,.12,'sine',.025,i * .07)); return; }
     if (event.kind === 'reaction') { [440, 660, 880].forEach((f,i) => this.tone(f,f * 1.2,.16,'triangle',.03,i * .06)); return; }
     if (event.kind === 'turn-banner') {
       if (event.target === 'enemy') { this.tone(220, 110, .18, 'square', .025); this.tone(165, 82, .16, 'triangle', .025, .18); }

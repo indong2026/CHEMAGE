@@ -15,12 +15,12 @@ export function EnemyAffinity({ game, detail }: Props) {
 }
 export function EnemyStatus({ game: g, detail }: Props) {
   const statuses = [
-    ...(g.enemy.weaken ? [{ name: '공격 약화', icon: 'sword', value: 1, style: 'weak', text: '이번 적 행동의 각 직접 타격 피해 −3. 중첩되지 않고 재사용 시 갱신합니다. 공격하지 않아도 이번 행동 후 사라집니다.' }] : []),
+    ...(g.enemy.weaken || g.enemy.mist ? [{ name: '공격 약화', icon: 'sword', value: g.enemy.weaken ? 3 : 2, style: 'weak', text: '이번 적 행동의 각 직접 타격 피해 감소. 여러 약화는 강한 효과 하나만 적용하며 이번 행동 후 사라집니다.' }] : []),
     ...(enemyArmor(g) ? [{ name: '적 방어력', icon: 'shield', value: enemyArmor(g), style: 'armor', text: '직접 공격마다 피해를 줄입니다. NaCl은 5 관통, 부식은 현재 방어력을 3 낮춥니다.' }] : []),
     ...(g.enemy.shield ? [{ name: '적 보호막', icon: 'shield', value: g.enemy.shield, style: 'ward', text: '방어력 적용 후 피해를 흡수하는 임시 보호막. ZERO BURST에도 적용하며 다음 적 행동 직전에 만료됩니다.' }] : []),
-    ...(g.enemy.wet ? [{ name: '젖음', icon: 'drop', value: g.enemy.wet, style: 'wet', text: '다음 NaCl 피해 +4. 연계 시 소모하며 다음 플레이어 턴까지 유지합니다.' }] : []),
+    ...(g.enemy.wet ? [{ name: '젖음', icon: 'drop', value: g.enemy.wet, style: 'wet', text: '다음 NaCl 또는 SO₂ 피해 +4. 연계 시 소모하며 다음 플레이어 턴까지 유지합니다.' }] : []),
     ...(g.enemy.acid ? [{ name: '부식', icon: 'flask', value: g.enemy.acid, style: 'acid', text: '현재 방어력 −3. 숫자는 이후 남은 턴입니다. 시전한 턴의 경계에서는 감소하지 않습니다.' }] : []),
-    ...(g.enemy.dot ? [{ name: '잔류 피해', icon: 'fire', value: g.enemy.dot, style: 'dot', text: '적 행동 시작에 피해 4. 숫자는 남은 횟수. 상성, 방어력, 보호막을 무시합니다.' }] : []),
+    ...(g.enemy.dot ? [{ name: '잔류 피해', icon: 'fire', value: g.enemy.dot, style: 'dot', text: `적 행동 시작에 피해 ${g.enemy.dotDamage ?? 4}. 숫자는 남은 횟수. 마지막 시전으로 피해와 횟수를 갱신하며 상성, 방어력, 보호막을 무시합니다.` }] : []),
   ];
   return <div className="enemy-battle-status" aria-label="적 전투 상태">{statuses.map(s => <button key={s.name} className={s.style} aria-label={`${s.name} 설명`} onClick={() => detail?.(s.name, s.text)}><Icon name={s.icon} size={13} />{s.style === 'armor' ? '방어력' : s.style === 'ward' ? '보호막' : ''} <b>{s.value}</b></button>)}</div>;
 }

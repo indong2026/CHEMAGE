@@ -36,7 +36,7 @@ it('손패 안내는 한 개이며 힌트가 조합·가방·마력·턴을 보�
   fireEvent.click(screen.getByRole('button',{name:'마법 도감'}));expect(screen.getByText('워터 블래스트')).toBeInTheDocument();expect(screen.queryByRole('button',{name:'미발견 마법 1 힌트'})).toBeNull();
 });
 it('반응 2단계는 미발견 관련 마법을 숨기고 힌트로 이동하며 정확한 순서는 3단계에서만 공개한다', () => {
-  localStorage.setItem(CODEX_KEY,'["acid"]');render(<App/>);fireEvent.click(screen.getByRole('button',{name:'마법 도감'}));fireEvent.click(screen.getByRole('tab',{name:'반응 기록 0/3'}));
+  localStorage.setItem(CODEX_KEY,'["acid"]');render(<App/>);fireEvent.click(screen.getByRole('button',{name:'마법 도감'}));fireEvent.click(screen.getByRole('tab',{name:'반응 기록 0/4'}));
   fireEvent.click(screen.getByRole('button',{name:'미발견 반응 1 힌트'}));fireEvent.click(screen.getByRole('button',{name:'1단계 힌트 열기 무료'}));
   expect(screen.queryByText(/같은 플레이어 턴에 HCl/)).toBeNull();fireEvent.click(screen.getByRole('button',{name:'2단계 힌트 열기 무료'}));
   expect(screen.getByRole('button',{name:'1번째 관련 마법 HCl 보기'})).toBeInTheDocument();expect(screen.queryByText(/NaOH/)).toBeNull();
@@ -57,7 +57,7 @@ it('공명 미리보기는 발견한 관련 마법만 표시하고 원소 변경
   render(<Rewards game={s} choose={choose}/>);fireEvent.click(screen.getByRole('button',{name:/원소 공명/}));
   fireEvent.click(screen.getByRole('button',{name:'Fe 공명 선택'}));const preview=screen.getByRole('region',{name:'원소 공명 미리보기'});
   expect(preview).toHaveTextContent('Fe 2개 확정 + 무작위 3개');expect(preview).toHaveTextContent('아이언 가드');expect(preview).toHaveTextContent('아이언 스트라이크');
-  expect(preview).not.toHaveTextContent('FeCl₂');expect(preview).not.toHaveTextContent('페러스 체인');expect(within(preview).getAllByText('??? · 미발견 마법')).toHaveLength(1);
+  expect(preview).not.toHaveTextContent('FeCl₂');expect(preview).not.toHaveTextContent('페러스 체인');expect(within(preview).getAllByText('??? · 미발견 마법')).toHaveLength(2);
   fireEvent.click(screen.getByRole('button',{name:'Cl 공명 선택'}));expect(choose).not.toHaveBeenCalled();expect(preview).toHaveTextContent('Cl 2개 확정');
   fireEvent.click(screen.getByRole('button',{name:'Cl 공명 확정 · 다음 전투'}));fireEvent.click(screen.getByRole('button',{name:'Cl 공명 확정 · 다음 전투'}));
   expect(choose).toHaveBeenCalledExactlyOnceWith('resonance','Cl');

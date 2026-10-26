@@ -25,10 +25,10 @@ it('NaOH 조합 시에만 중화 가능과 합산 예측을 표시하고 반응�
 });
 it('반응 기록 탭은 발견한 반응만 열고 화학식과 게임 효과를 구분한다', () => {
   render(<Codex discoveries={['water','iron']} reactions={['neutralization','crystallization']} storageError={false} onClose={noop} />);
-  expect(screen.getByRole('tab',{name:'마법 2/13'})).toHaveAttribute('aria-selected','true');
-  fireEvent.click(screen.getByRole('tab',{name:'반응 기록 2/3'}));
+  expect(screen.getByRole('tab',{name:'전체 마법 2/19'})).toHaveAttribute('aria-selected','true');
+  fireEvent.click(screen.getByRole('tab',{name:'반응 기록 2/4'}));
   expect(screen.getByText('HCl + NaOH → NaCl + H₂O')).toBeInTheDocument();
-  expect(screen.getByText('? 미발견 반응')).toBeInTheDocument();
+  expect(screen.getAllByText('? 미발견 반응')).toHaveLength(2);
   expect(screen.getByText(/새로운 물질이 생기는 화학 반응식으로 취급하지 않습니다/)).toBeInTheDocument();
   expect(screen.queryByText('CH₄ + 2O₂ → CO₂ + 2H₂O')).toBeNull();
 });

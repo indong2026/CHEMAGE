@@ -1,0 +1,36 @@
+.compact-bag .bag-label { height:auto; min-height:40px; gap:6px; }
+.compact-bag .bag-label>span { white-space:nowrap; }
+.reconstruction-control { margin-left:auto; display:flex; align-items:center; gap:5px; padding:2px 0 2px 5px; background:none; border:0; color:#849b9e; min-height:40px; }
+.reconstruction-control small { font-size:10px; white-space:nowrap; }
+.reconstruction-ring { display:grid; place-items:center; width:32px; height:32px; border-radius:50%; background:conic-gradient(#77e6d6 var(--charge),#343c4a 0); position:relative; isolation:isolate; }
+.reconstruction-ring:before { content:''; position:absolute; inset:3px; border-radius:50%; background:#1d2432; z-index:-1; }
+.reconstruction-control.ready { color:#9cf4df; }
+.reconstruction-control.ready .reconstruction-ring { box-shadow:0 0 9px #77e6d633; }
+.reconstruction-control:focus-visible { outline:2px solid #9cf4df; outline-offset:2px; }
+.reconstruction-choice { color:#b5e6dc; font-size:11px; padding:5px 0 8px; display:grid; gap:4px; }
+.reconstruction-choice>b { font-size:12px; }
+.reconstruction-choice>small { font-size:10px; line-height:1.5; color:#a6b9c3; }
+.reconstruction-choice>div { display:flex; gap:5px; align-items:center; flex-wrap:wrap; }
+.reconstruction-choice>div>span { flex:1; min-width:100px; font-size:11px; }
+.reconstruction-choice button { border:1px solid #42796f; background:#243e42; color:#c6fff1; padding:7px; min-height:36px; font-size:11px; }
+.reconstruction-selecting .element-tile { border-color:#578f86; }
+.reconstruction-selecting .element-tile.selected { outline:2px solid #b0ffdf; outline-offset:-2px; box-shadow:0 0 8px #79e5d544; }
+.battle-notice { overflow:hidden; }
+.reconstruction-notice { pointer-events:none; }
+.reconstruction-notice .notice-band { animation-duration:calc(1.2s / var(--rate,1)); }
+.reconstruction-result .notice-band { animation-duration:calc(.85s / var(--rate,1)); }
+.reconstruction-notice .notice-band { background:#173a3af2; border-color:#69cfbf; color:#bcfff0; padding:18px 8px; }
+.reconstruction-notice .notice-band>b { font-size:clamp(14px,4vw,19px); letter-spacing:0; overflow-wrap:anywhere; }
+.reconstruction-notice .notice-band>span { font-size:11px; line-height:1.6; letter-spacing:0; }
+.reconstruction-symbols { display:flex; align-items:center; justify-content:center; gap:22px; padding:12px 0; }
+.reconstruction-symbols i { display:grid; place-items:center; font-style:normal; font-size:30px; width:60px; height:60px; border:2px solid #8af2d5; background:#1e3940; box-shadow:4px 4px #0e202e; }
+.reconstruction-symbols i:first-child { animation:reconstruction-out calc(.85s / var(--rate,1)) steps(6) both; }
+.reconstruction-symbols i:last-child { animation:reconstruction-in calc(.85s / var(--rate,1)) steps(6) both; }
+@keyframes reconstruction-out { 0% {transform:translateY(24px);opacity:1} 40% {transform:rotate(-12deg);filter:brightness(2)} 100% {transform:scale(.75);opacity:.5} }
+@keyframes reconstruction-in { 0%,35% {transform:scale(.3);opacity:0} 55% {transform:scale(1.18);filter:brightness(3);opacity:1} 100% {transform:scale(1);filter:brightness(1)} }
+.fx-ammonia .projectile,.fx-sulfide .projectile,.fx-sulfur .projectile { border-radius:35%; box-shadow:8px 4px 0 var(--fx),-7px -3px 0 var(--fx); opacity:.8; }
+.fx-nitrogen .persistent-ward { border-color:#8ceadd; box-shadow:0 0 16px #70ddcc66; }
+.reaction-ammonium .reaction-flash i { background:#fff; }
+.reduced-motion .reconstruction-symbols i { animation:none!important; }
+@media (prefers-reduced-motion:reduce) { .reconstruction-symbols i {animation:none!important;} }
+@media(max-width:350px) { .reconstruction-control {gap:3px;} .reconstruction-control small {font-size:9px;} .reconstruction-choice>div>span {min-width:85px;} }

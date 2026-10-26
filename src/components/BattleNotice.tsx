@@ -1,6 +1,10 @@
 import type { GameEvent } from '../game/types';
+import { ELEMENTS } from '../data/elements';
 
 export function BattleNotice({ event }: { event: GameEvent }) {
+  if (event.kind === 'reconstruct-ready' || event.kind === 'reconstruct') return <div className={`battle-notice reconstruction-notice ${event.kind === 'reconstruct' ? 'reconstruction-result' : ''}`} role="status">
+    <div className="notice-band"><b>{event.text}</b>{event.kind === 'reconstruct' ? <><div className="reconstruction-symbols"><i>{event.fromElement}</i><span>→</span><i>{event.toElement}</i></div><span>{event.toElement && ELEMENTS[event.toElement].name} {event.toElement} 원소를 획득했습니다.</span></> : <span>가방의 원소 1개를 다른 원소로 바꿔보세요.</span>}</div>
+  </div>;
   const turn = event.kind === 'turn-banner', ready = event.kind === 'ready', death = event.kind === 'death';
   if (!turn && !ready && !death) return null;
   const enemy = event.target === 'enemy';

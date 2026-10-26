@@ -1,6 +1,9 @@
 import { SPELLS } from '../data/spells';
 import { REACTION_IDS } from '../data/reactions';
-import type { ReactionId, SpellId } from './types';
+import type { Element, ReactionId, SpellId } from './types';
+export function spellsForElement(element: Element) {
+  return SPELLS.filter(spell => (spell.recipe[element] ?? 0) > 0);
+}
 export const CODEX_KEY = 'chemage.discoveries.v1';
 type StorageLike = Pick<Storage, 'getItem' | 'setItem'>;
 export function loadDiscoveries(storage?: StorageLike): SpellId[] {

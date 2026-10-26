@@ -1,0 +1,17 @@
+/* Reuse the bag tiles and archive cards without changing combat layout. */
+.codex-tabs button{min-width:0;font-size:12px;padding:7px 3px;line-height:1.5}
+.codex-tabs small{display:block;font:10px ui-monospace,monospace;color:#b7c8d9}
+.codex-elements{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:7px}
+.codex-elements .element-tile{min-width:0;height:57px;display:flex;flex-direction:column;justify-content:center;gap:3px;padding:5px}
+.codex-elements .element-tile b{font:700 21px ui-monospace,monospace}
+.codex-elements .element-tile small{font-size:10px;color:#bac4d5}
+.element-progress{font-size:12px;color:#b8c9d9;line-height:1.8;margin:13px 0 0;overflow-wrap:anywhere}
+.element-progress b{color:#a5e3dc;white-space:nowrap}
+.element-spells{gap:8px;margin-top:10px}
+.element-spells .codex-entry{width:100%;min-height:73px;align-items:center;text-align:left;padding:10px 9px}
+.element-spells .codex-formula{padding:0;min-width:57px;font-size:20px}
+.codex-summary{color:#d0c6e4;cursor:pointer}
+.codex-summary strong{display:block;font-size:12px;line-height:1.7}
+.codex-summary small{display:block;font-size:10px;color:#a5d7d0;margin-top:4px}
+.codex-entry .eyebrow .icon{vertical-align:middle;margin-right:3px}
+.codex-elements button:focus-visible{outline:2px solid var(--element);outline-offset:2px}

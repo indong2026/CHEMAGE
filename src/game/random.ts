@@ -13,7 +13,12 @@ export function drawElement(rng: Rng, resonance: Partial<Record<Element, number>
     cumulative += probabilities[element];
     if (roll < cumulative) return element;
   }
-  return 'Fe';
+  return ELEMENT_KEYS[ELEMENT_KEYS.length - 1];
+}
+/** Independent of drop weights and resonance: seven equally likely alternatives. */
+export function reconstructElement(from: Element, rng: Rng): Element {
+  const candidates = ELEMENT_KEYS.filter(e => e !== from);
+  return candidates[Math.min(candidates.length - 1, Math.max(0, Math.floor(rng() * candidates.length)))];
 }
 export function shuffle<T>(items: readonly T[], rng: Rng): T[] {
   const result = [...items];

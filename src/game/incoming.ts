@@ -1,8 +1,8 @@
 import type { DirectHit, Intent, TurnEffects } from './types';
 
 /** Shared by the intent UI and execution; authored patterns remain immutable. */
-export function adjustedIntent(intent: Intent, weaken = 0, vulnerable = false): Intent {
-  const hits = directHits(intent).map(h => ({ ...h, value: Math.max(0, h.value - (weaken ? 3 : 0) + (vulnerable ? 3 : 0)) }));
+export function adjustedIntent(intent: Intent, weaken = 0, vulnerable = false, mist = false): Intent {
+  const hits = directHits(intent).map(h => ({ ...h, value: Math.max(0, h.value - Math.max(weaken ? 3 : 0, mist ? 2 : 0) + (vulnerable ? 3 : 0)) }));
   if (!hits.length) return intent;
   return { ...intent, value: hits.reduce((sum, h) => sum + h.value, 0), ...(intent.hits?.length ? { hits } : {}) };
 }

@@ -5,10 +5,12 @@ import type { GameEvent, GameState } from '../game/types';
 export function battleSequence(game: GameState, announced: boolean, opening = false) {
   const events: GameEvent[] = [];
   let playerTurn: GameEvent | undefined;
+  let reconstructionReady: GameEvent | undefined;
   const source: GameEvent[] = opening
     ? [{ kind: 'turn', target: 'player', cue: 'system', text: '당신의 차례', frame: battleFrame(game) }]
     : game.events;
   for (const event of source) {
+    if (event.kind === 'reconstruct-ready') { reconstructionReady = event; continue; }
     if (event.frame && event.frame.mana < 100) announced = false;
     if (event.kind === 'turn' && event.target === 'player') { playerTurn = event; continue; }
     events.push(event.kind === 'turn' ? { ...event, kind: 'turn-banner' } : event);
@@ -20,6 +22,7 @@ export function battleSequence(game: GameState, announced: boolean, opening = fa
       events.push({ kind: 'ready', cue: 'system', text: '필살기 준비 완료!', frame: battleFrame(game) });
       announced = true;
     }
+    if (reconstructionReady) events.push({ ...reconstructionReady, frame: battleFrame(game) });
   }
   return { events, announced };
 }

@@ -28,8 +28,8 @@ describe('연구 힌트 데이터와 독립 저장', () => {
     const hints=spellHints(id);expect(hints).toHaveLength(3);expect(hints[0]).toBe(SPELL_CLUES[id]);expect(hints[1]).toContain(`총 ${n}개`);expect(hints[2]).toContain(answer);
     expect(hints[0]).not.toContain(SPELL_BY_ID[id].name);
   });
-  it('13종에 누락이 없고 화학 명칭과 수용액 구분을 유지한다', () => {
-    expect(Object.keys(SPELL_CLUES)).toHaveLength(13);
+  it('19종에 누락이 없고 화학 명칭과 수용액 구분을 유지한다', () => {
+    expect(Object.keys(SPELL_CLUES)).toHaveLength(19);
     expect(SPELL_CLUES.acid).toContain('물에 녹은 수용액');expect(SPELL_CLUES.ferrous).toContain('염화 철(II)');expect(SPELL_CLUES.ironOxide).toContain('산화 철(II)');
   });
   it('각 항목은 0→1→2→3 순서로 공개되고 상한·다른 항목·전투를 보존한다', () => {

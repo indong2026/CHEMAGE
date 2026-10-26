@@ -4,6 +4,12 @@ import type { Element, ReactionId, SpellId } from '../game/types';
 
 // Stage 1 describes real substances; stages 2/3 derive quantities from the recipe.
 export const SPELL_CLUES: Record<SpellId, string> = {
+  nitrogen: '지구 대기의 가장 큰 부분을 차지하는 기체입니다. 같은 원자 두 개가 한 분자를 이룹니다.',
+  ammonia: '암모니아입니다. 질소와 수소로 이루어진 분자이며 염화 수소와 반응해 암모늄염을 형성할 수 있습니다.',
+  nitro: '이산화 질소입니다. 질소와 산소로 이루어진 물질입니다.',
+  sulfide: '황화 수소입니다. 수소와 황으로 이루어진 기체 물질입니다.',
+  sulfur: '이산화 황입니다. 황과 산소로 이루어진 물질입니다.',
+  ironSulfide: '황화 철(II)입니다. 철과 황의 비율이 1:1이며 황철석과는 다릅니다.',
   water: '우리 주변에서 쉽게 볼 수 있으며 생명 유지에 필수적인 액체입니다.',
   salt: '음식의 짠맛을 내는 대표적인 물질입니다. 양이온과 음이온이 규칙적으로 배열된 결정입니다.',
   carbon: '숨을 내쉴 때 나오는 기체 중 하나이며, 일부 소화기에도 사용됩니다.',
@@ -24,6 +30,11 @@ export function spellHints(id: SpellId): [string, string, string] {
   return [SPELL_CLUES[id], `${parts.map(([e]) => ELEMENTS[e].name).join(', ')} 원소를 사용합니다. 게임 조합에 원소 타일 총 ${count}개가 필요합니다.`, `${parts.map(([e, n]) => `${ELEMENTS[e].name} ${n}개`).join('와 ')}를 조합한 뒤 마법을 발동하세요.`];
 }
 export const REACTION_HINTS: Record<ReactionId, { principle: string; pair: [SpellId, SpellId]; clue: string; order: string }> = {
+  ammonium: {
+    principle: '암모니아는 염화 수소와 반응하여 암모늄염을 형성할 수 있습니다. 피해는 게임 효과입니다.',
+    pair: ['ammonia', 'acid'], clue: '질소와 수소로 이루어진 물질의 마법 다음에 염화 수소 마법을 사용해 보세요.',
+    order: '같은 플레이어 턴에 NH₃를 먼저 시전하고 HCl을 두 번째로 시전하세요. NH₃ + HCl → NH₄Cl. 추가 중립 피해 5는 판타지 규칙입니다.',
+  },
   neutralization: {
     principle: '산성 물질과 염기성 물질은 서로 반응할 수 있습니다. 추가 피해와 보호막은 게임 효과입니다.',
     pair: ['acid', 'alkali'], clue: '산성 수용액과 관련된 마법을 먼저, 강한 염기성 물질과 관련된 마법을 그다음에 사용해 보세요.',

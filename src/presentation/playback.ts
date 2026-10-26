@@ -1,6 +1,8 @@
 import type { GameEvent } from '../game/types';
 
 export function eventDuration(event: GameEvent) {
+  if (event.kind === 'reconstruct-ready') return 1200;
+  if (event.kind === 'reconstruct') return 850;
   if (event.kind === 'reaction') return 650;
   if (event.kind === 'shield-end') return 200;
   if (event.kind === 'turn-banner') return 700;
@@ -33,7 +35,7 @@ export class PlaybackController {
       if (index >= events.length) { this.skip(); return; }
       onEvent(events[index], index);
       const event = events[index];
-      const notice = event.kind === 'turn-banner' || event.kind === 'ready';
+      const notice = event.kind === 'turn-banner' || event.kind === 'ready' || event.kind === 'reconstruct-ready';
       const duration = notice && (this.reducedMotion || this.simpleBanners) ? 350 : this.reducedMotion ? (event.kind === 'death' ? 250 : 110) : eventDuration(event);
       this.timer = setTimeout(() => advance(index + 1), duration / this.speed);
     };

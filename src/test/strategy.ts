@@ -4,7 +4,20 @@ import { SPELLS } from '../data/spells';
 import { chooseReward, newGame, simulateAction } from '../game/engine';
 import { seededRng } from '../game/random';
 import { recipeIds } from '../game/suggestions';
-import type { Action, GameState } from '../game/types';
+import type { Action, GameState, Tile } from '../game/types';
+export const craftableIds = (tiles: Tile[]) => SPELLS.filter(spell => recipeIds(tiles,spell)).map(s=>s.id);
+/** Uses the visible hand and all seven possible outcomes, never the future RNG. */
+export function reconstructionChoice(s: GameState): number | undefined {
+  if (s.reconstruction !== 100 || !s.inventory.length) return;
+  const before=craftableIds(s.inventory).length;
+  let bestGain=0, choice:number|undefined;
+  for(const element of new Set(s.inventory.map(t=>t.element))){
+    const tile=s.inventory.find(t=>t.element===element)!;
+    const gain=ELEMENT_KEYS.filter(e=>e!==element).reduce((sum,e)=>sum+craftableIds(s.inventory.map(t=>t.id===tile.id?{...t,element:e}:t)).length-before,0)/7;
+    if(gain>bestGain+.00001){bestGain=gain;choice=tile.id;}
+  }
+  return choice;
+}
 export type Strategy = 'attack' | 'affinity' | 'shield' | 'mixed' | 'reaction' | 'stockpile' | 'burst';
 export function candidates(s: GameState, strategy: Strategy): Action[] {
   const actions: Action[] = [{ type: 'endTurn' }];
@@ -44,9 +57,11 @@ export function chooseAction(s: GameState, strategy: Strategy): Action {
   }
   return best;
 }
-export function runStrategy(strategy: Strategy, runs: number) {
+export function runStrategy(strategy: Strategy, runs: number, reconstruction = true) {
   const report = { strategy, runs, wins: 0, defeats: 0, stalled: 0, turns: 0, casts: 0, bursts: 0, conversions: 0, combos: 0, effectiveHits: 0, resistedHits: 0, defenseActions: 0, stageTurns: [0, 0, 0, 0, 0], stageVisits: [0, 0, 0, 0, 0], losses: [0, 0, 0, 0, 0], firstTurnKills: 0, resonanceStarts: [0,0,0,0,0], invalidResonanceStarts: 0, reactions: Object.fromEntries(REACTION_IDS.map(id => [id, 0])), spellUsage: Object.fromEntries(SPELLS.map(s => [s.id, 0])), enemyVisits: {} as Record<string, number>, winningSeeds: [] as number[] };
+  const metrics={reconstruction,uses:0,newSpellOpportunities:0,craftableBefore:0,craftableAfter:0,decisionSamples:0,craftableSum:0,emptyRecipeTurnEnds:0,turnEnds:0,newSpellCasts:0,strandedTileRounds:0,tileRounds:0,opportunities:Object.fromEntries(SPELLS.map(s=>[s.id,0]))};
   for (let seed = 1; seed <= runs; seed++) {
+    const reconstructionRng=seededRng(seed+50000),ages=new Map<number,number>();
     const rng = seededRng(seed); let s = newGame(rng, { firstAdventure: false }); report.stageVisits[0]++; report.enemyVisits[s.enemy.id] = (report.enemyVisits[s.enemy.id] ?? 0) + 1;
     for (let step = 0; step < 320 && s.screen !== 'victory' && s.screen !== 'defeat'; step++) {
       if (s.screen === 'reward') {
@@ -57,9 +72,18 @@ export function runStrategy(strategy: Strategy, runs: number) {
         if(reward==='resonance'){report.resonanceStarts[s.stage]++;if(s.inventory.length!==5||s.inventory.filter(t=>t.element===element).length<2||s.pendingResonance!==null)report.invalidResonanceStarts++;}
         report.stageVisits[s.stage]++; report.enemyVisits[s.enemy.id] = (report.enemyVisits[s.enemy.id] ?? 0) + 1; continue;
       }
-      const before = s; s = simulateAction(s, chooseAction(s, strategy), rng);
+      const reconstructId=reconstruction ? reconstructionChoice(s) : undefined;
+      if(reconstructId!==undefined){
+        const beforeIds=craftableIds(s.inventory);s=simulateAction(s,{type:'reconstruct',id:reconstructId},reconstructionRng);
+        const afterIds=craftableIds(s.inventory);metrics.uses++;metrics.craftableBefore+=beforeIds.length;metrics.craftableAfter+=afterIds.length;
+        if(afterIds.some(id=>!beforeIds.includes(id)))metrics.newSpellOpportunities++;
+      }
+      const available=craftableIds(s.inventory);metrics.decisionSamples++;metrics.craftableSum+=available.length;for(const id of available)metrics.opportunities[id]++;
+      const before = s,action=chooseAction(s,strategy);s = simulateAction(s, action, rng);
+      if(action.type==='endTurn'){metrics.turnEnds++;if(!available.length)metrics.emptyRecipeTurnEnds++;}
+      if(s.turn!==before.turn){for(const tile of before.inventory){const age=(ages.get(tile.id)??0)+1;ages.set(tile.id,age);metrics.tileRounds++;if(age>=3&&!SPELLS.some(spell=>spell.recipe[tile.element]&&recipeIds(before.inventory,spell)))metrics.strandedTileRounds++;}}
       report.stageTurns[before.stage] += s.stats.turns - before.stats.turns;
-      for (const e of s.events) { if (e.kind === 'reaction' && e.reaction) report.reactions[e.reaction]++; if (e.kind === 'spell' && e.spell) report.spellUsage[e.spell]++; }
+      for (const e of s.events) { if (e.kind === 'reaction' && e.reaction) report.reactions[e.reaction]++; if (e.kind === 'spell' && e.spell) {report.spellUsage[e.spell]++;if(['nitrogen','ammonia','nitro','sulfide','sulfur','ironSulfide'].includes(e.spell))metrics.newSpellCasts++;} }
       report.combos += s.events.filter(e => (e.combo ?? 0) > 0).length;
       report.effectiveHits += s.events.filter(e => (e.multiplier ?? 1) > 1).length;
       report.resistedHits += s.events.filter(e => (e.multiplier ?? 1) < 1).length;
@@ -71,5 +95,5 @@ export function runStrategy(strategy: Strategy, runs: number) {
     else if (s.screen === 'defeat') { report.defeats++; report.losses[s.stage]++; }
     else report.stalled++;
   }
-  return report;
+  return {...report,metrics};
 }

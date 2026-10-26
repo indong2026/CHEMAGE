@@ -1,6 +1,6 @@
-# CHEMAGE · PHASE 6
+# CHEMAGE · PHASE 8
 
-React + TypeScript + Vite 기반 모바일 세로형 화학 마법 턴제 게임. 총 13개 마법, 3개 반응 연계, 5전투를 갖춘 게임입니다. 기존 전투 규칙을 유지하면서 3단계 연구 힌트와 원소 공명의 즉시 효과를 추가했습니다.
+React + TypeScript + Vite 기반 모바일 세로형 화학 마법 턴제 게임. 원소 8종, 마법 19종, 반응 연계 4종, 5전투를 갖춘 게임입니다. PHASE 8은 PHASE 7에 원소별 도감을 추가한 버전입니다.
 
 ## 실행과 배포 상태
 
@@ -9,24 +9,51 @@ Node.js 22.12 이상. Windows / Node 22.23.2에서 검증했습니다.
 ```powershell
 npm.cmd install      # 최초 설치 시
 npm.cmd run dev      # http://localhost:5177/
-npm.cmd test         # 241개 검사, 1,400회 모험 + 400회 보스 비교 포함
+npm.cmd test         # 324개 검사, 1,400회 전략 모험 + 400회 재구성 비교 + 400회 보스 비교
 npm.cmd run build    # TypeScript 검사 + 프로덕션 dist
 npm.cmd run preview  # http://localhost:4177/
 ```
 
 Windows 경로의 ^ 문자 때문에 npm 스크립트는 Node 진입점을 직접 실행합니다. 새 라이브러리, 서버, DB는 추가하지 않았습니다.
 
-- 이 폴더: PHASE 5 콘텐츠와 PHASE 6 연구 힌트·원소 공명 개선을 포함한 배포 소스입니다.
-- [공개 게임](https://indong2026.github.io/CHEMAGE/): GitHub Pages에서 제공합니다.
-- 로컬 배포 소스: `releases/phase6` (6.0.0, 2026-10-26).
-- [배포 Actions](https://github.com/indong2026/CHEMAGE/actions/workflows/pages.yml): Linux 테스트·빌드 성공 후 Pages에 게시합니다. 최신 실행에서 실제 배포 상태를 확인할 수 있습니다.
+- 이 저장소: PHASE 8 배포 소스. main 푸시 시 전체 테스트·빌드 성공 후 GitHub Pages에 자동 게시됩니다.
+- [공개 게임](https://indong2026.github.io/CHEMAGE/) · [최신 배포 상태](https://github.com/indong2026/CHEMAGE/actions/workflows/pages.yml).
+- 이전 PHASE 6 배포 커밋: `fd07790d08dea2ce08955a33018f4d8564b7d672`.
+- [이전 PHASE 6 배포 Actions](https://github.com/indong2026/CHEMAGE/actions/runs/40238438707): Linux 테스트·빌드·Pages 게시 모두 성공. [공개 검증 기록](docs/phase6-deployment.md).
 - 이전 PHASE 3/3.1 배포본은 별도 폴더에 보존했습니다.
+
+## PHASE 8 원소별 도감
+
+도감의 **전체 마법 / 원소별 보기 / 반응 기록** 탭을 사용합니다. 원소별 보기는 8개 원소 버튼을 4열 × 2행으로 표시하고, 기존 레시피에서 관련 마법을 자동 분류합니다. 같은 마법은 해당하는 여러 원소 목록에 나타나지만 전체 발견 수에는 한 번만 계산됩니다.
+
+원소 버튼에는 관련 마법 수, 목록 위에는 원소 이름과 발견 진행도가 표시됩니다. 발견한 카드는 기존 상세 정보로, 미발견 카드는 `???`·자물쇠와 함께 기존 3단계 힌트로 연결됩니다. 상세/힌트에서 돌아오면 선택 원소가 유지됩니다. 힌트를 읽어도 발견 기록은 바뀌지 않습니다. 전투와 확률·밸런스는 PHASE 7 그대로입니다.
+
+[PHASE 8 검증 보고서와 모바일 화면](docs/phase8-verification.md)
+
+## PHASE 7 신규 원소와 재구성
+
+| 마법 | 속성 | 효과 |
+| --- | --- | --- |
+| N₂ 질소 장막 | 중립 | 보호막 14, 기본 시전 마력 외 추가 마력 8 |
+| NH₃ 암모니아 미스트 | 중립 | 피해 12, 다음 적 행동의 각 직접 타격 −2 |
+| NO₂ 니트로 펄스 | 중립 | 피해 14, 지속 피해 2씩 2회 |
+| H₂S 설퍼 베일 | 중립 | 피해 10, 보호막 6 |
+| SO₂ 설퍼 미스트 | 부식 | 피해 14, 젖음이면 +4 후 젖음 소비 |
+| FeS 황철 타격 | 금속 | 피해 18, 방어력 2 관통 |
+
+NH₃ → HCl은 같은 턴에 암모늄염 형성을 발동하여 추가 중립 피해 5를 줍니다. 실제 반응식은 NH₃ + HCl → NH₄Cl이며, 전투 효과는 판타지 설정입니다. 신규 마법·반응도 기존 3단계 힌트와 실제 시전 발견 규칙을 사용합니다. N/S 공명도 관련 마법 미리보기와 다음 전투 2개 확정 지급을 지원합니다.
+
+- **재구성**은 가방 옆 청록색 원형 게이지입니다. 모험 시작 0%, 적 행동 완료 후 다음 플레이어 턴마다 +35%, 최대 100%입니다.
+- 100%에서 가방 카드 한 장을 선택하고 확정하면 다른 7종 중 하나로 균등 교체합니다. 취소하면 원소·게이지가 유지됩니다.
+- 사용 후 0%, 전투 사이 유지, 새 모험에서는 초기화됩니다. 원소 총수·마력·시전 횟수·턴·반응 순서는 바뀌지 않습니다.
+- 공명 가중치는 재구성 결과에 적용하지 않습니다. 준비 알림과 변환 연출은 기존 턴/ZERO 알림 순서와 속도·움직임 줄이기 설정을 따릅니다.
+- 일반 획득 확률은 H 29%, O 23%, C 13%, Na 9%, Cl 9%, Fe 5%, N 6%, S 6%입니다. 초기 제안 대비 NaCl/HCl 조합 빈도 감소를 완화한 값입니다. [검증과 조정 근거](docs/phase7-verification.md).
 
 ## 전투 규칙
 
 - 한 턴에 마법 최대 2회. 첫 시전 후 계속 조합하고 두 번째 시전 뒤 적이 한 번 행동합니다.
 - **턴 종료**는 남은 시전을 포기합니다. 무료 보호막·회복·원소 소모가 없고 이미 시전한 보호막과 특수 효과는 적 행동까지 유지됩니다.
-- Fe 16, CO₂ 12, C 10 보호막을 하나의 수치로 합산합니다. 방어 강화 보상은 모든 보호막 마법에 +3이며 중복 보상도 합산합니다.
+- Fe 16, CO₂ 12, C 10, N₂ 14, H₂S 6 보호막을 하나의 수치로 합산합니다. 방어 강화 보상은 모든 보호막 마법에 +3이며 중복 보상도 합산합니다.
 - 적 직접 피해 → CO₂ 화염 감소 최대 5 → 공통 보호막 → 초과 HP 피해 → 모든 타격 후 C 반사 3 → 남은 보호막과 임시 방어 효과 만료. 화염 감소와 반사는 각각 적 행동당 한 번입니다. 공격 사이에는 보호막을 유지하며 방어·충전·대기에도 행동 종료 시 만료합니다. 동시 사망은 플레이어 패배 우선입니다.
 - 원소 5개로 전투 시작, 매 턴 기본 3개 획득, 가방 12개. 기존 원소를 보존하고 초과 지급분만 개당 마력 15로 변환합니다.
 - 시전마다 마력 +10. ZERO BURST는 100 소모, 피해 30, 방어력 무시·적 보호막 적용, 턴 종료. 상성은 적용하지 않습니다.
@@ -38,10 +65,10 @@ Windows 경로의 ^ 문자 때문에 npm 스크립트는 Node 진입점을 직�
 | --- | --- |
 | 물 | H₂O |
 | 화염 | CH₄ |
-| 금속 | FeO, Fe, FeCl₂ |
-| 부식 | HCl |
+| 금속 | FeO, Fe, FeCl₂, FeS |
+| 부식 | HCl, SO₂ |
 | 결정 | NaCl |
-| 중립 | H₂O₂, O₂, CO₂, C, H₂, NaOH |
+| 중립 | H₂O₂, O₂, CO₂, C, H₂, NaOH, N₂, NH₃, NO₂, H₂S |
 
 물→화염, 부식→금속, 금속→결정은 1.5배. 화염→화염, 결정→금속, 물→결정은 0.75배. 나머지는 1배입니다. 이 관계는 판타지 전투 규칙이며 실제 화학 법칙을 뜻하지 않습니다.
 
@@ -91,7 +118,9 @@ Windows 경로의 ^ 문자 때문에 npm 스크립트는 Node 진입점을 직�
 | src/test/strategy.ts | 실제 엔진을 사용하는 전략 시뮬레이션 |
 | qa/ | 개발용 고정 연출 시나리오, 배포 빌드 미포함 |
 
-[PHASE 6 검증 보고서](docs/phase6-verification.md) · [1,400회 모험 결과](docs/phase6-balance.json) · [200시드 공명 전후 비교](docs/phase6-resonance-balance.json)
+[PHASE 7 검증 보고서](docs/phase7-verification.md) · [1,400회 전략 모험](docs/phase7-balance.json) · [200시드 재구성 비교](docs/phase7-reconstruction-balance.json) · [원소 확률 비교](docs/phase7-element-frequency.json)
+
+[이전 PHASE 6 검증 보고서](docs/phase6-verification.md) · [1,400회 모험 결과](docs/phase6-balance.json) · [200시드 공명 전후 비교](docs/phase6-resonance-balance.json)
 
 [이전 PHASE 5 검증 보고서](docs/phase5-verification.md) · [PHASE 5 자동 플레이 기록](docs/phase5-balance.json)
 
