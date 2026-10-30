@@ -1,0 +1,110 @@
+[
+  {
+    "boss": "golem",
+    "strategy": "attack",
+    "gained": 1,
+    "lost": 0
+  },
+  {
+    "boss": "golem",
+    "strategy": "affinity",
+    "gained": 1,
+    "lost": 0
+  },
+  {
+    "boss": "golem",
+    "strategy": "reaction",
+    "gained": 0,
+    "lost": 1
+  },
+  {
+    "boss": "golem",
+    "strategy": "mixed",
+    "gained": 0,
+    "lost": 1
+  },
+  {
+    "boss": "golem",
+    "strategy": "stockpile",
+    "gained": 1,
+    "lost": 1
+  },
+  {
+    "boss": "golem",
+    "strategy": "burst",
+    "gained": 1,
+    "lost": 1
+  },
+  {
+    "boss": "inferno",
+    "strategy": "attack",
+    "gained": 0,
+    "lost": 0
+  },
+  {
+    "boss": "inferno",
+    "strategy": "affinity",
+    "gained": 0,
+    "lost": 0
+  },
+  {
+    "boss": "inferno",
+    "strategy": "reaction",
+    "gained": 0,
+    "lost": 0
+  },
+  {
+    "boss": "inferno",
+    "strategy": "mixed",
+    "gained": 0,
+    "lost": 0
+  },
+  {
+    "boss": "inferno",
+    "strategy": "stockpile",
+    "gained": 0,
+    "lost": 0
+  },
+  {
+    "boss": "inferno",
+    "strategy": "burst",
+    "gained": 0,
+    "lost": 0
+  },
+  {
+    "boss": "warden",
+    "strategy": "attack",
+    "gained": 2,
+    "lost": 0
+  },
+  {
+    "boss": "warden",
+    "strategy": "affinity",
+    "gained": 0,
+    "lost": 0
+  },
+  {
+    "boss": "warden",
+    "strategy": "reaction",
+    "gained": 1,
+    "lost": 0
+  },
+  {
+    "boss": "warden",
+    "strategy": "mixed",
+    "gained": 1,
+    "lost": 0
+  },
+  {
+    "boss": "warden",
+    "strategy": "stockpile",
+    "gained": 0,
+    "lost": 0
+  },
+  {
+    "boss": "warden",
+    "strategy": "burst",
+    "gained": 1,
+    "lost": 0
+  }
+]

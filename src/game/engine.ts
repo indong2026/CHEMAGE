@@ -1,14 +1,14 @@
 import { BALANCE as B } from '../data/balance';
-import { ENEMIES } from '../data/enemies';
+import { ENEMIES, selectBoss } from '../data/enemies';
 import { REWARDS } from '../data/rewards';
 import { matchRecipe } from './recipes';
-import { drawElement, shuffle, reconstructElement } from './random';
+import { drawElement, shuffle, reconstructElement, seededRng } from './random';
 import { multiplier } from '../data/affinities';
 import { SPELL_BY_ID } from '../data/spells';
 import { incomingAction, adjustedIntent } from './incoming';
 import { availableReaction, REACTIONS } from '../data/reactions';
 import { ELEMENT_KEYS } from '../data/elements';
-import type { Action, BattleFrame, Effect, Element, EnemyId, GameEvent, GameState, RewardId, ReactionId, SpellId, Rng, Tile, TurnEffects } from './types';
+import type { Action, BattleFrame, BossId, Effect, Element, EnemyId, GameEvent, GameState, RewardId, ReactionId, SpellId, Rng, Tile, TurnEffects } from './types';
 
 export const enemyArmor = (s: GameState) => Math.max(0, ENEMIES[s.enemy.id].armor - (s.enemy.acid > 0 ? B.acid.reduction : 0));
 const emptyEffects = (): TurnEffects => ({ fireReduction: 0, reflect: 0, wetApplied: false, acidApplied: false });
@@ -39,10 +39,15 @@ function startBattle(s: GameState, rng: Rng): GameState {
   acquire(s, starter);
   return s;
 }
-export function newGame(rng: Rng = Math.random, options: { firstAdventure?: boolean; discoveries?: SpellId[]; reactions?: ReactionId[] } = {}): GameState {
+export function newGame(rng: Rng = Math.random, options: { firstAdventure?: boolean; discoveries?: SpellId[]; reactions?: ReactionId[]; boss?: BossId; bossRng?: Rng } = {}): GameState {
+  // Derive a separate stream from an already consumed route roll. No extra draw
+  // is taken from the caller's RNG, so hands/rewards keep their previous sequence.
+  let routeRoll: number | undefined;
+  const routeRng = () => { const value = rng(); routeRoll ??= value; return value; };
   const pool: EnemyId[] = ['slime', 'beetle', 'flame', 'minion', 'gel'];
-  const normals = options.firstAdventure === false ? shuffle(pool, rng).slice(0, 3) : ['slime' as EnemyId, ...shuffle(pool.slice(1), rng).slice(0, 2)];
-  const route: EnemyId[] = [...normals, 'elite', 'golem'];
+  const normals = options.firstAdventure === false ? shuffle(pool, routeRng).slice(0, 3) : ['slime' as EnemyId, ...shuffle(pool.slice(1), routeRng).slice(0, 2)];
+  const boss = options.boss ?? selectBoss(options.bossRng ?? seededRng(Math.floor(routeRoll! * 4294967296) ^ 0x4348454d));
+  const route: EnemyId[] = [...normals, 'elite', boss];
   return startBattle({
     screen: 'battle', route, stage: 0, turn: 1, revision: 0, hp: B.maxHp, reconstruction: 0,
     inventory: [], freshIds: [], nextId: 1, pendingResonance: null, boost: false, playerShield: 0, spellsUsed: 0, mana: 0, turnEffects: emptyEffects(), enemy: {} as GameState['enemy'],
@@ -90,6 +95,17 @@ function resolveAction(state: GameState, action: Action, revision: number, rng: 
   if (s.spellsUsed === 0) s.stats.turns++;
   let wardActive = false;
   const emit = (event: GameEvent) => s.events.push({ ...event, wardActive, ...(frames ? { frame: battleFrame(s) } : {}) });
+  const enterNewBossPhase = () => {
+    const data = ENEMIES[s.enemy.id];
+    if (s.enemy.id === 'golem' || !data.phaseThreshold || s.enemy.phase === 2 || s.enemy.hp <= 0 || s.enemy.hp > data.phaseThreshold) return;
+    s.enemy.phase = 2;
+    // Keep the already announced action and its index, including a charged hit.
+    // Phase II values apply only to the next newly selected action.
+    const gain = data.boss?.phaseShield ?? 0;
+    s.enemy.shield += gain;
+    emit({kind:'phase',cue:'system',effect:'phase',text:`${data.boss!.english} — ${data.boss!.phaseTitle}`});
+    if (gain) emit({kind:'shield',cue:'support',effect:'enemy-shield',target:'enemy',value:gain,text:`포트리스 보호막 +${gain}`});
+  };
   const ended = () => {
     if (s.hp <= 0 || s.enemy.hp <= 0) wardActive = false;
     if (s.hp <= 0) { s.screen = 'defeat'; s.boost = false; s.playerShield = 0; s.turnEffects = emptyEffects(); s.vulnerable = false; s.enemy.weaken = 0; s.enemy.mist = false; s.castHistory = []; emit({ kind: 'defeat', cue: 'system', text: '다시 도전할 수 있어요' }); return true; }
@@ -166,16 +182,19 @@ function resolveAction(state: GameState, action: Action, revision: number, rng: 
       s.playerShield += B.neutralization.shield;
       emit({ kind: 'shield', cue: 'support', effect: reaction, target: 'player', value: B.neutralization.shield, text: '중화 보호막 +6' });
     }
-    if (ended() || castOnly || s.spellsUsed < B.spellsPerTurn) return s;
+    if (ended()) return s;
+    enterNewBossPhase();
+    if (castOnly || s.spellsUsed < B.spellsPerTurn) return s;
   } else if (action.type === 'burst') {
     s.mana -= B.manaMax; s.stats.bursts++;
     emit({ kind: 'burst', cue: 'launch', effect: 'zero', text: 'ZERO BURST!' });
     strike(B.zeroDamage, 'zero', Infinity);
     if (ended()) return s;
+    enterNewBossPhase();
   }
   emit({ kind: 'turn', cue: 'system', target: 'enemy', text: '적의 차례' });
-  if (s.enemy.dot > 0) { s.enemy.dot--; strike(s.enemy.dotDamage ?? B.peroxide.dot, 'dot', Infinity, true); if (ended()) return s; }
-  s.enemy.shield = 0;
+  if (s.enemy.dot > 0) { s.enemy.dot--; strike(s.enemy.dotDamage ?? B.peroxide.dot, 'dot', Infinity, true); if (ended()) return s; enterNewBossPhase(); }
+  if (!ENEMIES[s.enemy.id].boss?.persistentShield) s.enemy.shield = 0;
   const intent = adjustedIntent(s.enemy.intent, s.enemy.weaken ?? 0, s.vulnerable, s.enemy.mist);
   const effect: Effect = `enemy-${intent.type === 'attack' ? 'attack' : intent.type === 'fire' ? 'fire' : intent.type}`;
   const hadShield = s.playerShield > 0;
@@ -195,7 +214,8 @@ function resolveAction(state: GameState, action: Action, revision: number, rng: 
   } else {
     emit({ kind: 'enemy', cue: 'launch', effect, value: intent.value, target: 'player', text: `${intent.label}${intent.value ? ` ${intent.value}` : ''}` });
     if (intent.type === 'shield') {
-      s.enemy.shield = intent.value; emit({ kind: 'shield', cue: 'support', effect, target: 'enemy', value: intent.value, text: `적 보호막 ${intent.value}` });
+      const beforeShield = s.enemy.shield;
+      s.enemy.shield = Math.max(s.enemy.shield, intent.value); emit({ kind: 'shield', cue: 'support', effect, target: 'enemy', value: s.enemy.shield - beforeShield, text: `적 보호막 ${s.enemy.shield}` });
     } else emit({ kind: 'info', cue: 'support', effect, target: 'enemy', text: intent.type === 'charge' ? '다음 강공격을 준비해요' : '적이 숨을 고릅니다' });
   }
   s.enemy.weaken = 0; s.enemy.mist = false;
@@ -206,12 +226,15 @@ function resolveAction(state: GameState, action: Action, revision: number, rng: 
   if (hadShield) emit({ kind: 'shield-end', cue: 'system', target: 'player', text: '적 행동 종료 · 보호막 해제' });
   wardActive = false;
   const data = ENEMIES[s.enemy.id];
-  if (data.phaseThreshold && s.enemy.hp <= data.phaseThreshold && s.enemy.phase === 1) {
+  enterNewBossPhase();
+  if (s.enemy.id === 'golem' && data.phaseThreshold && s.enemy.hp <= data.phaseThreshold && s.enemy.phase === 1 && intent.type !== 'charge') {
     s.enemy.phase = 2; s.enemy.patternIndex = 0;
     emit({ kind: 'phase', cue: 'system', effect: 'phase', text: '결정 폭주!' });
   } else s.enemy.patternIndex++;
   const pattern = s.enemy.phase === 2 ? data.phase2! : data.pattern;
   s.enemy.intent = { ...pattern[s.enemy.patternIndex % pattern.length] };
+  // A well-protected Warden attacks instead of repeatedly refreshing its ward.
+  if (s.enemy.id === 'warden' && s.enemy.intent.type === 'shield' && s.enemy.shield >= 10) s.enemy.intent = { ...pattern[0] };
   s.turn++; s.spellsUsed = 0; s.castHistory = []; s.freshIds = [];
   const reconstructionBefore = s.reconstruction;
   s.reconstruction = Math.min(100, s.reconstruction + B.reconstructionCharge);

@@ -27,11 +27,11 @@ describe('속성과 직접 피해', () => {
     const attack = chooseAction(s, 'attack'), affinity = chooseAction(s, 'affinity');
     const selected = (a: Action) => a.type === 'cast' ? matchRecipe(a.ids.map(id => s.inventory.find(t => t.id === id)!.element))?.id : a.type;
     expect(selected(attack)).toBe('methane'); expect(selected(affinity)).toBe('water');
-    expect(hit(act(s, affinity)).value).toBe(19); expect(hit(act(s, attack)).value).toBe(15);
+    expect(hit(act(s, affinity)).value).toBe(19); expect(hit(act(s, attack)).value).toBe(17);
   });
   it.each([
     ['water', 'flame', 19, 1.5], ['acid', 'beetle', 5, 1.5], ['ironOxide', 'golem', 21, 1.5],
-    ['water', 'golem', 9, .75], ['methane', 'flame', 15, .75], ['salt', 'beetle', 8, .75],
+    ['water', 'golem', 9, .75], ['methane', 'flame', 17, .75], ['salt', 'beetle', 8, .75],
     ['water', 'slime', 13, 1], ['peroxide', 'golem', 8, 1],
   ] as const)('%s → %s는 실제 HP 피해 %s, 배율 %s', (spell, enemy, damage, scale) => {
     const s = fixture(enemy, spell), n = cast(s, spell);

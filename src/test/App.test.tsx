@@ -26,7 +26,7 @@ function start(opening = false) { render(<App />); fireEvent.click(screen.getByR
 function select(name: string, index = 0) { fireEvent.click(within(screen.getByRole('region', { name: '원소 보관함' })).getAllByRole('button', { name })[index]); }
 function water() { select('수소 H'); select('수소 H', 1); select('산소 O'); }
 function finish() { act(() => vi.runAllTimers()); }
-function cast() { fireEvent.click(screen.getByRole('button', { name: /마법 발동/ })); }
+function cast() { fireEvent.click(screen.getByRole('button', { name: /마법 발동|연계 반응 발동/ })); }
 
 describe('즉시 시전 UI', { timeout: 15_000 }, () => {
   it('새 마법 시전에서만 연구 마력과 READY를 지급하고 조합만 하면 발견하지 않는다', () => {
@@ -81,14 +81,14 @@ describe('즉시 시전 UI', { timeout: 15_000 }, () => {
     expect(screen.getByRole('button', { name: /턴 종료/ })).toHaveClass('suggested');
   });
   it('첫 전투는 조합을 안내하되 완성·취소로는 발견되지 않고 시전해야 저장한다', () => {
-    start(); expect(screen.getByText(/H 두 개와 O 하나/)).toBeInTheDocument();
+    start(true); act(() => vi.advanceTimersByTime(700)); expect(screen.getByText('원소를 조합해 마법을 만들어 보세요!')).toBeInTheDocument();
     expect(screen.queryByRole('region', { name: '연쇄 목록' })).not.toBeInTheDocument();
     expect(screen.queryByRole('button', { name: '정제' })).not.toBeInTheDocument();
-    water(); expect(screen.getByText(/완성! 아래 마법 발동/)).toBeInTheDocument();
+    water(); expect(screen.getByRole('button',{name:/공격 마법 발동/})).toBeEnabled();
     expect(localStorage.getItem(CODEX_KEY)).toBeNull();
     expect(screen.getByRole('region', { name: '원소 보관함' })).toHaveTextContent('5 / 12');
     fireEvent.click(screen.getByRole('button', { name: '선택 해제' }));
-    expect(screen.getByRole('button', { name: /마법 발동/ })).toBeDisabled();
+    expect(screen.getByRole('button', { name: /마법 발동|연계 반응 발동/ })).toBeDisabled();
     expect(localStorage.getItem(CODEX_KEY)).toBeNull();
     water(); cast(); finish(); expect(JSON.parse(localStorage.getItem(CODEX_KEY)!)).toEqual(['water']);
   });
@@ -99,7 +99,7 @@ describe('즉시 시전 UI', { timeout: 15_000 }, () => {
     finish(); expect(screen.getByLabelText('남은 마법 1회')).toBeInTheDocument(); expect(screen.getByText('턴 1')).toBeInTheDocument();
     expect(screen.getByLabelText('내 체력')).toHaveAttribute('aria-valuenow', '60');
     expect(screen.getByLabelText('마력')).toHaveAttribute('aria-valuenow', '10');
-    expect(screen.getByText(/한 번 더 시전하거나/)).toBeInTheDocument();
+    expect(screen.getByRole('button',{name:'턴 종료'})).toBeEnabled();
   });
   it('두 번째 마법을 바로 사용하면 COMBO 뒤 적 행동과 새 턴으로 이어진다', () => {
     start(); water(); cast(); finish(); select('나트륨 Na'); select('염소 Cl'); cast();
@@ -111,13 +111,13 @@ describe('즉시 시전 UI', { timeout: 15_000 }, () => {
     localStorage.setItem(CODEX_KEY, '["water"]'); start();
     expect(screen.queryByRole('button', { name: '솔트 스파이크 자동 선택' })).not.toBeInTheDocument();
     fireEvent.click(screen.getByRole('button', { name: '워터 블래스트 자동 선택' }));
-    expect(screen.getByRole('button', { name: /마법 발동/ })).toBeEnabled();
+    expect(screen.getByRole('button', { name: /마법 발동|연계 반응 발동/ })).toBeEnabled();
     expect(screen.getByLabelText('마력')).toHaveAttribute('aria-valuenow', '0');
     expect(screen.getByRole('region', { name: '원소 보관함' })).toHaveTextContent('5 / 12');
     cast(); finish(); expect(screen.queryByRole('button', { name: '워터 블래스트 자동 선택' })).not.toBeInTheDocument();
   });
   it('잘못된 조합과 개별 선택 취소는 원소를 소모하지 않는다', () => {
-    start(); select('수소 H'); select('산소 O'); expect(screen.getByRole('button', { name: /마법 발동/ })).toBeDisabled();
+    start(); select('수소 H'); select('산소 O'); expect(screen.getByRole('button', { name: /마법 발동|연계 반응 발동/ })).toBeDisabled();
     fireEvent.click(screen.getByRole('button', { name: '산소 O 선택 취소' }));
     expect(screen.queryByRole('button', { name: '산소 O 선택 취소' })).not.toBeInTheDocument();
     expect(screen.getByRole('region', { name: '원소 보관함' })).toHaveTextContent('5 / 12');
@@ -128,15 +128,15 @@ describe('즉시 시전 UI', { timeout: 15_000 }, () => {
     fireEvent.click(screen.getByRole('button', { name: /턴 종료/ })); finish(); expect(screen.getByText('턴 3')).toBeInTheDocument();
   });
   it('빠른 중복 클릭과 연출 넘기기는 마법·적 행동을 중복 처리하지 않는다', () => {
-    start(); water(); const button = screen.getByRole('button', { name: /마법 발동/ }); fireEvent.click(button);
+    start(); water(); const button = screen.getByRole('button', { name: /마법 발동|연계 반응 발동/ }); fireEvent.click(button);
     expect(screen.getByRole('button', { name: /턴 종료/ })).toBeDisabled();
     fireEvent.click(button); finish();
     expect(screen.getByLabelText('마력')).toHaveAttribute('aria-valuenow', '10'); expect(screen.getByLabelText('남은 마법 1회')).toBeInTheDocument();
     fireEvent.click(screen.getByRole('button', { name: /턴 종료/ })); finish(); expect(screen.getByText('턴 2')).toBeInTheDocument();
   });
-  it('첫 마법을 배우기 전에 방어해도 조합 튜토리얼이 유지된다', () => {
+  it('첫 마법 전에 턴을 종료해도 조합 입력을 계속 사용할 수 있다', () => {
     start(); fireEvent.click(screen.getByRole('button', { name: /턴 종료/ })); finish();
-    expect(screen.getByText('H 두 개와 O 하나를 눌러 조합해 보세요.')).toBeInTheDocument();
+    expect(screen.getByRole('button',{name:'턴 종료'})).toBeEnabled();expect(screen.getByRole('region',{name:'원소 보관함'})).toBeInTheDocument();
   });
   it('초과 원소를 팝업 없이 변환하며 가방을 보존하고 마력을 표시한다', () => {
     scenario.mode = 'overflow'; start(); fireEvent.click(screen.getByRole('button', { name: /턴 종료/ })); finish();

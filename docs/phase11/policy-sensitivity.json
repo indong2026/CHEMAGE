@@ -1,0 +1,7169 @@
+{
+  "note": "Uniform legal-action policy, separate RNG. Weak reference for decision bias, not a human model.",
+  "random": [
+    {
+      "boss": "golem",
+      "strategy": "mixed",
+      "runs": 200,
+      "waterBonus": 4,
+      "adventure": false,
+      "excluded": [],
+      "randomLegal": true,
+      "wins": 15,
+      "defeats": 185,
+      "stalled": 0,
+      "rounds": 1424,
+      "hp": 168,
+      "casts": 1724,
+      "decisions": 2506,
+      "endTurns": 693,
+      "emptyEnds": 110,
+      "reconstructions": 402,
+      "newReconstructionOptions": 244,
+      "blocked": 4364,
+      "shieldUnused": 3470,
+      "attributedBlocked": 4364,
+      "reactionBlocked": 12,
+      "reactionUnused": 0,
+      "weakHits": 116,
+      "attackHits": 1038,
+      "spells": {
+        "water": {
+          "opportunities": 733,
+          "availableRounds": 576,
+          "availabilityEpisodes": 425,
+          "casts": 115,
+          "elementsSpent": 345,
+          "hpDamage": 1340,
+          "enemyShieldDamage": 136,
+          "shieldGenerated": 0,
+          "shieldAbsorbed": 0,
+          "shieldUnused": 0,
+          "reflectDamage": 0,
+          "fireReduction": 0,
+          "weakeningReduction": 0,
+          "completionWait": 536,
+          "castOldestAge": 143,
+          "castTileAge": 230,
+          "usedBattles": 98,
+          "wonUsedBattles": 10,
+          "missing": {
+            "H": 2084,
+            "O": 792,
+            "C": 0,
+            "Na": 0,
+            "Cl": 0,
+            "Fe": 0,
+            "N": 0,
+            "S": 0
+          }
+        },
+        "salt": {
+          "opportunities": 683,
+          "availableRounds": 442,
+          "availabilityEpisodes": 219,
+          "casts": 119,
+          "elementsSpent": 238,
+          "hpDamage": 1286,
+          "enemyShieldDamage": 150,
+          "shieldGenerated": 0,
+          "shieldAbsorbed": 0,
+          "shieldUnused": 0,
+          "reflectDamage": 0,
+          "fireReduction": 0,
+          "weakeningReduction": 0,
+          "completionWait": 288,
+          "castOldestAge": 211,
+          "castTileAge": 289,
+          "usedBattles": 94,
+          "wonUsedBattles": 13,
+          "missing": {
+            "H": 0,
+            "O": 0,
+            "C": 0,
+            "Na": 1167,
+            "Cl": 1289,
+            "Fe": 0,
+            "N": 0,
+            "S": 0
+          }
+        },
+        "carbon": {
+          "opportunities": 445,
+          "availableRounds": 342,
+          "availabilityEpisodes": 255,
+          "casts": 61,
+          "elementsSpent": 183,
+          "hpDamage": 0,
+          "enemyShieldDamage": 0,
+          "shieldGenerated": 825,
+          "shieldAbsorbed": 400.11344537815125,
+          "shieldUnused": 424.8865546218488,
+          "reflectDamage": 0,
+          "fireReduction": 0,
+          "weakeningReduction": 0,
+          "completionWait": 382,
+          "castOldestAge": 95,
+          "castTileAge": 146,
+          "usedBattles": 48,
+          "wonUsedBattles": 6,
+          "missing": {
+            "H": 0,
+            "O": 2484,
+            "C": 1060,
+            "Na": 0,
+            "Cl": 0,
+            "Fe": 0,
+            "N": 0,
+            "S": 0
+          }
+        },
+        "iron": {
+          "opportunities": 650,
+          "availableRounds": 427,
+          "availabilityEpisodes": 230,
+          "casts": 113,
+          "elementsSpent": 113,
+          "hpDamage": 0,
+          "enemyShieldDamage": 0,
+          "shieldGenerated": 2000,
+          "shieldAbsorbed": 983.6302414905356,
+          "shieldUnused": 1016.3697585094645,
+          "reflectDamage": 0,
+          "fireReduction": 0,
+          "weakeningReduction": 0,
+          "completionWait": 0,
+          "castOldestAge": 61,
+          "castTileAge": 61,
+          "usedBattles": 82,
+          "wonUsedBattles": 10,
+          "missing": {
+            "H": 0,
+            "O": 0,
+            "C": 0,
+            "Na": 0,
+            "Cl": 0,
+            "Fe": 1856,
+            "N": 0,
+            "S": 0
+          }
+        },
+        "oxygen": {
+          "opportunities": 814,
+          "availableRounds": 593,
+          "availabilityEpisodes": 381,
+          "casts": 142,
+          "elementsSpent": 284,
+          "hpDamage": 0,
+          "enemyShieldDamage": 0,
+          "shieldGenerated": 0,
+          "shieldAbsorbed": 0,
+          "shieldUnused": 0,
+          "reflectDamage": 0,
+          "fireReduction": 0,
+          "weakeningReduction": 0,
+          "completionWait": 314,
+          "castOldestAge": 142,
+          "castTileAge": 196,
+          "usedBattles": 108,
+          "wonUsedBattles": 8,
+          "missing": {
+            "H": 0,
+            "O": 2484,
+            "C": 0,
+            "Na": 0,
+            "Cl": 0,
+            "Fe": 0,
+            "N": 0,
+            "S": 0
+          }
+        },
+        "acid": {
+          "opportunities": 880,
+          "availableRounds": 598,
+          "availabilityEpisodes": 339,
+          "casts": 157,
+          "elementsSpent": 314,
+          "hpDamage": 1100,
+          "enemyShieldDamage": 176,
+          "shieldGenerated": 0,
+          "shieldAbsorbed": 0,
+          "shieldUnused": 0,
+          "reflectDamage": 0,
+          "fireReduction": 0,
+          "weakeningReduction": 0,
+          "completionWait": 395,
+          "castOldestAge": 202,
+          "castTileAge": 254,
+          "usedBattles": 115,
+          "wonUsedBattles": 8,
+          "missing": {
+            "H": 659,
+            "O": 0,
+            "C": 0,
+            "Na": 0,
+            "Cl": 1289,
+            "Fe": 0,
+            "N": 0,
+            "S": 0
+          }
+        },
+        "peroxide": {
+          "opportunities": 331,
+          "availableRounds": 282,
+          "availabilityEpisodes": 235,
+          "casts": 37,
+          "elementsSpent": 148,
+          "hpDamage": 558,
+          "enemyShieldDamage": 40,
+          "shieldGenerated": 0,
+          "shieldAbsorbed": 0,
+          "shieldUnused": 0,
+          "reflectDamage": 0,
+          "fireReduction": 0,
+          "weakeningReduction": 0,
+          "completionWait": 384,
+          "castOldestAge": 65,
+          "castTileAge": 143,
+          "usedBattles": 37,
+          "wonUsedBattles": 3,
+          "missing": {
+            "H": 2084,
+            "O": 2484,
+            "C": 0,
+            "Na": 0,
+            "Cl": 0,
+            "Fe": 0,
+            "N": 0,
+            "S": 0
+          }
+        },
+        "graphite": {
+          "opportunities": 1446,
+          "availableRounds": 893,
+          "availabilityEpisodes": 321,
+          "casts": 315,
+          "elementsSpent": 315,
+          "hpDamage": 0,
+          "enemyShieldDamage": 0,
+          "shieldGenerated": 3603,
+          "shieldAbsorbed": 2196.443614718615,
+          "shieldUnused": 1406.5563852813852,
+          "reflectDamage": 582,
+          "fireReduction": 0,
+          "weakeningReduction": 0,
+          "completionWait": 0,
+          "castOldestAge": 276,
+          "castTileAge": 276,
+          "usedBattles": 154,
+          "wonUsedBattles": 15,
+          "missing": {
+            "H": 0,
+            "O": 0,
+            "C": 1060,
+            "Na": 0,
+            "Cl": 0,
+            "Fe": 0,
+            "N": 0,
+            "S": 0
+          }
+        },
+        "methane": {
+          "opportunities": 82,
+          "availableRounds": 65,
+          "availabilityEpisodes": 50,
+          "casts": 11,
+          "elementsSpent": 55,
+          "hpDamage": 220,
+          "enemyShieldDamage": 10,
+          "shieldGenerated": 0,
+          "shieldAbsorbed": 0,
+          "shieldUnused": 0,
+          "reflectDamage": 0,
+          "fireReduction": 0,
+          "weakeningReduction": 0,
+          "completionWait": 110,
+          "castOldestAge": 29,
+          "castTileAge": 75,
+          "usedBattles": 10,
+          "wonUsedBattles": 0,
+          "missing": {
+            "H": 6477,
+            "O": 0,
+            "C": 1060,
+            "Na": 0,
+            "Cl": 0,
+            "Fe": 0,
+            "N": 0,
+            "S": 0
+          }
+        },
+        "ironOxide": {
+          "opportunities": 453,
+          "availableRounds": 334,
+          "availabilityEpisodes": 222,
+          "casts": 58,
+          "elementsSpent": 116,
+          "hpDamage": 1328,
+          "enemyShieldDamage": 40,
+          "shieldGenerated": 0,
+          "shieldAbsorbed": 0,
+          "shieldUnused": 0,
+          "reflectDamage": 0,
+          "fireReduction": 0,
+          "weakeningReduction": 0,
+          "completionWait": 224,
+          "castOldestAge": 55,
+          "castTileAge": 63,
+          "usedBattles": 51,
+          "wonUsedBattles": 5,
+          "missing": {
+            "H": 0,
+            "O": 792,
+            "C": 0,
+            "Na": 0,
+            "Cl": 0,
+            "Fe": 1856,
+            "N": 0,
+            "S": 0
+          }
+        },
+        "hydrogen": {
+          "opportunities": 1081,
+          "availableRounds": 770,
+          "availabilityEpisodes": 463,
+          "casts": 180,
+          "elementsSpent": 360,
+          "hpDamage": 1370,
+          "enemyShieldDamage": 206,
+          "shieldGenerated": 0,
+          "shieldAbsorbed": 0,
+          "shieldUnused": 0,
+          "reflectDamage": 0,
+          "fireReduction": 0,
+          "weakeningReduction": 0,
+          "completionWait": 301,
+          "castOldestAge": 146,
+          "castTileAge": 203,
+          "usedBattles": 124,
+          "wonUsedBattles": 11,
+          "missing": {
+            "H": 2084,
+            "O": 0,
+            "C": 0,
+            "Na": 0,
+            "Cl": 0,
+            "Fe": 0,
+            "N": 0,
+            "S": 0
+          }
+        },
+        "alkali": {
+          "opportunities": 666,
+          "availableRounds": 500,
+          "availabilityEpisodes": 314,
+          "casts": 106,
+          "elementsSpent": 318,
+          "hpDamage": 1004,
+          "enemyShieldDamage": 143,
+          "shieldGenerated": 0,
+          "shieldAbsorbed": 0,
+          "shieldUnused": 0,
+          "reflectDamage": 0,
+          "fireReduction": 0,
+          "weakeningReduction": 0,
+          "completionWait": 554,
+          "castOldestAge": 205,
+          "castTileAge": 317,
+          "usedBattles": 90,
+          "wonUsedBattles": 9,
+          "missing": {
+            "H": 659,
+            "O": 792,
+            "C": 0,
+            "Na": 1167,
+            "Cl": 0,
+            "Fe": 0,
+            "N": 0,
+            "S": 0
+          }
+        },
+        "ferrous": {
+          "opportunities": 89,
+          "availableRounds": 60,
+          "availabilityEpisodes": 42,
+          "casts": 14,
+          "elementsSpent": 42,
+          "hpDamage": 321,
+          "enemyShieldDamage": 30,
+          "shieldGenerated": 0,
+          "shieldAbsorbed": 0,
+          "shieldUnused": 0,
+          "reflectDamage": 0,
+          "fireReduction": 0,
+          "weakeningReduction": 24,
+          "completionWait": 105,
+          "castOldestAge": 37,
+          "castTileAge": 66,
+          "usedBattles": 14,
+          "wonUsedBattles": 2,
+          "missing": {
+            "H": 0,
+            "O": 0,
+            "C": 0,
+            "Na": 0,
+            "Cl": 3393,
+            "Fe": 1856,
+            "N": 0,
+            "S": 0
+          }
+        },
+        "nitrogen": {
+          "opportunities": 252,
+          "availableRounds": 157,
+          "availabilityEpisodes": 88,
+          "casts": 55,
+          "elementsSpent": 110,
+          "hpDamage": 0,
+          "enemyShieldDamage": 0,
+          "shieldGenerated": 863,
+          "shieldAbsorbed": 444.6478632478632,
+          "shieldUnused": 418.35213675213674,
+          "reflectDamage": 0,
+          "fireReduction": 0,
+          "weakeningReduction": 0,
+          "completionWait": 155,
+          "castOldestAge": 109,
+          "castTileAge": 145,
+          "usedBattles": 51,
+          "wonUsedBattles": 8,
+          "missing": {
+            "H": 0,
+            "O": 0,
+            "C": 0,
+            "Na": 0,
+            "Cl": 0,
+            "Fe": 0,
+            "N": 3665,
+            "S": 0
+          }
+        },
+        "ammonia": {
+          "opportunities": 190,
+          "availableRounds": 144,
+          "availabilityEpisodes": 105,
+          "casts": 29,
+          "elementsSpent": 116,
+          "hpDamage": 358,
+          "enemyShieldDamage": 20,
+          "shieldGenerated": 0,
+          "shieldAbsorbed": 0,
+          "shieldUnused": 0,
+          "reflectDamage": 0,
+          "fireReduction": 0,
+          "weakeningReduction": 38,
+          "completionWait": 226,
+          "castOldestAge": 68,
+          "castTileAge": 130,
+          "usedBattles": 28,
+          "wonUsedBattles": 3,
+          "missing": {
+            "H": 4131,
+            "O": 0,
+            "C": 0,
+            "Na": 0,
+            "Cl": 0,
+            "Fe": 0,
+            "N": 1411,
+            "S": 0
+          }
+        },
+        "nitro": {
+          "opportunities": 355,
+          "availableRounds": 267,
+          "availabilityEpisodes": 193,
+          "casts": 46,
+          "elementsSpent": 138,
+          "hpDamage": 806,
+          "enemyShieldDamage": 50,
+          "shieldGenerated": 0,
+          "shieldAbsorbed": 0,
+          "shieldUnused": 0,
+          "reflectDamage": 0,
+          "fireReduction": 0,
+          "weakeningReduction": 0,
+          "completionWait": 352,
+          "castOldestAge": 101,
+          "castTileAge": 150,
+          "usedBattles": 43,
+          "wonUsedBattles": 2,
+          "missing": {
+            "H": 0,
+            "O": 2484,
+            "C": 0,
+            "Na": 0,
+            "Cl": 0,
+            "Fe": 0,
+            "N": 1411,
+            "S": 0
+          }
+        },
+        "sulfide": {
+          "opportunities": 437,
+          "availableRounds": 331,
+          "availabilityEpisodes": 248,
+          "casts": 68,
+          "elementsSpent": 204,
+          "hpDamage": 660,
+          "enemyShieldDamage": 100,
+          "shieldGenerated": 531,
+          "shieldAbsorbed": 327.16483516483515,
+          "shieldUnused": 203.83516483516485,
+          "reflectDamage": 0,
+          "fireReduction": 0,
+          "weakeningReduction": 0,
+          "completionWait": 420,
+          "castOldestAge": 107,
+          "castTileAge": 156,
+          "usedBattles": 64,
+          "wonUsedBattles": 7,
+          "missing": {
+            "H": 2084,
+            "O": 0,
+            "C": 0,
+            "Na": 0,
+            "Cl": 0,
+            "Fe": 0,
+            "N": 0,
+            "S": 1414
+          }
+        },
+        "sulfur": {
+          "opportunities": 344,
+          "availableRounds": 263,
+          "availabilityEpisodes": 193,
+          "casts": 54,
+          "elementsSpent": 162,
+          "hpDamage": 764,
+          "enemyShieldDamage": 60,
+          "shieldGenerated": 0,
+          "shieldAbsorbed": 0,
+          "shieldUnused": 0,
+          "reflectDamage": 0,
+          "fireReduction": 0,
+          "weakeningReduction": 0,
+          "completionWait": 348,
+          "castOldestAge": 115,
+          "castTileAge": 169,
+          "usedBattles": 50,
+          "wonUsedBattles": 6,
+          "missing": {
+            "H": 0,
+            "O": 2484,
+            "C": 0,
+            "Na": 0,
+            "Cl": 0,
+            "Fe": 0,
+            "N": 0,
+            "S": 1414
+          }
+        },
+        "ironSulfide": {
+          "opportunities": 236,
+          "availableRounds": 172,
+          "availabilityEpisodes": 122,
+          "casts": 44,
+          "elementsSpent": 88,
+          "hpDamage": 1181,
+          "enemyShieldDamage": 91,
+          "shieldGenerated": 0,
+          "shieldAbsorbed": 0,
+          "shieldUnused": 0,
+          "reflectDamage": 0,
+          "fireReduction": 0,
+          "weakeningReduction": 0,
+          "completionWait": 176,
+          "castOldestAge": 75,
+          "castTileAge": 85,
+          "usedBattles": 42,
+          "wonUsedBattles": 6,
+          "missing": {
+            "H": 0,
+            "O": 0,
+            "C": 0,
+            "Na": 0,
+            "Cl": 0,
+            "Fe": 1856,
+            "N": 0,
+            "S": 1414
+          }
+        }
+      },
+      "enemies": {
+        "golem": {
+          "visits": 200,
+          "wins": 15,
+          "decisions": 2506,
+          "casts": 1724,
+          "spells": {
+            "water": {
+              "opportunities": 733,
+              "availableRounds": 576,
+              "availabilityEpisodes": 425,
+              "casts": 115,
+              "elementsSpent": 345,
+              "hpDamage": 1340,
+              "enemyShieldDamage": 136,
+              "shieldGenerated": 0,
+              "shieldAbsorbed": 0,
+              "shieldUnused": 0,
+              "reflectDamage": 0,
+              "fireReduction": 0,
+              "weakeningReduction": 0,
+              "completionWait": 536,
+              "castOldestAge": 143,
+              "castTileAge": 230,
+              "usedBattles": 98,
+              "wonUsedBattles": 10,
+              "missing": {
+                "H": 2084,
+                "O": 792,
+                "C": 0,
+                "Na": 0,
+                "Cl": 0,
+                "Fe": 0,
+                "N": 0,
+                "S": 0
+              }
+            },
+            "salt": {
+              "opportunities": 683,
+              "availableRounds": 442,
+              "availabilityEpisodes": 219,
+              "casts": 119,
+              "elementsSpent": 238,
+              "hpDamage": 1286,
+              "enemyShieldDamage": 150,
+              "shieldGenerated": 0,
+              "shieldAbsorbed": 0,
+              "shieldUnused": 0,
+              "reflectDamage": 0,
+              "fireReduction": 0,
+              "weakeningReduction": 0,
+              "completionWait": 288,
+              "castOldestAge": 211,
+              "castTileAge": 289,
+              "usedBattles": 94,
+              "wonUsedBattles": 13,
+              "missing": {
+                "H": 0,
+                "O": 0,
+                "C": 0,
+                "Na": 1167,
+                "Cl": 1289,
+                "Fe": 0,
+                "N": 0,
+                "S": 0
+              }
+            },
+            "carbon": {
+              "opportunities": 445,
+              "availableRounds": 342,
+              "availabilityEpisodes": 255,
+              "casts": 61,
+              "elementsSpent": 183,
+              "hpDamage": 0,
+              "enemyShieldDamage": 0,
+              "shieldGenerated": 825,
+              "shieldAbsorbed": 400.11344537815125,
+              "shieldUnused": 424.8865546218488,
+              "reflectDamage": 0,
+              "fireReduction": 0,
+              "weakeningReduction": 0,
+              "completionWait": 382,
+              "castOldestAge": 95,
+              "castTileAge": 146,
+              "usedBattles": 48,
+              "wonUsedBattles": 6,
+              "missing": {
+                "H": 0,
+                "O": 2484,
+                "C": 1060,
+                "Na": 0,
+                "Cl": 0,
+                "Fe": 0,
+                "N": 0,
+                "S": 0
+              }
+            },
+            "iron": {
+              "opportunities": 650,
+              "availableRounds": 427,
+              "availabilityEpisodes": 230,
+              "casts": 113,
+              "elementsSpent": 113,
+              "hpDamage": 0,
+              "enemyShieldDamage": 0,
+              "shieldGenerated": 2000,
+              "shieldAbsorbed": 983.6302414905356,
+              "shieldUnused": 1016.3697585094645,
+              "reflectDamage": 0,
+              "fireReduction": 0,
+              "weakeningReduction": 0,
+              "completionWait": 0,
+              "castOldestAge": 61,
+              "castTileAge": 61,
+              "usedBattles": 82,
+              "wonUsedBattles": 10,
+              "missing": {
+                "H": 0,
+                "O": 0,
+                "C": 0,
+                "Na": 0,
+                "Cl": 0,
+                "Fe": 1856,
+                "N": 0,
+                "S": 0
+              }
+            },
+            "oxygen": {
+              "opportunities": 814,
+              "availableRounds": 593,
+              "availabilityEpisodes": 381,
+              "casts": 142,
+              "elementsSpent": 284,
+              "hpDamage": 0,
+              "enemyShieldDamage": 0,
+              "shieldGenerated": 0,
+              "shieldAbsorbed": 0,
+              "shieldUnused": 0,
+              "reflectDamage": 0,
+              "fireReduction": 0,
+              "weakeningReduction": 0,
+              "completionWait": 314,
+              "castOldestAge": 142,
+              "castTileAge": 196,
+              "usedBattles": 108,
+              "wonUsedBattles": 8,
+              "missing": {
+                "H": 0,
+                "O": 2484,
+                "C": 0,
+                "Na": 0,
+                "Cl": 0,
+                "Fe": 0,
+                "N": 0,
+                "S": 0
+              }
+            },
+            "acid": {
+              "opportunities": 880,
+              "availableRounds": 598,
+              "availabilityEpisodes": 339,
+              "casts": 157,
+              "elementsSpent": 314,
+              "hpDamage": 1100,
+              "enemyShieldDamage": 176,
+              "shieldGenerated": 0,
+              "shieldAbsorbed": 0,
+              "shieldUnused": 0,
+              "reflectDamage": 0,
+              "fireReduction": 0,
+              "weakeningReduction": 0,
+              "completionWait": 395,
+              "castOldestAge": 202,
+              "castTileAge": 254,
+              "usedBattles": 115,
+              "wonUsedBattles": 8,
+              "missing": {
+                "H": 659,
+                "O": 0,
+                "C": 0,
+                "Na": 0,
+                "Cl": 1289,
+                "Fe": 0,
+                "N": 0,
+                "S": 0
+              }
+            },
+            "peroxide": {
+              "opportunities": 331,
+              "availableRounds": 282,
+              "availabilityEpisodes": 235,
+              "casts": 37,
+              "elementsSpent": 148,
+              "hpDamage": 558,
+              "enemyShieldDamage": 40,
+              "shieldGenerated": 0,
+              "shieldAbsorbed": 0,
+              "shieldUnused": 0,
+              "reflectDamage": 0,
+              "fireReduction": 0,
+              "weakeningReduction": 0,
+              "completionWait": 384,
+              "castOldestAge": 65,
+              "castTileAge": 143,
+              "usedBattles": 37,
+              "wonUsedBattles": 3,
+              "missing": {
+                "H": 2084,
+                "O": 2484,
+                "C": 0,
+                "Na": 0,
+                "Cl": 0,
+                "Fe": 0,
+                "N": 0,
+                "S": 0
+              }
+            },
+            "graphite": {
+              "opportunities": 1446,
+              "availableRounds": 893,
+              "availabilityEpisodes": 321,
+              "casts": 315,
+              "elementsSpent": 315,
+              "hpDamage": 0,
+              "enemyShieldDamage": 0,
+              "shieldGenerated": 3603,
+              "shieldAbsorbed": 2196.443614718615,
+              "shieldUnused": 1406.5563852813852,
+              "reflectDamage": 582,
+              "fireReduction": 0,
+              "weakeningReduction": 0,
+              "completionWait": 0,
+              "castOldestAge": 276,
+              "castTileAge": 276,
+              "usedBattles": 154,
+              "wonUsedBattles": 15,
+              "missing": {
+                "H": 0,
+                "O": 0,
+                "C": 1060,
+                "Na": 0,
+                "Cl": 0,
+                "Fe": 0,
+                "N": 0,
+                "S": 0
+              }
+            },
+            "methane": {
+              "opportunities": 82,
+              "availableRounds": 65,
+              "availabilityEpisodes": 50,
+              "casts": 11,
+              "elementsSpent": 55,
+              "hpDamage": 220,
+              "enemyShieldDamage": 10,
+              "shieldGenerated": 0,
+              "shieldAbsorbed": 0,
+              "shieldUnused": 0,
+              "reflectDamage": 0,
+              "fireReduction": 0,
+              "weakeningReduction": 0,
+              "completionWait": 110,
+              "castOldestAge": 29,
+              "castTileAge": 75,
+              "usedBattles": 10,
+              "wonUsedBattles": 0,
+              "missing": {
+                "H": 6477,
+                "O": 0,
+                "C": 1060,
+                "Na": 0,
+                "Cl": 0,
+                "Fe": 0,
+                "N": 0,
+                "S": 0
+              }
+            },
+            "ironOxide": {
+              "opportunities": 453,
+              "availableRounds": 334,
+              "availabilityEpisodes": 222,
+              "casts": 58,
+              "elementsSpent": 116,
+              "hpDamage": 1328,
+              "enemyShieldDamage": 40,
+              "shieldGenerated": 0,
+              "shieldAbsorbed": 0,
+              "shieldUnused": 0,
+              "reflectDamage": 0,
+              "fireReduction": 0,
+              "weakeningReduction": 0,
+              "completionWait": 224,
+              "castOldestAge": 55,
+              "castTileAge": 63,
+              "usedBattles": 51,
+              "wonUsedBattles": 5,
+              "missing": {
+                "H": 0,
+                "O": 792,
+                "C": 0,
+                "Na": 0,
+                "Cl": 0,
+                "Fe": 1856,
+                "N": 0,
+                "S": 0
+              }
+            },
+            "hydrogen": {
+              "opportunities": 1081,
+              "availableRounds": 770,
+              "availabilityEpisodes": 463,
+              "casts": 180,
+              "elementsSpent": 360,
+              "hpDamage": 1370,
+              "enemyShieldDamage": 206,
+              "shieldGenerated": 0,
+              "shieldAbsorbed": 0,
+              "shieldUnused": 0,
+              "reflectDamage": 0,
+              "fireReduction": 0,
+              "weakeningReduction": 0,
+              "completionWait": 301,
+              "castOldestAge": 146,
+              "castTileAge": 203,
+              "usedBattles": 124,
+              "wonUsedBattles": 11,
+              "missing": {
+                "H": 2084,
+                "O": 0,
+                "C": 0,
+                "Na": 0,
+                "Cl": 0,
+                "Fe": 0,
+                "N": 0,
+                "S": 0
+              }
+            },
+            "alkali": {
+              "opportunities": 666,
+              "availableRounds": 500,
+              "availabilityEpisodes": 314,
+              "casts": 106,
+              "elementsSpent": 318,
+              "hpDamage": 1004,
+              "enemyShieldDamage": 143,
+              "shieldGenerated": 0,
+              "shieldAbsorbed": 0,
+              "shieldUnused": 0,
+              "reflectDamage": 0,
+              "fireReduction": 0,
+              "weakeningReduction": 0,
+              "completionWait": 554,
+              "castOldestAge": 205,
+              "castTileAge": 317,
+              "usedBattles": 90,
+              "wonUsedBattles": 9,
+              "missing": {
+                "H": 659,
+                "O": 792,
+                "C": 0,
+                "Na": 1167,
+                "Cl": 0,
+                "Fe": 0,
+                "N": 0,
+                "S": 0
+              }
+            },
+            "ferrous": {
+              "opportunities": 89,
+              "availableRounds": 60,
+              "availabilityEpisodes": 42,
+              "casts": 14,
+              "elementsSpent": 42,
+              "hpDamage": 321,
+              "enemyShieldDamage": 30,
+              "shieldGenerated": 0,
+              "shieldAbsorbed": 0,
+              "shieldUnused": 0,
+              "reflectDamage": 0,
+              "fireReduction": 0,
+              "weakeningReduction": 24,
+              "completionWait": 105,
+              "castOldestAge": 37,
+              "castTileAge": 66,
+              "usedBattles": 14,
+              "wonUsedBattles": 2,
+              "missing": {
+                "H": 0,
+                "O": 0,
+                "C": 0,
+                "Na": 0,
+                "Cl": 3393,
+                "Fe": 1856,
+                "N": 0,
+                "S": 0
+              }
+            },
+            "nitrogen": {
+              "opportunities": 252,
+              "availableRounds": 157,
+              "availabilityEpisodes": 88,
+              "casts": 55,
+              "elementsSpent": 110,
+              "hpDamage": 0,
+              "enemyShieldDamage": 0,
+              "shieldGenerated": 863,
+              "shieldAbsorbed": 444.6478632478632,
+              "shieldUnused": 418.35213675213674,
+              "reflectDamage": 0,
+              "fireReduction": 0,
+              "weakeningReduction": 0,
+              "completionWait": 155,
+              "castOldestAge": 109,
+              "castTileAge": 145,
+              "usedBattles": 51,
+              "wonUsedBattles": 8,
+              "missing": {
+                "H": 0,
+                "O": 0,
+                "C": 0,
+                "Na": 0,
+                "Cl": 0,
+                "Fe": 0,
+                "N": 3665,
+                "S": 0
+              }
+            },
+            "ammonia": {
+              "opportunities": 190,
+              "availableRounds": 144,
+              "availabilityEpisodes": 105,
+              "casts": 29,
+              "elementsSpent": 116,
+              "hpDamage": 358,
+              "enemyShieldDamage": 20,
+              "shieldGenerated": 0,
+              "shieldAbsorbed": 0,
+              "shieldUnused": 0,
+              "reflectDamage": 0,
+              "fireReduction": 0,
+              "weakeningReduction": 38,
+              "completionWait": 226,
+              "castOldestAge": 68,
+              "castTileAge": 130,
+              "usedBattles": 28,
+              "wonUsedBattles": 3,
+              "missing": {
+                "H": 4131,
+                "O": 0,
+                "C": 0,
+                "Na": 0,
+                "Cl": 0,
+                "Fe": 0,
+                "N": 1411,
+                "S": 0
+              }
+            },
+            "nitro": {
+              "opportunities": 355,
+              "availableRounds": 267,
+              "availabilityEpisodes": 193,
+              "casts": 46,
+              "elementsSpent": 138,
+              "hpDamage": 806,
+              "enemyShieldDamage": 50,
+              "shieldGenerated": 0,
+              "shieldAbsorbed": 0,
+              "shieldUnused": 0,
+              "reflectDamage": 0,
+              "fireReduction": 0,
+              "weakeningReduction": 0,
+              "completionWait": 352,
+              "castOldestAge": 101,
+              "castTileAge": 150,
+              "usedBattles": 43,
+              "wonUsedBattles": 2,
+              "missing": {
+                "H": 0,
+                "O": 2484,
+                "C": 0,
+                "Na": 0,
+                "Cl": 0,
+                "Fe": 0,
+                "N": 1411,
+                "S": 0
+              }
+            },
+            "sulfide": {
+              "opportunities": 437,
+              "availableRounds": 331,
+              "availabilityEpisodes": 248,
+              "casts": 68,
+              "elementsSpent": 204,
+              "hpDamage": 660,
+              "enemyShieldDamage": 100,
+              "shieldGenerated": 531,
+              "shieldAbsorbed": 327.16483516483515,
+              "shieldUnused": 203.83516483516485,
+              "reflectDamage": 0,
+              "fireReduction": 0,
+              "weakeningReduction": 0,
+              "completionWait": 420,
+              "castOldestAge": 107,
+              "castTileAge": 156,
+              "usedBattles": 64,
+              "wonUsedBattles": 7,
+              "missing": {
+                "H": 2084,
+                "O": 0,
+                "C": 0,
+                "Na": 0,
+                "Cl": 0,
+                "Fe": 0,
+                "N": 0,
+                "S": 1414
+              }
+            },
+            "sulfur": {
+              "opportunities": 344,
+              "availableRounds": 263,
+              "availabilityEpisodes": 193,
+              "casts": 54,
+              "elementsSpent": 162,
+              "hpDamage": 764,
+              "enemyShieldDamage": 60,
+              "shieldGenerated": 0,
+              "shieldAbsorbed": 0,
+              "shieldUnused": 0,
+              "reflectDamage": 0,
+              "fireReduction": 0,
+              "weakeningReduction": 0,
+              "completionWait": 348,
+              "castOldestAge": 115,
+              "castTileAge": 169,
+              "usedBattles": 50,
+              "wonUsedBattles": 6,
+              "missing": {
+                "H": 0,
+                "O": 2484,
+                "C": 0,
+                "Na": 0,
+                "Cl": 0,
+                "Fe": 0,
+                "N": 0,
+                "S": 1414
+              }
+            },
+            "ironSulfide": {
+              "opportunities": 236,
+              "availableRounds": 172,
+              "availabilityEpisodes": 122,
+              "casts": 44,
+              "elementsSpent": 88,
+              "hpDamage": 1181,
+              "enemyShieldDamage": 91,
+              "shieldGenerated": 0,
+              "shieldAbsorbed": 0,
+              "shieldUnused": 0,
+              "reflectDamage": 0,
+              "fireReduction": 0,
+              "weakeningReduction": 0,
+              "completionWait": 176,
+              "castOldestAge": 75,
+              "castTileAge": 85,
+              "usedBattles": 42,
+              "wonUsedBattles": 6,
+              "missing": {
+                "H": 0,
+                "O": 0,
+                "C": 0,
+                "Na": 0,
+                "Cl": 0,
+                "Fe": 1856,
+                "N": 0,
+                "S": 1414
+              }
+            }
+          }
+        }
+      },
+      "outcomes": [
+        {
+          "seed": 1,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 2,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 3,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 4,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 5,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 6,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 7,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 8,
+          "win": false,
+          "hp": 0,
+          "rounds": 10
+        },
+        {
+          "seed": 9,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 10,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 11,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 12,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 13,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 14,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 15,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 16,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 17,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 18,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 19,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 20,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 21,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 22,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 23,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 24,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 25,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 26,
+          "win": false,
+          "hp": 0,
+          "rounds": 9
+        },
+        {
+          "seed": 27,
+          "win": false,
+          "hp": 0,
+          "rounds": 9
+        },
+        {
+          "seed": 28,
+          "win": false,
+          "hp": 0,
+          "rounds": 10
+        },
+        {
+          "seed": 29,
+          "win": false,
+          "hp": 0,
+          "rounds": 10
+        },
+        {
+          "seed": 30,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 31,
+          "win": true,
+          "hp": 4,
+          "rounds": 9
+        },
+        {
+          "seed": 32,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 33,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 34,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 35,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 36,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 37,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 38,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 39,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 40,
+          "win": false,
+          "hp": 0,
+          "rounds": 9
+        },
+        {
+          "seed": 41,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 42,
+          "win": false,
+          "hp": 0,
+          "rounds": 9
+        },
+        {
+          "seed": 43,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 44,
+          "win": true,
+          "hp": 13,
+          "rounds": 8
+        },
+        {
+          "seed": 45,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 46,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 47,
+          "win": true,
+          "hp": 18,
+          "rounds": 13
+        },
+        {
+          "seed": 48,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 49,
+          "win": false,
+          "hp": 0,
+          "rounds": 9
+        },
+        {
+          "seed": 50,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 51,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 52,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 53,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 54,
+          "win": false,
+          "hp": 0,
+          "rounds": 10
+        },
+        {
+          "seed": 55,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 56,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 57,
+          "win": false,
+          "hp": 0,
+          "rounds": 9
+        },
+        {
+          "seed": 58,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 59,
+          "win": true,
+          "hp": 7,
+          "rounds": 7
+        },
+        {
+          "seed": 60,
+          "win": false,
+          "hp": 0,
+          "rounds": 9
+        },
+        {
+          "seed": 61,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 62,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 63,
+          "win": false,
+          "hp": 0,
+          "rounds": 9
+        },
+        {
+          "seed": 64,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 65,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 66,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 67,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 68,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 69,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 70,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 71,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 72,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 73,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 74,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 75,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 76,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 77,
+          "win": false,
+          "hp": 0,
+          "rounds": 9
+        },
+        {
+          "seed": 78,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 79,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 80,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 81,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 82,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 83,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 84,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 85,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 86,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 87,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 88,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 89,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 90,
+          "win": false,
+          "hp": 0,
+          "rounds": 9
+        },
+        {
+          "seed": 91,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 92,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 93,
+          "win": false,
+          "hp": 0,
+          "rounds": 9
+        },
+        {
+          "seed": 94,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 95,
+          "win": true,
+          "hp": 9,
+          "rounds": 8
+        },
+        {
+          "seed": 96,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 97,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 98,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 99,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 100,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 101,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 102,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 103,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 104,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 105,
+          "win": true,
+          "hp": 3,
+          "rounds": 8
+        },
+        {
+          "seed": 106,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 107,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 108,
+          "win": false,
+          "hp": 0,
+          "rounds": 9
+        },
+        {
+          "seed": 109,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 110,
+          "win": true,
+          "hp": 19,
+          "rounds": 8
+        },
+        {
+          "seed": 111,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 112,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 113,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 114,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 115,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 116,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 117,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 118,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 119,
+          "win": false,
+          "hp": 0,
+          "rounds": 11
+        },
+        {
+          "seed": 120,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 121,
+          "win": false,
+          "hp": 0,
+          "rounds": 12
+        },
+        {
+          "seed": 122,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 123,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 124,
+          "win": false,
+          "hp": 0,
+          "rounds": 9
+        },
+        {
+          "seed": 125,
+          "win": true,
+          "hp": 3,
+          "rounds": 9
+        },
+        {
+          "seed": 126,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 127,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 128,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 129,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 130,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 131,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 132,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 133,
+          "win": false,
+          "hp": 0,
+          "rounds": 9
+        },
+        {
+          "seed": 134,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 135,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 136,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 137,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 138,
+          "win": false,
+          "hp": 0,
+          "rounds": 9
+        },
+        {
+          "seed": 139,
+          "win": false,
+          "hp": 0,
+          "rounds": 9
+        },
+        {
+          "seed": 140,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 141,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 142,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 143,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 144,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 145,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 146,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 147,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 148,
+          "win": false,
+          "hp": 0,
+          "rounds": 9
+        },
+        {
+          "seed": 149,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 150,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 151,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 152,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 153,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 154,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 155,
+          "win": true,
+          "hp": 6,
+          "rounds": 9
+        },
+        {
+          "seed": 156,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 157,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 158,
+          "win": false,
+          "hp": 0,
+          "rounds": 9
+        },
+        {
+          "seed": 159,
+          "win": true,
+          "hp": 13,
+          "rounds": 11
+        },
+        {
+          "seed": 160,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 161,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 162,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 163,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 164,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 165,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 166,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 167,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 168,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 169,
+          "win": true,
+          "hp": 14,
+          "rounds": 11
+        },
+        {
+          "seed": 170,
+          "win": false,
+          "hp": 0,
+          "rounds": 9
+        },
+        {
+          "seed": 171,
+          "win": true,
+          "hp": 22,
+          "rounds": 9
+        },
+        {
+          "seed": 172,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 173,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 174,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 175,
+          "win": true,
+          "hp": 29,
+          "rounds": 12
+        },
+        {
+          "seed": 176,
+          "win": false,
+          "hp": 0,
+          "rounds": 9
+        },
+        {
+          "seed": 177,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 178,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 179,
+          "win": true,
+          "hp": 1,
+          "rounds": 8
+        },
+        {
+          "seed": 180,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 181,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 182,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 183,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 184,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 185,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 186,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 187,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 188,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 189,
+          "win": false,
+          "hp": 0,
+          "rounds": 9
+        },
+        {
+          "seed": 190,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 191,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 192,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 193,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 194,
+          "win": false,
+          "hp": 0,
+          "rounds": 9
+        },
+        {
+          "seed": 195,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 196,
+          "win": false,
+          "hp": 0,
+          "rounds": 9
+        },
+        {
+          "seed": 197,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 198,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 199,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 200,
+          "win": true,
+          "hp": 7,
+          "rounds": 7
+        }
+      ],
+      "winRate": 0.075,
+      "averageRounds": 7.12,
+      "averageHp": 0.84,
+      "cShare": 0.18271461716937354,
+      "emptyEndRatio": 0.15873015873015872,
+      "uniqueSpells": 19,
+      "entropy": 2.6766147861969376
+    },
+    {
+      "boss": "inferno",
+      "strategy": "mixed",
+      "runs": 200,
+      "waterBonus": 4,
+      "adventure": false,
+      "excluded": [],
+      "randomLegal": true,
+      "wins": 23,
+      "defeats": 177,
+      "stalled": 0,
+      "rounds": 1375,
+      "hp": 216,
+      "casts": 1643,
+      "decisions": 2400,
+      "endTurns": 671,
+      "emptyEnds": 104,
+      "reconstructions": 384,
+      "newReconstructionOptions": 234,
+      "blocked": 4651,
+      "shieldUnused": 2826,
+      "attributedBlocked": 4651,
+      "reactionBlocked": 6,
+      "reactionUnused": 0,
+      "weakHits": 113,
+      "attackHits": 983,
+      "spells": {
+        "water": {
+          "opportunities": 696,
+          "availableRounds": 550,
+          "availabilityEpisodes": 404,
+          "casts": 113,
+          "elementsSpent": 339,
+          "hpDamage": 2876,
+          "enemyShieldDamage": 0,
+          "shieldGenerated": 0,
+          "shieldAbsorbed": 0,
+          "shieldUnused": 0,
+          "reflectDamage": 0,
+          "fireReduction": 0,
+          "weakeningReduction": 0,
+          "completionWait": 495,
+          "castOldestAge": 147,
+          "castTileAge": 242,
+          "usedBattles": 97,
+          "wonUsedBattles": 19,
+          "missing": {
+            "H": 1992,
+            "O": 769,
+            "C": 0,
+            "Na": 0,
+            "Cl": 0,
+            "Fe": 0,
+            "N": 0,
+            "S": 0
+          }
+        },
+        "salt": {
+          "opportunities": 643,
+          "availableRounds": 427,
+          "availabilityEpisodes": 217,
+          "casts": 117,
+          "elementsSpent": 234,
+          "hpDamage": 1400,
+          "enemyShieldDamage": 0,
+          "shieldGenerated": 0,
+          "shieldAbsorbed": 0,
+          "shieldUnused": 0,
+          "reflectDamage": 0,
+          "fireReduction": 0,
+          "weakeningReduction": 0,
+          "completionWait": 262,
+          "castOldestAge": 207,
+          "castTileAge": 284,
+          "usedBattles": 92,
+          "wonUsedBattles": 19,
+          "missing": {
+            "H": 0,
+            "O": 0,
+            "C": 0,
+            "Na": 1131,
+            "Cl": 1252,
+            "Fe": 0,
+            "N": 0,
+            "S": 0
+          }
+        },
+        "carbon": {
+          "opportunities": 435,
+          "availableRounds": 334,
+          "availabilityEpisodes": 244,
+          "casts": 58,
+          "elementsSpent": 174,
+          "hpDamage": 0,
+          "enemyShieldDamage": 0,
+          "shieldGenerated": 786,
+          "shieldAbsorbed": 376.5246371275783,
+          "shieldUnused": 409.47536287242167,
+          "reflectDamage": 0,
+          "fireReduction": 230,
+          "weakeningReduction": 0,
+          "completionWait": 358,
+          "castOldestAge": 85,
+          "castTileAge": 132,
+          "usedBattles": 47,
+          "wonUsedBattles": 7,
+          "missing": {
+            "H": 0,
+            "O": 2377,
+            "C": 1021,
+            "Na": 0,
+            "Cl": 0,
+            "Fe": 0,
+            "N": 0,
+            "S": 0
+          }
+        },
+        "iron": {
+          "opportunities": 610,
+          "availableRounds": 402,
+          "availabilityEpisodes": 221,
+          "casts": 104,
+          "elementsSpent": 104,
+          "hpDamage": 0,
+          "enemyShieldDamage": 0,
+          "shieldGenerated": 1841,
+          "shieldAbsorbed": 1079.671816418875,
+          "shieldUnused": 761.3281835811249,
+          "reflectDamage": 0,
+          "fireReduction": 0,
+          "weakeningReduction": 0,
+          "completionWait": 0,
+          "castOldestAge": 56,
+          "castTileAge": 56,
+          "usedBattles": 75,
+          "wonUsedBattles": 14,
+          "missing": {
+            "H": 0,
+            "O": 0,
+            "C": 0,
+            "Na": 0,
+            "Cl": 0,
+            "Fe": 1790,
+            "N": 0,
+            "S": 0
+          }
+        },
+        "oxygen": {
+          "opportunities": 792,
+          "availableRounds": 580,
+          "availabilityEpisodes": 365,
+          "casts": 142,
+          "elementsSpent": 284,
+          "hpDamage": 0,
+          "enemyShieldDamage": 0,
+          "shieldGenerated": 0,
+          "shieldAbsorbed": 0,
+          "shieldUnused": 0,
+          "reflectDamage": 0,
+          "fireReduction": 0,
+          "weakeningReduction": 0,
+          "completionWait": 277,
+          "castOldestAge": 142,
+          "castTileAge": 196,
+          "usedBattles": 105,
+          "wonUsedBattles": 11,
+          "missing": {
+            "H": 0,
+            "O": 2377,
+            "C": 0,
+            "Na": 0,
+            "Cl": 0,
+            "Fe": 0,
+            "N": 0,
+            "S": 0
+          }
+        },
+        "acid": {
+          "opportunities": 826,
+          "availableRounds": 572,
+          "availabilityEpisodes": 332,
+          "casts": 151,
+          "elementsSpent": 302,
+          "hpDamage": 1084,
+          "enemyShieldDamage": 0,
+          "shieldGenerated": 0,
+          "shieldAbsorbed": 0,
+          "shieldUnused": 0,
+          "reflectDamage": 0,
+          "fireReduction": 0,
+          "weakeningReduction": 0,
+          "completionWait": 377,
+          "castOldestAge": 183,
+          "castTileAge": 234,
+          "usedBattles": 113,
+          "wonUsedBattles": 17,
+          "missing": {
+            "H": 634,
+            "O": 0,
+            "C": 0,
+            "Na": 0,
+            "Cl": 1252,
+            "Fe": 0,
+            "N": 0,
+            "S": 0
+          }
+        },
+        "peroxide": {
+          "opportunities": 325,
+          "availableRounds": 278,
+          "availabilityEpisodes": 226,
+          "casts": 34,
+          "elementsSpent": 136,
+          "hpDamage": 530,
+          "enemyShieldDamage": 0,
+          "shieldGenerated": 0,
+          "shieldAbsorbed": 0,
+          "shieldUnused": 0,
+          "reflectDamage": 0,
+          "fireReduction": 0,
+          "weakeningReduction": 0,
+          "completionWait": 361,
+          "castOldestAge": 59,
+          "castTileAge": 134,
+          "usedBattles": 34,
+          "wonUsedBattles": 3,
+          "missing": {
+            "H": 1992,
+            "O": 2377,
+            "C": 0,
+            "Na": 0,
+            "Cl": 0,
+            "Fe": 0,
+            "N": 0,
+            "S": 0
+          }
+        },
+        "graphite": {
+          "opportunities": 1379,
+          "availableRounds": 855,
+          "availabilityEpisodes": 311,
+          "casts": 302,
+          "elementsSpent": 302,
+          "hpDamage": 0,
+          "enemyShieldDamage": 0,
+          "shieldGenerated": 3464,
+          "shieldAbsorbed": 2377.279304029304,
+          "shieldUnused": 1086.720695970696,
+          "reflectDamage": 663,
+          "fireReduction": 0,
+          "weakeningReduction": 0,
+          "completionWait": 0,
+          "castOldestAge": 269,
+          "castTileAge": 269,
+          "usedBattles": 151,
+          "wonUsedBattles": 22,
+          "missing": {
+            "H": 0,
+            "O": 0,
+            "C": 1021,
+            "Na": 0,
+            "Cl": 0,
+            "Fe": 0,
+            "N": 0,
+            "S": 0
+          }
+        },
+        "methane": {
+          "opportunities": 70,
+          "availableRounds": 57,
+          "availabilityEpisodes": 45,
+          "casts": 10,
+          "elementsSpent": 50,
+          "hpDamage": 148,
+          "enemyShieldDamage": 0,
+          "shieldGenerated": 0,
+          "shieldAbsorbed": 0,
+          "shieldUnused": 0,
+          "reflectDamage": 0,
+          "fireReduction": 0,
+          "weakeningReduction": 0,
+          "completionWait": 95,
+          "castOldestAge": 25,
+          "castTileAge": 58,
+          "usedBattles": 10,
+          "wonUsedBattles": 0,
+          "missing": {
+            "H": 6209,
+            "O": 0,
+            "C": 1021,
+            "Na": 0,
+            "Cl": 0,
+            "Fe": 0,
+            "N": 0,
+            "S": 0
+          }
+        },
+        "ironOxide": {
+          "opportunities": 417,
+          "availableRounds": 309,
+          "availabilityEpisodes": 207,
+          "casts": 55,
+          "elementsSpent": 110,
+          "hpDamage": 785,
+          "enemyShieldDamage": 0,
+          "shieldGenerated": 0,
+          "shieldAbsorbed": 0,
+          "shieldUnused": 0,
+          "reflectDamage": 0,
+          "fireReduction": 0,
+          "weakeningReduction": 0,
+          "completionWait": 208,
+          "castOldestAge": 55,
+          "castTileAge": 62,
+          "usedBattles": 49,
+          "wonUsedBattles": 10,
+          "missing": {
+            "H": 0,
+            "O": 769,
+            "C": 0,
+            "Na": 0,
+            "Cl": 0,
+            "Fe": 1790,
+            "N": 0,
+            "S": 0
+          }
+        },
+        "hydrogen": {
+          "opportunities": 1042,
+          "availableRounds": 745,
+          "availabilityEpisodes": 448,
+          "casts": 168,
+          "elementsSpent": 336,
+          "hpDamage": 1255,
+          "enemyShieldDamage": 0,
+          "shieldGenerated": 0,
+          "shieldAbsorbed": 0,
+          "shieldUnused": 0,
+          "reflectDamage": 0,
+          "fireReduction": 0,
+          "weakeningReduction": 0,
+          "completionWait": 284,
+          "castOldestAge": 136,
+          "castTileAge": 192,
+          "usedBattles": 118,
+          "wonUsedBattles": 14,
+          "missing": {
+            "H": 1992,
+            "O": 0,
+            "C": 0,
+            "Na": 0,
+            "Cl": 0,
+            "Fe": 0,
+            "N": 0,
+            "S": 0
+          }
+        },
+        "alkali": {
+          "opportunities": 618,
+          "availableRounds": 468,
+          "availabilityEpisodes": 295,
+          "casts": 91,
+          "elementsSpent": 273,
+          "hpDamage": 830,
+          "enemyShieldDamage": 0,
+          "shieldGenerated": 0,
+          "shieldAbsorbed": 0,
+          "shieldUnused": 0,
+          "reflectDamage": 0,
+          "fireReduction": 0,
+          "weakeningReduction": 0,
+          "completionWait": 504,
+          "castOldestAge": 163,
+          "castTileAge": 261,
+          "usedBattles": 77,
+          "wonUsedBattles": 11,
+          "missing": {
+            "H": 634,
+            "O": 769,
+            "C": 0,
+            "Na": 1131,
+            "Cl": 0,
+            "Fe": 0,
+            "N": 0,
+            "S": 0
+          }
+        },
+        "ferrous": {
+          "opportunities": 89,
+          "availableRounds": 60,
+          "availabilityEpisodes": 42,
+          "casts": 14,
+          "elementsSpent": 42,
+          "hpDamage": 214,
+          "enemyShieldDamage": 0,
+          "shieldGenerated": 0,
+          "shieldAbsorbed": 0,
+          "shieldUnused": 0,
+          "reflectDamage": 0,
+          "fireReduction": 0,
+          "weakeningReduction": 54,
+          "completionWait": 106,
+          "castOldestAge": 33,
+          "castTileAge": 59,
+          "usedBattles": 14,
+          "wonUsedBattles": 3,
+          "missing": {
+            "H": 0,
+            "O": 0,
+            "C": 0,
+            "Na": 0,
+            "Cl": 3284,
+            "Fe": 1790,
+            "N": 0,
+            "S": 0
+          }
+        },
+        "nitrogen": {
+          "opportunities": 245,
+          "availableRounds": 158,
+          "availabilityEpisodes": 86,
+          "casts": 54,
+          "elementsSpent": 108,
+          "hpDamage": 0,
+          "enemyShieldDamage": 0,
+          "shieldGenerated": 846,
+          "shieldAbsorbed": 484.1833333333333,
+          "shieldUnused": 361.8166666666667,
+          "reflectDamage": 0,
+          "fireReduction": 0,
+          "weakeningReduction": 0,
+          "completionWait": 124,
+          "castOldestAge": 99,
+          "castTileAge": 133,
+          "usedBattles": 50,
+          "wonUsedBattles": 9,
+          "missing": {
+            "H": 0,
+            "O": 0,
+            "C": 0,
+            "Na": 0,
+            "Cl": 0,
+            "Fe": 0,
+            "N": 3528,
+            "S": 0
+          }
+        },
+        "ammonia": {
+          "opportunities": 172,
+          "availableRounds": 134,
+          "availabilityEpisodes": 101,
+          "casts": 30,
+          "elementsSpent": 120,
+          "hpDamage": 362,
+          "enemyShieldDamage": 0,
+          "shieldGenerated": 0,
+          "shieldAbsorbed": 0,
+          "shieldUnused": 0,
+          "reflectDamage": 0,
+          "fireReduction": 0,
+          "weakeningReduction": 58,
+          "completionWait": 212,
+          "castOldestAge": 66,
+          "castTileAge": 129,
+          "usedBattles": 29,
+          "wonUsedBattles": 4,
+          "missing": {
+            "H": 3958,
+            "O": 0,
+            "C": 0,
+            "Na": 0,
+            "Cl": 0,
+            "Fe": 0,
+            "N": 1373,
+            "S": 0
+          }
+        },
+        "nitro": {
+          "opportunities": 334,
+          "availableRounds": 254,
+          "availabilityEpisodes": 178,
+          "casts": 44,
+          "elementsSpent": 132,
+          "hpDamage": 784,
+          "enemyShieldDamage": 0,
+          "shieldGenerated": 0,
+          "shieldAbsorbed": 0,
+          "shieldUnused": 0,
+          "reflectDamage": 0,
+          "fireReduction": 0,
+          "weakeningReduction": 0,
+          "completionWait": 310,
+          "castOldestAge": 95,
+          "castTileAge": 134,
+          "usedBattles": 42,
+          "wonUsedBattles": 8,
+          "missing": {
+            "H": 0,
+            "O": 2377,
+            "C": 0,
+            "Na": 0,
+            "Cl": 0,
+            "Fe": 0,
+            "N": 1373,
+            "S": 0
+          }
+        },
+        "sulfide": {
+          "opportunities": 402,
+          "availableRounds": 306,
+          "availabilityEpisodes": 230,
+          "casts": 68,
+          "elementsSpent": 204,
+          "hpDamage": 701,
+          "enemyShieldDamage": 0,
+          "shieldGenerated": 534,
+          "shieldAbsorbed": 327.34090909090907,
+          "shieldUnused": 206.6590909090909,
+          "reflectDamage": 0,
+          "fireReduction": 0,
+          "weakeningReduction": 0,
+          "completionWait": 369,
+          "castOldestAge": 103,
+          "castTileAge": 154,
+          "usedBattles": 63,
+          "wonUsedBattles": 8,
+          "missing": {
+            "H": 1992,
+            "O": 0,
+            "C": 0,
+            "Na": 0,
+            "Cl": 0,
+            "Fe": 0,
+            "N": 0,
+            "S": 1385
+          }
+        },
+        "sulfur": {
+          "opportunities": 323,
+          "availableRounds": 245,
+          "availabilityEpisodes": 180,
+          "casts": 48,
+          "elementsSpent": 144,
+          "hpDamage": 678,
+          "enemyShieldDamage": 0,
+          "shieldGenerated": 0,
+          "shieldAbsorbed": 0,
+          "shieldUnused": 0,
+          "reflectDamage": 0,
+          "fireReduction": 0,
+          "weakeningReduction": 0,
+          "completionWait": 308,
+          "castOldestAge": 88,
+          "castTileAge": 129,
+          "usedBattles": 44,
+          "wonUsedBattles": 10,
+          "missing": {
+            "H": 0,
+            "O": 2377,
+            "C": 0,
+            "Na": 0,
+            "Cl": 0,
+            "Fe": 0,
+            "N": 0,
+            "S": 1385
+          }
+        },
+        "ironSulfide": {
+          "opportunities": 209,
+          "availableRounds": 153,
+          "availabilityEpisodes": 114,
+          "casts": 40,
+          "elementsSpent": 80,
+          "hpDamage": 791,
+          "enemyShieldDamage": 0,
+          "shieldGenerated": 0,
+          "shieldAbsorbed": 0,
+          "shieldUnused": 0,
+          "reflectDamage": 0,
+          "fireReduction": 0,
+          "weakeningReduction": 0,
+          "completionWait": 164,
+          "castOldestAge": 64,
+          "castTileAge": 71,
+          "usedBattles": 36,
+          "wonUsedBattles": 4,
+          "missing": {
+            "H": 0,
+            "O": 0,
+            "C": 0,
+            "Na": 0,
+            "Cl": 0,
+            "Fe": 1790,
+            "N": 0,
+            "S": 1385
+          }
+        }
+      },
+      "enemies": {
+        "inferno": {
+          "visits": 200,
+          "wins": 23,
+          "decisions": 2400,
+          "casts": 1643,
+          "spells": {
+            "water": {
+              "opportunities": 696,
+              "availableRounds": 550,
+              "availabilityEpisodes": 404,
+              "casts": 113,
+              "elementsSpent": 339,
+              "hpDamage": 2876,
+              "enemyShieldDamage": 0,
+              "shieldGenerated": 0,
+              "shieldAbsorbed": 0,
+              "shieldUnused": 0,
+              "reflectDamage": 0,
+              "fireReduction": 0,
+              "weakeningReduction": 0,
+              "completionWait": 495,
+              "castOldestAge": 147,
+              "castTileAge": 242,
+              "usedBattles": 97,
+              "wonUsedBattles": 19,
+              "missing": {
+                "H": 1992,
+                "O": 769,
+                "C": 0,
+                "Na": 0,
+                "Cl": 0,
+                "Fe": 0,
+                "N": 0,
+                "S": 0
+              }
+            },
+            "salt": {
+              "opportunities": 643,
+              "availableRounds": 427,
+              "availabilityEpisodes": 217,
+              "casts": 117,
+              "elementsSpent": 234,
+              "hpDamage": 1400,
+              "enemyShieldDamage": 0,
+              "shieldGenerated": 0,
+              "shieldAbsorbed": 0,
+              "shieldUnused": 0,
+              "reflectDamage": 0,
+              "fireReduction": 0,
+              "weakeningReduction": 0,
+              "completionWait": 262,
+              "castOldestAge": 207,
+              "castTileAge": 284,
+              "usedBattles": 92,
+              "wonUsedBattles": 19,
+              "missing": {
+                "H": 0,
+                "O": 0,
+                "C": 0,
+                "Na": 1131,
+                "Cl": 1252,
+                "Fe": 0,
+                "N": 0,
+                "S": 0
+              }
+            },
+            "carbon": {
+              "opportunities": 435,
+              "availableRounds": 334,
+              "availabilityEpisodes": 244,
+              "casts": 58,
+              "elementsSpent": 174,
+              "hpDamage": 0,
+              "enemyShieldDamage": 0,
+              "shieldGenerated": 786,
+              "shieldAbsorbed": 376.5246371275783,
+              "shieldUnused": 409.47536287242167,
+              "reflectDamage": 0,
+              "fireReduction": 230,
+              "weakeningReduction": 0,
+              "completionWait": 358,
+              "castOldestAge": 85,
+              "castTileAge": 132,
+              "usedBattles": 47,
+              "wonUsedBattles": 7,
+              "missing": {
+                "H": 0,
+                "O": 2377,
+                "C": 1021,
+                "Na": 0,
+                "Cl": 0,
+                "Fe": 0,
+                "N": 0,
+                "S": 0
+              }
+            },
+            "iron": {
+              "opportunities": 610,
+              "availableRounds": 402,
+              "availabilityEpisodes": 221,
+              "casts": 104,
+              "elementsSpent": 104,
+              "hpDamage": 0,
+              "enemyShieldDamage": 0,
+              "shieldGenerated": 1841,
+              "shieldAbsorbed": 1079.671816418875,
+              "shieldUnused": 761.3281835811249,
+              "reflectDamage": 0,
+              "fireReduction": 0,
+              "weakeningReduction": 0,
+              "completionWait": 0,
+              "castOldestAge": 56,
+              "castTileAge": 56,
+              "usedBattles": 75,
+              "wonUsedBattles": 14,
+              "missing": {
+                "H": 0,
+                "O": 0,
+                "C": 0,
+                "Na": 0,
+                "Cl": 0,
+                "Fe": 1790,
+                "N": 0,
+                "S": 0
+              }
+            },
+            "oxygen": {
+              "opportunities": 792,
+              "availableRounds": 580,
+              "availabilityEpisodes": 365,
+              "casts": 142,
+              "elementsSpent": 284,
+              "hpDamage": 0,
+              "enemyShieldDamage": 0,
+              "shieldGenerated": 0,
+              "shieldAbsorbed": 0,
+              "shieldUnused": 0,
+              "reflectDamage": 0,
+              "fireReduction": 0,
+              "weakeningReduction": 0,
+              "completionWait": 277,
+              "castOldestAge": 142,
+              "castTileAge": 196,
+              "usedBattles": 105,
+              "wonUsedBattles": 11,
+              "missing": {
+                "H": 0,
+                "O": 2377,
+                "C": 0,
+                "Na": 0,
+                "Cl": 0,
+                "Fe": 0,
+                "N": 0,
+                "S": 0
+              }
+            },
+            "acid": {
+              "opportunities": 826,
+              "availableRounds": 572,
+              "availabilityEpisodes": 332,
+              "casts": 151,
+              "elementsSpent": 302,
+              "hpDamage": 1084,
+              "enemyShieldDamage": 0,
+              "shieldGenerated": 0,
+              "shieldAbsorbed": 0,
+              "shieldUnused": 0,
+              "reflectDamage": 0,
+              "fireReduction": 0,
+              "weakeningReduction": 0,
+              "completionWait": 377,
+              "castOldestAge": 183,
+              "castTileAge": 234,
+              "usedBattles": 113,
+              "wonUsedBattles": 17,
+              "missing": {
+                "H": 634,
+                "O": 0,
+                "C": 0,
+                "Na": 0,
+                "Cl": 1252,
+                "Fe": 0,
+                "N": 0,
+                "S": 0
+              }
+            },
+            "peroxide": {
+              "opportunities": 325,
+              "availableRounds": 278,
+              "availabilityEpisodes": 226,
+              "casts": 34,
+              "elementsSpent": 136,
+              "hpDamage": 530,
+              "enemyShieldDamage": 0,
+              "shieldGenerated": 0,
+              "shieldAbsorbed": 0,
+              "shieldUnused": 0,
+              "reflectDamage": 0,
+              "fireReduction": 0,
+              "weakeningReduction": 0,
+              "completionWait": 361,
+              "castOldestAge": 59,
+              "castTileAge": 134,
+              "usedBattles": 34,
+              "wonUsedBattles": 3,
+              "missing": {
+                "H": 1992,
+                "O": 2377,
+                "C": 0,
+                "Na": 0,
+                "Cl": 0,
+                "Fe": 0,
+                "N": 0,
+                "S": 0
+              }
+            },
+            "graphite": {
+              "opportunities": 1379,
+              "availableRounds": 855,
+              "availabilityEpisodes": 311,
+              "casts": 302,
+              "elementsSpent": 302,
+              "hpDamage": 0,
+              "enemyShieldDamage": 0,
+              "shieldGenerated": 3464,
+              "shieldAbsorbed": 2377.279304029304,
+              "shieldUnused": 1086.720695970696,
+              "reflectDamage": 663,
+              "fireReduction": 0,
+              "weakeningReduction": 0,
+              "completionWait": 0,
+              "castOldestAge": 269,
+              "castTileAge": 269,
+              "usedBattles": 151,
+              "wonUsedBattles": 22,
+              "missing": {
+                "H": 0,
+                "O": 0,
+                "C": 1021,
+                "Na": 0,
+                "Cl": 0,
+                "Fe": 0,
+                "N": 0,
+                "S": 0
+              }
+            },
+            "methane": {
+              "opportunities": 70,
+              "availableRounds": 57,
+              "availabilityEpisodes": 45,
+              "casts": 10,
+              "elementsSpent": 50,
+              "hpDamage": 148,
+              "enemyShieldDamage": 0,
+              "shieldGenerated": 0,
+              "shieldAbsorbed": 0,
+              "shieldUnused": 0,
+              "reflectDamage": 0,
+              "fireReduction": 0,
+              "weakeningReduction": 0,
+              "completionWait": 95,
+              "castOldestAge": 25,
+              "castTileAge": 58,
+              "usedBattles": 10,
+              "wonUsedBattles": 0,
+              "missing": {
+                "H": 6209,
+                "O": 0,
+                "C": 1021,
+                "Na": 0,
+                "Cl": 0,
+                "Fe": 0,
+                "N": 0,
+                "S": 0
+              }
+            },
+            "ironOxide": {
+              "opportunities": 417,
+              "availableRounds": 309,
+              "availabilityEpisodes": 207,
+              "casts": 55,
+              "elementsSpent": 110,
+              "hpDamage": 785,
+              "enemyShieldDamage": 0,
+              "shieldGenerated": 0,
+              "shieldAbsorbed": 0,
+              "shieldUnused": 0,
+              "reflectDamage": 0,
+              "fireReduction": 0,
+              "weakeningReduction": 0,
+              "completionWait": 208,
+              "castOldestAge": 55,
+              "castTileAge": 62,
+              "usedBattles": 49,
+              "wonUsedBattles": 10,
+              "missing": {
+                "H": 0,
+                "O": 769,
+                "C": 0,
+                "Na": 0,
+                "Cl": 0,
+                "Fe": 1790,
+                "N": 0,
+                "S": 0
+              }
+            },
+            "hydrogen": {
+              "opportunities": 1042,
+              "availableRounds": 745,
+              "availabilityEpisodes": 448,
+              "casts": 168,
+              "elementsSpent": 336,
+              "hpDamage": 1255,
+              "enemyShieldDamage": 0,
+              "shieldGenerated": 0,
+              "shieldAbsorbed": 0,
+              "shieldUnused": 0,
+              "reflectDamage": 0,
+              "fireReduction": 0,
+              "weakeningReduction": 0,
+              "completionWait": 284,
+              "castOldestAge": 136,
+              "castTileAge": 192,
+              "usedBattles": 118,
+              "wonUsedBattles": 14,
+              "missing": {
+                "H": 1992,
+                "O": 0,
+                "C": 0,
+                "Na": 0,
+                "Cl": 0,
+                "Fe": 0,
+                "N": 0,
+                "S": 0
+              }
+            },
+            "alkali": {
+              "opportunities": 618,
+              "availableRounds": 468,
+              "availabilityEpisodes": 295,
+              "casts": 91,
+              "elementsSpent": 273,
+              "hpDamage": 830,
+              "enemyShieldDamage": 0,
+              "shieldGenerated": 0,
+              "shieldAbsorbed": 0,
+              "shieldUnused": 0,
+              "reflectDamage": 0,
+              "fireReduction": 0,
+              "weakeningReduction": 0,
+              "completionWait": 504,
+              "castOldestAge": 163,
+              "castTileAge": 261,
+              "usedBattles": 77,
+              "wonUsedBattles": 11,
+              "missing": {
+                "H": 634,
+                "O": 769,
+                "C": 0,
+                "Na": 1131,
+                "Cl": 0,
+                "Fe": 0,
+                "N": 0,
+                "S": 0
+              }
+            },
+            "ferrous": {
+              "opportunities": 89,
+              "availableRounds": 60,
+              "availabilityEpisodes": 42,
+              "casts": 14,
+              "elementsSpent": 42,
+              "hpDamage": 214,
+              "enemyShieldDamage": 0,
+              "shieldGenerated": 0,
+              "shieldAbsorbed": 0,
+              "shieldUnused": 0,
+              "reflectDamage": 0,
+              "fireReduction": 0,
+              "weakeningReduction": 54,
+              "completionWait": 106,
+              "castOldestAge": 33,
+              "castTileAge": 59,
+              "usedBattles": 14,
+              "wonUsedBattles": 3,
+              "missing": {
+                "H": 0,
+                "O": 0,
+                "C": 0,
+                "Na": 0,
+                "Cl": 3284,
+                "Fe": 1790,
+                "N": 0,
+                "S": 0
+              }
+            },
+            "nitrogen": {
+              "opportunities": 245,
+              "availableRounds": 158,
+              "availabilityEpisodes": 86,
+              "casts": 54,
+              "elementsSpent": 108,
+              "hpDamage": 0,
+              "enemyShieldDamage": 0,
+              "shieldGenerated": 846,
+              "shieldAbsorbed": 484.1833333333333,
+              "shieldUnused": 361.8166666666667,
+              "reflectDamage": 0,
+              "fireReduction": 0,
+              "weakeningReduction": 0,
+              "completionWait": 124,
+              "castOldestAge": 99,
+              "castTileAge": 133,
+              "usedBattles": 50,
+              "wonUsedBattles": 9,
+              "missing": {
+                "H": 0,
+                "O": 0,
+                "C": 0,
+                "Na": 0,
+                "Cl": 0,
+                "Fe": 0,
+                "N": 3528,
+                "S": 0
+              }
+            },
+            "ammonia": {
+              "opportunities": 172,
+              "availableRounds": 134,
+              "availabilityEpisodes": 101,
+              "casts": 30,
+              "elementsSpent": 120,
+              "hpDamage": 362,
+              "enemyShieldDamage": 0,
+              "shieldGenerated": 0,
+              "shieldAbsorbed": 0,
+              "shieldUnused": 0,
+              "reflectDamage": 0,
+              "fireReduction": 0,
+              "weakeningReduction": 58,
+              "completionWait": 212,
+              "castOldestAge": 66,
+              "castTileAge": 129,
+              "usedBattles": 29,
+              "wonUsedBattles": 4,
+              "missing": {
+                "H": 3958,
+                "O": 0,
+                "C": 0,
+                "Na": 0,
+                "Cl": 0,
+                "Fe": 0,
+                "N": 1373,
+                "S": 0
+              }
+            },
+            "nitro": {
+              "opportunities": 334,
+              "availableRounds": 254,
+              "availabilityEpisodes": 178,
+              "casts": 44,
+              "elementsSpent": 132,
+              "hpDamage": 784,
+              "enemyShieldDamage": 0,
+              "shieldGenerated": 0,
+              "shieldAbsorbed": 0,
+              "shieldUnused": 0,
+              "reflectDamage": 0,
+              "fireReduction": 0,
+              "weakeningReduction": 0,
+              "completionWait": 310,
+              "castOldestAge": 95,
+              "castTileAge": 134,
+              "usedBattles": 42,
+              "wonUsedBattles": 8,
+              "missing": {
+                "H": 0,
+                "O": 2377,
+                "C": 0,
+                "Na": 0,
+                "Cl": 0,
+                "Fe": 0,
+                "N": 1373,
+                "S": 0
+              }
+            },
+            "sulfide": {
+              "opportunities": 402,
+              "availableRounds": 306,
+              "availabilityEpisodes": 230,
+              "casts": 68,
+              "elementsSpent": 204,
+              "hpDamage": 701,
+              "enemyShieldDamage": 0,
+              "shieldGenerated": 534,
+              "shieldAbsorbed": 327.34090909090907,
+              "shieldUnused": 206.6590909090909,
+              "reflectDamage": 0,
+              "fireReduction": 0,
+              "weakeningReduction": 0,
+              "completionWait": 369,
+              "castOldestAge": 103,
+              "castTileAge": 154,
+              "usedBattles": 63,
+              "wonUsedBattles": 8,
+              "missing": {
+                "H": 1992,
+                "O": 0,
+                "C": 0,
+                "Na": 0,
+                "Cl": 0,
+                "Fe": 0,
+                "N": 0,
+                "S": 1385
+              }
+            },
+            "sulfur": {
+              "opportunities": 323,
+              "availableRounds": 245,
+              "availabilityEpisodes": 180,
+              "casts": 48,
+              "elementsSpent": 144,
+              "hpDamage": 678,
+              "enemyShieldDamage": 0,
+              "shieldGenerated": 0,
+              "shieldAbsorbed": 0,
+              "shieldUnused": 0,
+              "reflectDamage": 0,
+              "fireReduction": 0,
+              "weakeningReduction": 0,
+              "completionWait": 308,
+              "castOldestAge": 88,
+              "castTileAge": 129,
+              "usedBattles": 44,
+              "wonUsedBattles": 10,
+              "missing": {
+                "H": 0,
+                "O": 2377,
+                "C": 0,
+                "Na": 0,
+                "Cl": 0,
+                "Fe": 0,
+                "N": 0,
+                "S": 1385
+              }
+            },
+            "ironSulfide": {
+              "opportunities": 209,
+              "availableRounds": 153,
+              "availabilityEpisodes": 114,
+              "casts": 40,
+              "elementsSpent": 80,
+              "hpDamage": 791,
+              "enemyShieldDamage": 0,
+              "shieldGenerated": 0,
+              "shieldAbsorbed": 0,
+              "shieldUnused": 0,
+              "reflectDamage": 0,
+              "fireReduction": 0,
+              "weakeningReduction": 0,
+              "completionWait": 164,
+              "castOldestAge": 64,
+              "castTileAge": 71,
+              "usedBattles": 36,
+              "wonUsedBattles": 4,
+              "missing": {
+                "H": 0,
+                "O": 0,
+                "C": 0,
+                "Na": 0,
+                "Cl": 0,
+                "Fe": 1790,
+                "N": 0,
+                "S": 1385
+              }
+            }
+          }
+        }
+      },
+      "outcomes": [
+        {
+          "seed": 1,
+          "win": false,
+          "hp": 0,
+          "rounds": 4
+        },
+        {
+          "seed": 2,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 3,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 4,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 5,
+          "win": false,
+          "hp": 0,
+          "rounds": 9
+        },
+        {
+          "seed": 6,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 7,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 8,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 9,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 10,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 11,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 12,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 13,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 14,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 15,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 16,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 17,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 18,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 19,
+          "win": false,
+          "hp": 0,
+          "rounds": 4
+        },
+        {
+          "seed": 20,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 21,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 22,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 23,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 24,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 25,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 26,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 27,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 28,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 29,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 30,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 31,
+          "win": true,
+          "hp": 12,
+          "rounds": 8
+        },
+        {
+          "seed": 32,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 33,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 34,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 35,
+          "win": false,
+          "hp": 0,
+          "rounds": 4
+        },
+        {
+          "seed": 36,
+          "win": false,
+          "hp": 0,
+          "rounds": 9
+        },
+        {
+          "seed": 37,
+          "win": true,
+          "hp": 2,
+          "rounds": 8
+        },
+        {
+          "seed": 38,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 39,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 40,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 41,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 42,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 43,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 44,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 45,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 46,
+          "win": false,
+          "hp": 0,
+          "rounds": 9
+        },
+        {
+          "seed": 47,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 48,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 49,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 50,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 51,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 52,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 53,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 54,
+          "win": false,
+          "hp": 0,
+          "rounds": 10
+        },
+        {
+          "seed": 55,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 56,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 57,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 58,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 59,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 60,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 61,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 62,
+          "win": true,
+          "hp": 7,
+          "rounds": 6
+        },
+        {
+          "seed": 63,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 64,
+          "win": false,
+          "hp": 0,
+          "rounds": 9
+        },
+        {
+          "seed": 65,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 66,
+          "win": false,
+          "hp": 0,
+          "rounds": 4
+        },
+        {
+          "seed": 67,
+          "win": false,
+          "hp": 0,
+          "rounds": 4
+        },
+        {
+          "seed": 68,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 69,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 70,
+          "win": true,
+          "hp": 7,
+          "rounds": 8
+        },
+        {
+          "seed": 71,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 72,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 73,
+          "win": false,
+          "hp": 0,
+          "rounds": 9
+        },
+        {
+          "seed": 74,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 75,
+          "win": false,
+          "hp": 0,
+          "rounds": 9
+        },
+        {
+          "seed": 76,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 77,
+          "win": false,
+          "hp": 0,
+          "rounds": 10
+        },
+        {
+          "seed": 78,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 79,
+          "win": true,
+          "hp": 28,
+          "rounds": 7
+        },
+        {
+          "seed": 80,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 81,
+          "win": false,
+          "hp": 0,
+          "rounds": 4
+        },
+        {
+          "seed": 82,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 83,
+          "win": true,
+          "hp": 4,
+          "rounds": 11
+        },
+        {
+          "seed": 84,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 85,
+          "win": false,
+          "hp": 0,
+          "rounds": 9
+        },
+        {
+          "seed": 86,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 87,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 88,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 89,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 90,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 91,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 92,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 93,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 94,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 95,
+          "win": true,
+          "hp": 5,
+          "rounds": 9
+        },
+        {
+          "seed": 96,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 97,
+          "win": false,
+          "hp": 0,
+          "rounds": 4
+        },
+        {
+          "seed": 98,
+          "win": false,
+          "hp": 0,
+          "rounds": 4
+        },
+        {
+          "seed": 99,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 100,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 101,
+          "win": true,
+          "hp": 2,
+          "rounds": 9
+        },
+        {
+          "seed": 102,
+          "win": true,
+          "hp": 3,
+          "rounds": 8
+        },
+        {
+          "seed": 103,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 104,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 105,
+          "win": true,
+          "hp": 27,
+          "rounds": 8
+        },
+        {
+          "seed": 106,
+          "win": true,
+          "hp": 1,
+          "rounds": 8
+        },
+        {
+          "seed": 107,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 108,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 109,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 110,
+          "win": true,
+          "hp": 13,
+          "rounds": 9
+        },
+        {
+          "seed": 111,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 112,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 113,
+          "win": false,
+          "hp": 0,
+          "rounds": 4
+        },
+        {
+          "seed": 114,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 115,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 116,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 117,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 118,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 119,
+          "win": false,
+          "hp": 0,
+          "rounds": 10
+        },
+        {
+          "seed": 120,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 121,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 122,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 123,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 124,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 125,
+          "win": true,
+          "hp": 15,
+          "rounds": 9
+        },
+        {
+          "seed": 126,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 127,
+          "win": true,
+          "hp": 5,
+          "rounds": 9
+        },
+        {
+          "seed": 128,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 129,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 130,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 131,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 132,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 133,
+          "win": true,
+          "hp": 14,
+          "rounds": 10
+        },
+        {
+          "seed": 134,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 135,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 136,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 137,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 138,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 139,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 140,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 141,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 142,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 143,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 144,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 145,
+          "win": false,
+          "hp": 0,
+          "rounds": 4
+        },
+        {
+          "seed": 146,
+          "win": false,
+          "hp": 0,
+          "rounds": 4
+        },
+        {
+          "seed": 147,
+          "win": true,
+          "hp": 8,
+          "rounds": 7
+        },
+        {
+          "seed": 148,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 149,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 150,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 151,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 152,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 153,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 154,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 155,
+          "win": true,
+          "hp": 3,
+          "rounds": 9
+        },
+        {
+          "seed": 156,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 157,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 158,
+          "win": false,
+          "hp": 0,
+          "rounds": 9
+        },
+        {
+          "seed": 159,
+          "win": true,
+          "hp": 8,
+          "rounds": 11
+        },
+        {
+          "seed": 160,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 161,
+          "win": false,
+          "hp": 0,
+          "rounds": 4
+        },
+        {
+          "seed": 162,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 163,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 164,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 165,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 166,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 167,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 168,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 169,
+          "win": true,
+          "hp": 1,
+          "rounds": 11
+        },
+        {
+          "seed": 170,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 171,
+          "win": true,
+          "hp": 17,
+          "rounds": 9
+        },
+        {
+          "seed": 172,
+          "win": true,
+          "hp": 3,
+          "rounds": 8
+        },
+        {
+          "seed": 173,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 174,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 175,
+          "win": true,
+          "hp": 20,
+          "rounds": 11
+        },
+        {
+          "seed": 176,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 177,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 178,
+          "win": false,
+          "hp": 0,
+          "rounds": 4
+        },
+        {
+          "seed": 179,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 180,
+          "win": true,
+          "hp": 11,
+          "rounds": 8
+        },
+        {
+          "seed": 181,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 182,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 183,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 184,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 185,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 186,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 187,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 188,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 189,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 190,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 191,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 192,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 193,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 194,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 195,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 196,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 197,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 198,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 199,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 200,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        }
+      ],
+      "winRate": 0.115,
+      "averageRounds": 6.875,
+      "averageHp": 1.08,
+      "cShare": 0.18381010346926355,
+      "emptyEndRatio": 0.15499254843517138,
+      "uniqueSpells": 19,
+      "entropy": 2.674146230944882
+    },
+    {
+      "boss": "warden",
+      "strategy": "mixed",
+      "runs": 200,
+      "waterBonus": 4,
+      "adventure": false,
+      "excluded": [],
+      "randomLegal": true,
+      "wins": 9,
+      "defeats": 191,
+      "stalled": 0,
+      "rounds": 1617,
+      "hp": 152,
+      "casts": 1971,
+      "decisions": 2844,
+      "endTurns": 758,
+      "emptyEnds": 113,
+      "reconstructions": 463,
+      "newReconstructionOptions": 280,
+      "blocked": 5259,
+      "shieldUnused": 3803,
+      "attributedBlocked": 5259,
+      "reactionBlocked": 12,
+      "reactionUnused": 0,
+      "weakHits": 246,
+      "attackHits": 1178,
+      "spells": {
+        "water": {
+          "opportunities": 835,
+          "availableRounds": 657,
+          "availabilityEpisodes": 468,
+          "casts": 131,
+          "elementsSpent": 393,
+          "hpDamage": 1384,
+          "enemyShieldDamage": 434,
+          "shieldGenerated": 0,
+          "shieldAbsorbed": 0,
+          "shieldUnused": 0,
+          "reflectDamage": 0,
+          "fireReduction": 0,
+          "weakeningReduction": 0,
+          "completionWait": 609,
+          "castOldestAge": 176,
+          "castTileAge": 291,
+          "usedBattles": 107,
+          "wonUsedBattles": 5,
+          "missing": {
+            "H": 2362,
+            "O": 883,
+            "C": 0,
+            "Na": 0,
+            "Cl": 0,
+            "Fe": 0,
+            "N": 0,
+            "S": 0
+          }
+        },
+        "salt": {
+          "opportunities": 814,
+          "availableRounds": 525,
+          "availabilityEpisodes": 249,
+          "casts": 130,
+          "elementsSpent": 260,
+          "hpDamage": 827,
+          "enemyShieldDamage": 325,
+          "shieldGenerated": 0,
+          "shieldAbsorbed": 0,
+          "shieldUnused": 0,
+          "reflectDamage": 0,
+          "fireReduction": 0,
+          "weakeningReduction": 0,
+          "completionWait": 337,
+          "castOldestAge": 246,
+          "castTileAge": 338,
+          "usedBattles": 99,
+          "wonUsedBattles": 7,
+          "missing": {
+            "H": 0,
+            "O": 0,
+            "C": 0,
+            "Na": 1300,
+            "Cl": 1417,
+            "Fe": 0,
+            "N": 0,
+            "S": 0
+          }
+        },
+        "carbon": {
+          "opportunities": 527,
+          "availableRounds": 402,
+          "availabilityEpisodes": 286,
+          "casts": 68,
+          "elementsSpent": 204,
+          "hpDamage": 0,
+          "enemyShieldDamage": 0,
+          "shieldGenerated": 927,
+          "shieldAbsorbed": 534.0799035523299,
+          "shieldUnused": 392.92009644766995,
+          "reflectDamage": 0,
+          "fireReduction": 0,
+          "weakeningReduction": 0,
+          "completionWait": 447,
+          "castOldestAge": 111,
+          "castTileAge": 180,
+          "usedBattles": 51,
+          "wonUsedBattles": 5,
+          "missing": {
+            "H": 0,
+            "O": 2787,
+            "C": 1164,
+            "Na": 0,
+            "Cl": 0,
+            "Fe": 0,
+            "N": 0,
+            "S": 0
+          }
+        },
+        "iron": {
+          "opportunities": 728,
+          "availableRounds": 476,
+          "availabilityEpisodes": 248,
+          "casts": 124,
+          "elementsSpent": 124,
+          "hpDamage": 0,
+          "enemyShieldDamage": 0,
+          "shieldGenerated": 2185,
+          "shieldAbsorbed": 1129.3258358471594,
+          "shieldUnused": 1055.6741641528406,
+          "reflectDamage": 0,
+          "fireReduction": 0,
+          "weakeningReduction": 0,
+          "completionWait": 0,
+          "castOldestAge": 87,
+          "castTileAge": 87,
+          "usedBattles": 86,
+          "wonUsedBattles": 7,
+          "missing": {
+            "H": 0,
+            "O": 0,
+            "C": 0,
+            "Na": 0,
+            "Cl": 0,
+            "Fe": 2116,
+            "N": 0,
+            "S": 0
+          }
+        },
+        "oxygen": {
+          "opportunities": 940,
+          "availableRounds": 686,
+          "availabilityEpisodes": 428,
+          "casts": 162,
+          "elementsSpent": 324,
+          "hpDamage": 0,
+          "enemyShieldDamage": 0,
+          "shieldGenerated": 0,
+          "shieldAbsorbed": 0,
+          "shieldUnused": 0,
+          "reflectDamage": 0,
+          "fireReduction": 0,
+          "weakeningReduction": 0,
+          "completionWait": 345,
+          "castOldestAge": 175,
+          "castTileAge": 241,
+          "usedBattles": 118,
+          "wonUsedBattles": 4,
+          "missing": {
+            "H": 0,
+            "O": 2787,
+            "C": 0,
+            "Na": 0,
+            "Cl": 0,
+            "Fe": 0,
+            "N": 0,
+            "S": 0
+          }
+        },
+        "acid": {
+          "opportunities": 1031,
+          "availableRounds": 701,
+          "availabilityEpisodes": 385,
+          "casts": 185,
+          "elementsSpent": 370,
+          "hpDamage": 930,
+          "enemyShieldDamage": 369,
+          "shieldGenerated": 0,
+          "shieldAbsorbed": 0,
+          "shieldUnused": 0,
+          "reflectDamage": 0,
+          "fireReduction": 0,
+          "weakeningReduction": 0,
+          "completionWait": 460,
+          "castOldestAge": 253,
+          "castTileAge": 324,
+          "usedBattles": 126,
+          "wonUsedBattles": 6,
+          "missing": {
+            "H": 749,
+            "O": 0,
+            "C": 0,
+            "Na": 0,
+            "Cl": 1417,
+            "Fe": 0,
+            "N": 0,
+            "S": 0
+          }
+        },
+        "peroxide": {
+          "opportunities": 383,
+          "availableRounds": 328,
+          "availabilityEpisodes": 269,
+          "casts": 40,
+          "elementsSpent": 160,
+          "hpDamage": 410,
+          "enemyShieldDamage": 74,
+          "shieldGenerated": 0,
+          "shieldAbsorbed": 0,
+          "shieldUnused": 0,
+          "reflectDamage": 0,
+          "fireReduction": 0,
+          "weakeningReduction": 0,
+          "completionWait": 456,
+          "castOldestAge": 73,
+          "castTileAge": 161,
+          "usedBattles": 38,
+          "wonUsedBattles": 4,
+          "missing": {
+            "H": 2362,
+            "O": 2787,
+            "C": 0,
+            "Na": 0,
+            "Cl": 0,
+            "Fe": 0,
+            "N": 0,
+            "S": 0
+          }
+        },
+        "graphite": {
+          "opportunities": 1680,
+          "availableRounds": 1029,
+          "availabilityEpisodes": 342,
+          "casts": 370,
+          "elementsSpent": 370,
+          "hpDamage": 0,
+          "enemyShieldDamage": 0,
+          "shieldGenerated": 4219,
+          "shieldAbsorbed": 2542.9063727938733,
+          "shieldUnused": 1676.0936272061274,
+          "reflectDamage": 698,
+          "fireReduction": 0,
+          "weakeningReduction": 0,
+          "completionWait": 0,
+          "castOldestAge": 381,
+          "castTileAge": 381,
+          "usedBattles": 160,
+          "wonUsedBattles": 9,
+          "missing": {
+            "H": 0,
+            "O": 0,
+            "C": 1164,
+            "Na": 0,
+            "Cl": 0,
+            "Fe": 0,
+            "N": 0,
+            "S": 0
+          }
+        },
+        "methane": {
+          "opportunities": 94,
+          "availableRounds": 75,
+          "availabilityEpisodes": 55,
+          "casts": 13,
+          "elementsSpent": 65,
+          "hpDamage": 174,
+          "enemyShieldDamage": 28,
+          "shieldGenerated": 0,
+          "shieldAbsorbed": 0,
+          "shieldUnused": 0,
+          "reflectDamage": 0,
+          "fireReduction": 0,
+          "weakeningReduction": 0,
+          "completionWait": 122,
+          "castOldestAge": 31,
+          "castTileAge": 71,
+          "usedBattles": 12,
+          "wonUsedBattles": 1,
+          "missing": {
+            "H": 7333,
+            "O": 0,
+            "C": 1164,
+            "Na": 0,
+            "Cl": 0,
+            "Fe": 0,
+            "N": 0,
+            "S": 0
+          }
+        },
+        "ironOxide": {
+          "opportunities": 508,
+          "availableRounds": 372,
+          "availabilityEpisodes": 240,
+          "casts": 64,
+          "elementsSpent": 128,
+          "hpDamage": 536,
+          "enemyShieldDamage": 189,
+          "shieldGenerated": 0,
+          "shieldAbsorbed": 0,
+          "shieldUnused": 0,
+          "reflectDamage": 0,
+          "fireReduction": 0,
+          "weakeningReduction": 0,
+          "completionWait": 245,
+          "castOldestAge": 68,
+          "castTileAge": 81,
+          "usedBattles": 56,
+          "wonUsedBattles": 4,
+          "missing": {
+            "H": 0,
+            "O": 883,
+            "C": 0,
+            "Na": 0,
+            "Cl": 0,
+            "Fe": 2116,
+            "N": 0,
+            "S": 0
+          }
+        },
+        "hydrogen": {
+          "opportunities": 1231,
+          "availableRounds": 872,
+          "availabilityEpisodes": 502,
+          "casts": 192,
+          "elementsSpent": 384,
+          "hpDamage": 541,
+          "enemyShieldDamage": 393,
+          "shieldGenerated": 0,
+          "shieldAbsorbed": 0,
+          "shieldUnused": 0,
+          "reflectDamage": 0,
+          "fireReduction": 0,
+          "weakeningReduction": 0,
+          "completionWait": 340,
+          "castOldestAge": 165,
+          "castTileAge": 231,
+          "usedBattles": 129,
+          "wonUsedBattles": 6,
+          "missing": {
+            "H": 2362,
+            "O": 0,
+            "C": 0,
+            "Na": 0,
+            "Cl": 0,
+            "Fe": 0,
+            "N": 0,
+            "S": 0
+          }
+        },
+        "alkali": {
+          "opportunities": 771,
+          "availableRounds": 577,
+          "availabilityEpisodes": 358,
+          "casts": 120,
+          "elementsSpent": 360,
+          "hpDamage": 529,
+          "enemyShieldDamage": 342,
+          "shieldGenerated": 0,
+          "shieldAbsorbed": 0,
+          "shieldUnused": 0,
+          "reflectDamage": 0,
+          "fireReduction": 0,
+          "weakeningReduction": 0,
+          "completionWait": 669,
+          "castOldestAge": 238,
+          "castTileAge": 368,
+          "usedBattles": 97,
+          "wonUsedBattles": 4,
+          "missing": {
+            "H": 749,
+            "O": 883,
+            "C": 0,
+            "Na": 1300,
+            "Cl": 0,
+            "Fe": 0,
+            "N": 0,
+            "S": 0
+          }
+        },
+        "ferrous": {
+          "opportunities": 122,
+          "availableRounds": 81,
+          "availabilityEpisodes": 56,
+          "casts": 18,
+          "elementsSpent": 54,
+          "hpDamage": 122,
+          "enemyShieldDamage": 87,
+          "shieldGenerated": 0,
+          "shieldAbsorbed": 0,
+          "shieldUnused": 0,
+          "reflectDamage": 0,
+          "fireReduction": 0,
+          "weakeningReduction": 51,
+          "completionWait": 137,
+          "castOldestAge": 45,
+          "castTileAge": 79,
+          "usedBattles": 18,
+          "wonUsedBattles": 3,
+          "missing": {
+            "H": 0,
+            "O": 0,
+            "C": 0,
+            "Na": 0,
+            "Cl": 3761,
+            "Fe": 2116,
+            "N": 0,
+            "S": 0
+          }
+        },
+        "nitrogen": {
+          "opportunities": 337,
+          "availableRounds": 210,
+          "availabilityEpisodes": 112,
+          "casts": 69,
+          "elementsSpent": 138,
+          "hpDamage": 0,
+          "enemyShieldDamage": 0,
+          "shieldGenerated": 1077,
+          "shieldAbsorbed": 650.3534722222221,
+          "shieldUnused": 426.6465277777777,
+          "reflectDamage": 0,
+          "fireReduction": 0,
+          "weakeningReduction": 0,
+          "completionWait": 201,
+          "castOldestAge": 146,
+          "castTileAge": 191,
+          "usedBattles": 63,
+          "wonUsedBattles": 6,
+          "missing": {
+            "H": 0,
+            "O": 0,
+            "C": 0,
+            "Na": 0,
+            "Cl": 0,
+            "Fe": 0,
+            "N": 4095,
+            "S": 0
+          }
+        },
+        "ammonia": {
+          "opportunities": 228,
+          "availableRounds": 178,
+          "availabilityEpisodes": 132,
+          "casts": 34,
+          "elementsSpent": 136,
+          "hpDamage": 176,
+          "enemyShieldDamage": 108,
+          "shieldGenerated": 0,
+          "shieldAbsorbed": 0,
+          "shieldUnused": 0,
+          "reflectDamage": 0,
+          "fireReduction": 0,
+          "weakeningReduction": 52,
+          "completionWait": 311,
+          "castOldestAge": 81,
+          "castTileAge": 155,
+          "usedBattles": 33,
+          "wonUsedBattles": 3,
+          "missing": {
+            "H": 4671,
+            "O": 0,
+            "C": 0,
+            "Na": 0,
+            "Cl": 0,
+            "Fe": 0,
+            "N": 1588,
+            "S": 0
+          }
+        },
+        "nitro": {
+          "opportunities": 425,
+          "availableRounds": 319,
+          "availabilityEpisodes": 222,
+          "casts": 59,
+          "elementsSpent": 177,
+          "hpDamage": 672,
+          "enemyShieldDamage": 165,
+          "shieldGenerated": 0,
+          "shieldAbsorbed": 0,
+          "shieldUnused": 0,
+          "reflectDamage": 0,
+          "fireReduction": 0,
+          "weakeningReduction": 0,
+          "completionWait": 416,
+          "castOldestAge": 129,
+          "castTileAge": 187,
+          "usedBattles": 52,
+          "wonUsedBattles": 4,
+          "missing": {
+            "H": 0,
+            "O": 2787,
+            "C": 0,
+            "Na": 0,
+            "Cl": 0,
+            "Fe": 0,
+            "N": 1588,
+            "S": 0
+          }
+        },
+        "sulfide": {
+          "opportunities": 504,
+          "availableRounds": 379,
+          "availabilityEpisodes": 276,
+          "casts": 83,
+          "elementsSpent": 249,
+          "hpDamage": 416,
+          "enemyShieldDamage": 111,
+          "shieldGenerated": 642,
+          "shieldAbsorbed": 390.3344155844156,
+          "shieldUnused": 251.66558441558442,
+          "reflectDamage": 0,
+          "fireReduction": 0,
+          "weakeningReduction": 0,
+          "completionWait": 472,
+          "castOldestAge": 142,
+          "castTileAge": 206,
+          "usedBattles": 76,
+          "wonUsedBattles": 7,
+          "missing": {
+            "H": 2362,
+            "O": 0,
+            "C": 0,
+            "Na": 0,
+            "Cl": 0,
+            "Fe": 0,
+            "N": 0,
+            "S": 1579
+          }
+        },
+        "sulfur": {
+          "opportunities": 393,
+          "availableRounds": 300,
+          "availabilityEpisodes": 222,
+          "casts": 61,
+          "elementsSpent": 183,
+          "hpDamage": 920,
+          "enemyShieldDamage": 188,
+          "shieldGenerated": 0,
+          "shieldAbsorbed": 0,
+          "shieldUnused": 0,
+          "reflectDamage": 0,
+          "fireReduction": 0,
+          "weakeningReduction": 0,
+          "completionWait": 414,
+          "castOldestAge": 124,
+          "castTileAge": 183,
+          "usedBattles": 54,
+          "wonUsedBattles": 5,
+          "missing": {
+            "H": 0,
+            "O": 2787,
+            "C": 0,
+            "Na": 0,
+            "Cl": 0,
+            "Fe": 0,
+            "N": 0,
+            "S": 1579
+          }
+        },
+        "ironSulfide": {
+          "opportunities": 278,
+          "availableRounds": 198,
+          "availabilityEpisodes": 143,
+          "casts": 48,
+          "elementsSpent": 96,
+          "hpDamage": 729,
+          "enemyShieldDamage": 122,
+          "shieldGenerated": 0,
+          "shieldAbsorbed": 0,
+          "shieldUnused": 0,
+          "reflectDamage": 0,
+          "fireReduction": 0,
+          "weakeningReduction": 0,
+          "completionWait": 228,
+          "castOldestAge": 80,
+          "castTileAge": 92,
+          "usedBattles": 45,
+          "wonUsedBattles": 2,
+          "missing": {
+            "H": 0,
+            "O": 0,
+            "C": 0,
+            "Na": 0,
+            "Cl": 0,
+            "Fe": 2116,
+            "N": 0,
+            "S": 1579
+          }
+        }
+      },
+      "enemies": {
+        "warden": {
+          "visits": 200,
+          "wins": 9,
+          "decisions": 2844,
+          "casts": 1971,
+          "spells": {
+            "water": {
+              "opportunities": 835,
+              "availableRounds": 657,
+              "availabilityEpisodes": 468,
+              "casts": 131,
+              "elementsSpent": 393,
+              "hpDamage": 1384,
+              "enemyShieldDamage": 434,
+              "shieldGenerated": 0,
+              "shieldAbsorbed": 0,
+              "shieldUnused": 0,
+              "reflectDamage": 0,
+              "fireReduction": 0,
+              "weakeningReduction": 0,
+              "completionWait": 609,
+              "castOldestAge": 176,
+              "castTileAge": 291,
+              "usedBattles": 107,
+              "wonUsedBattles": 5,
+              "missing": {
+                "H": 2362,
+                "O": 883,
+                "C": 0,
+                "Na": 0,
+                "Cl": 0,
+                "Fe": 0,
+                "N": 0,
+                "S": 0
+              }
+            },
+            "salt": {
+              "opportunities": 814,
+              "availableRounds": 525,
+              "availabilityEpisodes": 249,
+              "casts": 130,
+              "elementsSpent": 260,
+              "hpDamage": 827,
+              "enemyShieldDamage": 325,
+              "shieldGenerated": 0,
+              "shieldAbsorbed": 0,
+              "shieldUnused": 0,
+              "reflectDamage": 0,
+              "fireReduction": 0,
+              "weakeningReduction": 0,
+              "completionWait": 337,
+              "castOldestAge": 246,
+              "castTileAge": 338,
+              "usedBattles": 99,
+              "wonUsedBattles": 7,
+              "missing": {
+                "H": 0,
+                "O": 0,
+                "C": 0,
+                "Na": 1300,
+                "Cl": 1417,
+                "Fe": 0,
+                "N": 0,
+                "S": 0
+              }
+            },
+            "carbon": {
+              "opportunities": 527,
+              "availableRounds": 402,
+              "availabilityEpisodes": 286,
+              "casts": 68,
+              "elementsSpent": 204,
+              "hpDamage": 0,
+              "enemyShieldDamage": 0,
+              "shieldGenerated": 927,
+              "shieldAbsorbed": 534.0799035523299,
+              "shieldUnused": 392.92009644766995,
+              "reflectDamage": 0,
+              "fireReduction": 0,
+              "weakeningReduction": 0,
+              "completionWait": 447,
+              "castOldestAge": 111,
+              "castTileAge": 180,
+              "usedBattles": 51,
+              "wonUsedBattles": 5,
+              "missing": {
+                "H": 0,
+                "O": 2787,
+                "C": 1164,
+                "Na": 0,
+                "Cl": 0,
+                "Fe": 0,
+                "N": 0,
+                "S": 0
+              }
+            },
+            "iron": {
+              "opportunities": 728,
+              "availableRounds": 476,
+              "availabilityEpisodes": 248,
+              "casts": 124,
+              "elementsSpent": 124,
+              "hpDamage": 0,
+              "enemyShieldDamage": 0,
+              "shieldGenerated": 2185,
+              "shieldAbsorbed": 1129.3258358471594,
+              "shieldUnused": 1055.6741641528406,
+              "reflectDamage": 0,
+              "fireReduction": 0,
+              "weakeningReduction": 0,
+              "completionWait": 0,
+              "castOldestAge": 87,
+              "castTileAge": 87,
+              "usedBattles": 86,
+              "wonUsedBattles": 7,
+              "missing": {
+                "H": 0,
+                "O": 0,
+                "C": 0,
+                "Na": 0,
+                "Cl": 0,
+                "Fe": 2116,
+                "N": 0,
+                "S": 0
+              }
+            },
+            "oxygen": {
+              "opportunities": 940,
+              "availableRounds": 686,
+              "availabilityEpisodes": 428,
+              "casts": 162,
+              "elementsSpent": 324,
+              "hpDamage": 0,
+              "enemyShieldDamage": 0,
+              "shieldGenerated": 0,
+              "shieldAbsorbed": 0,
+              "shieldUnused": 0,
+              "reflectDamage": 0,
+              "fireReduction": 0,
+              "weakeningReduction": 0,
+              "completionWait": 345,
+              "castOldestAge": 175,
+              "castTileAge": 241,
+              "usedBattles": 118,
+              "wonUsedBattles": 4,
+              "missing": {
+                "H": 0,
+                "O": 2787,
+                "C": 0,
+                "Na": 0,
+                "Cl": 0,
+                "Fe": 0,
+                "N": 0,
+                "S": 0
+              }
+            },
+            "acid": {
+              "opportunities": 1031,
+              "availableRounds": 701,
+              "availabilityEpisodes": 385,
+              "casts": 185,
+              "elementsSpent": 370,
+              "hpDamage": 930,
+              "enemyShieldDamage": 369,
+              "shieldGenerated": 0,
+              "shieldAbsorbed": 0,
+              "shieldUnused": 0,
+              "reflectDamage": 0,
+              "fireReduction": 0,
+              "weakeningReduction": 0,
+              "completionWait": 460,
+              "castOldestAge": 253,
+              "castTileAge": 324,
+              "usedBattles": 126,
+              "wonUsedBattles": 6,
+              "missing": {
+                "H": 749,
+                "O": 0,
+                "C": 0,
+                "Na": 0,
+                "Cl": 1417,
+                "Fe": 0,
+                "N": 0,
+                "S": 0
+              }
+            },
+            "peroxide": {
+              "opportunities": 383,
+              "availableRounds": 328,
+              "availabilityEpisodes": 269,
+              "casts": 40,
+              "elementsSpent": 160,
+              "hpDamage": 410,
+              "enemyShieldDamage": 74,
+              "shieldGenerated": 0,
+              "shieldAbsorbed": 0,
+              "shieldUnused": 0,
+              "reflectDamage": 0,
+              "fireReduction": 0,
+              "weakeningReduction": 0,
+              "completionWait": 456,
+              "castOldestAge": 73,
+              "castTileAge": 161,
+              "usedBattles": 38,
+              "wonUsedBattles": 4,
+              "missing": {
+                "H": 2362,
+                "O": 2787,
+                "C": 0,
+                "Na": 0,
+                "Cl": 0,
+                "Fe": 0,
+                "N": 0,
+                "S": 0
+              }
+            },
+            "graphite": {
+              "opportunities": 1680,
+              "availableRounds": 1029,
+              "availabilityEpisodes": 342,
+              "casts": 370,
+              "elementsSpent": 370,
+              "hpDamage": 0,
+              "enemyShieldDamage": 0,
+              "shieldGenerated": 4219,
+              "shieldAbsorbed": 2542.9063727938733,
+              "shieldUnused": 1676.0936272061274,
+              "reflectDamage": 698,
+              "fireReduction": 0,
+              "weakeningReduction": 0,
+              "completionWait": 0,
+              "castOldestAge": 381,
+              "castTileAge": 381,
+              "usedBattles": 160,
+              "wonUsedBattles": 9,
+              "missing": {
+                "H": 0,
+                "O": 0,
+                "C": 1164,
+                "Na": 0,
+                "Cl": 0,
+                "Fe": 0,
+                "N": 0,
+                "S": 0
+              }
+            },
+            "methane": {
+              "opportunities": 94,
+              "availableRounds": 75,
+              "availabilityEpisodes": 55,
+              "casts": 13,
+              "elementsSpent": 65,
+              "hpDamage": 174,
+              "enemyShieldDamage": 28,
+              "shieldGenerated": 0,
+              "shieldAbsorbed": 0,
+              "shieldUnused": 0,
+              "reflectDamage": 0,
+              "fireReduction": 0,
+              "weakeningReduction": 0,
+              "completionWait": 122,
+              "castOldestAge": 31,
+              "castTileAge": 71,
+              "usedBattles": 12,
+              "wonUsedBattles": 1,
+              "missing": {
+                "H": 7333,
+                "O": 0,
+                "C": 1164,
+                "Na": 0,
+                "Cl": 0,
+                "Fe": 0,
+                "N": 0,
+                "S": 0
+              }
+            },
+            "ironOxide": {
+              "opportunities": 508,
+              "availableRounds": 372,
+              "availabilityEpisodes": 240,
+              "casts": 64,
+              "elementsSpent": 128,
+              "hpDamage": 536,
+              "enemyShieldDamage": 189,
+              "shieldGenerated": 0,
+              "shieldAbsorbed": 0,
+              "shieldUnused": 0,
+              "reflectDamage": 0,
+              "fireReduction": 0,
+              "weakeningReduction": 0,
+              "completionWait": 245,
+              "castOldestAge": 68,
+              "castTileAge": 81,
+              "usedBattles": 56,
+              "wonUsedBattles": 4,
+              "missing": {
+                "H": 0,
+                "O": 883,
+                "C": 0,
+                "Na": 0,
+                "Cl": 0,
+                "Fe": 2116,
+                "N": 0,
+                "S": 0
+              }
+            },
+            "hydrogen": {
+              "opportunities": 1231,
+              "availableRounds": 872,
+              "availabilityEpisodes": 502,
+              "casts": 192,
+              "elementsSpent": 384,
+              "hpDamage": 541,
+              "enemyShieldDamage": 393,
+              "shieldGenerated": 0,
+              "shieldAbsorbed": 0,
+              "shieldUnused": 0,
+              "reflectDamage": 0,
+              "fireReduction": 0,
+              "weakeningReduction": 0,
+              "completionWait": 340,
+              "castOldestAge": 165,
+              "castTileAge": 231,
+              "usedBattles": 129,
+              "wonUsedBattles": 6,
+              "missing": {
+                "H": 2362,
+                "O": 0,
+                "C": 0,
+                "Na": 0,
+                "Cl": 0,
+                "Fe": 0,
+                "N": 0,
+                "S": 0
+              }
+            },
+            "alkali": {
+              "opportunities": 771,
+              "availableRounds": 577,
+              "availabilityEpisodes": 358,
+              "casts": 120,
+              "elementsSpent": 360,
+              "hpDamage": 529,
+              "enemyShieldDamage": 342,
+              "shieldGenerated": 0,
+              "shieldAbsorbed": 0,
+              "shieldUnused": 0,
+              "reflectDamage": 0,
+              "fireReduction": 0,
+              "weakeningReduction": 0,
+              "completionWait": 669,
+              "castOldestAge": 238,
+              "castTileAge": 368,
+              "usedBattles": 97,
+              "wonUsedBattles": 4,
+              "missing": {
+                "H": 749,
+                "O": 883,
+                "C": 0,
+                "Na": 1300,
+                "Cl": 0,
+                "Fe": 0,
+                "N": 0,
+                "S": 0
+              }
+            },
+            "ferrous": {
+              "opportunities": 122,
+              "availableRounds": 81,
+              "availabilityEpisodes": 56,
+              "casts": 18,
+              "elementsSpent": 54,
+              "hpDamage": 122,
+              "enemyShieldDamage": 87,
+              "shieldGenerated": 0,
+              "shieldAbsorbed": 0,
+              "shieldUnused": 0,
+              "reflectDamage": 0,
+              "fireReduction": 0,
+              "weakeningReduction": 51,
+              "completionWait": 137,
+              "castOldestAge": 45,
+              "castTileAge": 79,
+              "usedBattles": 18,
+              "wonUsedBattles": 3,
+              "missing": {
+                "H": 0,
+                "O": 0,
+                "C": 0,
+                "Na": 0,
+                "Cl": 3761,
+                "Fe": 2116,
+                "N": 0,
+                "S": 0
+              }
+            },
+            "nitrogen": {
+              "opportunities": 337,
+              "availableRounds": 210,
+              "availabilityEpisodes": 112,
+              "casts": 69,
+              "elementsSpent": 138,
+              "hpDamage": 0,
+              "enemyShieldDamage": 0,
+              "shieldGenerated": 1077,
+              "shieldAbsorbed": 650.3534722222221,
+              "shieldUnused": 426.6465277777777,
+              "reflectDamage": 0,
+              "fireReduction": 0,
+              "weakeningReduction": 0,
+              "completionWait": 201,
+              "castOldestAge": 146,
+              "castTileAge": 191,
+              "usedBattles": 63,
+              "wonUsedBattles": 6,
+              "missing": {
+                "H": 0,
+                "O": 0,
+                "C": 0,
+                "Na": 0,
+                "Cl": 0,
+                "Fe": 0,
+                "N": 4095,
+                "S": 0
+              }
+            },
+            "ammonia": {
+              "opportunities": 228,
+              "availableRounds": 178,
+              "availabilityEpisodes": 132,
+              "casts": 34,
+              "elementsSpent": 136,
+              "hpDamage": 176,
+              "enemyShieldDamage": 108,
+              "shieldGenerated": 0,
+              "shieldAbsorbed": 0,
+              "shieldUnused": 0,
+              "reflectDamage": 0,
+              "fireReduction": 0,
+              "weakeningReduction": 52,
+              "completionWait": 311,
+              "castOldestAge": 81,
+              "castTileAge": 155,
+              "usedBattles": 33,
+              "wonUsedBattles": 3,
+              "missing": {
+                "H": 4671,
+                "O": 0,
+                "C": 0,
+                "Na": 0,
+                "Cl": 0,
+                "Fe": 0,
+                "N": 1588,
+                "S": 0
+              }
+            },
+            "nitro": {
+              "opportunities": 425,
+              "availableRounds": 319,
+              "availabilityEpisodes": 222,
+              "casts": 59,
+              "elementsSpent": 177,
+              "hpDamage": 672,
+              "enemyShieldDamage": 165,
+              "shieldGenerated": 0,
+              "shieldAbsorbed": 0,
+              "shieldUnused": 0,
+              "reflectDamage": 0,
+              "fireReduction": 0,
+              "weakeningReduction": 0,
+              "completionWait": 416,
+              "castOldestAge": 129,
+              "castTileAge": 187,
+              "usedBattles": 52,
+              "wonUsedBattles": 4,
+              "missing": {
+                "H": 0,
+                "O": 2787,
+                "C": 0,
+                "Na": 0,
+                "Cl": 0,
+                "Fe": 0,
+                "N": 1588,
+                "S": 0
+              }
+            },
+            "sulfide": {
+              "opportunities": 504,
+              "availableRounds": 379,
+              "availabilityEpisodes": 276,
+              "casts": 83,
+              "elementsSpent": 249,
+              "hpDamage": 416,
+              "enemyShieldDamage": 111,
+              "shieldGenerated": 642,
+              "shieldAbsorbed": 390.3344155844156,
+              "shieldUnused": 251.66558441558442,
+              "reflectDamage": 0,
+              "fireReduction": 0,
+              "weakeningReduction": 0,
+              "completionWait": 472,
+              "castOldestAge": 142,
+              "castTileAge": 206,
+              "usedBattles": 76,
+              "wonUsedBattles": 7,
+              "missing": {
+                "H": 2362,
+                "O": 0,
+                "C": 0,
+                "Na": 0,
+                "Cl": 0,
+                "Fe": 0,
+                "N": 0,
+                "S": 1579
+              }
+            },
+            "sulfur": {
+              "opportunities": 393,
+              "availableRounds": 300,
+              "availabilityEpisodes": 222,
+              "casts": 61,
+              "elementsSpent": 183,
+              "hpDamage": 920,
+              "enemyShieldDamage": 188,
+              "shieldGenerated": 0,
+              "shieldAbsorbed": 0,
+              "shieldUnused": 0,
+              "reflectDamage": 0,
+              "fireReduction": 0,
+              "weakeningReduction": 0,
+              "completionWait": 414,
+              "castOldestAge": 124,
+              "castTileAge": 183,
+              "usedBattles": 54,
+              "wonUsedBattles": 5,
+              "missing": {
+                "H": 0,
+                "O": 2787,
+                "C": 0,
+                "Na": 0,
+                "Cl": 0,
+                "Fe": 0,
+                "N": 0,
+                "S": 1579
+              }
+            },
+            "ironSulfide": {
+              "opportunities": 278,
+              "availableRounds": 198,
+              "availabilityEpisodes": 143,
+              "casts": 48,
+              "elementsSpent": 96,
+              "hpDamage": 729,
+              "enemyShieldDamage": 122,
+              "shieldGenerated": 0,
+              "shieldAbsorbed": 0,
+              "shieldUnused": 0,
+              "reflectDamage": 0,
+              "fireReduction": 0,
+              "weakeningReduction": 0,
+              "completionWait": 228,
+              "castOldestAge": 80,
+              "castTileAge": 92,
+              "usedBattles": 45,
+              "wonUsedBattles": 2,
+              "missing": {
+                "H": 0,
+                "O": 0,
+                "C": 0,
+                "Na": 0,
+                "Cl": 0,
+                "Fe": 2116,
+                "N": 0,
+                "S": 1579
+              }
+            }
+          }
+        }
+      },
+      "outcomes": [
+        {
+          "seed": 1,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 2,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 3,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 4,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 5,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 6,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 7,
+          "win": false,
+          "hp": 0,
+          "rounds": 10
+        },
+        {
+          "seed": 8,
+          "win": false,
+          "hp": 0,
+          "rounds": 15
+        },
+        {
+          "seed": 9,
+          "win": false,
+          "hp": 0,
+          "rounds": 10
+        },
+        {
+          "seed": 10,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 11,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 12,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 13,
+          "win": false,
+          "hp": 0,
+          "rounds": 10
+        },
+        {
+          "seed": 14,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 15,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 16,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 17,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 18,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 19,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 20,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 21,
+          "win": false,
+          "hp": 0,
+          "rounds": 10
+        },
+        {
+          "seed": 22,
+          "win": false,
+          "hp": 0,
+          "rounds": 10
+        },
+        {
+          "seed": 23,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 24,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 25,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 26,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 27,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 28,
+          "win": false,
+          "hp": 0,
+          "rounds": 10
+        },
+        {
+          "seed": 29,
+          "win": false,
+          "hp": 0,
+          "rounds": 10
+        },
+        {
+          "seed": 30,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 31,
+          "win": false,
+          "hp": 0,
+          "rounds": 10
+        },
+        {
+          "seed": 32,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 33,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 34,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 35,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 36,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 37,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 38,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 39,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 40,
+          "win": false,
+          "hp": 0,
+          "rounds": 10
+        },
+        {
+          "seed": 41,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 42,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 43,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 44,
+          "win": false,
+          "hp": 0,
+          "rounds": 10
+        },
+        {
+          "seed": 45,
+          "win": false,
+          "hp": 0,
+          "rounds": 15
+        },
+        {
+          "seed": 46,
+          "win": false,
+          "hp": 0,
+          "rounds": 10
+        },
+        {
+          "seed": 47,
+          "win": false,
+          "hp": 0,
+          "rounds": 10
+        },
+        {
+          "seed": 48,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 49,
+          "win": false,
+          "hp": 0,
+          "rounds": 10
+        },
+        {
+          "seed": 50,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 51,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 52,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 53,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 54,
+          "win": false,
+          "hp": 0,
+          "rounds": 10
+        },
+        {
+          "seed": 55,
+          "win": false,
+          "hp": 0,
+          "rounds": 10
+        },
+        {
+          "seed": 56,
+          "win": false,
+          "hp": 0,
+          "rounds": 10
+        },
+        {
+          "seed": 57,
+          "win": false,
+          "hp": 0,
+          "rounds": 10
+        },
+        {
+          "seed": 58,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 59,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 60,
+          "win": false,
+          "hp": 0,
+          "rounds": 10
+        },
+        {
+          "seed": 61,
+          "win": false,
+          "hp": 0,
+          "rounds": 11
+        },
+        {
+          "seed": 62,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 63,
+          "win": false,
+          "hp": 0,
+          "rounds": 10
+        },
+        {
+          "seed": 64,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 65,
+          "win": false,
+          "hp": 0,
+          "rounds": 10
+        },
+        {
+          "seed": 66,
+          "win": false,
+          "hp": 0,
+          "rounds": 10
+        },
+        {
+          "seed": 67,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 68,
+          "win": false,
+          "hp": 0,
+          "rounds": 10
+        },
+        {
+          "seed": 69,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 70,
+          "win": true,
+          "hp": 2,
+          "rounds": 10
+        },
+        {
+          "seed": 71,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 72,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 73,
+          "win": false,
+          "hp": 0,
+          "rounds": 10
+        },
+        {
+          "seed": 74,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 75,
+          "win": false,
+          "hp": 0,
+          "rounds": 10
+        },
+        {
+          "seed": 76,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 77,
+          "win": false,
+          "hp": 0,
+          "rounds": 10
+        },
+        {
+          "seed": 78,
+          "win": false,
+          "hp": 0,
+          "rounds": 10
+        },
+        {
+          "seed": 79,
+          "win": false,
+          "hp": 0,
+          "rounds": 10
+        },
+        {
+          "seed": 80,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 81,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 82,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 83,
+          "win": true,
+          "hp": 9,
+          "rounds": 13
+        },
+        {
+          "seed": 84,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 85,
+          "win": false,
+          "hp": 0,
+          "rounds": 10
+        },
+        {
+          "seed": 86,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 87,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 88,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 89,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 90,
+          "win": false,
+          "hp": 0,
+          "rounds": 10
+        },
+        {
+          "seed": 91,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 92,
+          "win": false,
+          "hp": 0,
+          "rounds": 10
+        },
+        {
+          "seed": 93,
+          "win": false,
+          "hp": 0,
+          "rounds": 10
+        },
+        {
+          "seed": 94,
+          "win": false,
+          "hp": 0,
+          "rounds": 10
+        },
+        {
+          "seed": 95,
+          "win": true,
+          "hp": 32,
+          "rounds": 10
+        },
+        {
+          "seed": 96,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 97,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 98,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 99,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 100,
+          "win": false,
+          "hp": 0,
+          "rounds": 10
+        },
+        {
+          "seed": 101,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 102,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 103,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 104,
+          "win": false,
+          "hp": 0,
+          "rounds": 10
+        },
+        {
+          "seed": 105,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 106,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 107,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 108,
+          "win": false,
+          "hp": 0,
+          "rounds": 10
+        },
+        {
+          "seed": 109,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 110,
+          "win": true,
+          "hp": 24,
+          "rounds": 11
+        },
+        {
+          "seed": 111,
+          "win": false,
+          "hp": 0,
+          "rounds": 10
+        },
+        {
+          "seed": 112,
+          "win": false,
+          "hp": 0,
+          "rounds": 10
+        },
+        {
+          "seed": 113,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 114,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 115,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 116,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 117,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 118,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 119,
+          "win": false,
+          "hp": 0,
+          "rounds": 10
+        },
+        {
+          "seed": 120,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 121,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 122,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 123,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 124,
+          "win": false,
+          "hp": 0,
+          "rounds": 10
+        },
+        {
+          "seed": 125,
+          "win": true,
+          "hp": 21,
+          "rounds": 10
+        },
+        {
+          "seed": 126,
+          "win": false,
+          "hp": 0,
+          "rounds": 10
+        },
+        {
+          "seed": 127,
+          "win": false,
+          "hp": 0,
+          "rounds": 10
+        },
+        {
+          "seed": 128,
+          "win": false,
+          "hp": 0,
+          "rounds": 10
+        },
+        {
+          "seed": 129,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 130,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 131,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 132,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 133,
+          "win": true,
+          "hp": 22,
+          "rounds": 10
+        },
+        {
+          "seed": 134,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 135,
+          "win": false,
+          "hp": 0,
+          "rounds": 10
+        },
+        {
+          "seed": 136,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 137,
+          "win": false,
+          "hp": 0,
+          "rounds": 10
+        },
+        {
+          "seed": 138,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 139,
+          "win": false,
+          "hp": 0,
+          "rounds": 10
+        },
+        {
+          "seed": 140,
+          "win": false,
+          "hp": 0,
+          "rounds": 10
+        },
+        {
+          "seed": 141,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 142,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 143,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 144,
+          "win": false,
+          "hp": 0,
+          "rounds": 10
+        },
+        {
+          "seed": 145,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 146,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 147,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 148,
+          "win": false,
+          "hp": 0,
+          "rounds": 12
+        },
+        {
+          "seed": 149,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 150,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 151,
+          "win": false,
+          "hp": 0,
+          "rounds": 10
+        },
+        {
+          "seed": 152,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 153,
+          "win": false,
+          "hp": 0,
+          "rounds": 10
+        },
+        {
+          "seed": 154,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 155,
+          "win": false,
+          "hp": 0,
+          "rounds": 10
+        },
+        {
+          "seed": 156,
+          "win": false,
+          "hp": 0,
+          "rounds": 10
+        },
+        {
+          "seed": 157,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 158,
+          "win": false,
+          "hp": 0,
+          "rounds": 11
+        },
+        {
+          "seed": 159,
+          "win": false,
+          "hp": 0,
+          "rounds": 11
+        },
+        {
+          "seed": 160,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 161,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 162,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 163,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 164,
+          "win": false,
+          "hp": 0,
+          "rounds": 11
+        },
+        {
+          "seed": 165,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 166,
+          "win": false,
+          "hp": 0,
+          "rounds": 10
+        },
+        {
+          "seed": 167,
+          "win": false,
+          "hp": 0,
+          "rounds": 10
+        },
+        {
+          "seed": 168,
+          "win": false,
+          "hp": 0,
+          "rounds": 10
+        },
+        {
+          "seed": 169,
+          "win": true,
+          "hp": 15,
+          "rounds": 13
+        },
+        {
+          "seed": 170,
+          "win": true,
+          "hp": 3,
+          "rounds": 11
+        },
+        {
+          "seed": 171,
+          "win": false,
+          "hp": 0,
+          "rounds": 10
+        },
+        {
+          "seed": 172,
+          "win": false,
+          "hp": 0,
+          "rounds": 10
+        },
+        {
+          "seed": 173,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 174,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 175,
+          "win": true,
+          "hp": 24,
+          "rounds": 13
+        },
+        {
+          "seed": 176,
+          "win": false,
+          "hp": 0,
+          "rounds": 12
+        },
+        {
+          "seed": 177,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 178,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 179,
+          "win": false,
+          "hp": 0,
+          "rounds": 10
+        },
+        {
+          "seed": 180,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 181,
+          "win": false,
+          "hp": 0,
+          "rounds": 10
+        },
+        {
+          "seed": 182,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 183,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 184,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 185,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 186,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 187,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 188,
+          "win": false,
+          "hp": 0,
+          "rounds": 10
+        },
+        {
+          "seed": 189,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 190,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 191,
+          "win": false,
+          "hp": 0,
+          "rounds": 8
+        },
+        {
+          "seed": 192,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 193,
+          "win": false,
+          "hp": 0,
+          "rounds": 5
+        },
+        {
+          "seed": 194,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        },
+        {
+          "seed": 195,
+          "win": false,
+          "hp": 0,
+          "rounds": 10
+        },
+        {
+          "seed": 196,
+          "win": false,
+          "hp": 0,
+          "rounds": 10
+        },
+        {
+          "seed": 197,
+          "win": false,
+          "hp": 0,
+          "rounds": 11
+        },
+        {
+          "seed": 198,
+          "win": false,
+          "hp": 0,
+          "rounds": 10
+        },
+        {
+          "seed": 199,
+          "win": false,
+          "hp": 0,
+          "rounds": 6
+        },
+        {
+          "seed": 200,
+          "win": false,
+          "hp": 0,
+          "rounds": 7
+        }
+      ],
+      "winRate": 0.045,
+      "averageRounds": 8.085,
+      "averageHp": 0.76,
+      "cShare": 0.18772196854388634,
+      "emptyEndRatio": 0.14907651715039577,
+      "uniqueSpells": 19,
+      "entropy": 2.6786219277003482
+    }
+  ]
+}

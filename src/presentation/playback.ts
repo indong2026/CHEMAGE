@@ -1,3 +1,4 @@
+import { ENEMIES } from '../data/enemies';
 import type { GameEvent } from '../game/types';
 
 export function eventDuration(event: GameEvent) {
@@ -9,7 +10,7 @@ export function eventDuration(event: GameEvent) {
   if (event.kind === 'ready') return 800;
   if (event.kind === 'convert') return 550;
   if (event.effect === 'zero') return event.cue === 'launch' ? 400 : 460;
-  if (event.kind === 'death') return event.frame?.enemy.id === 'golem' ? 750 : 600;
+  if (event.kind === 'death') return (event.frame && !!ENEMIES[event.frame.enemy.id].boss) ? 750 : 600;
   if (event.kind === 'win' || event.kind === 'defeat' || event.kind === 'phase') return 360;
   if (event.kind === 'turn') return 180;
   if (event.cue === 'launch') return event.effect?.startsWith('enemy-') ? 330 : 270;
@@ -33,7 +34,7 @@ export class PlaybackController {
     const advance = (index: number) => {
       if (generation !== this.generation || !this.done) return;
       if (index >= events.length) { this.skip(); return; }
-      onEvent(events[index], index);
+      try { onEvent(events[index], index); } catch { /* A failed visual/audio callback must not strand the input lock. */ }
       const event = events[index];
       const notice = event.kind === 'turn-banner' || event.kind === 'ready' || event.kind === 'reconstruct-ready';
       const duration = notice && (this.reducedMotion || this.simpleBanners) ? 350 : this.reducedMotion ? (event.kind === 'death' ? 250 : 110) : eventDuration(event);

@@ -24,7 +24,7 @@ it('선택·변경·취소는 카드/게이지/기존 조합을 보존하고 선
   open();expect(screen.getByText('사용할 원소를 선택해주세요')).toBeInTheDocument();expect(screen.getByRole('button',{name:'재구성 실행'})).toBeDisabled();
   fireEvent.click(bag().getAllByRole('button',{name:'염소 Cl'})[0]);expect(screen.getByText('염소 Cl → ?')).toBeInTheDocument();
   fireEvent.click(bag().getByRole('button',{name:'황 S'}));expect(screen.getByText('황 S → ?')).toBeInTheDocument();
-  expect(screen.getByRole('button',{name:'턴 종료'})).toBeDisabled();expect(screen.getByRole('button',{name:'ZERO BURST'})).toBeDisabled();expect(screen.getByRole('button',{name:/마법 발동/})).toBeDisabled();
+  expect(screen.queryByRole('button',{name:'턴 종료'})).toBeNull();expect(screen.queryByRole('button',{name:'ZERO BURST'})).toBeNull();expect(screen.getByRole('button',{name:/마법 발동|연계 반응 발동/})).toBeDisabled();
   fireEvent.click(screen.getByRole('button',{name:'취소'}));expect(document.querySelector('.instant-slots')!.textContent).toBe(before);expect(screen.getByRole('button',{name:'원소 재구성 100%'})).toBeEnabled();expect(bag().getAllByRole('button',{name:'염소 Cl'})).toHaveLength(2);
 });
 it('확정은 한 장만 교체하고 연속 입력·연출 중 충돌 방지 및 선택 슬롯 동기화',()=>{

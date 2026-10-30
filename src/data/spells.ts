@@ -14,7 +14,7 @@ export const SPELLS: Spell[] = [
   { id: 'ironOxide', affinity: 'METAL', formula: 'FeO', display: 'FeO', name: '아이언 스트라이크', substance: '산화 철(II)', recipe: { Fe: 1, O: 1 }, fact: 'FeO는 철과 산소가 1:1 비율을 이루는 산화 철(II)입니다. 철의 산화수는 +2입니다. 금속 파편을 발사하는 공격은 판타지 설정입니다.', effect: `피해 ${B.ironOxide.damage} · 날카로운 금속 파편`, attack: true, color: '#e0cbd0' },
   { id: 'hydrogen', affinity: 'NEUTRAL', formula: 'H2', display: 'H₂', name: '하이드로 펄스', substance: '수소 분자', recipe: { H: 2 }, fact: 'H₂는 수소 원자 두 개가 결합한 수소 분자입니다. 보호막을 흔드는 파동은 게임의 판타지 효과입니다.', effect: '피해 7 · 먼저 보호막에만 추가 피해 4 (HP로 넘치지 않음)', attack: true, color: '#c6eaff' },
   { id: 'alkali', affinity: 'NEUTRAL', formula: 'NaOH', display: 'NaOH', name: '알칼리 펄스', substance: '수산화 나트륨', recipe: { Na: 1, O: 1, H: 1 }, fact: 'NaOH는 수산화 나트륨이며 수용액에서 강한 염기성을 나타냅니다. 파동 공격은 판타지 전투 효과입니다.', effect: '피해 9 · 먼저 보호막에만 추가 피해 5 · 같은 턴 HCl 다음에 중화 반응', attack: true, color: '#83e6d3' },
-  { id: 'ferrous', affinity: 'METAL', formula: 'FeCl2', display: 'FeCl₂', name: '페러스 체인', substance: '염화 철(II)', recipe: { Fe: 1, Cl: 2 }, fact: 'FeCl₂는 철의 산화수가 +2인 염화 철(II)입니다. 금속 사슬과 공격 약화는 판타지 설정입니다.', effect: '피해 16 · 이번 적 행동의 각 직접 타격 −3 · 중첩 불가', attack: true, color: '#b7c8e4' },
+  { id: 'ferrous', affinity: 'METAL', formula: 'FeCl2', display: 'FeCl₂', name: '페러스 체인', substance: '염화 철(II)', recipe: { Fe: 1, Cl: 2 }, fact: 'FeCl₂는 철의 산화수가 +2인 염화 철(II)입니다. 금속 사슬과 공격 약화는 판타지 설정입니다.', effect: `피해 ${B.ferrous.damage} · 이번 적 행동의 각 직접 타격 −${B.ferrous.reduction} · 중첩 불가`, attack: true, color: '#b7c8e4' },
 ];
 SPELLS.push(
   { id: 'nitrogen', affinity: 'NEUTRAL', formula: 'N2', display: 'N₂', name: '질소 장막', substance: '질소 분자', recipe: { N: 2 }, fact: '질소 원자 2개로 이루어진 분자이며 지구 대기의 주성분입니다.', effect: '보호막 14 · 추가 마력 +8', attack: false, color: '#74dedb' },

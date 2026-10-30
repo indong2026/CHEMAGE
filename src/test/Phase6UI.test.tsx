@@ -31,8 +31,8 @@ it('손패 안내는 한 개이며 힌트가 조합·가방·마력·턴을 보�
   expect(document.querySelector('.instant-slots')!.textContent).toBe(before);expect(screen.getByLabelText('마력')).toHaveAttribute('aria-valuenow','0');
   expect(screen.getByLabelText('남은 마법 2회')).toBeInTheDocument();expect(screen.getByText('턴 1')).toBeInTheDocument();expect(screen.getByRole('region',{name:'원소 보관함'})).toHaveTextContent('5 / 12');
   fireEvent.click(bag.getAllByRole('button',{name:'수소 H'})[1]);fireEvent.click(bag.getByRole('button',{name:'산소 O'}));
-  expect(localStorage.getItem(CODEX_KEY)).toBeNull();fireEvent.click(screen.getByRole('button',{name:/마법 발동/}));
-  expect(screen.getByText('NEW MAGIC!')).toBeInTheDocument();finish();expect(JSON.parse(localStorage.getItem(CODEX_KEY)!)).toEqual(['water']);
+  expect(localStorage.getItem(CODEX_KEY)).toBeNull();fireEvent.click(screen.getByRole('button',{name:/마법 발동|연계 반응 발동/}));
+  expect(screen.queryByText('NEW DISCOVERY!')).toBeNull();finish();expect(JSON.parse(localStorage.getItem(CODEX_KEY)!)).toEqual(['water']);
   fireEvent.click(screen.getByRole('button',{name:'마법 도감'}));expect(screen.getByText('워터 블래스트')).toBeInTheDocument();expect(screen.queryByRole('button',{name:'미발견 마법 1 힌트'})).toBeNull();
 });
 it('반응 2단계는 미발견 관련 마법을 숨기고 힌트로 이동하며 정확한 순서는 3단계에서만 공개한다', () => {

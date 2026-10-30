@@ -1,0 +1,650 @@
+[
+  {
+    "name": "baseline",
+    "boss": "golem",
+    "strategy": "attack",
+    "choice": "methane"
+  },
+  {
+    "name": "baseline",
+    "boss": "golem",
+    "strategy": "affinity",
+    "choice": "methane"
+  },
+  {
+    "name": "baseline",
+    "boss": "golem",
+    "strategy": "reaction",
+    "choice": "iron"
+  },
+  {
+    "name": "baseline",
+    "boss": "golem",
+    "strategy": "mixed",
+    "choice": "iron"
+  },
+  {
+    "name": "baseline",
+    "boss": "golem",
+    "strategy": "stockpile",
+    "choice": "iron"
+  },
+  {
+    "name": "baseline",
+    "boss": "golem",
+    "strategy": "burst",
+    "choice": "iron"
+  },
+  {
+    "name": "baseline",
+    "boss": "inferno",
+    "strategy": "attack",
+    "choice": "methane"
+  },
+  {
+    "name": "baseline",
+    "boss": "inferno",
+    "strategy": "affinity",
+    "choice": "water"
+  },
+  {
+    "name": "baseline",
+    "boss": "inferno",
+    "strategy": "reaction",
+    "choice": "water"
+  },
+  {
+    "name": "baseline",
+    "boss": "inferno",
+    "strategy": "mixed",
+    "choice": "water"
+  },
+  {
+    "name": "baseline",
+    "boss": "inferno",
+    "strategy": "stockpile",
+    "choice": "water"
+  },
+  {
+    "name": "baseline",
+    "boss": "inferno",
+    "strategy": "burst",
+    "choice": "water"
+  },
+  {
+    "name": "baseline",
+    "boss": "warden",
+    "strategy": "attack",
+    "choice": "iron"
+  },
+  {
+    "name": "baseline",
+    "boss": "warden",
+    "strategy": "affinity",
+    "choice": "iron"
+  },
+  {
+    "name": "baseline",
+    "boss": "warden",
+    "strategy": "reaction",
+    "choice": "iron"
+  },
+  {
+    "name": "baseline",
+    "boss": "warden",
+    "strategy": "mixed",
+    "choice": "iron"
+  },
+  {
+    "name": "baseline",
+    "boss": "warden",
+    "strategy": "stockpile",
+    "choice": "iron"
+  },
+  {
+    "name": "baseline",
+    "boss": "warden",
+    "strategy": "burst",
+    "choice": "iron"
+  },
+  {
+    "name": "c8",
+    "boss": "golem",
+    "strategy": "attack",
+    "choice": "methane"
+  },
+  {
+    "name": "c8",
+    "boss": "golem",
+    "strategy": "affinity",
+    "choice": "methane"
+  },
+  {
+    "name": "c8",
+    "boss": "golem",
+    "strategy": "reaction",
+    "choice": "iron"
+  },
+  {
+    "name": "c8",
+    "boss": "golem",
+    "strategy": "mixed",
+    "choice": "iron"
+  },
+  {
+    "name": "c8",
+    "boss": "golem",
+    "strategy": "stockpile",
+    "choice": "iron"
+  },
+  {
+    "name": "c8",
+    "boss": "golem",
+    "strategy": "burst",
+    "choice": "iron"
+  },
+  {
+    "name": "c8",
+    "boss": "inferno",
+    "strategy": "attack",
+    "choice": "methane"
+  },
+  {
+    "name": "c8",
+    "boss": "inferno",
+    "strategy": "affinity",
+    "choice": "water"
+  },
+  {
+    "name": "c8",
+    "boss": "inferno",
+    "strategy": "reaction",
+    "choice": "water"
+  },
+  {
+    "name": "c8",
+    "boss": "inferno",
+    "strategy": "mixed",
+    "choice": "water"
+  },
+  {
+    "name": "c8",
+    "boss": "inferno",
+    "strategy": "stockpile",
+    "choice": "water"
+  },
+  {
+    "name": "c8",
+    "boss": "inferno",
+    "strategy": "burst",
+    "choice": "water"
+  },
+  {
+    "name": "c8",
+    "boss": "warden",
+    "strategy": "attack",
+    "choice": "iron"
+  },
+  {
+    "name": "c8",
+    "boss": "warden",
+    "strategy": "affinity",
+    "choice": "iron"
+  },
+  {
+    "name": "c8",
+    "boss": "warden",
+    "strategy": "reaction",
+    "choice": "iron"
+  },
+  {
+    "name": "c8",
+    "boss": "warden",
+    "strategy": "mixed",
+    "choice": "iron"
+  },
+  {
+    "name": "c8",
+    "boss": "warden",
+    "strategy": "stockpile",
+    "choice": "iron"
+  },
+  {
+    "name": "c8",
+    "boss": "warden",
+    "strategy": "burst",
+    "choice": "iron"
+  },
+  {
+    "name": "cReflect2",
+    "boss": "golem",
+    "strategy": "attack",
+    "choice": "methane"
+  },
+  {
+    "name": "cReflect2",
+    "boss": "golem",
+    "strategy": "affinity",
+    "choice": "methane"
+  },
+  {
+    "name": "cReflect2",
+    "boss": "golem",
+    "strategy": "reaction",
+    "choice": "iron"
+  },
+  {
+    "name": "cReflect2",
+    "boss": "golem",
+    "strategy": "mixed",
+    "choice": "iron"
+  },
+  {
+    "name": "cReflect2",
+    "boss": "golem",
+    "strategy": "stockpile",
+    "choice": "iron"
+  },
+  {
+    "name": "cReflect2",
+    "boss": "golem",
+    "strategy": "burst",
+    "choice": "iron"
+  },
+  {
+    "name": "cReflect2",
+    "boss": "inferno",
+    "strategy": "attack",
+    "choice": "methane"
+  },
+  {
+    "name": "cReflect2",
+    "boss": "inferno",
+    "strategy": "affinity",
+    "choice": "water"
+  },
+  {
+    "name": "cReflect2",
+    "boss": "inferno",
+    "strategy": "reaction",
+    "choice": "water"
+  },
+  {
+    "name": "cReflect2",
+    "boss": "inferno",
+    "strategy": "mixed",
+    "choice": "water"
+  },
+  {
+    "name": "cReflect2",
+    "boss": "inferno",
+    "strategy": "stockpile",
+    "choice": "water"
+  },
+  {
+    "name": "cReflect2",
+    "boss": "inferno",
+    "strategy": "burst",
+    "choice": "water"
+  },
+  {
+    "name": "cReflect2",
+    "boss": "warden",
+    "strategy": "attack",
+    "choice": "iron"
+  },
+  {
+    "name": "cReflect2",
+    "boss": "warden",
+    "strategy": "affinity",
+    "choice": "iron"
+  },
+  {
+    "name": "cReflect2",
+    "boss": "warden",
+    "strategy": "reaction",
+    "choice": "iron"
+  },
+  {
+    "name": "cReflect2",
+    "boss": "warden",
+    "strategy": "mixed",
+    "choice": "iron"
+  },
+  {
+    "name": "cReflect2",
+    "boss": "warden",
+    "strategy": "stockpile",
+    "choice": "iron"
+  },
+  {
+    "name": "cReflect2",
+    "boss": "warden",
+    "strategy": "burst",
+    "choice": "iron"
+  },
+  {
+    "name": "methane23",
+    "boss": "golem",
+    "strategy": "attack",
+    "choice": "methane"
+  },
+  {
+    "name": "methane23",
+    "boss": "golem",
+    "strategy": "affinity",
+    "choice": "methane"
+  },
+  {
+    "name": "methane23",
+    "boss": "golem",
+    "strategy": "reaction",
+    "choice": "iron"
+  },
+  {
+    "name": "methane23",
+    "boss": "golem",
+    "strategy": "mixed",
+    "choice": "iron"
+  },
+  {
+    "name": "methane23",
+    "boss": "golem",
+    "strategy": "stockpile",
+    "choice": "iron"
+  },
+  {
+    "name": "methane23",
+    "boss": "golem",
+    "strategy": "burst",
+    "choice": "iron"
+  },
+  {
+    "name": "methane23",
+    "boss": "inferno",
+    "strategy": "attack",
+    "choice": "methane"
+  },
+  {
+    "name": "methane23",
+    "boss": "inferno",
+    "strategy": "affinity",
+    "choice": "water"
+  },
+  {
+    "name": "methane23",
+    "boss": "inferno",
+    "strategy": "reaction",
+    "choice": "water"
+  },
+  {
+    "name": "methane23",
+    "boss": "inferno",
+    "strategy": "mixed",
+    "choice": "water"
+  },
+  {
+    "name": "methane23",
+    "boss": "inferno",
+    "strategy": "stockpile",
+    "choice": "water"
+  },
+  {
+    "name": "methane23",
+    "boss": "inferno",
+    "strategy": "burst",
+    "choice": "water"
+  },
+  {
+    "name": "methane23",
+    "boss": "warden",
+    "strategy": "attack",
+    "choice": "iron"
+  },
+  {
+    "name": "methane23",
+    "boss": "warden",
+    "strategy": "affinity",
+    "choice": "iron"
+  },
+  {
+    "name": "methane23",
+    "boss": "warden",
+    "strategy": "reaction",
+    "choice": "iron"
+  },
+  {
+    "name": "methane23",
+    "boss": "warden",
+    "strategy": "mixed",
+    "choice": "iron"
+  },
+  {
+    "name": "methane23",
+    "boss": "warden",
+    "strategy": "stockpile",
+    "choice": "iron"
+  },
+  {
+    "name": "methane23",
+    "boss": "warden",
+    "strategy": "burst",
+    "choice": "iron"
+  },
+  {
+    "name": "methane24",
+    "boss": "golem",
+    "strategy": "attack",
+    "choice": "methane"
+  },
+  {
+    "name": "methane24",
+    "boss": "golem",
+    "strategy": "affinity",
+    "choice": "methane"
+  },
+  {
+    "name": "methane24",
+    "boss": "golem",
+    "strategy": "reaction",
+    "choice": "iron"
+  },
+  {
+    "name": "methane24",
+    "boss": "golem",
+    "strategy": "mixed",
+    "choice": "iron"
+  },
+  {
+    "name": "methane24",
+    "boss": "golem",
+    "strategy": "stockpile",
+    "choice": "iron"
+  },
+  {
+    "name": "methane24",
+    "boss": "golem",
+    "strategy": "burst",
+    "choice": "iron"
+  },
+  {
+    "name": "methane24",
+    "boss": "inferno",
+    "strategy": "attack",
+    "choice": "methane"
+  },
+  {
+    "name": "methane24",
+    "boss": "inferno",
+    "strategy": "affinity",
+    "choice": "water"
+  },
+  {
+    "name": "methane24",
+    "boss": "inferno",
+    "strategy": "reaction",
+    "choice": "water"
+  },
+  {
+    "name": "methane24",
+    "boss": "inferno",
+    "strategy": "mixed",
+    "choice": "water"
+  },
+  {
+    "name": "methane24",
+    "boss": "inferno",
+    "strategy": "stockpile",
+    "choice": "water"
+  },
+  {
+    "name": "methane24",
+    "boss": "inferno",
+    "strategy": "burst",
+    "choice": "water"
+  },
+  {
+    "name": "methane24",
+    "boss": "warden",
+    "strategy": "attack",
+    "choice": "iron"
+  },
+  {
+    "name": "methane24",
+    "boss": "warden",
+    "strategy": "affinity",
+    "choice": "iron"
+  },
+  {
+    "name": "methane24",
+    "boss": "warden",
+    "strategy": "reaction",
+    "choice": "iron"
+  },
+  {
+    "name": "methane24",
+    "boss": "warden",
+    "strategy": "mixed",
+    "choice": "iron"
+  },
+  {
+    "name": "methane24",
+    "boss": "warden",
+    "strategy": "stockpile",
+    "choice": "iron"
+  },
+  {
+    "name": "methane24",
+    "boss": "warden",
+    "strategy": "burst",
+    "choice": "iron"
+  },
+  {
+    "name": "ferrous18",
+    "boss": "golem",
+    "strategy": "attack",
+    "choice": "methane"
+  },
+  {
+    "name": "ferrous18",
+    "boss": "golem",
+    "strategy": "affinity",
+    "choice": "methane"
+  },
+  {
+    "name": "ferrous18",
+    "boss": "golem",
+    "strategy": "reaction",
+    "choice": "iron"
+  },
+  {
+    "name": "ferrous18",
+    "boss": "golem",
+    "strategy": "mixed",
+    "choice": "iron"
+  },
+  {
+    "name": "ferrous18",
+    "boss": "golem",
+    "strategy": "stockpile",
+    "choice": "iron"
+  },
+  {
+    "name": "ferrous18",
+    "boss": "golem",
+    "strategy": "burst",
+    "choice": "iron"
+  },
+  {
+    "name": "ferrous18",
+    "boss": "inferno",
+    "strategy": "attack",
+    "choice": "methane"
+  },
+  {
+    "name": "ferrous18",
+    "boss": "inferno",
+    "strategy": "affinity",
+    "choice": "water"
+  },
+  {
+    "name": "ferrous18",
+    "boss": "inferno",
+    "strategy": "reaction",
+    "choice": "water"
+  },
+  {
+    "name": "ferrous18",
+    "boss": "inferno",
+    "strategy": "mixed",
+    "choice": "water"
+  },
+  {
+    "name": "ferrous18",
+    "boss": "inferno",
+    "strategy": "stockpile",
+    "choice": "water"
+  },
+  {
+    "name": "ferrous18",
+    "boss": "inferno",
+    "strategy": "burst",
+    "choice": "water"
+  },
+  {
+    "name": "ferrous18",
+    "boss": "warden",
+    "strategy": "attack",
+    "choice": "iron"
+  },
+  {
+    "name": "ferrous18",
+    "boss": "warden",
+    "strategy": "affinity",
+    "choice": "iron"
+  },
+  {
+    "name": "ferrous18",
+    "boss": "warden",
+    "strategy": "reaction",
+    "choice": "iron"
+  },
+  {
+    "name": "ferrous18",
+    "boss": "warden",
+    "strategy": "mixed",
+    "choice": "iron"
+  },
+  {
+    "name": "ferrous18",
+    "boss": "warden",
+    "strategy": "stockpile",
+    "choice": "iron"
+  },
+  {
+    "name": "ferrous18",
+    "boss": "warden",
+    "strategy": "burst",
+    "choice": "iron"
+  }
+]

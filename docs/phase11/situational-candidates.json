@@ -1,0 +1,5738 @@
+[
+  {
+    "tuning": "baseline",
+    "scenario": "single",
+    "spell": "graphite",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 10,
+      "totalShield": 10,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 8,
+    "generated": 10,
+    "absorbed": 10,
+    "reflect": 3,
+    "mana": 10,
+    "intent": [
+      18
+    ]
+  },
+  {
+    "tuning": "baseline",
+    "scenario": "single",
+    "spell": "carbon",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 12,
+      "totalShield": 12,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 6,
+    "generated": 12,
+    "absorbed": 12,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      18
+    ]
+  },
+  {
+    "tuning": "baseline",
+    "scenario": "single",
+    "spell": "iron",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 16,
+      "totalShield": 16,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 2,
+    "generated": 16,
+    "absorbed": 16,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      18
+    ]
+  },
+  {
+    "tuning": "baseline",
+    "scenario": "single",
+    "spell": "nitrogen",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 14,
+      "totalShield": 14,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 4,
+    "generated": 14,
+    "absorbed": 14,
+    "reflect": 0,
+    "mana": 18,
+    "intent": [
+      18
+    ]
+  },
+  {
+    "tuning": "baseline",
+    "scenario": "single",
+    "spell": "sulfide",
+    "preview": {
+      "damage": 5,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 6,
+      "reactionShield": 6,
+      "multiplier": 1
+    },
+    "damage": 5,
+    "hpLoss": 12,
+    "generated": 6,
+    "absorbed": 6,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      18
+    ]
+  },
+  {
+    "tuning": "baseline",
+    "scenario": "single",
+    "spell": "ferrous",
+    "preview": {
+      "damage": 11,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 0,
+      "reactionShield": 0,
+      "multiplier": 1
+    },
+    "damage": 11,
+    "hpLoss": 15,
+    "generated": 0,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      15
+    ]
+  },
+  {
+    "tuning": "baseline",
+    "scenario": "single",
+    "spell": "ammonia",
+    "preview": {
+      "damage": 7,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 0,
+      "reactionShield": 0,
+      "multiplier": 1
+    },
+    "damage": 7,
+    "hpLoss": 16,
+    "generated": 0,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      16
+    ]
+  },
+  {
+    "tuning": "baseline",
+    "scenario": "multi",
+    "spell": "graphite",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 10,
+      "totalShield": 10,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 8,
+    "generated": 10,
+    "absorbed": 10,
+    "reflect": 3,
+    "mana": 10,
+    "intent": [
+      9,
+      9
+    ]
+  },
+  {
+    "tuning": "baseline",
+    "scenario": "multi",
+    "spell": "carbon",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 12,
+      "totalShield": 12,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 6,
+    "generated": 12,
+    "absorbed": 12,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      9,
+      9
+    ]
+  },
+  {
+    "tuning": "baseline",
+    "scenario": "multi",
+    "spell": "iron",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 16,
+      "totalShield": 16,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 2,
+    "generated": 16,
+    "absorbed": 16,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      9,
+      9
+    ]
+  },
+  {
+    "tuning": "baseline",
+    "scenario": "multi",
+    "spell": "nitrogen",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 14,
+      "totalShield": 14,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 4,
+    "generated": 14,
+    "absorbed": 14,
+    "reflect": 0,
+    "mana": 18,
+    "intent": [
+      9,
+      9
+    ]
+  },
+  {
+    "tuning": "baseline",
+    "scenario": "multi",
+    "spell": "sulfide",
+    "preview": {
+      "damage": 5,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 6,
+      "reactionShield": 6,
+      "multiplier": 1
+    },
+    "damage": 5,
+    "hpLoss": 12,
+    "generated": 6,
+    "absorbed": 6,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      9,
+      9
+    ]
+  },
+  {
+    "tuning": "baseline",
+    "scenario": "multi",
+    "spell": "ferrous",
+    "preview": {
+      "damage": 11,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 0,
+      "reactionShield": 0,
+      "multiplier": 1
+    },
+    "damage": 11,
+    "hpLoss": 12,
+    "generated": 0,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      6,
+      6
+    ]
+  },
+  {
+    "tuning": "baseline",
+    "scenario": "multi",
+    "spell": "ammonia",
+    "preview": {
+      "damage": 7,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 0,
+      "reactionShield": 0,
+      "multiplier": 1
+    },
+    "damage": 7,
+    "hpLoss": 14,
+    "generated": 0,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      7,
+      7
+    ]
+  },
+  {
+    "tuning": "baseline",
+    "scenario": "fire",
+    "spell": "graphite",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 10,
+      "totalShield": 10,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 12,
+    "generated": 10,
+    "absorbed": 10,
+    "reflect": 3,
+    "mana": 10,
+    "intent": [
+      22
+    ]
+  },
+  {
+    "tuning": "baseline",
+    "scenario": "fire",
+    "spell": "carbon",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 12,
+      "totalShield": 12,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 5,
+    "generated": 12,
+    "absorbed": 12,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      22
+    ]
+  },
+  {
+    "tuning": "baseline",
+    "scenario": "fire",
+    "spell": "iron",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 16,
+      "totalShield": 16,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 6,
+    "generated": 16,
+    "absorbed": 16,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      22
+    ]
+  },
+  {
+    "tuning": "baseline",
+    "scenario": "fire",
+    "spell": "nitrogen",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 14,
+      "totalShield": 14,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 8,
+    "generated": 14,
+    "absorbed": 14,
+    "reflect": 0,
+    "mana": 18,
+    "intent": [
+      22
+    ]
+  },
+  {
+    "tuning": "baseline",
+    "scenario": "fire",
+    "spell": "sulfide",
+    "preview": {
+      "damage": 5,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 6,
+      "reactionShield": 6,
+      "multiplier": 1
+    },
+    "damage": 5,
+    "hpLoss": 16,
+    "generated": 6,
+    "absorbed": 6,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      22
+    ]
+  },
+  {
+    "tuning": "baseline",
+    "scenario": "fire",
+    "spell": "ferrous",
+    "preview": {
+      "damage": 11,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 0,
+      "reactionShield": 0,
+      "multiplier": 1
+    },
+    "damage": 11,
+    "hpLoss": 19,
+    "generated": 0,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      19
+    ]
+  },
+  {
+    "tuning": "baseline",
+    "scenario": "fire",
+    "spell": "ammonia",
+    "preview": {
+      "damage": 7,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 0,
+      "reactionShield": 0,
+      "multiplier": 1
+    },
+    "damage": 7,
+    "hpLoss": 20,
+    "generated": 0,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      20
+    ]
+  },
+  {
+    "tuning": "baseline",
+    "scenario": "fireMulti",
+    "spell": "graphite",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 10,
+      "totalShield": 10,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 6,
+    "generated": 10,
+    "absorbed": 10,
+    "reflect": 3,
+    "mana": 10,
+    "intent": [
+      8,
+      8
+    ]
+  },
+  {
+    "tuning": "baseline",
+    "scenario": "fireMulti",
+    "spell": "carbon",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 12,
+      "totalShield": 12,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 0,
+    "generated": 12,
+    "absorbed": 11,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      8,
+      8
+    ]
+  },
+  {
+    "tuning": "baseline",
+    "scenario": "fireMulti",
+    "spell": "iron",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 16,
+      "totalShield": 16,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 0,
+    "generated": 16,
+    "absorbed": 16,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      8,
+      8
+    ]
+  },
+  {
+    "tuning": "baseline",
+    "scenario": "fireMulti",
+    "spell": "nitrogen",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 14,
+      "totalShield": 14,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 2,
+    "generated": 14,
+    "absorbed": 14,
+    "reflect": 0,
+    "mana": 18,
+    "intent": [
+      8,
+      8
+    ]
+  },
+  {
+    "tuning": "baseline",
+    "scenario": "fireMulti",
+    "spell": "sulfide",
+    "preview": {
+      "damage": 5,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 6,
+      "reactionShield": 6,
+      "multiplier": 1
+    },
+    "damage": 5,
+    "hpLoss": 10,
+    "generated": 6,
+    "absorbed": 6,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      8,
+      8
+    ]
+  },
+  {
+    "tuning": "baseline",
+    "scenario": "fireMulti",
+    "spell": "ferrous",
+    "preview": {
+      "damage": 11,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 0,
+      "reactionShield": 0,
+      "multiplier": 1
+    },
+    "damage": 11,
+    "hpLoss": 10,
+    "generated": 0,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      5,
+      5
+    ]
+  },
+  {
+    "tuning": "baseline",
+    "scenario": "fireMulti",
+    "spell": "ammonia",
+    "preview": {
+      "damage": 7,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 0,
+      "reactionShield": 0,
+      "multiplier": 1
+    },
+    "damage": 7,
+    "hpLoss": 12,
+    "generated": 0,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      6,
+      6
+    ]
+  },
+  {
+    "tuning": "baseline",
+    "scenario": "charge",
+    "spell": "graphite",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 10,
+      "totalShield": 10,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 0,
+    "generated": 10,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      0
+    ]
+  },
+  {
+    "tuning": "baseline",
+    "scenario": "charge",
+    "spell": "carbon",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 12,
+      "totalShield": 12,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 0,
+    "generated": 12,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      0
+    ]
+  },
+  {
+    "tuning": "baseline",
+    "scenario": "charge",
+    "spell": "iron",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 16,
+      "totalShield": 16,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 0,
+    "generated": 16,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      0
+    ]
+  },
+  {
+    "tuning": "baseline",
+    "scenario": "charge",
+    "spell": "nitrogen",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 14,
+      "totalShield": 14,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 0,
+    "generated": 14,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 18,
+    "intent": [
+      0
+    ]
+  },
+  {
+    "tuning": "baseline",
+    "scenario": "charge",
+    "spell": "sulfide",
+    "preview": {
+      "damage": 5,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 6,
+      "reactionShield": 6,
+      "multiplier": 1
+    },
+    "damage": 5,
+    "hpLoss": 0,
+    "generated": 6,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      0
+    ]
+  },
+  {
+    "tuning": "baseline",
+    "scenario": "charge",
+    "spell": "ferrous",
+    "preview": {
+      "damage": 11,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 0,
+      "reactionShield": 0,
+      "multiplier": 1
+    },
+    "damage": 11,
+    "hpLoss": 0,
+    "generated": 0,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      0
+    ]
+  },
+  {
+    "tuning": "baseline",
+    "scenario": "charge",
+    "spell": "ammonia",
+    "preview": {
+      "damage": 7,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 0,
+      "reactionShield": 0,
+      "multiplier": 1
+    },
+    "damage": 7,
+    "hpLoss": 0,
+    "generated": 0,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      0
+    ]
+  },
+  {
+    "tuning": "baseline",
+    "scenario": "shield",
+    "spell": "graphite",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 10,
+      "totalShield": 10,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 0,
+    "generated": 10,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      10
+    ]
+  },
+  {
+    "tuning": "baseline",
+    "scenario": "shield",
+    "spell": "carbon",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 12,
+      "totalShield": 12,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 0,
+    "generated": 12,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      10
+    ]
+  },
+  {
+    "tuning": "baseline",
+    "scenario": "shield",
+    "spell": "iron",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 16,
+      "totalShield": 16,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 0,
+    "generated": 16,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      10
+    ]
+  },
+  {
+    "tuning": "baseline",
+    "scenario": "shield",
+    "spell": "nitrogen",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 14,
+      "totalShield": 14,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 0,
+    "generated": 14,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 18,
+    "intent": [
+      10
+    ]
+  },
+  {
+    "tuning": "baseline",
+    "scenario": "shield",
+    "spell": "sulfide",
+    "preview": {
+      "damage": 5,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 6,
+      "reactionShield": 6,
+      "multiplier": 1
+    },
+    "damage": 5,
+    "hpLoss": 0,
+    "generated": 6,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      10
+    ]
+  },
+  {
+    "tuning": "baseline",
+    "scenario": "shield",
+    "spell": "ferrous",
+    "preview": {
+      "damage": 11,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 0,
+      "reactionShield": 0,
+      "multiplier": 1
+    },
+    "damage": 11,
+    "hpLoss": 0,
+    "generated": 0,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      10
+    ]
+  },
+  {
+    "tuning": "baseline",
+    "scenario": "shield",
+    "spell": "ammonia",
+    "preview": {
+      "damage": 7,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 0,
+      "reactionShield": 0,
+      "multiplier": 1
+    },
+    "damage": 7,
+    "hpLoss": 0,
+    "generated": 0,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      10
+    ]
+  },
+  {
+    "tuning": "c8",
+    "scenario": "single",
+    "spell": "graphite",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 8,
+      "totalShield": 8,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 10,
+    "generated": 8,
+    "absorbed": 8,
+    "reflect": 3,
+    "mana": 10,
+    "intent": [
+      18
+    ]
+  },
+  {
+    "tuning": "c8",
+    "scenario": "single",
+    "spell": "carbon",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 12,
+      "totalShield": 12,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 6,
+    "generated": 12,
+    "absorbed": 12,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      18
+    ]
+  },
+  {
+    "tuning": "c8",
+    "scenario": "single",
+    "spell": "iron",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 16,
+      "totalShield": 16,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 2,
+    "generated": 16,
+    "absorbed": 16,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      18
+    ]
+  },
+  {
+    "tuning": "c8",
+    "scenario": "single",
+    "spell": "nitrogen",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 14,
+      "totalShield": 14,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 4,
+    "generated": 14,
+    "absorbed": 14,
+    "reflect": 0,
+    "mana": 18,
+    "intent": [
+      18
+    ]
+  },
+  {
+    "tuning": "c8",
+    "scenario": "single",
+    "spell": "sulfide",
+    "preview": {
+      "damage": 5,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 6,
+      "reactionShield": 6,
+      "multiplier": 1
+    },
+    "damage": 5,
+    "hpLoss": 12,
+    "generated": 6,
+    "absorbed": 6,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      18
+    ]
+  },
+  {
+    "tuning": "c8",
+    "scenario": "single",
+    "spell": "ferrous",
+    "preview": {
+      "damage": 11,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 0,
+      "reactionShield": 0,
+      "multiplier": 1
+    },
+    "damage": 11,
+    "hpLoss": 15,
+    "generated": 0,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      15
+    ]
+  },
+  {
+    "tuning": "c8",
+    "scenario": "single",
+    "spell": "ammonia",
+    "preview": {
+      "damage": 7,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 0,
+      "reactionShield": 0,
+      "multiplier": 1
+    },
+    "damage": 7,
+    "hpLoss": 16,
+    "generated": 0,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      16
+    ]
+  },
+  {
+    "tuning": "c8",
+    "scenario": "multi",
+    "spell": "graphite",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 8,
+      "totalShield": 8,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 10,
+    "generated": 8,
+    "absorbed": 8,
+    "reflect": 3,
+    "mana": 10,
+    "intent": [
+      9,
+      9
+    ]
+  },
+  {
+    "tuning": "c8",
+    "scenario": "multi",
+    "spell": "carbon",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 12,
+      "totalShield": 12,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 6,
+    "generated": 12,
+    "absorbed": 12,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      9,
+      9
+    ]
+  },
+  {
+    "tuning": "c8",
+    "scenario": "multi",
+    "spell": "iron",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 16,
+      "totalShield": 16,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 2,
+    "generated": 16,
+    "absorbed": 16,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      9,
+      9
+    ]
+  },
+  {
+    "tuning": "c8",
+    "scenario": "multi",
+    "spell": "nitrogen",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 14,
+      "totalShield": 14,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 4,
+    "generated": 14,
+    "absorbed": 14,
+    "reflect": 0,
+    "mana": 18,
+    "intent": [
+      9,
+      9
+    ]
+  },
+  {
+    "tuning": "c8",
+    "scenario": "multi",
+    "spell": "sulfide",
+    "preview": {
+      "damage": 5,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 6,
+      "reactionShield": 6,
+      "multiplier": 1
+    },
+    "damage": 5,
+    "hpLoss": 12,
+    "generated": 6,
+    "absorbed": 6,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      9,
+      9
+    ]
+  },
+  {
+    "tuning": "c8",
+    "scenario": "multi",
+    "spell": "ferrous",
+    "preview": {
+      "damage": 11,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 0,
+      "reactionShield": 0,
+      "multiplier": 1
+    },
+    "damage": 11,
+    "hpLoss": 12,
+    "generated": 0,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      6,
+      6
+    ]
+  },
+  {
+    "tuning": "c8",
+    "scenario": "multi",
+    "spell": "ammonia",
+    "preview": {
+      "damage": 7,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 0,
+      "reactionShield": 0,
+      "multiplier": 1
+    },
+    "damage": 7,
+    "hpLoss": 14,
+    "generated": 0,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      7,
+      7
+    ]
+  },
+  {
+    "tuning": "c8",
+    "scenario": "fire",
+    "spell": "graphite",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 8,
+      "totalShield": 8,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 14,
+    "generated": 8,
+    "absorbed": 8,
+    "reflect": 3,
+    "mana": 10,
+    "intent": [
+      22
+    ]
+  },
+  {
+    "tuning": "c8",
+    "scenario": "fire",
+    "spell": "carbon",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 12,
+      "totalShield": 12,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 5,
+    "generated": 12,
+    "absorbed": 12,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      22
+    ]
+  },
+  {
+    "tuning": "c8",
+    "scenario": "fire",
+    "spell": "iron",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 16,
+      "totalShield": 16,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 6,
+    "generated": 16,
+    "absorbed": 16,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      22
+    ]
+  },
+  {
+    "tuning": "c8",
+    "scenario": "fire",
+    "spell": "nitrogen",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 14,
+      "totalShield": 14,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 8,
+    "generated": 14,
+    "absorbed": 14,
+    "reflect": 0,
+    "mana": 18,
+    "intent": [
+      22
+    ]
+  },
+  {
+    "tuning": "c8",
+    "scenario": "fire",
+    "spell": "sulfide",
+    "preview": {
+      "damage": 5,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 6,
+      "reactionShield": 6,
+      "multiplier": 1
+    },
+    "damage": 5,
+    "hpLoss": 16,
+    "generated": 6,
+    "absorbed": 6,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      22
+    ]
+  },
+  {
+    "tuning": "c8",
+    "scenario": "fire",
+    "spell": "ferrous",
+    "preview": {
+      "damage": 11,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 0,
+      "reactionShield": 0,
+      "multiplier": 1
+    },
+    "damage": 11,
+    "hpLoss": 19,
+    "generated": 0,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      19
+    ]
+  },
+  {
+    "tuning": "c8",
+    "scenario": "fire",
+    "spell": "ammonia",
+    "preview": {
+      "damage": 7,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 0,
+      "reactionShield": 0,
+      "multiplier": 1
+    },
+    "damage": 7,
+    "hpLoss": 20,
+    "generated": 0,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      20
+    ]
+  },
+  {
+    "tuning": "c8",
+    "scenario": "fireMulti",
+    "spell": "graphite",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 8,
+      "totalShield": 8,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 8,
+    "generated": 8,
+    "absorbed": 8,
+    "reflect": 3,
+    "mana": 10,
+    "intent": [
+      8,
+      8
+    ]
+  },
+  {
+    "tuning": "c8",
+    "scenario": "fireMulti",
+    "spell": "carbon",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 12,
+      "totalShield": 12,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 0,
+    "generated": 12,
+    "absorbed": 11,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      8,
+      8
+    ]
+  },
+  {
+    "tuning": "c8",
+    "scenario": "fireMulti",
+    "spell": "iron",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 16,
+      "totalShield": 16,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 0,
+    "generated": 16,
+    "absorbed": 16,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      8,
+      8
+    ]
+  },
+  {
+    "tuning": "c8",
+    "scenario": "fireMulti",
+    "spell": "nitrogen",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 14,
+      "totalShield": 14,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 2,
+    "generated": 14,
+    "absorbed": 14,
+    "reflect": 0,
+    "mana": 18,
+    "intent": [
+      8,
+      8
+    ]
+  },
+  {
+    "tuning": "c8",
+    "scenario": "fireMulti",
+    "spell": "sulfide",
+    "preview": {
+      "damage": 5,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 6,
+      "reactionShield": 6,
+      "multiplier": 1
+    },
+    "damage": 5,
+    "hpLoss": 10,
+    "generated": 6,
+    "absorbed": 6,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      8,
+      8
+    ]
+  },
+  {
+    "tuning": "c8",
+    "scenario": "fireMulti",
+    "spell": "ferrous",
+    "preview": {
+      "damage": 11,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 0,
+      "reactionShield": 0,
+      "multiplier": 1
+    },
+    "damage": 11,
+    "hpLoss": 10,
+    "generated": 0,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      5,
+      5
+    ]
+  },
+  {
+    "tuning": "c8",
+    "scenario": "fireMulti",
+    "spell": "ammonia",
+    "preview": {
+      "damage": 7,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 0,
+      "reactionShield": 0,
+      "multiplier": 1
+    },
+    "damage": 7,
+    "hpLoss": 12,
+    "generated": 0,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      6,
+      6
+    ]
+  },
+  {
+    "tuning": "c8",
+    "scenario": "charge",
+    "spell": "graphite",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 8,
+      "totalShield": 8,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 0,
+    "generated": 8,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      0
+    ]
+  },
+  {
+    "tuning": "c8",
+    "scenario": "charge",
+    "spell": "carbon",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 12,
+      "totalShield": 12,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 0,
+    "generated": 12,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      0
+    ]
+  },
+  {
+    "tuning": "c8",
+    "scenario": "charge",
+    "spell": "iron",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 16,
+      "totalShield": 16,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 0,
+    "generated": 16,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      0
+    ]
+  },
+  {
+    "tuning": "c8",
+    "scenario": "charge",
+    "spell": "nitrogen",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 14,
+      "totalShield": 14,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 0,
+    "generated": 14,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 18,
+    "intent": [
+      0
+    ]
+  },
+  {
+    "tuning": "c8",
+    "scenario": "charge",
+    "spell": "sulfide",
+    "preview": {
+      "damage": 5,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 6,
+      "reactionShield": 6,
+      "multiplier": 1
+    },
+    "damage": 5,
+    "hpLoss": 0,
+    "generated": 6,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      0
+    ]
+  },
+  {
+    "tuning": "c8",
+    "scenario": "charge",
+    "spell": "ferrous",
+    "preview": {
+      "damage": 11,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 0,
+      "reactionShield": 0,
+      "multiplier": 1
+    },
+    "damage": 11,
+    "hpLoss": 0,
+    "generated": 0,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      0
+    ]
+  },
+  {
+    "tuning": "c8",
+    "scenario": "charge",
+    "spell": "ammonia",
+    "preview": {
+      "damage": 7,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 0,
+      "reactionShield": 0,
+      "multiplier": 1
+    },
+    "damage": 7,
+    "hpLoss": 0,
+    "generated": 0,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      0
+    ]
+  },
+  {
+    "tuning": "c8",
+    "scenario": "shield",
+    "spell": "graphite",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 8,
+      "totalShield": 8,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 0,
+    "generated": 8,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      10
+    ]
+  },
+  {
+    "tuning": "c8",
+    "scenario": "shield",
+    "spell": "carbon",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 12,
+      "totalShield": 12,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 0,
+    "generated": 12,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      10
+    ]
+  },
+  {
+    "tuning": "c8",
+    "scenario": "shield",
+    "spell": "iron",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 16,
+      "totalShield": 16,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 0,
+    "generated": 16,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      10
+    ]
+  },
+  {
+    "tuning": "c8",
+    "scenario": "shield",
+    "spell": "nitrogen",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 14,
+      "totalShield": 14,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 0,
+    "generated": 14,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 18,
+    "intent": [
+      10
+    ]
+  },
+  {
+    "tuning": "c8",
+    "scenario": "shield",
+    "spell": "sulfide",
+    "preview": {
+      "damage": 5,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 6,
+      "reactionShield": 6,
+      "multiplier": 1
+    },
+    "damage": 5,
+    "hpLoss": 0,
+    "generated": 6,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      10
+    ]
+  },
+  {
+    "tuning": "c8",
+    "scenario": "shield",
+    "spell": "ferrous",
+    "preview": {
+      "damage": 11,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 0,
+      "reactionShield": 0,
+      "multiplier": 1
+    },
+    "damage": 11,
+    "hpLoss": 0,
+    "generated": 0,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      10
+    ]
+  },
+  {
+    "tuning": "c8",
+    "scenario": "shield",
+    "spell": "ammonia",
+    "preview": {
+      "damage": 7,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 0,
+      "reactionShield": 0,
+      "multiplier": 1
+    },
+    "damage": 7,
+    "hpLoss": 0,
+    "generated": 0,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      10
+    ]
+  },
+  {
+    "tuning": "cReflect2",
+    "scenario": "single",
+    "spell": "graphite",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 10,
+      "totalShield": 10,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 8,
+    "generated": 10,
+    "absorbed": 10,
+    "reflect": 2,
+    "mana": 10,
+    "intent": [
+      18
+    ]
+  },
+  {
+    "tuning": "cReflect2",
+    "scenario": "single",
+    "spell": "carbon",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 12,
+      "totalShield": 12,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 6,
+    "generated": 12,
+    "absorbed": 12,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      18
+    ]
+  },
+  {
+    "tuning": "cReflect2",
+    "scenario": "single",
+    "spell": "iron",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 16,
+      "totalShield": 16,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 2,
+    "generated": 16,
+    "absorbed": 16,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      18
+    ]
+  },
+  {
+    "tuning": "cReflect2",
+    "scenario": "single",
+    "spell": "nitrogen",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 14,
+      "totalShield": 14,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 4,
+    "generated": 14,
+    "absorbed": 14,
+    "reflect": 0,
+    "mana": 18,
+    "intent": [
+      18
+    ]
+  },
+  {
+    "tuning": "cReflect2",
+    "scenario": "single",
+    "spell": "sulfide",
+    "preview": {
+      "damage": 5,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 6,
+      "reactionShield": 6,
+      "multiplier": 1
+    },
+    "damage": 5,
+    "hpLoss": 12,
+    "generated": 6,
+    "absorbed": 6,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      18
+    ]
+  },
+  {
+    "tuning": "cReflect2",
+    "scenario": "single",
+    "spell": "ferrous",
+    "preview": {
+      "damage": 11,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 0,
+      "reactionShield": 0,
+      "multiplier": 1
+    },
+    "damage": 11,
+    "hpLoss": 15,
+    "generated": 0,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      15
+    ]
+  },
+  {
+    "tuning": "cReflect2",
+    "scenario": "single",
+    "spell": "ammonia",
+    "preview": {
+      "damage": 7,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 0,
+      "reactionShield": 0,
+      "multiplier": 1
+    },
+    "damage": 7,
+    "hpLoss": 16,
+    "generated": 0,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      16
+    ]
+  },
+  {
+    "tuning": "cReflect2",
+    "scenario": "multi",
+    "spell": "graphite",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 10,
+      "totalShield": 10,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 8,
+    "generated": 10,
+    "absorbed": 10,
+    "reflect": 2,
+    "mana": 10,
+    "intent": [
+      9,
+      9
+    ]
+  },
+  {
+    "tuning": "cReflect2",
+    "scenario": "multi",
+    "spell": "carbon",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 12,
+      "totalShield": 12,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 6,
+    "generated": 12,
+    "absorbed": 12,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      9,
+      9
+    ]
+  },
+  {
+    "tuning": "cReflect2",
+    "scenario": "multi",
+    "spell": "iron",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 16,
+      "totalShield": 16,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 2,
+    "generated": 16,
+    "absorbed": 16,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      9,
+      9
+    ]
+  },
+  {
+    "tuning": "cReflect2",
+    "scenario": "multi",
+    "spell": "nitrogen",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 14,
+      "totalShield": 14,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 4,
+    "generated": 14,
+    "absorbed": 14,
+    "reflect": 0,
+    "mana": 18,
+    "intent": [
+      9,
+      9
+    ]
+  },
+  {
+    "tuning": "cReflect2",
+    "scenario": "multi",
+    "spell": "sulfide",
+    "preview": {
+      "damage": 5,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 6,
+      "reactionShield": 6,
+      "multiplier": 1
+    },
+    "damage": 5,
+    "hpLoss": 12,
+    "generated": 6,
+    "absorbed": 6,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      9,
+      9
+    ]
+  },
+  {
+    "tuning": "cReflect2",
+    "scenario": "multi",
+    "spell": "ferrous",
+    "preview": {
+      "damage": 11,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 0,
+      "reactionShield": 0,
+      "multiplier": 1
+    },
+    "damage": 11,
+    "hpLoss": 12,
+    "generated": 0,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      6,
+      6
+    ]
+  },
+  {
+    "tuning": "cReflect2",
+    "scenario": "multi",
+    "spell": "ammonia",
+    "preview": {
+      "damage": 7,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 0,
+      "reactionShield": 0,
+      "multiplier": 1
+    },
+    "damage": 7,
+    "hpLoss": 14,
+    "generated": 0,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      7,
+      7
+    ]
+  },
+  {
+    "tuning": "cReflect2",
+    "scenario": "fire",
+    "spell": "graphite",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 10,
+      "totalShield": 10,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 12,
+    "generated": 10,
+    "absorbed": 10,
+    "reflect": 2,
+    "mana": 10,
+    "intent": [
+      22
+    ]
+  },
+  {
+    "tuning": "cReflect2",
+    "scenario": "fire",
+    "spell": "carbon",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 12,
+      "totalShield": 12,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 5,
+    "generated": 12,
+    "absorbed": 12,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      22
+    ]
+  },
+  {
+    "tuning": "cReflect2",
+    "scenario": "fire",
+    "spell": "iron",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 16,
+      "totalShield": 16,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 6,
+    "generated": 16,
+    "absorbed": 16,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      22
+    ]
+  },
+  {
+    "tuning": "cReflect2",
+    "scenario": "fire",
+    "spell": "nitrogen",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 14,
+      "totalShield": 14,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 8,
+    "generated": 14,
+    "absorbed": 14,
+    "reflect": 0,
+    "mana": 18,
+    "intent": [
+      22
+    ]
+  },
+  {
+    "tuning": "cReflect2",
+    "scenario": "fire",
+    "spell": "sulfide",
+    "preview": {
+      "damage": 5,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 6,
+      "reactionShield": 6,
+      "multiplier": 1
+    },
+    "damage": 5,
+    "hpLoss": 16,
+    "generated": 6,
+    "absorbed": 6,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      22
+    ]
+  },
+  {
+    "tuning": "cReflect2",
+    "scenario": "fire",
+    "spell": "ferrous",
+    "preview": {
+      "damage": 11,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 0,
+      "reactionShield": 0,
+      "multiplier": 1
+    },
+    "damage": 11,
+    "hpLoss": 19,
+    "generated": 0,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      19
+    ]
+  },
+  {
+    "tuning": "cReflect2",
+    "scenario": "fire",
+    "spell": "ammonia",
+    "preview": {
+      "damage": 7,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 0,
+      "reactionShield": 0,
+      "multiplier": 1
+    },
+    "damage": 7,
+    "hpLoss": 20,
+    "generated": 0,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      20
+    ]
+  },
+  {
+    "tuning": "cReflect2",
+    "scenario": "fireMulti",
+    "spell": "graphite",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 10,
+      "totalShield": 10,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 6,
+    "generated": 10,
+    "absorbed": 10,
+    "reflect": 2,
+    "mana": 10,
+    "intent": [
+      8,
+      8
+    ]
+  },
+  {
+    "tuning": "cReflect2",
+    "scenario": "fireMulti",
+    "spell": "carbon",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 12,
+      "totalShield": 12,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 0,
+    "generated": 12,
+    "absorbed": 11,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      8,
+      8
+    ]
+  },
+  {
+    "tuning": "cReflect2",
+    "scenario": "fireMulti",
+    "spell": "iron",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 16,
+      "totalShield": 16,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 0,
+    "generated": 16,
+    "absorbed": 16,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      8,
+      8
+    ]
+  },
+  {
+    "tuning": "cReflect2",
+    "scenario": "fireMulti",
+    "spell": "nitrogen",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 14,
+      "totalShield": 14,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 2,
+    "generated": 14,
+    "absorbed": 14,
+    "reflect": 0,
+    "mana": 18,
+    "intent": [
+      8,
+      8
+    ]
+  },
+  {
+    "tuning": "cReflect2",
+    "scenario": "fireMulti",
+    "spell": "sulfide",
+    "preview": {
+      "damage": 5,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 6,
+      "reactionShield": 6,
+      "multiplier": 1
+    },
+    "damage": 5,
+    "hpLoss": 10,
+    "generated": 6,
+    "absorbed": 6,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      8,
+      8
+    ]
+  },
+  {
+    "tuning": "cReflect2",
+    "scenario": "fireMulti",
+    "spell": "ferrous",
+    "preview": {
+      "damage": 11,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 0,
+      "reactionShield": 0,
+      "multiplier": 1
+    },
+    "damage": 11,
+    "hpLoss": 10,
+    "generated": 0,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      5,
+      5
+    ]
+  },
+  {
+    "tuning": "cReflect2",
+    "scenario": "fireMulti",
+    "spell": "ammonia",
+    "preview": {
+      "damage": 7,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 0,
+      "reactionShield": 0,
+      "multiplier": 1
+    },
+    "damage": 7,
+    "hpLoss": 12,
+    "generated": 0,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      6,
+      6
+    ]
+  },
+  {
+    "tuning": "cReflect2",
+    "scenario": "charge",
+    "spell": "graphite",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 10,
+      "totalShield": 10,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 0,
+    "generated": 10,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      0
+    ]
+  },
+  {
+    "tuning": "cReflect2",
+    "scenario": "charge",
+    "spell": "carbon",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 12,
+      "totalShield": 12,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 0,
+    "generated": 12,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      0
+    ]
+  },
+  {
+    "tuning": "cReflect2",
+    "scenario": "charge",
+    "spell": "iron",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 16,
+      "totalShield": 16,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 0,
+    "generated": 16,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      0
+    ]
+  },
+  {
+    "tuning": "cReflect2",
+    "scenario": "charge",
+    "spell": "nitrogen",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 14,
+      "totalShield": 14,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 0,
+    "generated": 14,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 18,
+    "intent": [
+      0
+    ]
+  },
+  {
+    "tuning": "cReflect2",
+    "scenario": "charge",
+    "spell": "sulfide",
+    "preview": {
+      "damage": 5,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 6,
+      "reactionShield": 6,
+      "multiplier": 1
+    },
+    "damage": 5,
+    "hpLoss": 0,
+    "generated": 6,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      0
+    ]
+  },
+  {
+    "tuning": "cReflect2",
+    "scenario": "charge",
+    "spell": "ferrous",
+    "preview": {
+      "damage": 11,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 0,
+      "reactionShield": 0,
+      "multiplier": 1
+    },
+    "damage": 11,
+    "hpLoss": 0,
+    "generated": 0,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      0
+    ]
+  },
+  {
+    "tuning": "cReflect2",
+    "scenario": "charge",
+    "spell": "ammonia",
+    "preview": {
+      "damage": 7,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 0,
+      "reactionShield": 0,
+      "multiplier": 1
+    },
+    "damage": 7,
+    "hpLoss": 0,
+    "generated": 0,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      0
+    ]
+  },
+  {
+    "tuning": "cReflect2",
+    "scenario": "shield",
+    "spell": "graphite",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 10,
+      "totalShield": 10,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 0,
+    "generated": 10,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      10
+    ]
+  },
+  {
+    "tuning": "cReflect2",
+    "scenario": "shield",
+    "spell": "carbon",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 12,
+      "totalShield": 12,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 0,
+    "generated": 12,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      10
+    ]
+  },
+  {
+    "tuning": "cReflect2",
+    "scenario": "shield",
+    "spell": "iron",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 16,
+      "totalShield": 16,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 0,
+    "generated": 16,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      10
+    ]
+  },
+  {
+    "tuning": "cReflect2",
+    "scenario": "shield",
+    "spell": "nitrogen",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 14,
+      "totalShield": 14,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 0,
+    "generated": 14,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 18,
+    "intent": [
+      10
+    ]
+  },
+  {
+    "tuning": "cReflect2",
+    "scenario": "shield",
+    "spell": "sulfide",
+    "preview": {
+      "damage": 5,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 6,
+      "reactionShield": 6,
+      "multiplier": 1
+    },
+    "damage": 5,
+    "hpLoss": 0,
+    "generated": 6,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      10
+    ]
+  },
+  {
+    "tuning": "cReflect2",
+    "scenario": "shield",
+    "spell": "ferrous",
+    "preview": {
+      "damage": 11,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 0,
+      "reactionShield": 0,
+      "multiplier": 1
+    },
+    "damage": 11,
+    "hpLoss": 0,
+    "generated": 0,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      10
+    ]
+  },
+  {
+    "tuning": "cReflect2",
+    "scenario": "shield",
+    "spell": "ammonia",
+    "preview": {
+      "damage": 7,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 0,
+      "reactionShield": 0,
+      "multiplier": 1
+    },
+    "damage": 7,
+    "hpLoss": 0,
+    "generated": 0,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      10
+    ]
+  },
+  {
+    "tuning": "methane23",
+    "scenario": "single",
+    "spell": "graphite",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 10,
+      "totalShield": 10,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 8,
+    "generated": 10,
+    "absorbed": 10,
+    "reflect": 3,
+    "mana": 10,
+    "intent": [
+      18
+    ]
+  },
+  {
+    "tuning": "methane23",
+    "scenario": "single",
+    "spell": "carbon",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 12,
+      "totalShield": 12,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 6,
+    "generated": 12,
+    "absorbed": 12,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      18
+    ]
+  },
+  {
+    "tuning": "methane23",
+    "scenario": "single",
+    "spell": "iron",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 16,
+      "totalShield": 16,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 2,
+    "generated": 16,
+    "absorbed": 16,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      18
+    ]
+  },
+  {
+    "tuning": "methane23",
+    "scenario": "single",
+    "spell": "nitrogen",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 14,
+      "totalShield": 14,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 4,
+    "generated": 14,
+    "absorbed": 14,
+    "reflect": 0,
+    "mana": 18,
+    "intent": [
+      18
+    ]
+  },
+  {
+    "tuning": "methane23",
+    "scenario": "single",
+    "spell": "sulfide",
+    "preview": {
+      "damage": 5,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 6,
+      "reactionShield": 6,
+      "multiplier": 1
+    },
+    "damage": 5,
+    "hpLoss": 12,
+    "generated": 6,
+    "absorbed": 6,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      18
+    ]
+  },
+  {
+    "tuning": "methane23",
+    "scenario": "single",
+    "spell": "ferrous",
+    "preview": {
+      "damage": 11,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 0,
+      "reactionShield": 0,
+      "multiplier": 1
+    },
+    "damage": 11,
+    "hpLoss": 15,
+    "generated": 0,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      15
+    ]
+  },
+  {
+    "tuning": "methane23",
+    "scenario": "single",
+    "spell": "ammonia",
+    "preview": {
+      "damage": 7,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 0,
+      "reactionShield": 0,
+      "multiplier": 1
+    },
+    "damage": 7,
+    "hpLoss": 16,
+    "generated": 0,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      16
+    ]
+  },
+  {
+    "tuning": "methane23",
+    "scenario": "multi",
+    "spell": "graphite",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 10,
+      "totalShield": 10,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 8,
+    "generated": 10,
+    "absorbed": 10,
+    "reflect": 3,
+    "mana": 10,
+    "intent": [
+      9,
+      9
+    ]
+  },
+  {
+    "tuning": "methane23",
+    "scenario": "multi",
+    "spell": "carbon",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 12,
+      "totalShield": 12,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 6,
+    "generated": 12,
+    "absorbed": 12,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      9,
+      9
+    ]
+  },
+  {
+    "tuning": "methane23",
+    "scenario": "multi",
+    "spell": "iron",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 16,
+      "totalShield": 16,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 2,
+    "generated": 16,
+    "absorbed": 16,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      9,
+      9
+    ]
+  },
+  {
+    "tuning": "methane23",
+    "scenario": "multi",
+    "spell": "nitrogen",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 14,
+      "totalShield": 14,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 4,
+    "generated": 14,
+    "absorbed": 14,
+    "reflect": 0,
+    "mana": 18,
+    "intent": [
+      9,
+      9
+    ]
+  },
+  {
+    "tuning": "methane23",
+    "scenario": "multi",
+    "spell": "sulfide",
+    "preview": {
+      "damage": 5,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 6,
+      "reactionShield": 6,
+      "multiplier": 1
+    },
+    "damage": 5,
+    "hpLoss": 12,
+    "generated": 6,
+    "absorbed": 6,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      9,
+      9
+    ]
+  },
+  {
+    "tuning": "methane23",
+    "scenario": "multi",
+    "spell": "ferrous",
+    "preview": {
+      "damage": 11,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 0,
+      "reactionShield": 0,
+      "multiplier": 1
+    },
+    "damage": 11,
+    "hpLoss": 12,
+    "generated": 0,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      6,
+      6
+    ]
+  },
+  {
+    "tuning": "methane23",
+    "scenario": "multi",
+    "spell": "ammonia",
+    "preview": {
+      "damage": 7,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 0,
+      "reactionShield": 0,
+      "multiplier": 1
+    },
+    "damage": 7,
+    "hpLoss": 14,
+    "generated": 0,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      7,
+      7
+    ]
+  },
+  {
+    "tuning": "methane23",
+    "scenario": "fire",
+    "spell": "graphite",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 10,
+      "totalShield": 10,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 12,
+    "generated": 10,
+    "absorbed": 10,
+    "reflect": 3,
+    "mana": 10,
+    "intent": [
+      22
+    ]
+  },
+  {
+    "tuning": "methane23",
+    "scenario": "fire",
+    "spell": "carbon",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 12,
+      "totalShield": 12,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 5,
+    "generated": 12,
+    "absorbed": 12,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      22
+    ]
+  },
+  {
+    "tuning": "methane23",
+    "scenario": "fire",
+    "spell": "iron",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 16,
+      "totalShield": 16,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 6,
+    "generated": 16,
+    "absorbed": 16,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      22
+    ]
+  },
+  {
+    "tuning": "methane23",
+    "scenario": "fire",
+    "spell": "nitrogen",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 14,
+      "totalShield": 14,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 8,
+    "generated": 14,
+    "absorbed": 14,
+    "reflect": 0,
+    "mana": 18,
+    "intent": [
+      22
+    ]
+  },
+  {
+    "tuning": "methane23",
+    "scenario": "fire",
+    "spell": "sulfide",
+    "preview": {
+      "damage": 5,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 6,
+      "reactionShield": 6,
+      "multiplier": 1
+    },
+    "damage": 5,
+    "hpLoss": 16,
+    "generated": 6,
+    "absorbed": 6,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      22
+    ]
+  },
+  {
+    "tuning": "methane23",
+    "scenario": "fire",
+    "spell": "ferrous",
+    "preview": {
+      "damage": 11,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 0,
+      "reactionShield": 0,
+      "multiplier": 1
+    },
+    "damage": 11,
+    "hpLoss": 19,
+    "generated": 0,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      19
+    ]
+  },
+  {
+    "tuning": "methane23",
+    "scenario": "fire",
+    "spell": "ammonia",
+    "preview": {
+      "damage": 7,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 0,
+      "reactionShield": 0,
+      "multiplier": 1
+    },
+    "damage": 7,
+    "hpLoss": 20,
+    "generated": 0,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      20
+    ]
+  },
+  {
+    "tuning": "methane23",
+    "scenario": "fireMulti",
+    "spell": "graphite",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 10,
+      "totalShield": 10,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 6,
+    "generated": 10,
+    "absorbed": 10,
+    "reflect": 3,
+    "mana": 10,
+    "intent": [
+      8,
+      8
+    ]
+  },
+  {
+    "tuning": "methane23",
+    "scenario": "fireMulti",
+    "spell": "carbon",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 12,
+      "totalShield": 12,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 0,
+    "generated": 12,
+    "absorbed": 11,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      8,
+      8
+    ]
+  },
+  {
+    "tuning": "methane23",
+    "scenario": "fireMulti",
+    "spell": "iron",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 16,
+      "totalShield": 16,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 0,
+    "generated": 16,
+    "absorbed": 16,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      8,
+      8
+    ]
+  },
+  {
+    "tuning": "methane23",
+    "scenario": "fireMulti",
+    "spell": "nitrogen",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 14,
+      "totalShield": 14,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 2,
+    "generated": 14,
+    "absorbed": 14,
+    "reflect": 0,
+    "mana": 18,
+    "intent": [
+      8,
+      8
+    ]
+  },
+  {
+    "tuning": "methane23",
+    "scenario": "fireMulti",
+    "spell": "sulfide",
+    "preview": {
+      "damage": 5,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 6,
+      "reactionShield": 6,
+      "multiplier": 1
+    },
+    "damage": 5,
+    "hpLoss": 10,
+    "generated": 6,
+    "absorbed": 6,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      8,
+      8
+    ]
+  },
+  {
+    "tuning": "methane23",
+    "scenario": "fireMulti",
+    "spell": "ferrous",
+    "preview": {
+      "damage": 11,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 0,
+      "reactionShield": 0,
+      "multiplier": 1
+    },
+    "damage": 11,
+    "hpLoss": 10,
+    "generated": 0,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      5,
+      5
+    ]
+  },
+  {
+    "tuning": "methane23",
+    "scenario": "fireMulti",
+    "spell": "ammonia",
+    "preview": {
+      "damage": 7,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 0,
+      "reactionShield": 0,
+      "multiplier": 1
+    },
+    "damage": 7,
+    "hpLoss": 12,
+    "generated": 0,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      6,
+      6
+    ]
+  },
+  {
+    "tuning": "methane23",
+    "scenario": "charge",
+    "spell": "graphite",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 10,
+      "totalShield": 10,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 0,
+    "generated": 10,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      0
+    ]
+  },
+  {
+    "tuning": "methane23",
+    "scenario": "charge",
+    "spell": "carbon",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 12,
+      "totalShield": 12,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 0,
+    "generated": 12,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      0
+    ]
+  },
+  {
+    "tuning": "methane23",
+    "scenario": "charge",
+    "spell": "iron",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 16,
+      "totalShield": 16,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 0,
+    "generated": 16,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      0
+    ]
+  },
+  {
+    "tuning": "methane23",
+    "scenario": "charge",
+    "spell": "nitrogen",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 14,
+      "totalShield": 14,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 0,
+    "generated": 14,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 18,
+    "intent": [
+      0
+    ]
+  },
+  {
+    "tuning": "methane23",
+    "scenario": "charge",
+    "spell": "sulfide",
+    "preview": {
+      "damage": 5,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 6,
+      "reactionShield": 6,
+      "multiplier": 1
+    },
+    "damage": 5,
+    "hpLoss": 0,
+    "generated": 6,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      0
+    ]
+  },
+  {
+    "tuning": "methane23",
+    "scenario": "charge",
+    "spell": "ferrous",
+    "preview": {
+      "damage": 11,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 0,
+      "reactionShield": 0,
+      "multiplier": 1
+    },
+    "damage": 11,
+    "hpLoss": 0,
+    "generated": 0,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      0
+    ]
+  },
+  {
+    "tuning": "methane23",
+    "scenario": "charge",
+    "spell": "ammonia",
+    "preview": {
+      "damage": 7,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 0,
+      "reactionShield": 0,
+      "multiplier": 1
+    },
+    "damage": 7,
+    "hpLoss": 0,
+    "generated": 0,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      0
+    ]
+  },
+  {
+    "tuning": "methane23",
+    "scenario": "shield",
+    "spell": "graphite",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 10,
+      "totalShield": 10,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 0,
+    "generated": 10,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      10
+    ]
+  },
+  {
+    "tuning": "methane23",
+    "scenario": "shield",
+    "spell": "carbon",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 12,
+      "totalShield": 12,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 0,
+    "generated": 12,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      10
+    ]
+  },
+  {
+    "tuning": "methane23",
+    "scenario": "shield",
+    "spell": "iron",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 16,
+      "totalShield": 16,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 0,
+    "generated": 16,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      10
+    ]
+  },
+  {
+    "tuning": "methane23",
+    "scenario": "shield",
+    "spell": "nitrogen",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 14,
+      "totalShield": 14,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 0,
+    "generated": 14,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 18,
+    "intent": [
+      10
+    ]
+  },
+  {
+    "tuning": "methane23",
+    "scenario": "shield",
+    "spell": "sulfide",
+    "preview": {
+      "damage": 5,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 6,
+      "reactionShield": 6,
+      "multiplier": 1
+    },
+    "damage": 5,
+    "hpLoss": 0,
+    "generated": 6,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      10
+    ]
+  },
+  {
+    "tuning": "methane23",
+    "scenario": "shield",
+    "spell": "ferrous",
+    "preview": {
+      "damage": 11,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 0,
+      "reactionShield": 0,
+      "multiplier": 1
+    },
+    "damage": 11,
+    "hpLoss": 0,
+    "generated": 0,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      10
+    ]
+  },
+  {
+    "tuning": "methane23",
+    "scenario": "shield",
+    "spell": "ammonia",
+    "preview": {
+      "damage": 7,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 0,
+      "reactionShield": 0,
+      "multiplier": 1
+    },
+    "damage": 7,
+    "hpLoss": 0,
+    "generated": 0,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      10
+    ]
+  },
+  {
+    "tuning": "methane24",
+    "scenario": "single",
+    "spell": "graphite",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 10,
+      "totalShield": 10,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 8,
+    "generated": 10,
+    "absorbed": 10,
+    "reflect": 3,
+    "mana": 10,
+    "intent": [
+      18
+    ]
+  },
+  {
+    "tuning": "methane24",
+    "scenario": "single",
+    "spell": "carbon",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 12,
+      "totalShield": 12,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 6,
+    "generated": 12,
+    "absorbed": 12,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      18
+    ]
+  },
+  {
+    "tuning": "methane24",
+    "scenario": "single",
+    "spell": "iron",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 16,
+      "totalShield": 16,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 2,
+    "generated": 16,
+    "absorbed": 16,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      18
+    ]
+  },
+  {
+    "tuning": "methane24",
+    "scenario": "single",
+    "spell": "nitrogen",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 14,
+      "totalShield": 14,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 4,
+    "generated": 14,
+    "absorbed": 14,
+    "reflect": 0,
+    "mana": 18,
+    "intent": [
+      18
+    ]
+  },
+  {
+    "tuning": "methane24",
+    "scenario": "single",
+    "spell": "sulfide",
+    "preview": {
+      "damage": 5,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 6,
+      "reactionShield": 6,
+      "multiplier": 1
+    },
+    "damage": 5,
+    "hpLoss": 12,
+    "generated": 6,
+    "absorbed": 6,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      18
+    ]
+  },
+  {
+    "tuning": "methane24",
+    "scenario": "single",
+    "spell": "ferrous",
+    "preview": {
+      "damage": 11,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 0,
+      "reactionShield": 0,
+      "multiplier": 1
+    },
+    "damage": 11,
+    "hpLoss": 15,
+    "generated": 0,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      15
+    ]
+  },
+  {
+    "tuning": "methane24",
+    "scenario": "single",
+    "spell": "ammonia",
+    "preview": {
+      "damage": 7,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 0,
+      "reactionShield": 0,
+      "multiplier": 1
+    },
+    "damage": 7,
+    "hpLoss": 16,
+    "generated": 0,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      16
+    ]
+  },
+  {
+    "tuning": "methane24",
+    "scenario": "multi",
+    "spell": "graphite",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 10,
+      "totalShield": 10,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 8,
+    "generated": 10,
+    "absorbed": 10,
+    "reflect": 3,
+    "mana": 10,
+    "intent": [
+      9,
+      9
+    ]
+  },
+  {
+    "tuning": "methane24",
+    "scenario": "multi",
+    "spell": "carbon",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 12,
+      "totalShield": 12,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 6,
+    "generated": 12,
+    "absorbed": 12,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      9,
+      9
+    ]
+  },
+  {
+    "tuning": "methane24",
+    "scenario": "multi",
+    "spell": "iron",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 16,
+      "totalShield": 16,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 2,
+    "generated": 16,
+    "absorbed": 16,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      9,
+      9
+    ]
+  },
+  {
+    "tuning": "methane24",
+    "scenario": "multi",
+    "spell": "nitrogen",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 14,
+      "totalShield": 14,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 4,
+    "generated": 14,
+    "absorbed": 14,
+    "reflect": 0,
+    "mana": 18,
+    "intent": [
+      9,
+      9
+    ]
+  },
+  {
+    "tuning": "methane24",
+    "scenario": "multi",
+    "spell": "sulfide",
+    "preview": {
+      "damage": 5,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 6,
+      "reactionShield": 6,
+      "multiplier": 1
+    },
+    "damage": 5,
+    "hpLoss": 12,
+    "generated": 6,
+    "absorbed": 6,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      9,
+      9
+    ]
+  },
+  {
+    "tuning": "methane24",
+    "scenario": "multi",
+    "spell": "ferrous",
+    "preview": {
+      "damage": 11,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 0,
+      "reactionShield": 0,
+      "multiplier": 1
+    },
+    "damage": 11,
+    "hpLoss": 12,
+    "generated": 0,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      6,
+      6
+    ]
+  },
+  {
+    "tuning": "methane24",
+    "scenario": "multi",
+    "spell": "ammonia",
+    "preview": {
+      "damage": 7,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 0,
+      "reactionShield": 0,
+      "multiplier": 1
+    },
+    "damage": 7,
+    "hpLoss": 14,
+    "generated": 0,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      7,
+      7
+    ]
+  },
+  {
+    "tuning": "methane24",
+    "scenario": "fire",
+    "spell": "graphite",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 10,
+      "totalShield": 10,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 12,
+    "generated": 10,
+    "absorbed": 10,
+    "reflect": 3,
+    "mana": 10,
+    "intent": [
+      22
+    ]
+  },
+  {
+    "tuning": "methane24",
+    "scenario": "fire",
+    "spell": "carbon",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 12,
+      "totalShield": 12,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 5,
+    "generated": 12,
+    "absorbed": 12,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      22
+    ]
+  },
+  {
+    "tuning": "methane24",
+    "scenario": "fire",
+    "spell": "iron",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 16,
+      "totalShield": 16,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 6,
+    "generated": 16,
+    "absorbed": 16,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      22
+    ]
+  },
+  {
+    "tuning": "methane24",
+    "scenario": "fire",
+    "spell": "nitrogen",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 14,
+      "totalShield": 14,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 8,
+    "generated": 14,
+    "absorbed": 14,
+    "reflect": 0,
+    "mana": 18,
+    "intent": [
+      22
+    ]
+  },
+  {
+    "tuning": "methane24",
+    "scenario": "fire",
+    "spell": "sulfide",
+    "preview": {
+      "damage": 5,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 6,
+      "reactionShield": 6,
+      "multiplier": 1
+    },
+    "damage": 5,
+    "hpLoss": 16,
+    "generated": 6,
+    "absorbed": 6,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      22
+    ]
+  },
+  {
+    "tuning": "methane24",
+    "scenario": "fire",
+    "spell": "ferrous",
+    "preview": {
+      "damage": 11,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 0,
+      "reactionShield": 0,
+      "multiplier": 1
+    },
+    "damage": 11,
+    "hpLoss": 19,
+    "generated": 0,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      19
+    ]
+  },
+  {
+    "tuning": "methane24",
+    "scenario": "fire",
+    "spell": "ammonia",
+    "preview": {
+      "damage": 7,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 0,
+      "reactionShield": 0,
+      "multiplier": 1
+    },
+    "damage": 7,
+    "hpLoss": 20,
+    "generated": 0,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      20
+    ]
+  },
+  {
+    "tuning": "methane24",
+    "scenario": "fireMulti",
+    "spell": "graphite",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 10,
+      "totalShield": 10,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 6,
+    "generated": 10,
+    "absorbed": 10,
+    "reflect": 3,
+    "mana": 10,
+    "intent": [
+      8,
+      8
+    ]
+  },
+  {
+    "tuning": "methane24",
+    "scenario": "fireMulti",
+    "spell": "carbon",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 12,
+      "totalShield": 12,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 0,
+    "generated": 12,
+    "absorbed": 11,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      8,
+      8
+    ]
+  },
+  {
+    "tuning": "methane24",
+    "scenario": "fireMulti",
+    "spell": "iron",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 16,
+      "totalShield": 16,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 0,
+    "generated": 16,
+    "absorbed": 16,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      8,
+      8
+    ]
+  },
+  {
+    "tuning": "methane24",
+    "scenario": "fireMulti",
+    "spell": "nitrogen",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 14,
+      "totalShield": 14,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 2,
+    "generated": 14,
+    "absorbed": 14,
+    "reflect": 0,
+    "mana": 18,
+    "intent": [
+      8,
+      8
+    ]
+  },
+  {
+    "tuning": "methane24",
+    "scenario": "fireMulti",
+    "spell": "sulfide",
+    "preview": {
+      "damage": 5,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 6,
+      "reactionShield": 6,
+      "multiplier": 1
+    },
+    "damage": 5,
+    "hpLoss": 10,
+    "generated": 6,
+    "absorbed": 6,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      8,
+      8
+    ]
+  },
+  {
+    "tuning": "methane24",
+    "scenario": "fireMulti",
+    "spell": "ferrous",
+    "preview": {
+      "damage": 11,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 0,
+      "reactionShield": 0,
+      "multiplier": 1
+    },
+    "damage": 11,
+    "hpLoss": 10,
+    "generated": 0,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      5,
+      5
+    ]
+  },
+  {
+    "tuning": "methane24",
+    "scenario": "fireMulti",
+    "spell": "ammonia",
+    "preview": {
+      "damage": 7,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 0,
+      "reactionShield": 0,
+      "multiplier": 1
+    },
+    "damage": 7,
+    "hpLoss": 12,
+    "generated": 0,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      6,
+      6
+    ]
+  },
+  {
+    "tuning": "methane24",
+    "scenario": "charge",
+    "spell": "graphite",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 10,
+      "totalShield": 10,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 0,
+    "generated": 10,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      0
+    ]
+  },
+  {
+    "tuning": "methane24",
+    "scenario": "charge",
+    "spell": "carbon",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 12,
+      "totalShield": 12,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 0,
+    "generated": 12,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      0
+    ]
+  },
+  {
+    "tuning": "methane24",
+    "scenario": "charge",
+    "spell": "iron",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 16,
+      "totalShield": 16,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 0,
+    "generated": 16,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      0
+    ]
+  },
+  {
+    "tuning": "methane24",
+    "scenario": "charge",
+    "spell": "nitrogen",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 14,
+      "totalShield": 14,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 0,
+    "generated": 14,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 18,
+    "intent": [
+      0
+    ]
+  },
+  {
+    "tuning": "methane24",
+    "scenario": "charge",
+    "spell": "sulfide",
+    "preview": {
+      "damage": 5,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 6,
+      "reactionShield": 6,
+      "multiplier": 1
+    },
+    "damage": 5,
+    "hpLoss": 0,
+    "generated": 6,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      0
+    ]
+  },
+  {
+    "tuning": "methane24",
+    "scenario": "charge",
+    "spell": "ferrous",
+    "preview": {
+      "damage": 11,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 0,
+      "reactionShield": 0,
+      "multiplier": 1
+    },
+    "damage": 11,
+    "hpLoss": 0,
+    "generated": 0,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      0
+    ]
+  },
+  {
+    "tuning": "methane24",
+    "scenario": "charge",
+    "spell": "ammonia",
+    "preview": {
+      "damage": 7,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 0,
+      "reactionShield": 0,
+      "multiplier": 1
+    },
+    "damage": 7,
+    "hpLoss": 0,
+    "generated": 0,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      0
+    ]
+  },
+  {
+    "tuning": "methane24",
+    "scenario": "shield",
+    "spell": "graphite",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 10,
+      "totalShield": 10,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 0,
+    "generated": 10,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      10
+    ]
+  },
+  {
+    "tuning": "methane24",
+    "scenario": "shield",
+    "spell": "carbon",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 12,
+      "totalShield": 12,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 0,
+    "generated": 12,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      10
+    ]
+  },
+  {
+    "tuning": "methane24",
+    "scenario": "shield",
+    "spell": "iron",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 16,
+      "totalShield": 16,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 0,
+    "generated": 16,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      10
+    ]
+  },
+  {
+    "tuning": "methane24",
+    "scenario": "shield",
+    "spell": "nitrogen",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 14,
+      "totalShield": 14,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 0,
+    "generated": 14,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 18,
+    "intent": [
+      10
+    ]
+  },
+  {
+    "tuning": "methane24",
+    "scenario": "shield",
+    "spell": "sulfide",
+    "preview": {
+      "damage": 5,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 6,
+      "reactionShield": 6,
+      "multiplier": 1
+    },
+    "damage": 5,
+    "hpLoss": 0,
+    "generated": 6,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      10
+    ]
+  },
+  {
+    "tuning": "methane24",
+    "scenario": "shield",
+    "spell": "ferrous",
+    "preview": {
+      "damage": 11,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 0,
+      "reactionShield": 0,
+      "multiplier": 1
+    },
+    "damage": 11,
+    "hpLoss": 0,
+    "generated": 0,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      10
+    ]
+  },
+  {
+    "tuning": "methane24",
+    "scenario": "shield",
+    "spell": "ammonia",
+    "preview": {
+      "damage": 7,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 0,
+      "reactionShield": 0,
+      "multiplier": 1
+    },
+    "damage": 7,
+    "hpLoss": 0,
+    "generated": 0,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      10
+    ]
+  },
+  {
+    "tuning": "ferrous18",
+    "scenario": "single",
+    "spell": "graphite",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 10,
+      "totalShield": 10,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 8,
+    "generated": 10,
+    "absorbed": 10,
+    "reflect": 3,
+    "mana": 10,
+    "intent": [
+      18
+    ]
+  },
+  {
+    "tuning": "ferrous18",
+    "scenario": "single",
+    "spell": "carbon",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 12,
+      "totalShield": 12,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 6,
+    "generated": 12,
+    "absorbed": 12,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      18
+    ]
+  },
+  {
+    "tuning": "ferrous18",
+    "scenario": "single",
+    "spell": "iron",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 16,
+      "totalShield": 16,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 2,
+    "generated": 16,
+    "absorbed": 16,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      18
+    ]
+  },
+  {
+    "tuning": "ferrous18",
+    "scenario": "single",
+    "spell": "nitrogen",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 14,
+      "totalShield": 14,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 4,
+    "generated": 14,
+    "absorbed": 14,
+    "reflect": 0,
+    "mana": 18,
+    "intent": [
+      18
+    ]
+  },
+  {
+    "tuning": "ferrous18",
+    "scenario": "single",
+    "spell": "sulfide",
+    "preview": {
+      "damage": 5,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 6,
+      "reactionShield": 6,
+      "multiplier": 1
+    },
+    "damage": 5,
+    "hpLoss": 12,
+    "generated": 6,
+    "absorbed": 6,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      18
+    ]
+  },
+  {
+    "tuning": "ferrous18",
+    "scenario": "single",
+    "spell": "ferrous",
+    "preview": {
+      "damage": 13,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 0,
+      "reactionShield": 0,
+      "multiplier": 1
+    },
+    "damage": 13,
+    "hpLoss": 15,
+    "generated": 0,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      15
+    ]
+  },
+  {
+    "tuning": "ferrous18",
+    "scenario": "single",
+    "spell": "ammonia",
+    "preview": {
+      "damage": 7,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 0,
+      "reactionShield": 0,
+      "multiplier": 1
+    },
+    "damage": 7,
+    "hpLoss": 16,
+    "generated": 0,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      16
+    ]
+  },
+  {
+    "tuning": "ferrous18",
+    "scenario": "multi",
+    "spell": "graphite",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 10,
+      "totalShield": 10,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 8,
+    "generated": 10,
+    "absorbed": 10,
+    "reflect": 3,
+    "mana": 10,
+    "intent": [
+      9,
+      9
+    ]
+  },
+  {
+    "tuning": "ferrous18",
+    "scenario": "multi",
+    "spell": "carbon",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 12,
+      "totalShield": 12,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 6,
+    "generated": 12,
+    "absorbed": 12,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      9,
+      9
+    ]
+  },
+  {
+    "tuning": "ferrous18",
+    "scenario": "multi",
+    "spell": "iron",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 16,
+      "totalShield": 16,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 2,
+    "generated": 16,
+    "absorbed": 16,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      9,
+      9
+    ]
+  },
+  {
+    "tuning": "ferrous18",
+    "scenario": "multi",
+    "spell": "nitrogen",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 14,
+      "totalShield": 14,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 4,
+    "generated": 14,
+    "absorbed": 14,
+    "reflect": 0,
+    "mana": 18,
+    "intent": [
+      9,
+      9
+    ]
+  },
+  {
+    "tuning": "ferrous18",
+    "scenario": "multi",
+    "spell": "sulfide",
+    "preview": {
+      "damage": 5,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 6,
+      "reactionShield": 6,
+      "multiplier": 1
+    },
+    "damage": 5,
+    "hpLoss": 12,
+    "generated": 6,
+    "absorbed": 6,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      9,
+      9
+    ]
+  },
+  {
+    "tuning": "ferrous18",
+    "scenario": "multi",
+    "spell": "ferrous",
+    "preview": {
+      "damage": 13,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 0,
+      "reactionShield": 0,
+      "multiplier": 1
+    },
+    "damage": 13,
+    "hpLoss": 12,
+    "generated": 0,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      6,
+      6
+    ]
+  },
+  {
+    "tuning": "ferrous18",
+    "scenario": "multi",
+    "spell": "ammonia",
+    "preview": {
+      "damage": 7,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 0,
+      "reactionShield": 0,
+      "multiplier": 1
+    },
+    "damage": 7,
+    "hpLoss": 14,
+    "generated": 0,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      7,
+      7
+    ]
+  },
+  {
+    "tuning": "ferrous18",
+    "scenario": "fire",
+    "spell": "graphite",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 10,
+      "totalShield": 10,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 12,
+    "generated": 10,
+    "absorbed": 10,
+    "reflect": 3,
+    "mana": 10,
+    "intent": [
+      22
+    ]
+  },
+  {
+    "tuning": "ferrous18",
+    "scenario": "fire",
+    "spell": "carbon",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 12,
+      "totalShield": 12,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 5,
+    "generated": 12,
+    "absorbed": 12,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      22
+    ]
+  },
+  {
+    "tuning": "ferrous18",
+    "scenario": "fire",
+    "spell": "iron",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 16,
+      "totalShield": 16,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 6,
+    "generated": 16,
+    "absorbed": 16,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      22
+    ]
+  },
+  {
+    "tuning": "ferrous18",
+    "scenario": "fire",
+    "spell": "nitrogen",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 14,
+      "totalShield": 14,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 8,
+    "generated": 14,
+    "absorbed": 14,
+    "reflect": 0,
+    "mana": 18,
+    "intent": [
+      22
+    ]
+  },
+  {
+    "tuning": "ferrous18",
+    "scenario": "fire",
+    "spell": "sulfide",
+    "preview": {
+      "damage": 5,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 6,
+      "reactionShield": 6,
+      "multiplier": 1
+    },
+    "damage": 5,
+    "hpLoss": 16,
+    "generated": 6,
+    "absorbed": 6,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      22
+    ]
+  },
+  {
+    "tuning": "ferrous18",
+    "scenario": "fire",
+    "spell": "ferrous",
+    "preview": {
+      "damage": 13,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 0,
+      "reactionShield": 0,
+      "multiplier": 1
+    },
+    "damage": 13,
+    "hpLoss": 19,
+    "generated": 0,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      19
+    ]
+  },
+  {
+    "tuning": "ferrous18",
+    "scenario": "fire",
+    "spell": "ammonia",
+    "preview": {
+      "damage": 7,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 0,
+      "reactionShield": 0,
+      "multiplier": 1
+    },
+    "damage": 7,
+    "hpLoss": 20,
+    "generated": 0,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      20
+    ]
+  },
+  {
+    "tuning": "ferrous18",
+    "scenario": "fireMulti",
+    "spell": "graphite",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 10,
+      "totalShield": 10,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 6,
+    "generated": 10,
+    "absorbed": 10,
+    "reflect": 3,
+    "mana": 10,
+    "intent": [
+      8,
+      8
+    ]
+  },
+  {
+    "tuning": "ferrous18",
+    "scenario": "fireMulti",
+    "spell": "carbon",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 12,
+      "totalShield": 12,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 0,
+    "generated": 12,
+    "absorbed": 11,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      8,
+      8
+    ]
+  },
+  {
+    "tuning": "ferrous18",
+    "scenario": "fireMulti",
+    "spell": "iron",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 16,
+      "totalShield": 16,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 0,
+    "generated": 16,
+    "absorbed": 16,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      8,
+      8
+    ]
+  },
+  {
+    "tuning": "ferrous18",
+    "scenario": "fireMulti",
+    "spell": "nitrogen",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 14,
+      "totalShield": 14,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 2,
+    "generated": 14,
+    "absorbed": 14,
+    "reflect": 0,
+    "mana": 18,
+    "intent": [
+      8,
+      8
+    ]
+  },
+  {
+    "tuning": "ferrous18",
+    "scenario": "fireMulti",
+    "spell": "sulfide",
+    "preview": {
+      "damage": 5,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 6,
+      "reactionShield": 6,
+      "multiplier": 1
+    },
+    "damage": 5,
+    "hpLoss": 10,
+    "generated": 6,
+    "absorbed": 6,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      8,
+      8
+    ]
+  },
+  {
+    "tuning": "ferrous18",
+    "scenario": "fireMulti",
+    "spell": "ferrous",
+    "preview": {
+      "damage": 13,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 0,
+      "reactionShield": 0,
+      "multiplier": 1
+    },
+    "damage": 13,
+    "hpLoss": 10,
+    "generated": 0,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      5,
+      5
+    ]
+  },
+  {
+    "tuning": "ferrous18",
+    "scenario": "fireMulti",
+    "spell": "ammonia",
+    "preview": {
+      "damage": 7,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 0,
+      "reactionShield": 0,
+      "multiplier": 1
+    },
+    "damage": 7,
+    "hpLoss": 12,
+    "generated": 0,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      6,
+      6
+    ]
+  },
+  {
+    "tuning": "ferrous18",
+    "scenario": "charge",
+    "spell": "graphite",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 10,
+      "totalShield": 10,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 0,
+    "generated": 10,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      0
+    ]
+  },
+  {
+    "tuning": "ferrous18",
+    "scenario": "charge",
+    "spell": "carbon",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 12,
+      "totalShield": 12,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 0,
+    "generated": 12,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      0
+    ]
+  },
+  {
+    "tuning": "ferrous18",
+    "scenario": "charge",
+    "spell": "iron",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 16,
+      "totalShield": 16,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 0,
+    "generated": 16,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      0
+    ]
+  },
+  {
+    "tuning": "ferrous18",
+    "scenario": "charge",
+    "spell": "nitrogen",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 14,
+      "totalShield": 14,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 0,
+    "generated": 14,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 18,
+    "intent": [
+      0
+    ]
+  },
+  {
+    "tuning": "ferrous18",
+    "scenario": "charge",
+    "spell": "sulfide",
+    "preview": {
+      "damage": 5,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 6,
+      "reactionShield": 6,
+      "multiplier": 1
+    },
+    "damage": 5,
+    "hpLoss": 0,
+    "generated": 6,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      0
+    ]
+  },
+  {
+    "tuning": "ferrous18",
+    "scenario": "charge",
+    "spell": "ferrous",
+    "preview": {
+      "damage": 13,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 0,
+      "reactionShield": 0,
+      "multiplier": 1
+    },
+    "damage": 13,
+    "hpLoss": 0,
+    "generated": 0,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      0
+    ]
+  },
+  {
+    "tuning": "ferrous18",
+    "scenario": "charge",
+    "spell": "ammonia",
+    "preview": {
+      "damage": 7,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 0,
+      "reactionShield": 0,
+      "multiplier": 1
+    },
+    "damage": 7,
+    "hpLoss": 0,
+    "generated": 0,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      0
+    ]
+  },
+  {
+    "tuning": "ferrous18",
+    "scenario": "shield",
+    "spell": "graphite",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 10,
+      "totalShield": 10,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 0,
+    "generated": 10,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      10
+    ]
+  },
+  {
+    "tuning": "ferrous18",
+    "scenario": "shield",
+    "spell": "carbon",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 12,
+      "totalShield": 12,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 0,
+    "generated": 12,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      10
+    ]
+  },
+  {
+    "tuning": "ferrous18",
+    "scenario": "shield",
+    "spell": "iron",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 16,
+      "totalShield": 16,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 0,
+    "generated": 16,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      10
+    ]
+  },
+  {
+    "tuning": "ferrous18",
+    "scenario": "shield",
+    "spell": "nitrogen",
+    "preview": {
+      "damage": 0,
+      "blocked": 0,
+      "combo": false,
+      "shield": 14,
+      "totalShield": 14,
+      "multiplier": 1
+    },
+    "damage": 0,
+    "hpLoss": 0,
+    "generated": 14,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 18,
+    "intent": [
+      10
+    ]
+  },
+  {
+    "tuning": "ferrous18",
+    "scenario": "shield",
+    "spell": "sulfide",
+    "preview": {
+      "damage": 5,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 6,
+      "reactionShield": 6,
+      "multiplier": 1
+    },
+    "damage": 5,
+    "hpLoss": 0,
+    "generated": 6,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      10
+    ]
+  },
+  {
+    "tuning": "ferrous18",
+    "scenario": "shield",
+    "spell": "ferrous",
+    "preview": {
+      "damage": 13,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 0,
+      "reactionShield": 0,
+      "multiplier": 1
+    },
+    "damage": 13,
+    "hpLoss": 0,
+    "generated": 0,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      10
+    ]
+  },
+  {
+    "tuning": "ferrous18",
+    "scenario": "shield",
+    "spell": "ammonia",
+    "preview": {
+      "damage": 7,
+      "blocked": 0,
+      "combo": false,
+      "shield": 0,
+      "totalShield": 0,
+      "reactionShield": 0,
+      "multiplier": 1
+    },
+    "damage": 7,
+    "hpLoss": 0,
+    "generated": 0,
+    "absorbed": 0,
+    "reflect": 0,
+    "mana": 10,
+    "intent": [
+      10
+    ]
+  }
+]

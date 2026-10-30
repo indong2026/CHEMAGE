@@ -1,6 +1,6 @@
-# CHEMAGE · PHASE 8
+# CHEMAGE · PHASE 11
 
-React + TypeScript + Vite 기반 모바일 세로형 화학 마법 턴제 게임. 원소 8종, 마법 19종, 반응 연계 4종, 5전투를 갖춘 게임입니다. PHASE 8은 PHASE 7에 원소별 도감을 추가한 버전입니다.
+React + TypeScript + Vite 기반 모바일 세로형 화학 마법 턴제 게임. 원소 8종, 마법 19종, 반응 연계 4종, 5전투와 최종 보스 3종을 갖춘 **PHASE 11 배포 소스**입니다. PHASE 11은 측정 결과를 바탕으로 CH₄·FeCl₂의 공격 보상을 소폭 높였습니다.
 
 ## 실행과 배포 상태
 
@@ -9,18 +9,50 @@ Node.js 22.12 이상. Windows / Node 22.23.2에서 검증했습니다.
 ```powershell
 npm.cmd install      # 최초 설치 시
 npm.cmd run dev      # http://localhost:5177/
-npm.cmd test         # 324개 검사, 1,400회 전략 모험 + 400회 재구성 비교 + 400회 보스 비교
+npm.cmd test         # 434개 통과, 대규모 실험 1개는 별도 실행
 npm.cmd run build    # TypeScript 검사 + 프로덕션 dist
 npm.cmd run preview  # http://localhost:4177/
 ```
 
 Windows 경로의 ^ 문자 때문에 npm 스크립트는 Node 진입점을 직접 실행합니다. 새 라이브러리, 서버, DB는 추가하지 않았습니다.
 
-- 이 저장소: PHASE 8 배포 소스. main 푸시 시 전체 테스트·빌드 성공 후 GitHub Pages에 자동 게시됩니다.
-- [공개 게임](https://indong2026.github.io/CHEMAGE/) · [최신 배포 상태](https://github.com/indong2026/CHEMAGE/actions/workflows/pages.yml).
-- 이전 PHASE 6 배포 커밋: `fd07790d08dea2ce08955a33018f4d8564b7d672`.
-- [이전 PHASE 6 배포 Actions](https://github.com/indong2026/CHEMAGE/actions/runs/40238438707): Linux 테스트·빌드·Pages 게시 모두 성공. [공개 검증 기록](docs/phase6-deployment.md).
+- 이 폴더: **PHASE 11 구현·로컬 검증 완료**. PHASE 9–11 작업에서는 배포 폴더를 수정하지 않았습니다.
+- [공개 게임](https://indong2026.github.io/CHEMAGE/): 최신 배포 대상 **PHASE 11**. 실제 반영 여부는 GitHub Actions 배포 결과를 확인하세요.
+- 이전 배포 소스: `releases/phase8`, 커밋 `fd89729d9fe2da4319797229ee4affd06ed53661`.
+- [PHASE 8 Actions](https://github.com/indong2026/CHEMAGE/actions/runs/40343177127): 당시 배포 성공 기록. PHASE 11은 main 브랜치의 GitHub Actions를 통해 배포합니다.
 - 이전 PHASE 3/3.1 배포본은 별도 폴더에 보존했습니다.
+
+## PHASE 11 마법 밸런스
+
+- CH₄ 직접 피해 20→23, FeCl₂ 직접 피해 16→18. 레시피·약화·상성·반응은 유지합니다.
+- C 보호막 10 / 반사 3 유지. 약화 후보는 편중 감소에 비해 승률 손실이 커 제외했습니다.
+- 19,200회 기준·후보·최종 측정. 전후 각각 3,600회 보스 전략 비교와 600회 전체 모험을 포함합니다.
+- 혼합 정책의 CH₄ 시전 10→14, FeCl₂ 22→31. 보스 승률 변화 ±0.5%p. **C 의존도와 희귀 레시피 부족은 여전히 남습니다.**
+- 모바일 320/390/430px 가로 넘침 0. 재구성 선택 중 가방·카드·발동 버튼 크기와 위치 유지.
+- 개발 검증: `/qa/phase11.html`. 실제 엔진·UI를 사용하며 저장 데이터를 읽거나 쓰지 않습니다. 배포 빌드에는 포함되지 않습니다.
+
+[PHASE 11 보고서](docs/phase11/report.md) · [19종 상세 CSV](docs/phase11/all-spells.csv) · [최종 원자료](docs/phase11/final.json)
+
+## PHASE 10 세 최종 보스
+
+- 모험마다 골렘·인페르노·워든을 같은 기본 확률로 선택합니다. 일반 원소 추첨 순서는 유지합니다.
+- 화염 2연타·충전 폭발, 금속 보호막·해머·프레스, 보스별 2페이즈와 전용 픽셀 아트.
+- 인페르노 HP는 시드 비교를 거쳐94→120으로 조정했으며 기존 마법과 정예·골렘 수치는 유지했습니다.
+- 425개 검사, 보스 비교4,000회와 전체 모험600회, 모바일4개 크기 검증.
+
+[PHASE 10 검증 보고서](docs/phase10-verification.md) · [보스별 밸런스](docs/phase10-balance.json)
+
+## PHASE 9 전투 UX
+
+- 재구성은 가방 제목과 하단 조작 영역만 전환합니다. 새 패널을 삽입하지 않아 카드·가방·발동 버튼·스크롤 위치를 유지합니다.
+- 발동 버튼은 공격 주황/방어 파랑/보조 초록, 실제 반응 가능 시 황금색입니다. 혼합형 H₂S에는 작은 방패를 추가합니다. 속성 이펙트 색은 그대로입니다.
+- 최초 시전 발견은 NEW DISCOVERY, 최초 반응 성공은 NEW REACTION으로 구분합니다. 전투 연출 뒤 순차 재생하며 안내 때문에 입력을 잠그지 않습니다.
+- 도감의 NEW는 별도 `chemage.unread.v1`에 저장합니다. 상세 확인하면 같은 마법의 모든 원소별 NEW가 함께 지워집니다. 기존 발견 항목은 업데이트 후 NEW로 만들지 않습니다.
+- 첫 안내와 상황 안내는 별도 `chemage.guides.v1`에 저장합니다. 기존 플레이어는 첫 안내를 자동 재생하지 않으며, 신규 플레이어는 건너뛸 수 있습니다. 도움말에서 기본 규칙을 다시 읽을 수 있습니다.
+- 조합 불가 가이드는 미발견을 포함한 전체 레시피·남은 시전·선택/잠금·재구성·ZERO 상태를 확인합니다. 일반 첫 전투/정예/보스 안내는 짧게 표시합니다.
+- 발견 판정은 최신 PHASE 6–8의 실제 시전 성공 시점 그대로입니다. 화학식 선택이나 힌트 공개만으로 발견되지 않습니다. 전투 엔진·확률·밸런스는 변경하지 않았습니다.
+
+[PHASE 9 검증 보고서](docs/phase9-verification.md) · [모바일 좌표 측정](docs/phase9-layout-measurements.json)
 
 ## PHASE 8 원소별 도감
 

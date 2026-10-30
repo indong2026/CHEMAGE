@@ -98,7 +98,7 @@ describe('원소 공명의 일회성 시작 손패', () => {
     s.screen='reward';s.rewards=['resonance'];expect(chooseReward(s,'resonance',()=>0,'Cl')).toBe(s);expect(chooseReward(s,'resonance',()=>0)).toBe(s);
   });
   it('정예 보상 직후 보스전에서도 5개 손패·확정 2개·중복 보상 방지를 유지한다', () => {
-    const s=reward(3);const next=chooseReward(s,'resonance',()=>0,'Fe');expect(next.enemy.id).toBe('golem');expect(next.stage).toBe(4);
+    const s=reward(3);const next=chooseReward(s,'resonance',()=>0,'Fe');expect(next.enemy.id).toBe(s.route[4]);expect(next.stage).toBe(4);
     expect(next.inventory.map(t=>t.element)).toEqual(['Fe','Fe','H','H','H']);expect(next.pendingResonance).toBeNull();expect(chooseReward(next,'resonance',()=>0,'Fe')).toBe(next);
     expect(newGame(()=>0).upgrades.resonance).toEqual({});expect(newGame(()=>0).pendingResonance).toBeNull();
   });

@@ -14,6 +14,6 @@ it('PHASE 6/7 일반 지급에서 5·8·12개 손패의 조합 빈도를 비교�
     }
     return{phase7,size,samples:10000,none,counts};
   }));
-  writeFileSync('docs/phase7-element-frequency.json',JSON.stringify({note:'Independent weighted hands without tutorial, resonance, spells, inventory selection or reconstruction. Same fixed RNG seeds. Counts are hands where a formula can be made at least once, not cast rates.',reports},null,2));
+  writeFileSync('docs/phase11/regression-element-frequency.json',JSON.stringify({note:'Independent weighted hands without tutorial, resonance, spells, inventory selection or reconstruction. Same fixed RNG seeds. Counts are hands where a formula can be made at least once, not cast rates.',reports},null,2));
   expect(reports.every(r=>r.none<r.samples)).toBe(true);expect(reports[5].counts.ammonia).toBeGreaterThan(0);
-});
+},20_000);

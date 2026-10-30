@@ -15,11 +15,11 @@ it('NaOH 조합 시에만 중화 가능과 합산 예측을 표시하고 반응�
   const first=performAction(s,{type:'cast',ids:[1,2]},s.revision,()=>.5);
   const view=render(battle(first,[3,4,5]));
   expect(screen.getByText('중화 반응 가능!')).toBeInTheDocument();
-  expect(screen.getByRole('button',{name:/마법 발동/})).toHaveTextContent('예상 피해 17 · 보호막 +6');
+  expect(screen.getByRole('button',{name:/마법 발동|연계 반응 발동/})).toHaveTextContent('예상 피해 17 · 보호막 +6');
   expect(screen.queryByText('HCl + NaOH → NaCl + H₂O')).toBeNull();
   const n=performAction(first,{type:'cast',ids:[3,4,5]},first.revision,()=>.5);
   const e=n.events.find(e=>e.kind==='reaction')!;view.rerender(battle(n,[],e));
-  expect(screen.getAllByText('HCl + NaOH → NaCl + H₂O')).toHaveLength(1);expect(screen.getByText('NEW REACTION')).toBeInTheDocument();
+  expect(screen.getAllByText('HCl + NaOH → NaCl + H₂O')).toHaveLength(1);expect(screen.getByText('REACTION')).toBeInTheDocument();
   expect(screen.getByRole('button',{name:'턴 종료'})).toBeDisabled();view.rerender(battle(n,[]));
   expect(screen.queryByText('HCl + NaOH → NaCl + H₂O')).toBeNull();
 });

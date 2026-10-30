@@ -1,0 +1,219 @@
+{
+  "tuning": {
+    "shield": 10,
+    "reflect": 3,
+    "methane": 20,
+    "ferrous": 16
+  },
+  "spells": [
+    {
+      "id": "water",
+      "formula": "H2O",
+      "recipe": {
+        "H": 2,
+        "O": 1
+      },
+      "fact": "수소 원자 2개와 산소 원자 1개로 이루어진 물 분자입니다.",
+      "affinity": "WATER"
+    },
+    {
+      "id": "salt",
+      "formula": "NaCl",
+      "recipe": {
+        "Na": 1,
+        "Cl": 1
+      },
+      "fact": "나트륨 이온과 염화 이온이 1:1 비율로 배열된 이온 결정이며, 소금의 주성분입니다.",
+      "affinity": "CRYSTAL"
+    },
+    {
+      "id": "carbon",
+      "formula": "CO2",
+      "recipe": {
+        "C": 1,
+        "O": 2
+      },
+      "fact": "탄소 원자 1개와 산소 원자 2개로 이루어진 기체입니다. 이산화 탄소는 소화기에 사용되기도 합니다.",
+      "affinity": "NEUTRAL"
+    },
+    {
+      "id": "iron",
+      "formula": "Fe",
+      "recipe": {
+        "Fe": 1
+      },
+      "fact": "철은 원자 번호 26인 금속 원소입니다. Fe는 철의 원소 기호입니다.",
+      "affinity": "METAL"
+    },
+    {
+      "id": "oxygen",
+      "formula": "O2",
+      "recipe": {
+        "O": 2
+      },
+      "fact": "산소 원자 2개로 이루어진 분자입니다. 산소는 다른 물질의 연소를 돕지만 그 자체가 연료는 아닙니다.",
+      "affinity": "NEUTRAL"
+    },
+    {
+      "id": "acid",
+      "formula": "HCl",
+      "recipe": {
+        "H": 1,
+        "Cl": 1
+      },
+      "fact": "염화 수소는 수소와 염소로 이루어진 물질입니다. 염화 수소가 물에 녹은 수용액을 염산이라고 부릅니다.",
+      "affinity": "CORROSION"
+    },
+    {
+      "id": "peroxide",
+      "formula": "H2O2",
+      "recipe": {
+        "H": 2,
+        "O": 2
+      },
+      "fact": "수소 원자 2개와 산소 원자 2개로 이루어진 물질로 산화력이 있습니다. 물과는 다른 물질입니다.",
+      "affinity": "NEUTRAL"
+    },
+    {
+      "id": "graphite",
+      "formula": "C",
+      "recipe": {
+        "C": 1
+      },
+      "fact": "흑연은 탄소 원자들이 층을 이룬 물질입니다. C는 탄소의 원소 기호이며 흑연과 다이아몬드는 모두 탄소로 이루어집니다.",
+      "affinity": "NEUTRAL"
+    },
+    {
+      "id": "methane",
+      "formula": "CH4",
+      "recipe": {
+        "C": 1,
+        "H": 4
+      },
+      "fact": "메테인(CH₄)은 탄소 원자 1개와 수소 원자 4개로 이루어진 가연성 기체입니다. 메탄이라고도 부릅니다. 화염 마법은 연소 가능성에서 착안한 판타지이며 화학식 완성 자체가 실제 점화를 의미하지 않습니다.",
+      "affinity": "FIRE"
+    },
+    {
+      "id": "ironOxide",
+      "formula": "FeO",
+      "recipe": {
+        "Fe": 1,
+        "O": 1
+      },
+      "fact": "FeO는 철과 산소가 1:1 비율을 이루는 산화 철(II)입니다. 철의 산화수는 +2입니다. 금속 파편을 발사하는 공격은 판타지 설정입니다.",
+      "affinity": "METAL"
+    },
+    {
+      "id": "hydrogen",
+      "formula": "H2",
+      "recipe": {
+        "H": 2
+      },
+      "fact": "H₂는 수소 원자 두 개가 결합한 수소 분자입니다. 보호막을 흔드는 파동은 게임의 판타지 효과입니다.",
+      "affinity": "NEUTRAL"
+    },
+    {
+      "id": "alkali",
+      "formula": "NaOH",
+      "recipe": {
+        "Na": 1,
+        "O": 1,
+        "H": 1
+      },
+      "fact": "NaOH는 수산화 나트륨이며 수용액에서 강한 염기성을 나타냅니다. 파동 공격은 판타지 전투 효과입니다.",
+      "affinity": "NEUTRAL"
+    },
+    {
+      "id": "ferrous",
+      "formula": "FeCl2",
+      "recipe": {
+        "Fe": 1,
+        "Cl": 2
+      },
+      "fact": "FeCl₂는 철의 산화수가 +2인 염화 철(II)입니다. 금속 사슬과 공격 약화는 판타지 설정입니다.",
+      "affinity": "METAL"
+    },
+    {
+      "id": "nitrogen",
+      "formula": "N2",
+      "recipe": {
+        "N": 2
+      },
+      "fact": "질소 원자 2개로 이루어진 분자이며 지구 대기의 주성분입니다.",
+      "affinity": "NEUTRAL"
+    },
+    {
+      "id": "ammonia",
+      "formula": "NH3",
+      "recipe": {
+        "N": 1,
+        "H": 3
+      },
+      "fact": "NH₃는 질소 원자 1개와 수소 원자 3개로 이루어진 암모니아입니다. 공격 약화는 판타지 효과입니다.",
+      "affinity": "NEUTRAL"
+    },
+    {
+      "id": "nitro",
+      "formula": "NO2",
+      "recipe": {
+        "N": 1,
+        "O": 2
+      },
+      "fact": "NO₂는 질소 원자 1개와 산소 원자 2개로 이루어진 이산화 질소입니다. 지속 피해는 판타지 효과입니다.",
+      "affinity": "NEUTRAL"
+    },
+    {
+      "id": "sulfide",
+      "formula": "H2S",
+      "recipe": {
+        "H": 2,
+        "S": 1
+      },
+      "fact": "H₂S는 수소 원자 2개와 황 원자 1개로 이루어진 황화 수소입니다. 보호막은 판타지 효과입니다.",
+      "affinity": "NEUTRAL"
+    },
+    {
+      "id": "sulfur",
+      "formula": "SO2",
+      "recipe": {
+        "S": 1,
+        "O": 2
+      },
+      "fact": "SO₂는 황 원자 1개와 산소 원자 2개로 이루어진 이산화 황입니다. 젖음 소비와 추가 피해는 실제 화학 반응이 아닌 게임 규칙입니다.",
+      "affinity": "CORROSION"
+    },
+    {
+      "id": "ironSulfide",
+      "formula": "FeS",
+      "recipe": {
+        "Fe": 1,
+        "S": 1
+      },
+      "fact": "FeS는 철과 황이 1:1 비율을 이루는 황화 철(II)입니다. 철의 산화수는 +2이며 황철석(FeS₂)과는 다른 물질입니다.",
+      "affinity": "METAL"
+    }
+  ],
+  "sourceHashes": {
+    "src/game/engine.ts": "789df4fc60bd3853ed4c0661d9eeb06dd5c09cf9b5584c3db09b58deaa9e846e",
+    "src/game/random.ts": "17948d9795189be84e388cab7149eda7b9e2851f3d4c8bf8a35b1c2b21057b7d",
+    "src/data/enemies.ts": "49848b632f9f81cd1c977c4b82a2e272aacce46b52e9af656c1b85b4dec1bf08",
+    "src/data/elements.ts": "0a8c8432da819c5692825d6660697b6e038850be2a55a97a5d2b8e45dd57ced9",
+    "src/data/reactions.ts": "f8b36eeaf5a6c265fb0bbafff6d9bef0a8c33724e86af7679c8bd9b5bf9dd5e8",
+    "src/data/rewards.ts": "16ceb45e3546c80cc4b1f177b9856145fc2fa5fc8a6eb1879035a728f5447be2",
+    "src/data/affinities.ts": "2dac409cf7588a3c236386a7c851f776d4003b689cefb142553262da277974bf",
+    "src/styles/ux.css": "7583f9d35c04a0192ace5df2f8f5d2fb6805dda36db4bddccb16dbeee100ae9a",
+    "src/screens/Battle.tsx": "eb542c876ba65d208c7c36271f267edb353d5d4160a4ef5fbab5c4c5b05989cc"
+  },
+  "originalByteHashes": {
+    "src/game/engine.ts": "789df4fc60bd3853ed4c0661d9eeb06dd5c09cf9b5584c3db09b58deaa9e846e",
+    "src/game/random.ts": "17948d9795189be84e388cab7149eda7b9e2851f3d4c8bf8a35b1c2b21057b7d",
+    "src/data/enemies.ts": "0ff8669a8ab6c38684ddf09433c0b2a0c06503157431cf2e1819cf91faeec6e2",
+    "src/data/elements.ts": "0a8c8432da819c5692825d6660697b6e038850be2a55a97a5d2b8e45dd57ced9",
+    "src/data/reactions.ts": "f8b36eeaf5a6c265fb0bbafff6d9bef0a8c33724e86af7679c8bd9b5bf9dd5e8",
+    "src/data/rewards.ts": "2c97cc4da5f0696ff6175c624a769494f6d35ac46d2208bde8a5cca303054953",
+    "src/data/affinities.ts": "2dac409cf7588a3c236386a7c851f776d4003b689cefb142553262da277974bf",
+    "src/styles/ux.css": "7583f9d35c04a0192ace5df2f8f5d2fb6805dda36db4bddccb16dbeee100ae9a",
+    "src/screens/Battle.tsx": "8873d65e01f084ab5e6ee00b77cee52ce1e2d29685cf911f0a4ef3892fc3beb6"
+  },
+  "hashConvention": "sourceHashes normalizes CRLF to LF for Windows/Linux CI; originalByteHashes preserves original PHASE 10 evidence"
+}

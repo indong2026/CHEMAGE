@@ -1,0 +1,338 @@
+[
+  {
+    "phase": "closed",
+    "geometry": [
+      {
+        "height": 156,
+        "selector": ".compact-bag",
+        "width": 320,
+        "x": 0,
+        "y": 568
+      },
+      {
+        "height": 47,
+        "selector": ".inventory .element-tile",
+        "width": 43.66666793823242,
+        "x": 14,
+        "y": 614
+      },
+      {
+        "height": 55,
+        "selector": ".instant-cast",
+        "width": 292,
+        "x": 14,
+        "y": 471
+      }
+    ],
+    "overflow": 0,
+    "width": 320
+  },
+  {
+    "phase": "open",
+    "geometry": [
+      {
+        "height": 156,
+        "selector": ".compact-bag",
+        "width": 320,
+        "x": 0,
+        "y": 568
+      },
+      {
+        "height": 47,
+        "selector": ".inventory .element-tile",
+        "width": 43.66666793823242,
+        "x": 14,
+        "y": 614
+      },
+      {
+        "height": 55,
+        "selector": ".instant-cast",
+        "width": 292,
+        "x": 14,
+        "y": 471
+      }
+    ],
+    "overflow": 0,
+    "width": 320
+  },
+  {
+    "phase": "selected",
+    "geometry": [
+      {
+        "height": 156,
+        "selector": ".compact-bag",
+        "width": 320,
+        "x": 0,
+        "y": 568
+      },
+      {
+        "height": 47,
+        "selector": ".inventory .element-tile",
+        "width": 43.66666793823242,
+        "x": 14,
+        "y": 614
+      },
+      {
+        "height": 55,
+        "selector": ".instant-cast",
+        "width": 292,
+        "x": 14,
+        "y": 471
+      }
+    ],
+    "overflow": 0,
+    "width": 320
+  },
+  {
+    "phase": "cancelled",
+    "geometry": [
+      {
+        "height": 156,
+        "selector": ".compact-bag",
+        "width": 320,
+        "x": 0,
+        "y": 568
+      },
+      {
+        "height": 47,
+        "selector": ".inventory .element-tile",
+        "width": 43.66666793823242,
+        "x": 14,
+        "y": 614
+      },
+      {
+        "height": 55,
+        "selector": ".instant-cast",
+        "width": 292,
+        "x": 14,
+        "y": 471
+      }
+    ],
+    "overflow": 0,
+    "width": 320
+  },
+  {
+    "phase": "closed",
+    "geometry": [
+      {
+        "height": 156,
+        "selector": ".compact-bag",
+        "width": 390,
+        "x": 0,
+        "y": 568
+      },
+      {
+        "height": 47,
+        "selector": ".inventory .element-tile",
+        "width": 55.33333587646485,
+        "x": 14,
+        "y": 614
+      },
+      {
+        "height": 55,
+        "selector": ".instant-cast",
+        "width": 362,
+        "x": 14,
+        "y": 471
+      }
+    ],
+    "overflow": 0,
+    "width": 390
+  },
+  {
+    "phase": "open",
+    "geometry": [
+      {
+        "height": 156,
+        "selector": ".compact-bag",
+        "width": 390,
+        "x": 0,
+        "y": 568
+      },
+      {
+        "height": 47,
+        "selector": ".inventory .element-tile",
+        "width": 55.33333587646485,
+        "x": 14,
+        "y": 614
+      },
+      {
+        "height": 55,
+        "selector": ".instant-cast",
+        "width": 362,
+        "x": 14,
+        "y": 471
+      }
+    ],
+    "overflow": 0,
+    "width": 390
+  },
+  {
+    "phase": "selected",
+    "geometry": [
+      {
+        "height": 156,
+        "selector": ".compact-bag",
+        "width": 390,
+        "x": 0,
+        "y": 568
+      },
+      {
+        "height": 47,
+        "selector": ".inventory .element-tile",
+        "width": 55.33333587646485,
+        "x": 14,
+        "y": 614
+      },
+      {
+        "height": 55,
+        "selector": ".instant-cast",
+        "width": 362,
+        "x": 14,
+        "y": 471
+      }
+    ],
+    "overflow": 0,
+    "width": 390
+  },
+  {
+    "phase": "cancelled",
+    "geometry": [
+      {
+        "height": 156,
+        "selector": ".compact-bag",
+        "width": 390,
+        "x": 0,
+        "y": 568
+      },
+      {
+        "height": 47,
+        "selector": ".inventory .element-tile",
+        "width": 55.33333587646485,
+        "x": 14,
+        "y": 614
+      },
+      {
+        "height": 55,
+        "selector": ".instant-cast",
+        "width": 362,
+        "x": 14,
+        "y": 471
+      }
+    ],
+    "overflow": 0,
+    "width": 390
+  },
+  {
+    "phase": "closed",
+    "geometry": [
+      {
+        "height": 156,
+        "selector": ".compact-bag",
+        "width": 430,
+        "x": 0,
+        "y": 568
+      },
+      {
+        "height": 47,
+        "selector": ".inventory .element-tile",
+        "width": 62,
+        "x": 14,
+        "y": 614
+      },
+      {
+        "height": 55,
+        "selector": ".instant-cast",
+        "width": 402,
+        "x": 14,
+        "y": 471
+      }
+    ],
+    "overflow": 0,
+    "width": 430
+  },
+  {
+    "phase": "open",
+    "geometry": [
+      {
+        "height": 156,
+        "selector": ".compact-bag",
+        "width": 430,
+        "x": 0,
+        "y": 568
+      },
+      {
+        "height": 47,
+        "selector": ".inventory .element-tile",
+        "width": 62,
+        "x": 14,
+        "y": 614
+      },
+      {
+        "height": 55,
+        "selector": ".instant-cast",
+        "width": 402,
+        "x": 14,
+        "y": 471
+      }
+    ],
+    "overflow": 0,
+    "width": 430
+  },
+  {
+    "phase": "selected",
+    "geometry": [
+      {
+        "height": 156,
+        "selector": ".compact-bag",
+        "width": 430,
+        "x": 0,
+        "y": 568
+      },
+      {
+        "height": 47,
+        "selector": ".inventory .element-tile",
+        "width": 62,
+        "x": 14,
+        "y": 614
+      },
+      {
+        "height": 55,
+        "selector": ".instant-cast",
+        "width": 402,
+        "x": 14,
+        "y": 471
+      }
+    ],
+    "overflow": 0,
+    "width": 430
+  },
+  {
+    "phase": "cancelled",
+    "geometry": [
+      {
+        "height": 156,
+        "selector": ".compact-bag",
+        "width": 430,
+        "x": 0,
+        "y": 568
+      },
+      {
+        "height": 47,
+        "selector": ".inventory .element-tile",
+        "width": 62,
+        "x": 14,
+        "y": 614
+      },
+      {
+        "height": 55,
+        "selector": ".instant-cast",
+        "width": 402,
+        "x": 14,
+        "y": 471
+      }
+    ],
+    "overflow": 0,
+    "width": 430
+  }
+]

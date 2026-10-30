@@ -8,7 +8,7 @@
     {
       "immediate": false,
       "runs": 200,
-      "wins": 128,
+      "wins": 124,
       "stalled": 0,
       "averageStartingFe": 0.33,
       "ironCasts": 147,
@@ -878,7 +878,7 @@
           "firstTurnShield": 20,
           "firstTurnDamage": 3,
           "firstTurnWin": false,
-          "win": true,
+          "win": false,
           "stalled": false
         },
         {
@@ -1161,12 +1161,12 @@
           "seed": 96,
           "startFe": 0,
           "startSize": 5,
-          "ironCasts": 1,
+          "ironCasts": 0,
           "ferrousCasts": 0,
           "firstTurnShield": 10,
           "firstTurnDamage": 10,
           "firstTurnWin": false,
-          "win": true,
+          "win": false,
           "stalled": false
         },
         {
@@ -1418,7 +1418,7 @@
           "firstTurnShield": 13,
           "firstTurnDamage": 3,
           "firstTurnWin": false,
-          "win": true,
+          "win": false,
           "stalled": false
         },
         {
@@ -2025,7 +2025,7 @@
           "seed": 168,
           "startFe": 0,
           "startSize": 5,
-          "ironCasts": 0,
+          "ironCasts": 1,
           "ferrousCasts": 0,
           "firstTurnShield": 16,
           "firstTurnDamage": 13,
@@ -2390,7 +2390,7 @@
           "firstTurnShield": 16,
           "firstTurnDamage": 7,
           "firstTurnWin": false,
-          "win": true,
+          "win": false,
           "stalled": false
         },
         {
@@ -2422,7 +2422,7 @@
     {
       "immediate": true,
       "runs": 200,
-      "wins": 172,
+      "wins": 170,
       "stalled": 0,
       "averageStartingFe": 2.18,
       "ironCasts": 357,
@@ -3472,7 +3472,7 @@
           "firstTurnShield": 19,
           "firstTurnDamage": 21,
           "firstTurnWin": false,
-          "win": true,
+          "win": false,
           "stalled": false
         },
         {
@@ -4744,7 +4744,7 @@
           "firstTurnShield": 0,
           "firstTurnDamage": 54,
           "firstTurnWin": false,
-          "win": true,
+          "win": false,
           "stalled": false
         },
         {

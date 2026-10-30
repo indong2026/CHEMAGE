@@ -1,0 +1,22 @@
+/* Boss visuals occupy the existing scene. No combat controls change geometry. */
+.boss-fx-fire .lab-background{filter:sepia(.35) hue-rotate(305deg)}
+.enemy-inferno>.sprite{filter:drop-shadow(0 0 6px #ef6b3580);animation:core-hover calc(2.4s / var(--rate,1)) steps(6) infinite}
+.enemy-inferno.charging>.sprite{filter:brightness(1.35) drop-shadow(0 0 10px #ffb32b)}
+.enraged .enemy-inferno>.sprite{filter:brightness(1.2) saturate(1.4) drop-shadow(0 0 10px #ff9c39)}
+.core-embers{position:absolute;inset:6px;pointer-events:none;animation:ember-orbit calc(6s / var(--rate,1)) steps(24) infinite}
+.core-embers i{position:absolute;width:7px;height:7px;background:#ffd57b;box-shadow:0 0 6px #ff793e}
+.core-embers i:nth-child(1){left:0;top:40%}.core-embers i:nth-child(2){right:0;top:40%}.core-embers i:nth-child(3){top:0;left:50%}.core-embers i:nth-child(4){bottom:0;left:50%}
+.enraged .core-embers i{width:9px;height:9px;background:#fff1bf;box-shadow:0 0 11px #ff652e}
+.enemy-warden>.sprite{filter:drop-shadow(2px 3px 0 #101723);animation:warden-idle calc(3.2s / var(--rate,1)) steps(3) infinite}
+.enraged .enemy-warden .sprite rect[fill="#64b6c9"],.enraged .enemy-warden .sprite rect[fill="#91e9dc"]{fill:#ff766f}
+.enemy-warden.charging>.sprite{filter:drop-shadow(0 0 6px #ff8462)}
+.boss-fx-hammer .incoming .projectile{border-radius:0;background:#9baec3;box-shadow:inset -5px -5px #46526e,0 0 8px #deedf7;rotate:45deg;width:21px;height:25px}
+.boss-fx-fire .incoming .projectile{background:#fff0b6;box-shadow:0 0 0 4px #f7a446,8px 0 0 3px #bb4d43}
+.boss-fx-fire.heavy-impact .shockwave{border-color:#ffb357}.boss-fx-hammer.heavy-impact .shockwave{border-color:#a9c9df;border-width:5px}
+.boss-fx-fire .phase-banner,.boss-fx-hammer .phase-banner{font-size:clamp(16px,5vw,22px);letter-spacing:.5px;line-height:1.5;background:#1b1924d9;top:124px}
+.boss-fx-fire .phase-banner{color:#ffca83}.boss-fx-hammer .phase-banner{color:#ffa7a2}
+@keyframes core-hover{0%,100%{translate:0 0}50%{translate:0 -4px}}
+@keyframes ember-orbit{to{rotate:360deg}}
+@keyframes warden-idle{0%,100%{translate:0 0}50%{translate:0 1px}}
+.reduced-motion .core-embers,.reduced-motion .enemy-inferno>.sprite,.reduced-motion .enemy-warden>.sprite{animation:none!important}
+@media(prefers-reduced-motion:reduce){.core-embers,.enemy-inferno>.sprite,.enemy-warden>.sprite{animation:none!important}}

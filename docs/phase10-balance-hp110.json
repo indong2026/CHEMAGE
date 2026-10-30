@@ -1,0 +1,1595 @@
+{
+  "seedRange": [
+    1,
+    200
+  ],
+  "note": "Paired final-battle fixtures: HP 45..60, mana 0/20/40/60, water +4 reward, shield bonus 0/3, draw 3/4, identical initial hands and future RNG. All recipes available to policies. One-round greedy policies, not estimates of human difficulty. Remaining HP excludes victory heal. Danger defense ratio counts decisions while dangerous intent visible. Full adventures use normal route and reward choices.",
+  "reports": [
+    {
+      "boss": "golem",
+      "strategy": "attack",
+      "runs": 200,
+      "wins": 133,
+      "stalled": 0,
+      "rounds": 1368,
+      "remainingHp": 2034,
+      "winnerHp": 2034,
+      "casts": 2056,
+      "weakHits": 180,
+      "attackHits": 1241,
+      "wards": 783,
+      "dangerDecisions": 1151,
+      "defendedDanger": 408,
+      "maxShield": 10,
+      "spells": {
+        "water": 218,
+        "oxygen": 127,
+        "hydrogen": 128,
+        "graphite": 547,
+        "alkali": 105,
+        "ironOxide": 101,
+        "sulfur": 53,
+        "iron": 89,
+        "nitro": 101,
+        "sulfide": 93,
+        "salt": 190,
+        "acid": 154,
+        "ironSulfide": 72,
+        "nitrogen": 52,
+        "ammonia": 12,
+        "ferrous": 7,
+        "methane": 7
+      },
+      "winRate": 0.665,
+      "averageRounds": 6.84,
+      "averageRemainingHp": 10.17,
+      "averageWinnerHp": 15.293233082706767,
+      "weakAttackRatio": 0.145044319097502,
+      "wardCastsPerRun": 3.915,
+      "dangerDefenseRatio": 0.35447437011294525,
+      "topSpells": [
+        [
+          "graphite",
+          547
+        ],
+        [
+          "water",
+          218
+        ],
+        [
+          "salt",
+          190
+        ],
+        [
+          "acid",
+          154
+        ],
+        [
+          "hydrogen",
+          128
+        ]
+      ]
+    },
+    {
+      "boss": "golem",
+      "strategy": "affinity",
+      "runs": 200,
+      "wins": 132,
+      "stalled": 0,
+      "rounds": 1358,
+      "remainingHp": 1939,
+      "winnerHp": 1939,
+      "casts": 2032,
+      "weakHits": 187,
+      "attackHits": 1233,
+      "wards": 783,
+      "dangerDecisions": 1148,
+      "defendedDanger": 409,
+      "maxShield": 10,
+      "spells": {
+        "hydrogen": 145,
+        "alkali": 112,
+        "oxygen": 128,
+        "water": 155,
+        "graphite": 548,
+        "ironOxide": 112,
+        "sulfur": 53,
+        "iron": 72,
+        "nitro": 97,
+        "sulfide": 107,
+        "salt": 186,
+        "acid": 155,
+        "ironSulfide": 67,
+        "nitrogen": 47,
+        "ammonia": 14,
+        "peroxide": 16,
+        "ferrous": 8,
+        "carbon": 4,
+        "methane": 6
+      },
+      "winRate": 0.66,
+      "averageRounds": 6.79,
+      "averageRemainingHp": 9.695,
+      "averageWinnerHp": 14.68939393939394,
+      "weakAttackRatio": 0.1516626115166261,
+      "wardCastsPerRun": 3.915,
+      "dangerDefenseRatio": 0.35627177700348434,
+      "topSpells": [
+        [
+          "graphite",
+          548
+        ],
+        [
+          "salt",
+          186
+        ],
+        [
+          "water",
+          155
+        ],
+        [
+          "acid",
+          155
+        ],
+        [
+          "hydrogen",
+          145
+        ]
+      ]
+    },
+    {
+      "boss": "golem",
+      "strategy": "reaction",
+      "runs": 200,
+      "wins": 137,
+      "stalled": 0,
+      "rounds": 1424,
+      "remainingHp": 2699,
+      "winnerHp": 2699,
+      "casts": 2164,
+      "weakHits": 147,
+      "attackHits": 1258,
+      "wards": 890,
+      "dangerDecisions": 1187,
+      "defendedDanger": 469,
+      "maxShield": 10,
+      "spells": {
+        "hydrogen": 142,
+        "alkali": 115,
+        "oxygen": 140,
+        "water": 163,
+        "graphite": 572,
+        "ironOxide": 77,
+        "sulfur": 64,
+        "iron": 127,
+        "nitro": 101,
+        "sulfide": 116,
+        "salt": 196,
+        "acid": 173,
+        "ironSulfide": 61,
+        "methane": 4,
+        "nitrogen": 61,
+        "carbon": 6,
+        "ammonia": 14,
+        "peroxide": 23,
+        "ferrous": 9
+      },
+      "winRate": 0.685,
+      "averageRounds": 7.12,
+      "averageRemainingHp": 13.495,
+      "averageWinnerHp": 19.7007299270073,
+      "weakAttackRatio": 0.11685214626391097,
+      "wardCastsPerRun": 4.45,
+      "dangerDefenseRatio": 0.3951137320977254,
+      "topSpells": [
+        [
+          "graphite",
+          572
+        ],
+        [
+          "salt",
+          196
+        ],
+        [
+          "acid",
+          173
+        ],
+        [
+          "water",
+          163
+        ],
+        [
+          "hydrogen",
+          142
+        ]
+      ]
+    },
+    {
+      "boss": "golem",
+      "strategy": "mixed",
+      "runs": 200,
+      "wins": 136,
+      "stalled": 0,
+      "rounds": 1424,
+      "remainingHp": 2669,
+      "winnerHp": 2669,
+      "casts": 2163,
+      "weakHits": 147,
+      "attackHits": 1256,
+      "wards": 890,
+      "dangerDecisions": 1191,
+      "defendedDanger": 470,
+      "maxShield": 10,
+      "spells": {
+        "hydrogen": 143,
+        "alkali": 112,
+        "oxygen": 141,
+        "water": 162,
+        "graphite": 573,
+        "ironOxide": 76,
+        "sulfur": 63,
+        "iron": 126,
+        "nitro": 101,
+        "sulfide": 119,
+        "salt": 196,
+        "acid": 171,
+        "ironSulfide": 61,
+        "methane": 3,
+        "nitrogen": 60,
+        "carbon": 7,
+        "ammonia": 15,
+        "peroxide": 24,
+        "ferrous": 10
+      },
+      "winRate": 0.68,
+      "averageRounds": 7.12,
+      "averageRemainingHp": 13.345,
+      "averageWinnerHp": 19.625,
+      "weakAttackRatio": 0.11703821656050956,
+      "wardCastsPerRun": 4.45,
+      "dangerDefenseRatio": 0.39462636439966414,
+      "topSpells": [
+        [
+          "graphite",
+          573
+        ],
+        [
+          "salt",
+          196
+        ],
+        [
+          "acid",
+          171
+        ],
+        [
+          "water",
+          162
+        ],
+        [
+          "hydrogen",
+          143
+        ]
+      ]
+    },
+    {
+      "boss": "golem",
+      "strategy": "stockpile",
+      "runs": 200,
+      "wins": 158,
+      "stalled": 0,
+      "rounds": 1436,
+      "remainingHp": 3626,
+      "winnerHp": 3626,
+      "casts": 2119,
+      "weakHits": 165,
+      "attackHits": 1287,
+      "wards": 827,
+      "dangerDecisions": 1203,
+      "defendedDanger": 538,
+      "maxShield": 10,
+      "spells": {
+        "hydrogen": 131,
+        "alkali": 106,
+        "oxygen": 126,
+        "water": 194,
+        "graphite": 517,
+        "ironOxide": 84,
+        "sulfur": 56,
+        "iron": 115,
+        "nitro": 108,
+        "sulfide": 115,
+        "salt": 201,
+        "ironSulfide": 71,
+        "methane": 9,
+        "nitrogen": 58,
+        "acid": 161,
+        "ammonia": 17,
+        "peroxide": 24,
+        "carbon": 16,
+        "ferrous": 10
+      },
+      "winRate": 0.79,
+      "averageRounds": 7.18,
+      "averageRemainingHp": 18.13,
+      "averageWinnerHp": 22.949367088607595,
+      "weakAttackRatio": 0.1282051282051282,
+      "wardCastsPerRun": 4.135,
+      "dangerDefenseRatio": 0.4472152950955943,
+      "topSpells": [
+        [
+          "graphite",
+          517
+        ],
+        [
+          "salt",
+          201
+        ],
+        [
+          "water",
+          194
+        ],
+        [
+          "acid",
+          161
+        ],
+        [
+          "hydrogen",
+          131
+        ]
+      ]
+    },
+    {
+      "boss": "golem",
+      "strategy": "burst",
+      "runs": 200,
+      "wins": 149,
+      "stalled": 0,
+      "rounds": 1486,
+      "remainingHp": 3019,
+      "winnerHp": 3019,
+      "casts": 2201,
+      "weakHits": 169,
+      "attackHits": 1304,
+      "wards": 875,
+      "dangerDecisions": 1130,
+      "defendedDanger": 413,
+      "maxShield": 10,
+      "spells": {
+        "hydrogen": 154,
+        "alkali": 120,
+        "oxygen": 146,
+        "water": 177,
+        "graphite": 573,
+        "ironOxide": 91,
+        "sulfur": 65,
+        "iron": 111,
+        "nitro": 97,
+        "sulfide": 117,
+        "salt": 198,
+        "acid": 171,
+        "ironSulfide": 67,
+        "nitrogen": 62,
+        "carbon": 5,
+        "ammonia": 18,
+        "peroxide": 16,
+        "ferrous": 11,
+        "methane": 2
+      },
+      "winRate": 0.745,
+      "averageRounds": 7.43,
+      "averageRemainingHp": 15.095,
+      "averageWinnerHp": 20.261744966442954,
+      "weakAttackRatio": 0.12960122699386503,
+      "wardCastsPerRun": 4.375,
+      "dangerDefenseRatio": 0.3654867256637168,
+      "topSpells": [
+        [
+          "graphite",
+          573
+        ],
+        [
+          "salt",
+          198
+        ],
+        [
+          "water",
+          177
+        ],
+        [
+          "acid",
+          171
+        ],
+        [
+          "hydrogen",
+          154
+        ]
+      ]
+    },
+    {
+      "boss": "inferno",
+      "strategy": "attack",
+      "runs": 200,
+      "wins": 170,
+      "stalled": 0,
+      "rounds": 1206,
+      "remainingHp": 3494,
+      "winnerHp": 3494,
+      "casts": 1832,
+      "weakHits": 238,
+      "attackHits": 1102,
+      "wards": 702,
+      "dangerDecisions": 433,
+      "defendedDanger": 135,
+      "maxShield": 0,
+      "spells": {
+        "water": 238,
+        "oxygen": 99,
+        "hydrogen": 111,
+        "graphite": 481,
+        "alkali": 80,
+        "ironOxide": 89,
+        "sulfur": 47,
+        "iron": 87,
+        "nitro": 87,
+        "sulfide": 69,
+        "salt": 168,
+        "acid": 140,
+        "ironSulfide": 55,
+        "nitrogen": 56,
+        "ammonia": 10,
+        "ferrous": 5,
+        "carbon": 7,
+        "methane": 3
+      },
+      "winRate": 0.85,
+      "averageRounds": 6.03,
+      "averageRemainingHp": 17.47,
+      "averageWinnerHp": 20.55294117647059,
+      "weakAttackRatio": 0.2159709618874773,
+      "wardCastsPerRun": 3.51,
+      "dangerDefenseRatio": 0.3117782909930716,
+      "topSpells": [
+        [
+          "graphite",
+          481
+        ],
+        [
+          "water",
+          238
+        ],
+        [
+          "salt",
+          168
+        ],
+        [
+          "acid",
+          140
+        ],
+        [
+          "hydrogen",
+          111
+        ]
+      ]
+    },
+    {
+      "boss": "inferno",
+      "strategy": "affinity",
+      "runs": 200,
+      "wins": 172,
+      "stalled": 0,
+      "rounds": 1192,
+      "remainingHp": 3637,
+      "winnerHp": 3637,
+      "casts": 1796,
+      "weakHits": 273,
+      "attackHits": 1080,
+      "wards": 689,
+      "dangerDecisions": 432,
+      "defendedDanger": 135,
+      "maxShield": 0,
+      "spells": {
+        "water": 273,
+        "graphite": 469,
+        "ironOxide": 88,
+        "oxygen": 89,
+        "sulfur": 49,
+        "iron": 88,
+        "hydrogen": 80,
+        "nitro": 77,
+        "sulfide": 61,
+        "alkali": 76,
+        "salt": 166,
+        "acid": 135,
+        "ironSulfide": 57,
+        "nitrogen": 60,
+        "ammonia": 10,
+        "carbon": 10,
+        "ferrous": 6,
+        "methane": 2
+      },
+      "winRate": 0.86,
+      "averageRounds": 5.96,
+      "averageRemainingHp": 18.185,
+      "averageWinnerHp": 21.1453488372093,
+      "weakAttackRatio": 0.25277777777777777,
+      "wardCastsPerRun": 3.445,
+      "dangerDefenseRatio": 0.3125,
+      "topSpells": [
+        [
+          "graphite",
+          469
+        ],
+        [
+          "water",
+          273
+        ],
+        [
+          "salt",
+          166
+        ],
+        [
+          "acid",
+          135
+        ],
+        [
+          "oxygen",
+          89
+        ]
+      ]
+    },
+    {
+      "boss": "inferno",
+      "strategy": "reaction",
+      "runs": 200,
+      "wins": 176,
+      "stalled": 0,
+      "rounds": 1241,
+      "remainingHp": 4518,
+      "winnerHp": 4518,
+      "casts": 1886,
+      "weakHits": 282,
+      "attackHits": 1080,
+      "wards": 792,
+      "dangerDecisions": 451,
+      "defendedDanger": 173,
+      "maxShield": 0,
+      "spells": {
+        "water": 282,
+        "graphite": 473,
+        "ironOxide": 56,
+        "oxygen": 92,
+        "iron": 149,
+        "sulfur": 56,
+        "hydrogen": 74,
+        "alkali": 82,
+        "nitro": 73,
+        "sulfide": 78,
+        "salt": 185,
+        "acid": 140,
+        "ironSulfide": 36,
+        "nitrogen": 64,
+        "carbon": 28,
+        "ammonia": 11,
+        "ferrous": 5,
+        "methane": 2
+      },
+      "winRate": 0.88,
+      "averageRounds": 6.205,
+      "averageRemainingHp": 22.59,
+      "averageWinnerHp": 25.670454545454547,
+      "weakAttackRatio": 0.2611111111111111,
+      "wardCastsPerRun": 3.96,
+      "dangerDefenseRatio": 0.3835920177383592,
+      "topSpells": [
+        [
+          "graphite",
+          473
+        ],
+        [
+          "water",
+          282
+        ],
+        [
+          "salt",
+          185
+        ],
+        [
+          "iron",
+          149
+        ],
+        [
+          "acid",
+          140
+        ]
+      ]
+    },
+    {
+      "boss": "inferno",
+      "strategy": "mixed",
+      "runs": 200,
+      "wins": 176,
+      "stalled": 0,
+      "rounds": 1242,
+      "remainingHp": 4530,
+      "winnerHp": 4530,
+      "casts": 1888,
+      "weakHits": 283,
+      "attackHits": 1079,
+      "wards": 795,
+      "dangerDecisions": 451,
+      "defendedDanger": 173,
+      "maxShield": 0,
+      "spells": {
+        "water": 283,
+        "graphite": 473,
+        "ironOxide": 55,
+        "oxygen": 92,
+        "iron": 152,
+        "sulfur": 56,
+        "hydrogen": 74,
+        "alkali": 82,
+        "nitro": 73,
+        "sulfide": 78,
+        "salt": 185,
+        "acid": 139,
+        "ironSulfide": 36,
+        "nitrogen": 64,
+        "carbon": 28,
+        "ammonia": 11,
+        "ferrous": 5,
+        "methane": 2
+      },
+      "winRate": 0.88,
+      "averageRounds": 6.21,
+      "averageRemainingHp": 22.65,
+      "averageWinnerHp": 25.738636363636363,
+      "weakAttackRatio": 0.2622798887859129,
+      "wardCastsPerRun": 3.975,
+      "dangerDefenseRatio": 0.3835920177383592,
+      "topSpells": [
+        [
+          "graphite",
+          473
+        ],
+        [
+          "water",
+          283
+        ],
+        [
+          "salt",
+          185
+        ],
+        [
+          "iron",
+          152
+        ],
+        [
+          "acid",
+          139
+        ]
+      ]
+    },
+    {
+      "boss": "inferno",
+      "strategy": "stockpile",
+      "runs": 200,
+      "wins": 187,
+      "stalled": 0,
+      "rounds": 1250,
+      "remainingHp": 5162,
+      "winnerHp": 5162,
+      "casts": 1868,
+      "weakHits": 308,
+      "attackHits": 1089,
+      "wards": 762,
+      "dangerDecisions": 454,
+      "defendedDanger": 223,
+      "maxShield": 0,
+      "spells": {
+        "water": 308,
+        "ironOxide": 51,
+        "graphite": 451,
+        "oxygen": 86,
+        "iron": 149,
+        "sulfur": 54,
+        "hydrogen": 75,
+        "alkali": 80,
+        "nitro": 74,
+        "sulfide": 69,
+        "salt": 189,
+        "acid": 133,
+        "ironSulfide": 37,
+        "nitrogen": 61,
+        "carbon": 32,
+        "ammonia": 13,
+        "ferrous": 5,
+        "methane": 1
+      },
+      "winRate": 0.935,
+      "averageRounds": 6.25,
+      "averageRemainingHp": 25.81,
+      "averageWinnerHp": 27.60427807486631,
+      "weakAttackRatio": 0.2828282828282828,
+      "wardCastsPerRun": 3.81,
+      "dangerDefenseRatio": 0.4911894273127753,
+      "topSpells": [
+        [
+          "graphite",
+          451
+        ],
+        [
+          "water",
+          308
+        ],
+        [
+          "salt",
+          189
+        ],
+        [
+          "iron",
+          149
+        ],
+        [
+          "acid",
+          133
+        ]
+      ]
+    },
+    {
+      "boss": "inferno",
+      "strategy": "burst",
+      "runs": 200,
+      "wins": 178,
+      "stalled": 0,
+      "rounds": 1269,
+      "remainingHp": 4551,
+      "winnerHp": 4551,
+      "casts": 1879,
+      "weakHits": 282,
+      "attackHits": 1110,
+      "wards": 762,
+      "dangerDecisions": 463,
+      "defendedDanger": 173,
+      "maxShield": 0,
+      "spells": {
+        "water": 282,
+        "graphite": 486,
+        "ironOxide": 58,
+        "oxygen": 82,
+        "iron": 135,
+        "sulfur": 63,
+        "hydrogen": 83,
+        "alkali": 90,
+        "nitro": 84,
+        "sulfide": 75,
+        "salt": 179,
+        "acid": 137,
+        "ironSulfide": 40,
+        "nitrogen": 53,
+        "carbon": 13,
+        "ammonia": 11,
+        "ferrous": 7,
+        "methane": 1
+      },
+      "winRate": 0.89,
+      "averageRounds": 6.345,
+      "averageRemainingHp": 22.755,
+      "averageWinnerHp": 25.56741573033708,
+      "weakAttackRatio": 0.25405405405405407,
+      "wardCastsPerRun": 3.81,
+      "dangerDefenseRatio": 0.37365010799136067,
+      "topSpells": [
+        [
+          "graphite",
+          486
+        ],
+        [
+          "water",
+          282
+        ],
+        [
+          "salt",
+          179
+        ],
+        [
+          "acid",
+          137
+        ],
+        [
+          "iron",
+          135
+        ]
+      ]
+    },
+    {
+      "boss": "warden",
+      "strategy": "attack",
+      "runs": 200,
+      "wins": 132,
+      "stalled": 0,
+      "rounds": 1647,
+      "remainingHp": 2611,
+      "winnerHp": 2611,
+      "casts": 2502,
+      "weakHits": 275,
+      "attackHits": 1416,
+      "wards": 996,
+      "dangerDecisions": 779,
+      "defendedDanger": 314,
+      "maxShield": 20,
+      "spells": {
+        "water": 285,
+        "oxygen": 189,
+        "hydrogen": 163,
+        "graphite": 664,
+        "alkali": 92,
+        "iron": 148,
+        "sulfur": 63,
+        "ironOxide": 75,
+        "sulfide": 83,
+        "nitro": 97,
+        "salt": 213,
+        "acid": 212,
+        "carbon": 6,
+        "ironSulfide": 95,
+        "peroxide": 9,
+        "nitrogen": 79,
+        "ammonia": 15,
+        "ferrous": 8,
+        "methane": 6
+      },
+      "winRate": 0.66,
+      "averageRounds": 8.235,
+      "averageRemainingHp": 13.055,
+      "averageWinnerHp": 19.78030303030303,
+      "weakAttackRatio": 0.1942090395480226,
+      "wardCastsPerRun": 4.98,
+      "dangerDefenseRatio": 0.4030808729139923,
+      "topSpells": [
+        [
+          "graphite",
+          664
+        ],
+        [
+          "water",
+          285
+        ],
+        [
+          "salt",
+          213
+        ],
+        [
+          "acid",
+          212
+        ],
+        [
+          "oxygen",
+          189
+        ]
+      ]
+    },
+    {
+      "boss": "warden",
+      "strategy": "affinity",
+      "runs": 200,
+      "wins": 136,
+      "stalled": 0,
+      "rounds": 1657,
+      "remainingHp": 2674,
+      "winnerHp": 2674,
+      "casts": 2531,
+      "weakHits": 349,
+      "attackHits": 1437,
+      "wards": 1011,
+      "dangerDecisions": 807,
+      "defendedDanger": 321,
+      "maxShield": 20,
+      "spells": {
+        "water": 270,
+        "oxygen": 176,
+        "hydrogen": 186,
+        "graphite": 674,
+        "alkali": 104,
+        "iron": 157,
+        "sulfur": 106,
+        "ironOxide": 68,
+        "sulfide": 66,
+        "nitro": 83,
+        "salt": 184,
+        "acid": 243,
+        "carbon": 6,
+        "ironSulfide": 91,
+        "methane": 7,
+        "nitrogen": 81,
+        "peroxide": 3,
+        "ammonia": 18,
+        "ferrous": 8
+      },
+      "winRate": 0.68,
+      "averageRounds": 8.285,
+      "averageRemainingHp": 13.37,
+      "averageWinnerHp": 19.66176470588235,
+      "weakAttackRatio": 0.2428670842032011,
+      "wardCastsPerRun": 5.055,
+      "dangerDefenseRatio": 0.39776951672862454,
+      "topSpells": [
+        [
+          "graphite",
+          674
+        ],
+        [
+          "water",
+          270
+        ],
+        [
+          "acid",
+          243
+        ],
+        [
+          "hydrogen",
+          186
+        ],
+        [
+          "salt",
+          184
+        ]
+      ]
+    },
+    {
+      "boss": "warden",
+      "strategy": "reaction",
+      "runs": 200,
+      "wins": 141,
+      "stalled": 0,
+      "rounds": 1734,
+      "remainingHp": 3432,
+      "winnerHp": 3432,
+      "casts": 2663,
+      "weakHits": 363,
+      "attackHits": 1468,
+      "wards": 1164,
+      "dangerDecisions": 852,
+      "defendedDanger": 379,
+      "maxShield": 12,
+      "spells": {
+        "water": 258,
+        "oxygen": 186,
+        "hydrogen": 163,
+        "graphite": 708,
+        "alkali": 112,
+        "iron": 204,
+        "sulfur": 114,
+        "ironOxide": 65,
+        "sulfide": 120,
+        "nitro": 86,
+        "carbon": 9,
+        "salt": 208,
+        "acid": 249,
+        "ironSulfide": 57,
+        "nitrogen": 88,
+        "peroxide": 6,
+        "ferrous": 6,
+        "methane": 5,
+        "ammonia": 19
+      },
+      "winRate": 0.705,
+      "averageRounds": 8.67,
+      "averageRemainingHp": 17.16,
+      "averageWinnerHp": 24.340425531914892,
+      "weakAttackRatio": 0.247275204359673,
+      "wardCastsPerRun": 5.82,
+      "dangerDefenseRatio": 0.4448356807511737,
+      "topSpells": [
+        [
+          "graphite",
+          708
+        ],
+        [
+          "water",
+          258
+        ],
+        [
+          "acid",
+          249
+        ],
+        [
+          "salt",
+          208
+        ],
+        [
+          "iron",
+          204
+        ]
+      ]
+    },
+    {
+      "boss": "warden",
+      "strategy": "mixed",
+      "runs": 200,
+      "wins": 140,
+      "stalled": 0,
+      "rounds": 1735,
+      "remainingHp": 3461,
+      "winnerHp": 3461,
+      "casts": 2662,
+      "weakHits": 355,
+      "attackHits": 1470,
+      "wards": 1153,
+      "dangerDecisions": 853,
+      "defendedDanger": 378,
+      "maxShield": 12,
+      "spells": {
+        "water": 269,
+        "oxygen": 186,
+        "hydrogen": 163,
+        "graphite": 706,
+        "alkali": 103,
+        "iron": 205,
+        "sulfur": 114,
+        "ironOxide": 68,
+        "sulfide": 123,
+        "nitro": 85,
+        "carbon": 8,
+        "salt": 213,
+        "acid": 241,
+        "ironSulfide": 57,
+        "nitrogen": 87,
+        "peroxide": 6,
+        "ferrous": 6,
+        "methane": 4,
+        "ammonia": 18
+      },
+      "winRate": 0.7,
+      "averageRounds": 8.675,
+      "averageRemainingHp": 17.305,
+      "averageWinnerHp": 24.72142857142857,
+      "weakAttackRatio": 0.24149659863945577,
+      "wardCastsPerRun": 5.765,
+      "dangerDefenseRatio": 0.44314185228604924,
+      "topSpells": [
+        [
+          "graphite",
+          706
+        ],
+        [
+          "water",
+          269
+        ],
+        [
+          "acid",
+          241
+        ],
+        [
+          "salt",
+          213
+        ],
+        [
+          "iron",
+          205
+        ]
+      ]
+    },
+    {
+      "boss": "warden",
+      "strategy": "stockpile",
+      "runs": 200,
+      "wins": 176,
+      "stalled": 0,
+      "rounds": 1762,
+      "remainingHp": 4716,
+      "winnerHp": 4716,
+      "casts": 2573,
+      "weakHits": 369,
+      "attackHits": 1436,
+      "wards": 1088,
+      "dangerDecisions": 849,
+      "defendedDanger": 491,
+      "maxShield": 20,
+      "spells": {
+        "water": 301,
+        "ironOxide": 64,
+        "oxygen": 209,
+        "graphite": 643,
+        "iron": 202,
+        "sulfur": 110,
+        "hydrogen": 102,
+        "sulfide": 122,
+        "nitro": 80,
+        "carbon": 7,
+        "salt": 188,
+        "acid": 259,
+        "alkali": 107,
+        "ironSulfide": 61,
+        "nitrogen": 76,
+        "ammonia": 21,
+        "ferrous": 8,
+        "methane": 13
+      },
+      "winRate": 0.88,
+      "averageRounds": 8.81,
+      "averageRemainingHp": 23.58,
+      "averageWinnerHp": 26.795454545454547,
+      "weakAttackRatio": 0.25696378830083566,
+      "wardCastsPerRun": 5.44,
+      "dangerDefenseRatio": 0.5783274440518257,
+      "topSpells": [
+        [
+          "graphite",
+          643
+        ],
+        [
+          "water",
+          301
+        ],
+        [
+          "acid",
+          259
+        ],
+        [
+          "oxygen",
+          209
+        ],
+        [
+          "iron",
+          202
+        ]
+      ]
+    },
+    {
+      "boss": "warden",
+      "strategy": "burst",
+      "runs": 200,
+      "wins": 156,
+      "stalled": 0,
+      "rounds": 1860,
+      "remainingHp": 3814,
+      "winnerHp": 3814,
+      "casts": 2743,
+      "weakHits": 393,
+      "attackHits": 1531,
+      "wards": 1166,
+      "dangerDecisions": 761,
+      "defendedDanger": 370,
+      "maxShield": 20,
+      "spells": {
+        "water": 293,
+        "oxygen": 197,
+        "hydrogen": 154,
+        "graphite": 708,
+        "alkali": 128,
+        "iron": 217,
+        "sulfur": 132,
+        "ironOxide": 58,
+        "sulfide": 126,
+        "ironSulfide": 59,
+        "nitro": 86,
+        "ammonia": 17,
+        "salt": 197,
+        "acid": 261,
+        "nitrogen": 87,
+        "ferrous": 7,
+        "methane": 5,
+        "peroxide": 8,
+        "carbon": 3
+      },
+      "winRate": 0.78,
+      "averageRounds": 9.3,
+      "averageRemainingHp": 19.07,
+      "averageWinnerHp": 24.44871794871795,
+      "weakAttackRatio": 0.2566949706074461,
+      "wardCastsPerRun": 5.83,
+      "dangerDefenseRatio": 0.48620236530880423,
+      "topSpells": [
+        [
+          "graphite",
+          708
+        ],
+        [
+          "water",
+          293
+        ],
+        [
+          "acid",
+          261
+        ],
+        [
+          "iron",
+          217
+        ],
+        [
+          "oxygen",
+          197
+        ]
+      ]
+    }
+  ],
+  "adventures": [
+    {
+      "boss": "golem",
+      "strategy": "mixed",
+      "runs": 200,
+      "wins": 152,
+      "defeats": 48,
+      "stalled": 0,
+      "turns": 4431,
+      "casts": 7106,
+      "bursts": 586,
+      "conversions": 110,
+      "combos": 581,
+      "effectiveHits": 720,
+      "resistedHits": 449,
+      "defenseActions": 2679,
+      "stageTurns": [
+        890,
+        596,
+        683,
+        1145,
+        1117
+      ],
+      "stageVisits": [
+        200,
+        200,
+        200,
+        200,
+        192
+      ],
+      "losses": [
+        0,
+        0,
+        0,
+        8,
+        40
+      ],
+      "firstTurnKills": 28,
+      "resonanceStarts": [
+        0,
+        9,
+        11,
+        9,
+        7
+      ],
+      "invalidResonanceStarts": 0,
+      "reactions": {
+        "neutralization": 43,
+        "combustion": 2,
+        "crystallization": 131,
+        "ammonium": 0
+      },
+      "spellUsage": {
+        "water": 871,
+        "salt": 570,
+        "carbon": 48,
+        "iron": 446,
+        "oxygen": 456,
+        "acid": 644,
+        "peroxide": 40,
+        "graphite": 1717,
+        "methane": 48,
+        "ironOxide": 284,
+        "hydrogen": 473,
+        "alkali": 302,
+        "ferrous": 29,
+        "nitrogen": 154,
+        "ammonia": 67,
+        "nitro": 285,
+        "sulfide": 271,
+        "sulfur": 228,
+        "ironSulfide": 173
+      },
+      "enemyVisits": {
+        "gel": 132,
+        "flame": 125,
+        "beetle": 120,
+        "elite": 200,
+        "golem": 192,
+        "slime": 113,
+        "minion": 110
+      },
+      "winningSeeds": [
+        1,
+        2,
+        3,
+        4,
+        7,
+        8,
+        10,
+        11,
+        12,
+        13
+      ],
+      "metrics": {
+        "reconstruction": true,
+        "uses": 1041,
+        "newSpellOpportunities": 625,
+        "craftableBefore": 3518,
+        "craftableAfter": 4462,
+        "decisionSamples": 8551,
+        "craftableSum": 24022,
+        "emptyRecipeTurnEnds": 796,
+        "turnEnds": 859,
+        "newSpellCasts": 1178,
+        "strandedTileRounds": 312,
+        "tileRounds": 12345,
+        "opportunities": {
+          "water": 1856,
+          "salt": 1230,
+          "carbon": 871,
+          "iron": 1569,
+          "oxygen": 2209,
+          "acid": 2075,
+          "peroxide": 720,
+          "graphite": 3593,
+          "methane": 155,
+          "ironOxide": 985,
+          "hydrogen": 3309,
+          "alkali": 1678,
+          "ferrous": 123,
+          "nitrogen": 401,
+          "ammonia": 350,
+          "nitro": 785,
+          "sulfide": 943,
+          "sulfur": 681,
+          "ironSulfide": 489
+        }
+      }
+    },
+    {
+      "boss": "inferno",
+      "strategy": "mixed",
+      "runs": 200,
+      "wins": 175,
+      "defeats": 25,
+      "stalled": 0,
+      "turns": 4274,
+      "casts": 6846,
+      "bursts": 563,
+      "conversions": 49,
+      "combos": 580,
+      "effectiveHits": 896,
+      "resistedHits": 253,
+      "defenseActions": 2558,
+      "stageTurns": [
+        890,
+        596,
+        683,
+        1145,
+        960
+      ],
+      "stageVisits": [
+        200,
+        200,
+        200,
+        200,
+        192
+      ],
+      "losses": [
+        0,
+        0,
+        0,
+        8,
+        17
+      ],
+      "firstTurnKills": 28,
+      "resonanceStarts": [
+        0,
+        9,
+        11,
+        9,
+        7
+      ],
+      "invalidResonanceStarts": 0,
+      "reactions": {
+        "neutralization": 23,
+        "combustion": 2,
+        "crystallization": 154,
+        "ammonium": 0
+      },
+      "spellUsage": {
+        "water": 1006,
+        "salt": 577,
+        "carbon": 58,
+        "iron": 485,
+        "oxygen": 418,
+        "acid": 606,
+        "peroxide": 24,
+        "graphite": 1623,
+        "methane": 24,
+        "ironOxide": 227,
+        "hydrogen": 435,
+        "alkali": 264,
+        "ferrous": 26,
+        "nitrogen": 148,
+        "ammonia": 63,
+        "nitro": 259,
+        "sulfide": 221,
+        "sulfur": 232,
+        "ironSulfide": 150
+      },
+      "enemyVisits": {
+        "gel": 132,
+        "flame": 125,
+        "beetle": 120,
+        "elite": 200,
+        "inferno": 192,
+        "slime": 113,
+        "minion": 110
+      },
+      "winningSeeds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "metrics": {
+        "reconstruction": true,
+        "uses": 993,
+        "newSpellOpportunities": 596,
+        "craftableBefore": 3257,
+        "craftableAfter": 4149,
+        "decisionSamples": 8257,
+        "craftableSum": 22454,
+        "emptyRecipeTurnEnds": 811,
+        "turnEnds": 848,
+        "newSpellCasts": 1073,
+        "strandedTileRounds": 311,
+        "tileRounds": 11385,
+        "opportunities": {
+          "water": 1674,
+          "salt": 1120,
+          "carbon": 791,
+          "iron": 1567,
+          "oxygen": 2041,
+          "acid": 1927,
+          "peroxide": 613,
+          "graphite": 3464,
+          "methane": 108,
+          "ironOxide": 980,
+          "hydrogen": 3054,
+          "alkali": 1517,
+          "ferrous": 130,
+          "nitrogen": 432,
+          "ammonia": 306,
+          "nitro": 721,
+          "sulfide": 874,
+          "sulfur": 648,
+          "ironSulfide": 487
+        }
+      }
+    },
+    {
+      "boss": "warden",
+      "strategy": "mixed",
+      "runs": 200,
+      "wins": 166,
+      "defeats": 34,
+      "stalled": 0,
+      "turns": 4596,
+      "casts": 7388,
+      "bursts": 611,
+      "conversions": 162,
+      "combos": 647,
+      "effectiveHits": 866,
+      "resistedHits": 397,
+      "defenseActions": 2786,
+      "stageTurns": [
+        890,
+        596,
+        683,
+        1145,
+        1282
+      ],
+      "stageVisits": [
+        200,
+        200,
+        200,
+        200,
+        192
+      ],
+      "losses": [
+        0,
+        0,
+        0,
+        8,
+        26
+      ],
+      "firstTurnKills": 28,
+      "resonanceStarts": [
+        0,
+        9,
+        11,
+        9,
+        7
+      ],
+      "invalidResonanceStarts": 0,
+      "reactions": {
+        "neutralization": 40,
+        "combustion": 3,
+        "crystallization": 150,
+        "ammonium": 0
+      },
+      "spellUsage": {
+        "water": 986,
+        "salt": 562,
+        "carbon": 50,
+        "iron": 520,
+        "oxygen": 490,
+        "acid": 717,
+        "peroxide": 28,
+        "graphite": 1764,
+        "methane": 41,
+        "ironOxide": 243,
+        "hydrogen": 473,
+        "alkali": 287,
+        "ferrous": 22,
+        "nitrogen": 167,
+        "ammonia": 65,
+        "nitro": 262,
+        "sulfide": 245,
+        "sulfur": 286,
+        "ironSulfide": 180
+      },
+      "enemyVisits": {
+        "gel": 132,
+        "flame": 125,
+        "beetle": 120,
+        "elite": 200,
+        "warden": 192,
+        "slime": 113,
+        "minion": 110
+      },
+      "winningSeeds": [
+        1,
+        2,
+        3,
+        4,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "metrics": {
+        "reconstruction": true,
+        "uses": 1104,
+        "newSpellOpportunities": 667,
+        "craftableBefore": 3819,
+        "craftableAfter": 4832,
+        "decisionSamples": 8881,
+        "craftableSum": 25381,
+        "emptyRecipeTurnEnds": 822,
+        "turnEnds": 882,
+        "newSpellCasts": 1205,
+        "strandedTileRounds": 398,
+        "tileRounds": 13305,
+        "opportunities": {
+          "water": 1926,
+          "salt": 1318,
+          "carbon": 892,
+          "iron": 1704,
+          "oxygen": 2249,
+          "acid": 2162,
+          "peroxide": 736,
+          "graphite": 3787,
+          "methane": 185,
+          "ironOxide": 1048,
+          "hydrogen": 3445,
+          "alkali": 1789,
+          "ferrous": 138,
+          "nitrogen": 498,
+          "ammonia": 406,
+          "nitro": 801,
+          "sulfide": 1031,
+          "sulfur": 723,
+          "ironSulfide": 543
+        }
+      }
+    }
+  ]
+}

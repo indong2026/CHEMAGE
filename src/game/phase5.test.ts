@@ -39,7 +39,7 @@ describe('신규 마법', () => {
   });
   it('FeCl₂는 금속 상성과 다음 행동의 각 타격 약화3, 중첩 대신 갱신을 적용한다', () => {
     const s = state(['ferrous', 'ferrous'], 'minion'); s.enemy.intent = ENEMIES.elite.pattern[2];
-    const first = cast(s, 'ferrous'); expect(hit(first).value).toBe(22); expect(first.enemy.weaken).toBe(1);
+    const first = cast(s, 'ferrous'); expect(hit(first).value).toBe(25); expect(first.enemy.weaken).toBe(1);
     const predicted = adjustedIntent(first.enemy.intent, first.enemy.weaken);
     expect(predicted.hits?.map(h => h.value)).toEqual([4,4,4]);
     const second = cast(first, 'ferrous'); expect(second.events.filter(e => e.kind === 'enemy').map(e => e.value)).toEqual([4,4,4]);
@@ -87,7 +87,7 @@ describe('반응은 실제 시전에만, 중복 없이', () => {
   });
   it('연소 강화는 기존 +10을 한 번만 적용하며 결정 연계도 기존 +4와 젖음 소비를 유지한다', () => {
     const fire = cast(cast(state(['oxygen','methane']), 'oxygen'), 'methane');
-    expect(hit(fire).value).toBe(30); expect(fire.boost).toBe(false); expect(fire.reactionDiscoveries).toEqual(['combustion']);
+    expect(hit(fire).value).toBe(33); expect(fire.boost).toBe(false); expect(fire.reactionDiscoveries).toEqual(['combustion']);
     const water = cast(state(['water','salt']), 'water'), salt = cast(water, 'salt');
     expect(hit(salt).value).toBe(15); expect(salt.enemy.wet).toBe(0); expect(salt.reactionDiscoveries).toEqual(['crystallization']);
     expect(fire.events.filter(e => e.kind === 'reaction')).toHaveLength(1);
@@ -106,7 +106,7 @@ describe('새 적과 무작위 모험', () => {
     for(let seed=1;seed<=200;seed++) {
       expect(newGame(seededRng(seed)).route[0]).toBe('slime');
       const s = newGame(seededRng(seed),{firstAdventure:false}); firsts.add(s.route[0]);
-      expect(s.route).toHaveLength(5); expect(new Set(s.route).size).toBe(5); expect(s.route.slice(3)).toEqual(['elite','golem']);
+      expect(s.route).toHaveLength(5); expect(new Set(s.route).size).toBe(5); expect(s.route[3]).toBe('elite'); expect(['golem','inferno','warden']).toContain(s.route[4]);
     }
     expect(firsts).toEqual(new Set(['slime','beetle','flame','minion','gel']));
   });

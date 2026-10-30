@@ -6,6 +6,26 @@ export const PALETTE: Record<string, string> = {
   r: '#a95560', o: '#e88b66', y: '#ffd08a', f: '#fff0bd', k: '#684b48',
 };
 export const SPRITES: Record<string, string[]> = {
+  inferno: [
+    '............y...........', '.....o.....yfy....o......', '....oyo....yfy...oyo.....',
+    '.....yo...oyfyo..oy......', '......o..royfyyo.o.......', '.....rooroyffyoro.......',
+    '....royyoyffffyoyr......', '...royffyyffffyyfyr.....', '..royfffyffffffyffyor...',
+    '..ryffyyxxxxxxxxyyfyr...', '.royfyxxoyyyyyyoxxyfyro..', '.ryfyxoyyffffffyyoxyfyr..',
+    '.ryfxoyffwwwwwwffyoxfyr.', '.royxoyfwxxwwxxwfyoxyro.', '..ryxoyfwxxwwxxwfyoxyr..',
+    '..royxoyffffffffyoxyor..', '...ryxoyyyffffyyyoxyr...', '....ryxxooyyyy ooxxyr....'.replace(' ', 'y'),
+    '.....royxxxxxxxxyor.....', '......royyyyyyyyor......', '.......rroyyyyorr.......',
+    '.....o...rroorr...o.....', '....oyo....rr....oyo....', '.....o............o.....',
+  ].map(row=>row.padEnd(24,'.')),
+  warden: [
+    '.........xxxxxx.........', '........xsswwssx........', '........xsmmmmsx........',
+    '...xxxx.xmcbbcmx.xxxx...', '..xsswwxxmxxxxmxxwwssx..', '.xssmmmssxxxxxxssmmmssx.',
+    '.xsmmmmssmssssmssmmmmsx.', '.xsmxxmmsswwwwssmmxxmsx.', '.xmxxdxmswwbbwwsmxdxxmx.',
+    '.xxxddxmswbc cbwsmxddxxx.'.replace(' ', 'c'), '.xsxddxmswwbbwwsmxddxsx.', '.xsxxxxmmssssssmmxxxxsx.',
+    '.xwwssxmmssssssmmxsswwx.', '.xsmmmxmmxxxxxxmmxmmmsx.', '.xmmmmxmdssssssdmxmmmmx.',
+    '.xxxxxxxdxssssxdxxxxxxx.', '.......xmxxxxxxmx.......', '......xssmx..xmssx......',
+    '......xssmx..xmssx......', '......xmmmx..xmmmx......', '.....xssswwxxwwsssx.....',
+    '.....xmmmmmx xmmmmmx....'.replace(' ', '.'), '.....xxxxxxx.xxxxxxx....', '........................',
+  ].map(row=>row.padEnd(24,'.')),
   minion: [
   "........................",
   "........................",

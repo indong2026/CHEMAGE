@@ -1,0 +1,182 @@
+[
+  {
+    "boss": "inferno",
+    "mode": "opening",
+    "height": 932,
+    "hp": "48",
+    "overflow": 0,
+    "unlocked": true,
+    "width": 430,
+    "log": "turn: 적의 차례\nenemy: 파이어 볼트 12 [12]\ndamage: 피격! −12 [12]\nturn: 나의 차례 [0]\nconvert: 초과 3개 → 마력 +0 [0]"
+  },
+  {
+    "boss": "inferno",
+    "mode": "multi",
+    "height": 932,
+    "hp": "46",
+    "overflow": 0,
+    "unlocked": true,
+    "width": 430,
+    "log": "turn: 적의 차례\nenemy: 플레임 러시 7 [7]\ndamage: 피격! −7 [7]\nenemy: 플레임 러시 7 [7]\ndamage: 피격! −7 [7]\nturn: 나의 차례 [0]\nconvert: 초과 3개 → 마력 +0 [0]"
+  },
+  {
+    "boss": "inferno",
+    "mode": "charge",
+    "height": 932,
+    "hp": "38",
+    "overflow": 0,
+    "unlocked": true,
+    "width": 430,
+    "log": "turn: 적의 차례\nenemy: 오버히트 버스트 22 [22]\ndamage: 피격! −22 [22]\nturn: 나의 차례 [0]\nconvert: 초과 3개 → 마력 +0 [0]"
+  },
+  {
+    "boss": "inferno",
+    "mode": "phase",
+    "height": 932,
+    "hp": "60",
+    "overflow": 0,
+    "unlocked": true,
+    "width": 430,
+    "log": "spell: H₂O · 워터 블래스트\ndamage: 18 피해 [18]\nphase: INFERNO CORE — OVERDRIVE!"
+  },
+  {
+    "boss": "inferno",
+    "mode": "ward",
+    "height": 932,
+    "hp": "60",
+    "overflow": 0,
+    "unlocked": true,
+    "width": 430,
+    "log": "spell: NaOH · 알칼리 펄스\ndamage: 3 피해 [3]"
+  },
+  {
+    "boss": "inferno",
+    "mode": "kill",
+    "height": 932,
+    "overflow": -15,
+    "text": "THE GUARDIAN IS SILENT마법은, 당신 안에.인페르노 코어 격파!\n다섯 번의 전투, 당신만의 해답을 찾았어요.5/5완료한 전투0사용한 마법1지나온 턴다시 모험하기발견한 마법 보기메인 메뉴",
+    "unlocked": true,
+    "width": 430,
+    "log": "burst: ZERO BURST!\ndamage: 1 피해 [1]\ndeath: 인페르노 코어 격파!\nwin: 전투 승리 · 체력 +0 [0]"
+  },
+  {
+    "boss": "warden",
+    "mode": "opening",
+    "height": 932,
+    "hp": "48",
+    "overflow": 0,
+    "unlocked": true,
+    "width": 430,
+    "log": "turn: 적의 차례\nenemy: 아이언 스트라이크 12 [12]\ndamage: 피격! −12 [12]\nturn: 나의 차례 [0]\nconvert: 초과 3개 → 마력 +0 [0]"
+  },
+  {
+    "boss": "warden",
+    "mode": "multi",
+    "height": 932,
+    "hp": "46",
+    "overflow": 0,
+    "unlocked": true,
+    "width": 430,
+    "log": "turn: 적의 차례\nenemy: 더블 해머 7 [7]\ndamage: 피격! −7 [7]\nenemy: 더블 해머 7 [7]\ndamage: 피격! −7 [7]\nturn: 나의 차례 [0]\nconvert: 초과 3개 → 마력 +0 [0]"
+  },
+  {
+    "boss": "warden",
+    "mode": "charge",
+    "height": 932,
+    "hp": "37",
+    "overflow": 0,
+    "unlocked": true,
+    "width": 430,
+    "log": "turn: 적의 차례\nenemy: 헤비 프레스 23 [23]\ndamage: 피격! −23 [23]\nturn: 나의 차례 [0]\nconvert: 초과 3개 → 마력 +0 [0]"
+  },
+  {
+    "boss": "warden",
+    "mode": "phase",
+    "height": 932,
+    "hp": "60",
+    "overflow": 0,
+    "unlocked": true,
+    "width": 430,
+    "log": "spell: H₂O · 워터 블래스트\ndamage: 8 피해 [8]\nphase: IRON WARDEN — FORTRESS MODE!\nshield: 포트리스 보호막 +10 [10]"
+  },
+  {
+    "boss": "warden",
+    "mode": "ward",
+    "height": 932,
+    "hp": "60",
+    "overflow": 0,
+    "unlocked": true,
+    "width": 430,
+    "log": "spell: NaOH · 알칼리 펄스\ndamage: 방어막에 막혔어요 [0]"
+  },
+  {
+    "boss": "warden",
+    "mode": "kill",
+    "height": 932,
+    "overflow": -15,
+    "text": "THE GUARDIAN IS SILENT마법은, 당신 안에.아이언 워든 격파!\n다섯 번의 전투, 당신만의 해답을 찾았어요.5/5완료한 전투0사용한 마법1지나온 턴다시 모험하기발견한 마법 보기메인 메뉴",
+    "unlocked": true,
+    "width": 430,
+    "log": "burst: ZERO BURST!\ndamage: 1 피해 [1]\ndeath: 아이언 워든 격파!\nwin: 전투 승리 · 체력 +0 [0]"
+  },
+  {
+    "boss": "golem",
+    "mode": "opening",
+    "height": 932,
+    "hp": "44",
+    "overflow": 0,
+    "unlocked": true,
+    "width": 430,
+    "log": "turn: 적의 차례\nenemy: 공격 16 [16]\ndamage: 피격! −16 [16]\nturn: 나의 차례 [0]\nconvert: 초과 3개 → 마력 +0 [0]"
+  },
+  {
+    "boss": "golem",
+    "mode": "multi",
+    "height": 932,
+    "hp": "40",
+    "overflow": 0,
+    "unlocked": true,
+    "width": 430,
+    "log": "turn: 적의 차례\nenemy: 크리스탈 러시 10 [10]\ndamage: 피격! −10 [10]\nenemy: 크리스탈 러시 10 [10]\ndamage: 피격! −10 [10]\nturn: 나의 차례 [0]\nconvert: 초과 3개 → 마력 +0 [0]"
+  },
+  {
+    "boss": "golem",
+    "mode": "charge",
+    "height": 932,
+    "hp": "36",
+    "overflow": 0,
+    "unlocked": true,
+    "width": 430,
+    "log": "turn: 적의 차례\nenemy: 결정 강타 24 [24]\ndamage: 피격! −24 [24]\nturn: 나의 차례 [0]\nconvert: 초과 3개 → 마력 +0 [0]"
+  },
+  {
+    "boss": "golem",
+    "mode": "phase",
+    "height": 932,
+    "hp": "44",
+    "overflow": 0,
+    "unlocked": true,
+    "width": 430,
+    "log": "turn: 적의 차례\nenemy: 공격 16 [16]\ndamage: 피격! −16 [16]\nphase: 결정 폭주!\nturn: 나의 차례 [3]"
+  },
+  {
+    "boss": "golem",
+    "mode": "ward",
+    "height": 932,
+    "hp": "60",
+    "overflow": 0,
+    "unlocked": true,
+    "width": 430,
+    "log": "spell: NaOH · 알칼리 펄스\ndamage: 4 피해 [4]"
+  },
+  {
+    "boss": "golem",
+    "mode": "kill",
+    "height": 932,
+    "overflow": -15,
+    "text": "THE GUARDIAN IS SILENT마법은, 당신 안에.크리스탈 골렘 격파!\n다섯 번의 전투, 당신만의 해답을 찾았어요.5/5완료한 전투0사용한 마법1지나온 턴다시 모험하기발견한 마법 보기메인 메뉴",
+    "unlocked": true,
+    "width": 430,
+    "log": "burst: ZERO BURST!\ndamage: 1 피해 [1]\ndeath: 크리스탈 골렘 격파!\nwin: 전투 승리 · 체력 +0 [0]"
+  }
+]

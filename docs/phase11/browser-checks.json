@@ -1,0 +1,48 @@
+[
+  {
+    "scenario": "CH4",
+    "record": "spell: CH₄ · 메탄 플레어\ndamage: 23 피해 [23]",
+    "hp": "25"
+  },
+  {
+    "scenario": "FeCl2 cast",
+    "record": "spell: FeCl₂ · 페러스 체인\ndamage: 13 피해 [13]",
+    "telegraph": "다음 행동 2연타 4 + 4"
+  },
+  {
+    "scenario": "FeCl2 + NH3",
+    "record": "spell: NH₃ · 암모니아 미스트\ndamage: 7 피해 [7]\nturn: 적의 차례\nenemy: 더블 해머 4 [4]\ndamage: 피격! −4 [4]\nenemy: 더블 해머 4 [4]\ndamage: 피격! −4 [4]\nturn: 나의 차례 [3]",
+    "hp": "52"
+  },
+  {
+    "scenario": "CO2 vs fire22",
+    "record": "turn: 적의 차례\nenemy: 오버히트 버스트 22 [22]\ndamage: 피격! −5 · 12 방어 [5] blocked=12\nshield-end: 적 행동 종료 · 보호막 해제\nturn: 나의 차례 [3]"
+  },
+  {
+    "scenario": "C+C",
+    "record": "spell: C · 그래파이트 월\nshield: 보호막 +10 [10]\nturn: 적의 차례\nenemy: 직접 공격 18 [18]\ndamage: BLOCK! 완전 방어 [0] blocked=18\ndamage: 3 피해 [3]\nshield-end: 적 행동 종료 · 보호막 해제\nturn: 나의 차례 [3]",
+    "hp": "60"
+  },
+  {
+    "scenario": "reconstruction",
+    "record": "reconstruct: 원소 재구성 성공!",
+    "tiles": 3,
+    "uses": "마법\n2/2",
+    "charge": "재구성 0%"
+  },
+  {
+    "scenario": "O2 -> CH4",
+    "record": "spell: CH₄ · 메탄 플레어\nreaction: 연소 강화!\ndamage: COMBO! +10 [33]\nturn: 적의 차례\nenemy: 직접 공격 18 [18]\ndamage: 피격! −18 [18]\nturn: 나의 차례 [3]",
+    "enemyHp": "15"
+  },
+  {
+    "scenario": "attack selection",
+    "className": "primary-button instant-cast cast-attack",
+    "label": "공격 마법 발동\n예상 피해 13"
+  },
+  {
+    "scenario": "defense selection",
+    "className": "primary-button instant-cast cast-defense",
+    "label": "방어 마법 발동\n보호막 +16 · 총 16"
+  }
+]

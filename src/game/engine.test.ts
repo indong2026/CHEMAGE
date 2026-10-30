@@ -52,7 +52,7 @@ describe('즉시 시전과 턴 경계', () => {
       const s = newGame(seededRng(seed));
       expect(s.route[0]).toBe('slime'); expect(s.inventory).toHaveLength(5); expect(s.upgrades.capacity).toBe(12);
       expect(recipeIds(s.inventory, SPELL_BY_ID.water)).toHaveLength(3);
-      expect(new Set(s.route).size).toBe(5); expect(s.route.slice(3)).toEqual(['elite', 'golem']);
+      expect(new Set(s.route).size).toBe(5); expect(s.route[3]).toBe('elite'); expect(['golem','inferno','warden']).toContain(s.route[4]);
     }
   });
   it('첫 마법은 해당 원소만 소모하고 적 행동과 드로우 없이 두 번째 선택을 기다린다', () => {
@@ -121,9 +121,9 @@ describe('보호막과 연계는 두 시전 사이에 유지된다', () => {
     expect(forward.enemy.hp).toBe(172); expect(reverse.enemy.hp).toBe(176);
     expect(forward.events.find(e => e.combo)?.combo).toBe(4);
   });
-  it('O₂ → CH₄는 30 피해, 강화는 한 번만 소비하며 일반 마력 +20', () => {
+  it('O₂ → CH₄는 33 피해, 강화는 한 번만 소비하며 일반 마력 +20', () => {
     const s = fixture(['O', 'O', 'C', 'H', 'H', 'H', 'H']); const n = cast(cast(s, 'oxygen'), 'methane');
-    expect(n.enemy.hp).toBe(170); expect(n.boost).toBe(false); expect(n.mana).toBe(20);
+    expect(n.enemy.hp).toBe(167); expect(n.boost).toBe(false); expect(n.mana).toBe(20);
   });
   it('O₂는 중첩되지 않으며 턴 종료나 방어로 사라지지 않는다', () => {
     const n = cast(cast(fixture(['O', 'O', 'O', 'O']), 'oxygen'), 'oxygen'); expect(n.boost).toBe(true);

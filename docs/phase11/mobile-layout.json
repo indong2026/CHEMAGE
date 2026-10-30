@@ -1,0 +1,128 @@
+[
+  {
+    "scenario": "empty",
+    "bagWidth": 320,
+    "overflow": 0,
+    "tileWidth": 43.66666793823242,
+    "width": 320
+  },
+  {
+    "scenario": "choice",
+    "bagWidth": 320,
+    "overflow": 0,
+    "tileWidth": 43.66666793823242,
+    "width": 320
+  },
+  {
+    "scenario": "heavy",
+    "bagWidth": 320,
+    "overflow": 0,
+    "tileWidth": 43.66666793823242,
+    "width": 320
+  },
+  {
+    "scenario": "methane",
+    "bagWidth": 320,
+    "overflow": 0,
+    "tileWidth": 43.66666793823242,
+    "width": 320
+  },
+  {
+    "scenario": "ferrous",
+    "bagWidth": 320,
+    "overflow": 0,
+    "tileWidth": 43.66666793823242,
+    "width": 320
+  },
+  {
+    "scenario": "reconstruct",
+    "bagWidth": 320,
+    "overflow": 0,
+    "tileWidth": 43.66666793823242,
+    "width": 320
+  },
+  {
+    "scenario": "empty",
+    "bagWidth": 390,
+    "overflow": 0,
+    "tileWidth": 55.33333587646485,
+    "width": 390
+  },
+  {
+    "scenario": "choice",
+    "bagWidth": 390,
+    "overflow": 0,
+    "tileWidth": 55.33333587646485,
+    "width": 390
+  },
+  {
+    "scenario": "heavy",
+    "bagWidth": 390,
+    "overflow": 0,
+    "tileWidth": 55.33333587646485,
+    "width": 390
+  },
+  {
+    "scenario": "methane",
+    "bagWidth": 390,
+    "overflow": 0,
+    "tileWidth": 55.33333587646485,
+    "width": 390
+  },
+  {
+    "scenario": "ferrous",
+    "bagWidth": 390,
+    "overflow": 0,
+    "tileWidth": 55.33333587646485,
+    "width": 390
+  },
+  {
+    "scenario": "reconstruct",
+    "bagWidth": 390,
+    "overflow": 0,
+    "tileWidth": 55.33333587646485,
+    "width": 390
+  },
+  {
+    "scenario": "empty",
+    "bagWidth": 430,
+    "overflow": 0,
+    "tileWidth": 62,
+    "width": 430
+  },
+  {
+    "scenario": "choice",
+    "bagWidth": 430,
+    "overflow": 0,
+    "tileWidth": 62,
+    "width": 430
+  },
+  {
+    "scenario": "heavy",
+    "bagWidth": 430,
+    "overflow": 0,
+    "tileWidth": 62,
+    "width": 430
+  },
+  {
+    "scenario": "methane",
+    "bagWidth": 430,
+    "overflow": 0,
+    "tileWidth": 62,
+    "width": 430
+  },
+  {
+    "scenario": "ferrous",
+    "bagWidth": 430,
+    "overflow": 0,
+    "tileWidth": 62,
+    "width": 430
+  },
+  {
+    "scenario": "reconstruct",
+    "bagWidth": 430,
+    "overflow": 0,
+    "tileWidth": 62,
+    "width": 430
+  }
+]

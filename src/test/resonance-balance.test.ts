@@ -5,7 +5,7 @@ import { drawElement, seededRng } from '../game/random';
 import { chooseAction } from './strategy';
 
 function bossRun(seed: number, immediate: boolean) {
-  let s = newGame(seededRng(seed), { firstAdventure: false });
+  let s = newGame(seededRng(seed), { firstAdventure: false, boss: 'golem' });
   // Paired late-game fixture: same boss, HP, mana, upgrades and future RNG.
   s.stage=3;s.screen='reward';s.rewards=['resonance'];s.hp=45+seed%16;s.mana=(seed%4)*20;
   s.upgrades.shieldBonus=(seed%2)*3;s.upgrades.waterDamage=(seed%3)*4;s.upgrades.draw=seed%5===0?4:3;
@@ -39,7 +39,7 @@ it('200개 동일 시드의 보스 직전 Fe 공명: 즉시 지급 전후를 비
       averageFirstTurnDamage:records.reduce((n,r)=>n+r.firstTurnDamage,0)/200,
       firstTurnWins:records.filter(r=>r.firstTurnWin).length,records};
   });
-  writeFileSync('docs/phase7-resonance-balance.json',JSON.stringify({seedRange:[1,200],note:'Paired boss-only fixtures, mixed policy; both variants keep Fe weight 1.5. Reference replaces guaranteed hand with 5 weighted draws. HP 45..60, mana 0/20/40/60, varied existing upgrades. Future RNG is paired. Not human difficulty evidence.',variants},null,2));
+  writeFileSync('docs/phase11/regression-resonance.json',JSON.stringify({seedRange:[1,200],note:'Paired boss-only fixtures, mixed policy; both variants keep Fe weight 1.5. Reference replaces guaranteed hand with 5 weighted draws. HP 45..60, mana 0/20/40/60, varied existing upgrades. Future RNG is paired. Not human difficulty evidence.',variants},null,2));
   for(const v of variants){expect(v.stalled).toBe(0);expect(v.records.every(r=>r.startSize===5)).toBe(true);expect(v.firstTurnWins).toBe(0);}
   expect(variants[1].records.every(r=>r.startFe>=2)).toBe(true);
   expect(variants[1].averageStartingFe).toBeGreaterThan(variants[0].averageStartingFe);
